@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page19.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page19.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page19.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+Low character housewife | Father-in-law found housewife alone and fucked her – Part 1
+</small>
+
+  <p>
+
+
+First of all, know something about me, my name is Riya, I got married about 1 month ago, my breast size is 34, waist size is 28 and my ass size is 36, before marriage I had sex with many people so I didn't want to do anything like that after marriage but what else can be done if it happened.
+(bangla sosur bouma sex)
+My husband, I and my father-in-law, mother-in-law have died for about 2 years, we all lived in the same house. My husband was always busy with work, he would stay at home for two days and even then he would not touch me, and the rest of the days he would stay outside and would not even call me, my father-in-law would watch TV and read newspapers all day, I felt lonely at home.
+
+So the incident happened that night, when my husband's boss called from his office and told me that my husband had to go on a business trip for three weeks, I was surprised because someone could leave his new wife like that, but my husband loved his job more than me, so he got ready the next morning and kissed me on the cheek and left. I was angry with my husband's boss because he took my husband away from me for three weeks, only me and my father-in-law were left at home.
+
+After my husband left, I started doing housework. I saw that my father-in-law had not woken up yet, so I went to my father-in-law's room. When I entered the room, I saw that my father-in-law was sleeping soundly. As I went to my father-in-law to wake him up, my eyes fell on my father-in-law's dhoti. Through the dhoti, I saw my father-in-law's big black penis. My whole body trembled because it had been 3-4 months since anyone had fucked me. sosur bouma sex
+
+I couldn't stop myself anymore and went closer to my father-in-law. I checked carefully whether my father-in-law was sleeping or would wake up now. I checked and saw that my father-in-law was still late in waking up. Then I fucked the dhoti a little more and stood up and lightly touched my father-in-law's penis. Then I looked at my father-in-law again. I saw that he was not waking up. So, with a little courage, I lightly squeezed my father-in-law's penis in my left hand and slowly started moving it up and down...
+
+After a while, my father-in-law's penis slowly started getting hard and bigger. Seeing my father-in-law's big penis, I got more excited. With a little courage, I sat near my father-in-law's feet. Then when his penis was completely hard and big, I started moving it up and down vigorously and with my right hand, I started pressing my right breast myself and occasionally checked that my father-in-law was not waking up. sosur bouma sex
+
+After going on like that for a while, I put my right hand inside my blouse and pressed my breast and nipple. Then I looked at my father-in-law and saw that he was still sleeping soundly. And with a little more courage, this time I moved my head to my father-in-law's penis. I smelled the penis and got more aroused. Then I kissed his head and looked at my father-in-law and saw that he was still sleeping.
+
+Looking at the penis again, I slowly took the head of the penis into my mouth and started sucking it and occasionally checked on my father-in-law. After sucking the head of the penis for a while, I took almost half of the penis into my mouth and started sucking it vigorously. My father-in-law didn't care about waking up. In the meantime, my father-in-law woke up at some point and saw me sucking his penis. My father-in-law didn't respond and started pretending to sleep. After a while, my father-in-law took all the cum out of my mouth... sosur bouma sex
+
+And I took the penis out of my mouth and swallowed all the cum, then covered the penis with a dhoti and left, and my father-in-law started thinking to himself, "...why was my wife sucking my penis? Can't my son please my wife? Well, whatever happened is good. I haven't sucked my penis for many years, but how can I fuck my wife now? "Then I cleaned my face and eyes and went to the kitchen to make breakfast. After a while, my father-in-law came and sat on the sofa, turned on the TV, started reading the paper while listening to the news and said, "Mother-in-law, make me some hot tea." I said, "Yes, I will, father-in-law, in 2 minutes." After making the tea, I went to my father-in-law and leaned over to put the tea plate first, and my saree fell off my chest. My father-in-law looked at me and looked at my big breasts and laughed. sosur bouma sex
+
+I was embarrassed to show my breasts like that to my father-in-law, so I said, “Father-in-law, take your tea.” Hearing my words, Father-in-law’s eyes moved from my breasts and said, “Yes.….Yes.….Give it to me, mother-in-law.” When Father-in-law took the tea plate from my hand, I adjusted my saree and sat next to Father-in-law with my tea.
+
+While we were drinking tea together, Father-in-law said, “The tea is quite good, mother-in-law.” I said, “Yes, I didn’t make it.” Father-in-law said, “So what will mother-in-law cook for lunch today?” I said, “I haven’t decided yet, let’s see what can be cooked.” We finished drinking tea and I went to the kitchen with the tea plates.
+
+I went to the kitchen to finish all the work and it was already noon so I went to take a bath and after seeing my father-in-law sucking my cock and making me suck his breasts like that, I intentionally closed the bathroom door because the door was right behind me, then I took off my blouse, petticoat, bra and panties.
+I started taking a shower, after a while my father-in-law saw that the bathroom door was open and he started watching me taking a shower through the crack in the door, then my father-in-law took off his dhoti and shirt and entered the bathroom.
+
+And he came behind me and put his hands on my breasts from behind and squeezed them, I was shocked for a second and my father-in-law came close to my ear and said, "Mom, suck my cock again." I said, "Again? So you understand?" My father-in-law said, "Yes, Mom, sucking your cock is the best cock sucking I have ever had in my life." After saying that, my father-in-law started squeezing my breasts with his hands. My father-in-law's cock gradually became hard and erect, and I could feel it in my ass...
+
+My father-in-law was pressing my breasts and occasionally pressing my nipples with his fingers. After a while, my father-in-law's penis became long and hard and he inserted it between my legs and I held it with my legs. Then my father-in-law started rubbing his penis on my vagina from behind. Then he removed his right hand from my breasts and turned my head towards him with that hand and started kissing me. I also started kissing him.
+
+After a while, he brought his right hand behind me and removed his penis from my vagina and started rubbing my vagina with his right hand. Then he inserted two fingers inside my vagina and started fingering them slowly. I took my right hand behind me and held my father-in-law's penis in my hand and started giving a handjob.
+
+After a while, the father-in-law stopped kissing me and took his fingers out of my pussy, held me and turned me around and said, "Suck me like you did in the morning." I didn't hesitate and took about half of his cock into my mouth and started sucking it with the father-in-law's mouth. "Ah, uh, are you really sucking my cock?"
+
+No one has ever sucked my cock like this before." Then the father-in-law put his hands on my head and held my head and gently pressed it into my mouth and slowly inserted it deeper into my mouth. Then he started fucking my face with hard pressure. After a while, the father-in-law said, "My cock will come out and I want to put my cock in your mouth like in the morning." As soon as he finished speaking, he put all his cock in my mouth and said, "Ah, my cock, you suck it better than anyone else." sosur bouma sex
+
+I took everything out of my mouth. I dropped the things and said, "Yes, if you think so." Then my father-in-law left the bathroom and I finished my bath and got dressed and left.
+
+In the evening, my father-in-law was sitting on the sofa watching TV alone. He didn't know when he fell asleep while watching TV. I sat on the left side of my father-in-law and started watching TV. My eyes went to my father-in-law's dhoti again. I poked the dhoti a little and saw his penis. As soon as I saw his penis, my sex got aroused. I leaned towards my father-in-law's penis and held it with my right hand and put almost half of it inside my mouth and started sucking it.
+
+Slowly the penis became hard and big inside my mouth then I started sucking it hard then my father-in-law woke up and realized that I was sucking his penis then my father-in-law grabbed my right breast with his left hand from above my blouse and bra and started pressing it and said “Mom, are you sucking my penis again? It seems you like my penis very much” I took the penis out of my mouth and said….. sosur bouma sex
+
+“Yes, my father-in-law, I like your penis very much” my father-in-law said “When you like the penis, don’t delay in sucking it” as soon as he said this my father-in-law held my head with his right hand and brought it over my penis and I put my penis back inside my mouth and started sucking then my father-in-law started pressing my head lightly with his right hand after sucking my penis for some time like that The father-in-law said….
+
+“My wife will come out” I didn’t do anything else, I know that my father-in-law loves to put things in my mouth, so I started waiting for the things to come out and suddenly he poured all the things in my mouth and I swallowed all the things, my father-in-law said to me “My wife, did you swallow the things?” I said “Yes, my father-in-law, it’s okay, don’t worry about this” my father-in-law said “Okay, my wife, you know what you will do” Then we both started watching TV together. sosur bouma sex
+
+It was night while watching TV, so we didn't eat or drink together, after eating, I started going to my room for sleep, then my father-in-law said, "Mom, I want to sleep with you tonight, I have been living alone for two years, so don't tell me no." I thought for a moment, a lot has happened between us, what else will happen if my father-in-law sleeps with me at night.
+
+After thinking, I said, "Yes, father-in-law, it's okay. You can sleep with me." Father-in-law said, "Okay, you go and sleep, I will take two medicines and come back in about 10-15 minutes." I said, "Okay, father-in-law." Then I went to my room, turned off the lights, and lay down on the left side of the bed. After about 20 minutes, father-in-law came to my room and took off his dhoti and shirt. I couldn't see his dhoti and shirt open because of the darkness. Then he came and lay down next to me and said, "Mom? Have you slept or not? sosur bouma sex
+
+" I said, "No, father-in-law, you haven't slept yet, I will sleep now," I said, "Mom."
+I fell asleep and after a while, my father-in-law came to me and he also came to my left side and placed his left hand on my neck and placed it on my blouse and saree and held my waist with his right hand and said, "Woman, am I sleeping like this today?"
+
+I said, "Do as you wish, Son." Then after a while, my father-in-law started rubbing my ass lightly with his penis from above my saree and started stroking my waist with his right hand and started pressing my breasts lightly with his left hand and started rubbing my legs with his foot and I could understand all these things but I didn't say anything otherwise my father-in-law might get angry. sosur bouma sex
+
+After a while I realized that my father-in-law's penis was getting hard and big after rubbing my ass, then my father-in-law started rubbing my legs with his feet and slowly lifted my saree up, almost to my knees. Now my father-in-law moved his right hand from my waist and put it inside my blouse from below and then into my bra and started pressing it lightly. I told my father-in-law, "If you do this, my father-in-law won't be able to sleep...
+
+" My father-in-law said, "I am massaging you so that you can sleep quickly." I said, "No, my father-in-law, you are making me more excited." My father-in-law said, "Then it is better." Hearing these words, I understood what my father-in-law was thinking, and I thought to myself, it has been almost two months since anyone has fucked me, maybe today my father-in-law will fuck me... sosur bouma sex
+
+After saying that, I saw my father-in-law open my blouse and bra with his left hand and he held my breasts with both hands and started pressing them hard and my mouth started making sounds like “Ahh, father-in-law, uhh, uhh.” My father-in-law said, “Do you like my massage, mother-in-law?” I said, "Yes, my father-in-law feels very good." On the other hand, my father-in-law's penis was completely hard and erect and he started to rub his big hard penis on my ass over my saree and squeezed it even harder...
+
+He brought his face close to my ear and slowly said, "Today I will give you the best massage of your life." Hearing this, I felt the blood in my whole body heat up. Then, my father-in-law removed his right hand from my breasts and lifted my knee-length saree and brought it up to my waist along with the petticoat. With his right hand, he started rubbing my pussy area from above my panties and said, "How do you feel now, mother-in-law?" sosur bouma sex
+
+I said “Um: Shashur Mashay, it feels so much fun” Shashur Mashay said “And in a while I will give you more fun” Then Shashur Mashay took off my panties with his right hand and brought them up to my knees and took two fingers of his right hand inside his mouth and made them wet completely and then brought his fingers to my pussy and at once he inserted his fingers completely inside my pussy and started fingering my pussy outside and inside (Fingering) ……….
+
+The sound started coming out of my mouth again “Ah: Um: Uh: Shashur Mashay, what are you doing, there is really no answer” Shashur Mashay said “There is still more massage left, wife”.
+
+Then the father-in-law took his fingers out of my vagina and held his penis with his right hand and started to fuck between my buttocks. After a while, the father-in-law brought his right hand to his mouth and took a little spit in his hand and touched the head of his penis with the spit of that hand. Then he held the penis with his right hand and placed it straight in the opening of my vagina and said, “Boumah, are you ready?” sosur bouma sex
+
+I said, “Yes, father-in-law, I was waiting for this.” As soon as I said that, the father-in-law inserted half of his penis inside my vagina and started to fuck me slowly and said, “Boumah, how do you feel about my penis now?”
+
+I said, "I feel like I'm in heaven, father-in-law." Hearing this, father-in-law grabbed my waist with his right hand and held my neck with his left hand and increased the speed of fucking and while fucking me, he slowly started inserting his penis deeper and deeper. In a short while, he inserted his entire penis inside my vagina and started fucking me hard and my mouth started making noises again, "Ah, uh, ah."
+
+After fucking me like this for a while, father-in-law took his penis out of my vagina and straightened me and fucked me with both my legs on both sides. Father-in-law came and sat in front of my vagina and grabbed his penis with his right hand and inserted his entire penis into my vagina at once and started fucking me hard. And after lying on top of me, he started sucking my breasts with his two hands and biting my nipples sometimes….. sosur bouma sex
+
+After fucking me for a while like this, the father-in-law took his penis out of my vagina and made me lie down upside down and said, “Mom, now you become a horse and take off all your clothes.” I took off all my clothes and became a horse and said, “Father-in-law, I like this very much.” Then the father-in-law took his penis and placed it on the opening of my vagina and he held my waist with his two hands and with one push, he inserted the whole penis back into my vagina….
+
+And he grabbed my waist and started pulling me towards him and from there, the father-in-law was pushing and pushing and started fucking me hard and the sound of "thap thap thap" started coming out as we fucked and after fucking like this for a while, the father-in-law said to the mother-in-law, "Bauuma, my penis is coming out."
+"I'll go right away."
+
+I said, "Father-in-law, take out your penis." Father-in-law continued to fuck me without listening to me. Then, at one point, Father-in-law poured all his cum inside my vagina and said, "Mother-in-law, I poured it inside your vagina by mistake." I said, "It's okay, Father-in-law, I will take the medicine." Father-in-law said, "Well, mother-in-law, then it's okay." After saying that, he lay down next to me and fell asleep. Immediately, I thought to myself, Father-in-law has done a lot of work today, so maybe he fell asleep because of his laziness. sosur bouma sex
+
+Then I went to the bathroom and cleaned myself and came home. After coming, I covered Father-in-law with a sheet and then I started taking off my clothes one by one, wearing bra-panties-petticoat-blouse-sari and went to sleep next to Father-in-law.
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

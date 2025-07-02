@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page36.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page36.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page36.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Why didn't you sleep??
+
+</small>
+
+<p>
+
+
+It is raining heavily outside. The sky, as if saddened by the sorrow of the city dwellers who are suffering from the summer heat, is pouring its tears on the ground. Ami is sitting by the window with her hand on her cheek. Seeing this sad face of the world, she herself wants to get lost in it. Ami has been staying at the house of a brother she knows in her area for a few days. Her parents have gone to Cox's Bazar for a week-long vacation. Since it was the last day of her class 10 test on the day of departure, they left her here because it was close to home. Ami has known them for a long time. Of course, her sister-in-law is now at home. Her brother lives in Italy; from there she comes to the country at most once or twice a year. Other times, her sister-in-law lives there, she has also gone to visit her daughter's house for a few days. Ami's exams have been over for two days, and even after that, Ami has not been able to go anywhere or do anything interesting. How much time can one spend sitting at home reading story books and watching TV all day? Even so, she spent some time talking to Bhabhi about interesting things, otherwise her vacation would have been a complete waste. Ami was thinking about these things while sitting by the window.
+‘Why are you still awake? Are you sleeping?’ Bhabhi’s words brought Ami back to reality.
+‘Ah…yes…I’m going’ Ami got up from the chair and looked at Bhabhi. Bhabhi was wearing a salwar kameez. Neela would be two or three years older than Ami. At this age, nothing seemed to be enough to cover Nela’s blossoming youth. Even through the loose clothes, the unbridled words of youth wanted to burst out. Ami got up and walked towards the drawing room with Bhabhi. Nela’s house was small; it had a bedroom, a drawing room, a kitchen and a bathroom. Ami slept on a small bed in the drawing room. Although she was a little sad, her eyes were actually closing in sleep. He went to the drawing room and lay down on the bed. Neela turned off the light and sat on a sofa on the other side of the room and turned down the sound. She watched TV until late at night, and Ami had been watching it since the first day. The TV was turned away from Ami, so Ami could clearly see Neela sitting on the sofa from the bed in its light. After staring at it for a while, Sameer fell asleep. He turned away. Late at night, Ami woke up. This problem often happens to her when she comes to a new place. Opening her eyes, she saw Bhabhi still sitting on the sofa and watching TV. She was surprised to see that Bhabhi had gotten up and changed her clothes. Now she was wearing a thin nighty, and in the light coming from the TV, Nela seemed invisible to Ami. She was most surprised to see Bhabhi touching her breasts that were protruding above her nighty. Bhabhi was watching everything on TV with great excitement. Ami stared at her in a daze; Not a word came out of her mouth. Even though Ami saw Neela in the light of the TV in the dark room, she did not notice that Ami was lying on the bed on the other side. While caressing her breasts with one hand, Neela put her hand under the hem of her nightie with the other hand. With her hand, she caressed her smooth thighs and lifted the nightie up, exposing her lower body. Ami saw with surprise that Neela was not wearing any panties. Seeing Neela's hairless pussy in the light of the TV, blood rushed to Ami's head. She had heard a lot about it from friends, today she saw it with her own eyes. Neela was also not sitting at that time, she was caressing her breasts with one hand over the nightie and rubbing her fingers in her pussy with the other hand. Her slightly wet pussy was glistening. Seeing this scene, Ami's penis started to harden. Also, she felt something strange. He wanted to get up… but he controlled himself with great difficulty. He scolded himself mentally. This is his Bhabhi, he shouldn't think about her like that. But Neela was trying her best to break his restraint even more. She was then inserting one hand inside her nightie and pressing her breasts with one hand and driving her pussy crazy with the fingers of the other hand. As she inserted her fingers into the hole of her pussy and made them rise and fall, small, sweet moans came out of her mouth. Hearing this sound, Ami was in a very bad state, she couldn't get up and lay there, unable to do anything. Oh! If only Bhabhi would remove the top of her nightie too! Seeing her hand moving up and down on Neela's swollen breasts over the nightie, Ami really wanted to see their faces. Her hand automatically went to her iron-hard nipple; she felt very good about applying light pressure there. Neela was then fingering her pussy with three fingers. While doing this, Neela suddenly became strange, her body became a little stiff, the speed of her fingers in her pussy increased. After a while, Neela became normal. Ami was surprised to see him take his fingers out of her pussy and put them in his mouth. He was sucking his fingers as if they were ice cream. Her pussy was completely soaked with some juice. Neela put her fingers down again, smeared them in the juice and sucked them in her mouth. Seeing this scene, Ami was not angry but rather attracted. She also wanted to go and suck that juice from her sister-in-law's fingers. But she remained silent and lay down. Neela finished sucking the juice, stood up and adjusted her nightie. Then she turned off the TV and left the drawing room humming. Ami stared in shock at the path she was taking in the darkness.
+When I woke up in the morning, Ami was a little startled. After seeing the incident of the night, he didn't even realize that he had fallen asleep with his hand on his penis. As soon as he woke up, the penis that had been soft in his hand started to harden. He got out of bed and quickly ran to the bathroom. He was very tired of the bathroom. As soon as he entered, he quickly He took off his robe and sat on the commode. Finally, his eyes suddenly fell on his penis, which was still hard to get up. As soon as he held it with his hand, he remembered seeing Neela Bhabhi last night. He sat on the commode and slowly started moving his hand up and down on his penis. He was feeling quite happy. His friends had told him to fuck her like this many times, but he had never tried it before today. It really felt great. He had never had such fun.
+Meanwhile, Neela went to the drawing room to call Ami for breakfast but did not find her. When she came out and saw the bathroom door next to the kitchen slightly damp, she saw this; Ami had forgotten to close the door due to the pressure of the bathroom. Neela opened the door slightly and was surprised to peek in. Ami was sitting on the commode and moving her hand up and down on her hard penis. She did not see Neela as her back was turned towards the door. Smiling, Neela closed the door again. My brother-in-law is growing up; who knows how many girls he will disturb their sleep! He thought as he walked towards the kitchen. The small smile remained on his face. Seeing Ami doing this reminded him of Hasan, her husband. The poor thing must be enjoying the taste of milk in Italy without me.
+Ami was happily intoxicated as she stroked Nunu, and after a while she felt a wonderful feeling. A feeling of happiness spread through her body from Nunu. She felt that something would come out of Nunu. Before she knew it, white semen started flowing from there. Sameer was surprised to see this scene. Of course, her friends also said that when she caressed Nunu like this, such juice comes out, and it was very relaxing at that time. Ami was really enjoying it. And after a while, the juice stopped coming out. Her hand was wet with the juice, and Nunu also had a little bit of it. Seeing this, she remembered the scene of Neela sucking the juice from her own vagina last night. Curious, he took a little of its white juice and put it in his mouth. Yay! What a sour, salty taste and what a stringy smell! He spat out the juice and cleaned himself and came out of the bathroom. Neela was sitting at a table in a corner next to the kitchen, reading the paper; when he saw Ami coming, he put the paper aside and sat up.
+‘Why are you up so late? Since when have I been sitting with breakfast for you. Didn’t you sleep well last night?’
+‘It’s…um…it’s a little late to get up…’ Ami pulled out a chair and sat down. He couldn’t find any similarity between Neela in her salwar kameez and the lustful Neela in her nightie that he had seen last night. Still, he was feeling shy today even looking at Bhabhi. Neela was talking to him very naturally while eating breakfast. Ami also became normal after a while due to Bhabhi’s easy manner.
+‘…Hey, I understand how you feel; I used to feel bad about sitting at home like this after the holidays.’ In response to Ami’s words, Neela was saying. ‘Dara, I’ll take you somewhere for a walk tomorrow, okay?’
+‘Hmm, that would be quite fun,’ Ami said and stood up.
+‘Don’t say that! Now that I’m going to my room and read books, I have a lot of work to do, number three has all the latest books by your favorite Humayun Ahmed.’
+Ami went towards Neela’s room, and Neela got busy with her various tasks in the kitchen. Ami went to Neela’s room and took out several books from the shelf and started reading. She really likes Humayun Ahmed’s stories. She spent the whole day reading books. Neela’s sister-in-law went to the market for a while, before leaving, she had left food on the dining table for her. Somehow, she ate some food and continued reading with the book. She didn’t even realize when evening had passed. A little later, Neela came home and rang the bell, and she regained consciousness. He got up and opened the door. Seeing the book in her hand, a smile spread across Bhabhi's face.
+'Why, I see you are not a bookworm, you have become a shark!'
+'What are you talking about, Bhabhi!' Ami turned away in shame; while walking, she went back to Bhabhi's room. Neela looked at the way she was going and put the things in her hand on the table with a smile.
+Ami finished reading the books and went to bed. In the meantime, Bhabhi once invited her to eat, and somehow she ate something and got lost in the book again. She got up after finishing reading. She was getting sleepy. She yawned and walked towards the drawing room. Nila was sitting on the sofa watching TV, wearing a thin nighty like a silk. As soon as she saw Ami enter, she quickly took the remote in her hand and changed the channel to a song. Seeing Bhabhi wearing a nighty again, Ami's uneasy feeling returned. But Neela did not care. She looked at Ami in a normal manner.
+‘Why have you lost your love for books so far?’ Neela said with a twinkle in her eye.
+‘Hmm, but I see you haven’t lost your love for TV either’ Ami took the remote from Bhabhi’s hand and sat on the sofa next to her. Ami kept changing channels and settled on a sports channel. Highlights of a tennis match between Djokovic and Federer were being shown. After watching for a while, Neela realized that Bhabhi was getting bored and started changing channels again. Suddenly, she accidentally pressed the AV button on the remote. But instead of a black screen on the TV, Ami was shocked to see what came up. A video was playing on the DVD player next to the TV. There, a girl was lying completely naked on a bed and a man was lying on top of her, pressing and sucking her huge breasts. Bhabhi was watching this scene before he came! Thinking of this, Ami’s hair stood on end. She looked at Nila sitting on the sofa next to her. Although she was a little unprepared at first, Neela controlled herself quite well.
+‘Why did you stop? I see you are still a child, give me the remote.’
+Ami somehow pushed the remote towards Neela. Her hand From there, Neela turned up the TV volume, she had to turn off the sound for Ami so far. As soon as she turned up the sound, the girl's happy screams could be heard on the TV as the man sucked her breasts. Ami saw that she was still looking at Neela and said to her, "Why are you looking at me? Look at the TV, how will you caress your wife if you don't learn to watch these things at this age?" Ami was extremely surprised to hear Bhabhi's words, but she turned her eyes to the TV, looked at the girl's breasts with wide eyes and started watching her sucking her breasts. Earlier, her friends had tried to watch such videos a lot, but she had not watched them. Today, she felt different feelings after watching them. However, she had no difficulty understanding what the man was doing. Although she had never seen the video, Ami, a bookworm, had once secretly read a book about sex written by one of her cousins. After reading it, she was amazed to learn how to caress girls. After a while, the man lowered his face and started sucking the girl's pussy. Seeing this scene, Ami's hard penis jumped. Suddenly, hearing a small scream, Ami looked to the side. Neela was pressing her breasts vigorously over her nightie, and when she was about to take off the ribbon of her nightie, Ami stopped when she realized that she was looking at her.
+"Why are you staring at me like a vulture? Look over there! I'll open it now." Neela gave Ami a mock scolding.
+Ami quickly turned her eyes back to the TV, the man was sucking the girl's breasts and fingering her pussy. As Ami looked at the TV, Neela lowered the ribbon of her nightie and exposed her chest. Then she started pressing her own naked breasts. Sweet sounds were coming out of her mouth. Hearing this sound, Ami could not suppress her curiosity and looked at Neela from the corner of her eyes. He was surprised to see her medium-sized, curvy fair breasts, the girl on TV's breasts were big but not as beautiful as Bhabhi's. He turned his face and looked at Neela fondling her breasts. Neela was so excited that Ami didn't say anything even when she looked at him. On the contrary, thinking that a boy was watching her while she was having sex with herself like this made him even hotter. Seeing Bhabhi's breasts, Ami's hand went back to her nunu. She started fondling it over her pants. It felt great. While fondling her breasts with one hand, Neela now inserted the other hand inside her nightie that was up to her waist. Juice had come to her vagina below. She started rubbing that too with her fingers. Suddenly, Neela looked at Ami for a moment and saw that she was fondling her nunu over her pants. As Neela's eyes fell on her, Ami felt ashamed and removed her hand from her nunu. Seeing that, Neela's face lit up with a mischievous smile.
+'Why did you take your hand away? Keep doing it. If you need to, take off your pants, I won't mind.'
+Hearing Bhabhi's words, Ami looked at her in shock. But Neela pretended not to see her and looked at the TV again and decided to caress her breasts and pussy. The girl was sucking the man on the TV's nipples. Ami was looking at Nila. Seeing her big tits, she couldn't take her hand off her nipples for long. She brought her hand down again and started pressing it. She really wanted to rub her naked nipples like in the morning and get that white juice out. But Bhabhi said she wouldn't mind, but Ami was hesitant to take off her pants in front of her. After a while, when Ami watched the TV for a while, she couldn't stay any longer and, without thinking twice, she put her hand on the button of her pants. As soon as he opened his pants, his hard pussy was released and he started jumping. He felt a different kind of pleasure when he started moving his hands up and down on it, especially seeing Bhabhi in front of him in a half-naked state, his excitement increased a hundredfold. A little later, the man on TV threw the girl on the bed and started thrusting his pussy into her vagina. Seeing this scene, Neela became extremely excited and took off her nightie completely. Seeing Bhabhi's completely naked body, Ami went crazy while pulling her pussy; she wanted to get up and grab Bhabhi, bite her and eat her. She pulled her pussy twice as hard but somehow restrained herself. Meanwhile, Neela was fingering her vagina loudly and making aaaaahhh uuuuhhh sounds. Her breasts were swaying along with the tremors of her whole body. Neela stopped when her eyes fell on Ami again and looked at her naked pussy. After a long time, she saw a boy's pussy face to face. Aami's was much smaller than Hassan's, but that was it. Excited by Aami's excitement, Neela decided to finger her pussy again. However, this time neither of them were looking at the TV, but at each other, masturbating, the distance between them being only the handles of the sofa. Seeing Neela looking at her like this and fingering her pussy, Ami couldn't stay for long. Semen came out of her pussy. The TV was quite close. His semen went and fell right on the TV. Seeing this devastating ejaculation of Aami, who had just reached puberty, Neela also started to have an orgasm. She looked at Aami in surprise for a while.
+'Oh, father! I see you've made a cannon there! What will happen to your wife when you get married! I'm already feeling sorry for the poor thing' Neela started to cry while reading her nightie.
+‘Oh my god, you can say such rude things!’ Ami felt very ashamed. She quickly took a tissue from the tissue box above the TV, cleaned her pussy and then took off her pants. She started wiping away his semen that had fallen on the TV. Her whole face turned red with shame. Seeing her condition, Neela started laughing. ‘Oh, you stupid boy, what is so shameful about this? Is that so? That's what happens to boys like you.' Neela came to him after finishing her nightie. She put her hand on his shoulder and lifted him up.
+'Listen, if you're so shy with your sister-in-law, why are you my brother-in-law? As long as you're here, have fun like you're supposed to. So that I don't have to suffer if your brother isn't here, he's bought me a lot of CDs of all these things. Watching them makes me want to cum. How can you do it too?'
+Ami shook her head gently. She felt a little sleepy thinking about doing something like that in front of her sister-in-law. But she was also feeling a little sleepy. She had just come to sleep a while ago. Neela, realizing her condition, forcibly took her to bed and laid her down. After taking off her shirt, Ami fell unconscious in a deep sleep as soon as she layed down. After putting Ami down, Neela put on a new CD and sat on the sofa. Her lust was still not satisfied.
+Neela got tired after watching TV till late at night. He didn't even have the strength left to go to her room next to him. He somehow turned off the TV and lay down next to Ami; he fell asleep as soon as he lay down. Ami was also fast asleep.
+Suddenly, while turning over in his sleep, he bumped into Neela who was lying next to him and woke up. He was having a very beautiful dream there, he was with a girl...but how could a girl come back in reality? In the pitch darkness, Ami felt like she was actually dreaming. To be sure, he extended a hand. His hand fell on something soft. Immediately, a cold current flowed through his body. He understood that it was the girl's breast under the silk nightie. But in his sleep, it didn't even occur to him that the girl could be his future Neela. He felt great to caress it. He moved his other hand to Neela's other breast and started gently caressing it. It felt great to caress a girl's breast for the first time in his life. Meanwhile, after a long time in her sleep, Neela's inner sexual instinct started to awaken again after receiving such caress from a boy in her mother. She moved a little, but Ami slowly continued to stroke her breasts.
+'Aaahhhh…Hasan…ooooohhhhhh! A little more…aaa…stroke harder…' came out of Neela's mouth in a sleepy voice.
+Ami's heart skipped a beat when she heard her brother's name on Neela's lips. Oma! So Neela Bhabhi! She thought I was Hasan Bhai! She tried to move away quickly, but Neela caught her even faster.
+'Why are you leaving, honey? Come, your beloved wife wants some warmth from your lips,' she said, without giving Ami a chance to do anything else, she pulled her closer and placed her lips on hers. Ami shivered as she felt a girl's lips touch hers for the first time in her life. Neela was trying to insert her tongue inside her closed lips. Her hands were playing with Ami's hair. Ami couldn't help but respond. As soon as she opened her lips, Neela's tongue entered her mouth. Neela's hot tongue seemed more interesting than a lollipop to Ami. She also started sucking Neela's tongue while kissing her in the same rhythm. Her hands were playing on Neela's nightie and her back. Neela started to cut her hair with her hands. Ami looked great. He moved his lips from Neela's lips and placed them near her ear and kissed her there, kissed her cheek and then kissed her closed eyes. He was intoxicated by the sweet smell of Neela's mouth, just like the girl of his dreams. He lowered his lips to Neela's chin and kissed her there too. Neela pulled her back to her lips. Sameer now inserted his tongue into Neela's lips. The two of them started playing hide and seek with each other's tongues. Ami's hands were roaming around Neela's body. Neela was also caressing Ami's naked back. Sometimes they were going down and trying to enter through the gap in Neela's trousers. Ami untied the ribbon of his trousers for Neela's convenience. Now Neela's hands started going down to Neela's ass again and again. She started squeezing Neela's ass with her hands. Ami's hands also came to rest on her thighs while playing with Neela's body. Ami felt great pressing Neela's soft breasts on the silk. While pressing her breasts with one hand, he lowered the other hand down. He found the hem of Neela's nightie that was up to the bottom of her thighs. Then he slipped his hand under her and touched Neela's smooth thighs. Neela was making a loud ahhhhhhh…oooo He held her hand and tried to bring Ami's head back down to her pussy.
+'Ah...Hasan son...Aaaaaa...Love me more...Uuhhh...Eat me...'
+Hearing Neela's sexy voice, Ami also brought her face down to her pussy. With one hand, he gently pressed the other breast and made a circle with his tongue around this breast, then he started moving his tongue around it and taking it to the nipple. He went to the nipple and filled the breast inside his mouth without letting his tongue touch it. Then, as he put his tongue on her nipple, a loud scream came out of Neela's mouth. 
+OhMi started licking the nipple with her tongue inside her mouth. Her other two hands were also rubbing the tip of Neela's other breast and thigh. Neela's nightie started to move up and down slowly, and at the same time, Ami started to move her hand from Neela's thigh, and at the same time, her nightie also started to move up. After stripping Neela from her legs to her navel, Ami's hand and nightie stopped moving. Ami moved her hand to Neela's navel and started to move it down around it. As she went down, Neela was getting harder. Meanwhile, Ami looked at Neela's other nipple, she filled it in her mouth and rubbed it with her tongue, spreading the saliva from her mouth on the other nipple with her palm. Meanwhile, while massaging her hand on Neela's navel, Ami brought her hand up again as soon as it went to the coarse hair on her vagina. In fact, he was unconsciously pouring out the knowledge of the sex book he had read on Neela. That's why he was also getting excited seeing Neela's excitement. He now lifted his face from Neela's breasts and tried to completely remove the nightie that was twisted on her stomach. Neela raised both hands and helped him. Neela was now completely naked. As her eyes had adjusted to the darkness, Ami could vaguely see her body. He came down again and started kissing Neela's lips and started pressing her thigh with one hand and her breast with the other. Ami was not aware that this was his Neela Bhabhi. And Neela Bhabhi was sitting there thinking of him as her husband. Both of them started kissing each other with extreme excitement. Ami held Neela and turned her over a little so that they were both facing each other. This time he brought his lips down to Neela's neck. He took out his tongue and licked it there, and moved his hand from Neela's thigh to her ass. He started to stroke Neela's fleshy ass with his hand; he slowly brought his hand to Neela's groin and then moved it again, driving Neela crazy. In excitement, Neela was kissing Ami's tongue with small bites. Ami went down to Neela's chin again and kissed her. Then he went down to her neck and stopped between her breasts while kissing. He started to stroke her breasts with one hand while he was licking her tongue there. The other hand was still roaming around Neela's ass and thighs. While kissing like this, Ami went down further and stopped at Neela's navel. He filled it with kisses. Neela had never received such a unique caress even from Hasan. But who would explain to the excited Neela that it was not Hasan? He started to pull Ami's hair. Ami came down further while kissing. Now she brought her face down to Neela's pubic hair. While sucking there, she somehow neglected the swollen area below it (Clit) and moved her face to Neela's thigh. She started pressing her tongue on the upper part of one thigh and pressing the other thigh with her hand. And she started rubbing the lower part of Neela's breasts with her bare hand. Neela was crazy at that time. She was holding Ami's head with her hand and trying to bring it down to her vagina again and again, but Ami was not going in that direction at all. She was pretending to go there and moving to her other thigh with her back. Sometimes, of course, she would stroke Neela's vagina a little with her hand and remove it, so that Neela's fire there, let alone extinguishing it, was burning even more fiercely. After a while, the situation became so tense that Nila, who was extremely excited, started a real fight with her to get Ami's face near her vagina. Now, as if forced, Ami gently put her tongue near Nila's vagina. Immediately, Nila trembled. He forcibly pulled Ami's head close to her vagina again. Now, Ami seemed to give up and started running her tongue inside her vagina. He was slowly putting his tongue on the swollen area above the vagina and bringing it down again. Nila's vagina was dripping with slippery juice.
+Ami left her vagina again and started moving up. Nila's vagina was stopping her, she had not yet orgasmed. But ignoring her many obstacles, Ami went up and put her lips on her lips and placed her fingers on the mouth of Nila's vagina. While kissing Neela, he came down to her vagina and started sucking her breasts again. At this time, rubbing his fingers on her pussy, he slowly inserted a finger inside. The inside of Neela's vagina was very hot; and as he inserted a little deeper, he felt something slightly swollen in a small hole-like place on the wall inside Neela's vagina. When he pressed his fingers there, Neela shivered loudly with a scream. While sucking Neela's breasts, Ami started to press them there. And in excitement, Neela started to grab her back. After a while like this, Neela suddenly tried to push Ami away.
+'Uh... move, honey, I have to go to the bathroom... Aaaaaaaaah...'
+Ami, not listening to Neela's words, started pressing her breasts while fingering her pussy like this. She pressed her lips to his and started kissing him affectionately. Neela struggled a little and then threw herself on Ami. Suddenly, extreme excitement filled her body. Her whole body started shaking. Ami moved her face away from Neela's breasts and went down. Her hand was inside her pussy. She started fingering there with more attention. Suddenly, Neela's whole body started trembling and shaking, Ami's finger inside her pussy also felt it. Neela screamed with a terrible loud voice. Ami felt like her ears would burst with the scream. She still kept fingering like crazy. Then suddenly, a liquid spilled from the top of Neela's pussy and fell on Ami's face. But what was it? It wasn't slippery like pussy juice, but it didn't smell bad like urine either. She was surprised to taste it in her mouth. What a sour taste Misty tasted again; she lowered her mouth and started sucking it with her tongue. As soon as the juice finished coming out, Neela felt a little soft. But Ami's excitement was at its peak. She started sucking the mouth of Neela's pussy like crazy. This time she was licking the swollen part of her pussy too. So it didn't take long for Neela to get excited again. She started pressing Ami's head against her pussy. Ami's neglected pussy was eating at home with Neela's knees. Neela really wanted to hold it but Ami kept licking her pussy and her hands were rubbing it under her breasts. Neela got impatient and tried to pull her up again. Now Ami gave up and went up and pressed her lips to Neela's. Taking the opportunity, Neela squeezed her pussy. Ami felt very good to get this touch. By now, after receiving this terrible caress from Ami, Neela's pussy was going crazy for something bigger, so she herself took Ami's penis and inserted it into her pussy. Ami's penis was also very irritated after caring for Neela for so long. As Ami entered Neela's pussy, she also became extremely excited after feeling its wild touch for the first time in her life. She started pounding Neela. Neela was screaming loudly. As she pounded, Ami pressed Neela's pussy hard and caressed her whole face with her tongue.
+'Aaaaaaaaaahhhhhhhhhhhhh……Uuuuuuuhhhhhhhhh……Maaaagooooo…more loud, honey……Oooooohhhhhhhhhh……' These sweet words were coming out of Neela's mouth as Ami pounded. Ami also got excited and increased the speed of his pounding. As I kept on patting like this, Ami turned over and brought Neela on top of her. He kept her on top and started to hold Neela's ass and make her rise and fall. Neela was getting a strange pleasure from holding her ass hard and patting her like this. Ami patted her for a while and brought her back to her side again. Neela was biting Ami's pussy in a strange way with her pussy. While doing this, Neela had an orgasm. This was another kind of feeling. Today, it was as if Ami was floating Neela in a sea of ​​happiness. Ami could not bear the biting of Neela's pussy for much longer. As she patted harder due to excessive excitement, her pussy suddenly came out of Neela's pussy and started to ejaculate in that state. When the ejaculation ended, both of them started gasping. Both of them enjoyed the utmost happiness of life. Then they hugged each other and fell asleep. Neela woke up in the morning with a sweet smile. She looked at Hassan who was hugging her next to her. She was immediately startled. Not so Hassan, Ami!! Neela screamed and moved away from Ami. Ami also woke up to Neela's scream. Looking at Neela, a shiver of fear ran through her whole body. What did she do to Zhok's head last night? Neela was sitting on a sofa with both hands on her face. It was over! Hassan thought that she was finally... Sigh! She sat like this. Ami, not knowing what to do, somehow picked up his pants from under the bed and took them off. From the bed, she said with great difficulty, 'Bhabhi... I... didn't mean to... do it... suddenly...' She couldn't say more than that, she lowered her head. Neela heard the sound of his voice and looked at him. Seeing Ami sitting down like a criminal, she suddenly felt sorry for him. What was the poor thing's fault? Joan Boyce's fault. She should be forgiven. But Neela felt guilty, thinking that the pleasure she had from having sex with Ami last night was something she had never had with Hassan in her entire life. With great difficulty, Neela shook these thoughts out of her head. No! I have to be stronger. Neela got up from the sofa, pulled a sheet over her body, and sat next to Ami. She put her hand on her neck and said, "You are not at fault, Ami, I have forgiven you for what you have done." At Bhabhi's words, Ami raised her face and looked at Bhabhi. "Really?" "Yes, can I still be angry with you?" Bhabhi said, giving Ami a kiss on her forehead and getting up, she went towards the bathroom. She kept looking at Bhabhi's way and promised that she would never make such a mistake again. Neela Bhabhi would only be her Bhabhi.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

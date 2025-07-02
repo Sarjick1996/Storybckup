@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>এটি একটি বাংলা সূচীপত্র।</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: auto;
+      padding: 16px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .post-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .post {
+      display: flex;
+      border: 1px solid;
+      border-radius: 10px;
+      padding: 10px;
+      height: 100%;
+      transition: box-shadow 0.2s ease, background-color 0.3s;
+    }
+
+    body.light-mode .post {
+      background-color: #faf3e0;
+      border-color: #eee;
+    }
+
+    body.dark-mode .post {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+
+    .post-content {
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .post img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin: 0 0 6px;
+    }
+
+    p {
+      font-size: 13px;
+      color: inherit;
+      margin: 0;
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .pagination button {
+      padding: 6px 10px;
+      margin: 0 3px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .pagination button.active {
+      font-weight: bold;
+      background-color: #eee;
+    }
+
+
+/* --- Description Fade Effect for Post Boxes --- */
+
+/* Adjustable height */
+:root {
+  --description-height: 130px; /* 👈 Change this value to increase/decrease height */
+}
+
+/* Post content fade setup */
+.post-content {
+  position: relative;
+  max-height: var(--description-height);
+  overflow: hidden;
+}
+
+
+/* Fade effect for light mode */
+.post-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to bottom, rgba(250, 243, 224, 0) 0%, rgba(250, 243, 224, 1) 100%);
+  pointer-events: none;
+}
+
+/* Fade effect for dark mode */
+body.dark-mode .post-content::after {
+  background: linear-gradient(to bottom, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 1) 100%);
+}
+
+
+
+/* Responsive adjustment for mobile (optional) */
+@media (max-width: 600px) {
+  :root {
+    --description-height: 80px; /* 👈 Taller on mobile */
+  }
+
+  .post-content::after {
+    height: 1px; /* Match fade height */
+  }
+   body.dark-mode .post {
+    border-color: rgba(255, 255, 255, 0.2); /* Whitish border */
+  }
+
+  body.light-mode .post {
+    border-color: rgba(0, 0, 0, 0.2); /* Blackish border */
+  }
+}
+
+    @media (min-width: 700px) {
+      .posts-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .post {
+        padding: 15px;
+      }
+
+      .post img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span class="theme-label" id="themeLabel">Light Mode</span>
+    <label class="switch">
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/indexhindi.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='../english/indexenglish.html'" class="lang-btn">English</button>
+    <button onclick="location.href='indexbengali.html'" class="lang-btn">বাংলা</button>
+  </div>
+
+  <h1>এটি একটি বাংলা সূচীপত্র।</h1>
+  <div id="posts" class="posts-grid">Loading posts...</div>
+  <div class="pagination" id="pagination"></div>
+
+  <script>
+   let POSTS_PER_PAGE = 20;
+
+// Adjust for mobile devices
+if (window.innerWidth <= 600) {
+  POSTS_PER_PAGE = 10;
+}
+
+    let currentPage = 1;
+    let allPosts = [];
+
+    function renderPosts(posts, page) {
+      const container = document.getElementById('posts');
+      container.innerHTML = '';
+
+      const start = (page - 1) * POSTS_PER_PAGE;
+      const end = start + POSTS_PER_PAGE;
+      const pagePosts = posts.slice(start, end);
+
+      pagePosts.forEach(post => {
+        const postHTML = `
+          <a href="${post.filename}" class="post-link">
+            <div class="post">
+              <div class="post-content">
+                <h2>${post.title}</h2>
+                <p>${post.description}</p>
+              </div>
+              <img src="${post.image}" alt="${post.title}" />
+            </div>
+          </a>
+        `;
+        container.innerHTML += postHTML;
+      });
+    }
+
+    function renderPagination(totalPosts) {
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+      const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        btn.className = (i === currentPage) ? 'active' : '';
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          renderPosts(allPosts, currentPage);
+          renderPagination(allPosts.length);
+        });
+        pagination.appendChild(btn);
+      }
+    }
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+  // Shuffle the posts
+  allPosts = shuffle(posts);
+  renderPosts(allPosts, currentPage);
+  renderPagination(allPosts.length);
+})
+      .catch(err => {
+        document.getElementById('posts').textContent = 'Failed to load posts: ' + err.message;
+        console.error(err);
+      });
+
+    // Theme toggle
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

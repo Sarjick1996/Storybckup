@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page28.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page28.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page28.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+red tomatoes filled with juice (Family sex story)
+
+</small>
+
+<p>
+
+
+After two years of dating, I was twenty-two when I got married to my cousin. He is the son of my father's cousin, and as such, he is my cousin. He is a handsome 32-year-old young man, 6 feet tall. He is respected by everyone as a good boy. His love affair with me was quite dramatic. I proposed to him, but he didn't care at first, but then I stuck with him for eighteen years. At one point, I became successful. My in-laws' house is in Sylhet, my father's house is in Chittagong.
+
+We are three sisters and one brother. The brother is the eldest, married and lives separately with his wife. My eldest sister is married and lives in Dubai with her son-in-law, and the younger one will be doing her SSC this time. When I was in class nine, our private tutor was Russell Bhai, and both me and my younger sister Munni studied with him. Russell Bhai completed his Masters and was looking for a job while also tutoring. He was 5 feet 5 inches tall and had a normal complexion, but he couldn't call it black. There was a hint of Maya Maya in his face.
+
+family choti golpo
+I was a young girl who liked everything I saw, I fell in love with Russell Bhai very quickly. Russell Bhai was a very clever person, he understood the situation, so like a fisherman who catches a fish with a hook, he playfully pulls it out and throws it on his hook. At first, there were eye-to-eye, shy smiles were exchanged, and the dreamy feelings of love would touch the corners of my mind. I will never forget the day Russell Bhai left a note on the table with a book folded and wrote "I love you".
+
+From then on, the mind started to wander, the chirping continued, sometimes during the study, he would gesture to show me his milk, if he didn't show it, his face would be heavy, then I would be forced to show it, I had to be satisfied with what I could see through the neck of the shirt, I couldn't see the whole thing because my younger sister was also there. Russell Bhai taught me with a lot of care, so it was because of his tireless efforts that I passed my SSC and Bsc with flying colors. After I got admitted to college, I basically had a full opportunity to mix with him, before that, when it comes to love, it was like the Uttam-Suchitra era. family choti golpo
+
+He held my hand, we never got a chance to kiss. After joining college, we became very close. Sometimes we would meet at restaurants or parks after skipping classes, holding hands, taking the opportunity to kiss my lips and kissing my breasts. I started getting hot. He also knew that I loved Russell brother like a blind man, so he started taking full advantage of the opportunity. Slowly, he started coming out of his shell. His needs were increasing day by day, so whenever he got a chance, he would first touch my pussy.
+
+I was a young man and I was crazy about him, so I agreed to everything he wanted. A lover of three years can only ask this from his girlfriend. So one day, when we went to meet, he said
+-Let's go to a friend's house today
+-A friend's house! Why?
+-There is no one at his house, we will make love. 
+-Not far
+-Why not? How much did I manage and you say no
+-Do I have to go to someone else's house to make love? Let's go to a better restaurant
+-Is there privacy in the restaurant? You come.
+
+He almost forcibly took me to his friend's house. The house was empty, just him and me. That day I was raped. Russell Bhai raped me like a pervert. I lost my virginity to the man I loved so much. I felt so insignificant and helpless that I once thought I would not live this life anymore. Love and affection are nothing but the face of a humble person and the evil intent of which is obscenity. I don't even know how I came home on my own, devastated after losing everything. family choti golpo
+
+After that day, Russell Bhai tried many times to contact me but I turned away from him out of sheer hatred. His disrespect for love had poisoned my mind. I didn't want that, I loved him with all my heart and soul. If he hadn't robbed my body like such an inhuman person that day against my will, he would have had everything in my mind and body. I was in a depression for a long time due to Russell Bhai's betrayal of trust. Everything in me was messed up.
+
+I am constantly fighting the daily destruction within myself and then the battle to repair myself again. While fighting, I finally managed it. After going to Sylhet for work, I fell in love with Roni Bhai. Then our passionate love lasted for almost two years. In these two years, we had physical intercourse several times. At first, we talked on the mobile phone all night and had phone sex almost every night. Roni went crazy to get me. family choti golpo
+
+I am five feet five inches tall, fair, slim figure. Everyone says I am beautiful. Every night I used to have phone sex with Roni and finger my pussy. After eating Russell Bhai's pussy, the way to my pussy was cleared, so after hearing Roni's sexually stimulating words, I started to crave for more pussy. But Roni lives in Sylhet and I am in Chittagong, so it is not easy to get it even if I want it. After two or three months of our love, Roni came to visit our house. He brought many condoms with him. As soon as I got the opportunity, I fucked him like crazy on the first day.
+
+Roni's penis must be quite big, about 6 inches. It entered my vagina effortlessly. The first few thrusts were a little painful but then it was just comfort and comfort. Roni wanted to fuck me all the way but that was not possible because everyone was at home. Still, we took the opportunity and no one would even notice. Actually, if Mia Bibi agreed, everything was possible. One day Roni threw me on the bathroom floor and fucked me completely naked. He only wanted to fuck me without a condom but I was afraid and didn't let him, I just said get married soon and then I will do as I wish. family choti golpo
+
+While making love like this, one day After marriage, we used to have passionate sex every day. Ronnie made my life so happy that sometimes I felt like there was no one else in the world as happy as me. The days passed like a dream. After a year of marriage, my mother-in-law went crazy for her granddaughter. So we both decided to have a baby. I stopped taking the pill and got pregnant after a couple of months.
+
+Many people say that despite the restrictions on physical intercourse during pregnancy, we used to have sex every day. Even the night before my son was born, Ronnie fucked me without any problem. After the birth of a son, everyone in the family was very happy, especially my mother-in-law because my son is the light of the family. My brother-in-law's family wanted a girl so everyone wanted a boy. When the boy was seven months old, my brother-in-law suddenly sent all the documents for Roni to go abroad from South Africa. family choti golpo
+
+How did it happen? In just a few days, my beloved Roni left me and went to South Africa. Everything seemed to be in a mess. I don't know why. My chest started to hurt for Roni,,, ,,
+Whenever I got the chance, I could feel my uncle's lustful eyes wandering around my body, but I didn't feel the need to tell my mother-in-law or Ja. It is the law of nature that a man's eyes will be on a woman's body, I also accepted that.
+
+Uncle's age must be 55/56, looking at his strong and sturdy body, you can't tell his age. He combs his hair regularly, has a bob but is clean shaven. An average Bengali man of this age is gray, but uncle's is not. My father's cousin is also my uncle's father-in-law. Lungi is my uncle's favorite dress, we joke about it behind the scenes. He is a father of two daughters. The elder son is studying in Inter, the daughter is in class 8 and the younger one is in class 5. Besides, uncle used to come home every day after Maghrib, have tea and chat with my mother-in-law for a long time. family choti golpo
+
+Some nights he would have dinner with us. Aunty is also a very polite woman, she loves us a lot, she can't always come because she used to be sick all year round, so she would come to our house occasionally. My uncle, brother-in-law and sister-in-law are so good that it is beyond words. My son-in-law calls me every day, we have video sex once or twice a week, and we chat about sex all the time. Because he knows that sex is a lot, my son-in-law sent me a rubber dildo that is 6 inches long, just like a real penis.
+
+When I get more sex, I insert it, and I have a partner in video chat. The days were passing by quite well. Taking care of the son, taking care of the mother-in-law, being with the wife. Day by day, the uncle's father-in-law's courage was increasing quite a lot. Lately, when I go to give tea, he touches my hand intentionally, looks at my chest and talks while looking at me. I noticed one thing, uncle's evil eyes are only on me, he doesn't behave like that with my wife. My wife looks beautiful, a little fat. Uncle doesn't seem to like fat people. My slim figure is catching my attention. family choti golpo
+
+It is impossible to avoid because then the conversation will come up, they will say Roni's wife is rude, so I was trying to cope as much as possible. When the son was three, he got pneumonia. I was in a state of confusion. My mother-in-law is sick at home, my daughter-in-law is also small, so she is busy with her, my uncle and uncle-in-law helped a lot to get Babu admitted to the clinic. The first night my mother-in-law stayed with me, she became even sicker, I stayed for two nights, but her daughter was very annoying, and besides, my sick mother-in-law is alone at home, so after thinking about everything, I told my wife-in-law that I can stay alone in the clinic so that she can take care of my mother-in-law and manage the house.
+
+I managed alone for a couple of weeks, every day at noon he would bring food and stay till afternoon. In that time I would take a bath and eat. My uncle, brother-in-law, would bring breakfast and my uncle, father-in-law, would bring dinner. My son-in-law would call me three or four times a day to check on me. My son was slowly getting better. The doctor said that he would have to be kept in total isolation for at least three weeks. My uncle was fine for the first week, but from then on he would come home more often at night, and whenever he got a chance, he would touch my body. family choti golpo
+
+While I was bringing food, it started raining heavily at around eleven at night. It was one o'clock and there was no sign of stopping, so I couldn't go. They called me at home and said that I would stay at the clinic because it was almost impossible to go in such a storm. I was crying in my heart but I couldn't think of what to do. There were two single beds in the room, one of which I slept with Babu and the other was empty.
+-Wife, you have two pillows
+He said, looking at my chest and feeling embarrassed Sis.
+-How many times do I tell you to come back to the country, you don't listen. Does anyone leave a young wife at home and go abroad?
+
+I didn't answer. What can be the answer to this question. His speech is very intrusive.
+-Why don't you tell him to come back to the country?
+-Hmm
+-What? Are you telling him?
+-Yes. family choti golpo
+
+-Tell me what will happen if he doesn't get a husband at this ripe young age. He is also old enough to have fun with his wife, there is a time for everything.
+I am listening silently. Uncle has crossed the wall of decency in a very deliberate way.
+-Did my wife listen to me?
+-Yes uncle. I am listening.
+-Did I say something wrong
+-Yes no
+
+-Look how the bastard is doing with such a beautiful wife at home. I couldn't have done it.
+I wanted to ask what you would have done, uncle. What is said in your heart is not said in your mouth anymore.
+-We also saw the faces of one or two grandchildren. Mother-in-law, is your vagina okay?
+What do you mean, old man? What do you mean? Are you asking if I have my period or if I am okay without my son-in-law's sex? family choti golpo
+
+-Did you sleep, mother-in-law?
+-Yes, he said no.
+-I wanted to know if your vagina is okay?
+I wonder when the guy wants to be free? Let's do a little digging. If you like the old man's sex, you can get a permanent increase, the pussy doesn't get cold because of the rubber and the fire increases.
+
+-Yes, uncle is okay
+-No, many people's vaginas break when they are without their husbands, that's why I wanted to know.
+I couldn't stay any longer and thought that when he started talking, I also played with him a little
+-Why is the body broken, uncle
+-If you tell me, will you mind again or not
+-Yes, uncle, I won't mind you, you are like my father. He said. family choti golpo
+
+-You understand that everything has a demand, wife.
+-Yes
+-What do you understand?
+-You understand that everything has a demand.
+-Yes, you understand. If you don't provide the supply of that demand properly, the demand dies.
+-What demand are you talking about? And what is the supply, uncle?
+
+-You understand what is the demand, wife, and what is the supply, uncle?
+
+-It seems that you have the judgment to understand what is the demand, wife, and what is the supply. You are married, so I hope you don't have to talk about the physical intercourse of men and women again
+-Hmm, you understand uncle. But can you meet all the demands, uncle, if you want? And are all the supplies capable of meeting his needs? family choti golpo
+
+On this dark night of storm, a middle-aged man found a young girl like me alone in a room and was talking such original and funny things, and listening to it, a flood of juice was flowing from my vagina. I became sexually aroused and started rubbing my other leg with one foot. My nipples became erect with excitement
+-The yoga is only available if there is a need, my wife.
+
+I did not even notice when uncle got down from the bed and came behind me with submission. I was lying on the right side and he grabbed my left breast by grabbing it over the blouse. I jerked my hand away and sat up.
+-Shh shh shh uncle, what are you doing? I am like your daughter.
+The room lamp was turned off, but the light in the passage was working like a dim light. Uncle pulled me with both hands and held me tightly to his chest. I could not move a hair due to his strong grip. family choti golpo
+
+-Doesn't the girl have any needs?
+-What are you saying, uncle? Leave.
+-Why are you doing this? I don't understand.
+-What are you saying?
+-You don't know how long my husband has been eating and drinking after seeing your past.
+
+-Leave. Whatever you say, I know you like a father.
+-From today, I will call you a vatar
+-What the hell are you saying?
+-That's right. Today, I will bathe my husband in your pussy water.
+-What are you saying, uncle, you are so rude. family choti golpo
+
+-Why are you doing this, wife? Why are you giving the old man so much trouble for so many years? You know how long I have been keeping an eye on you. Just give me a chance once and see how happy I can be
+-No, uncle. If anyone finds out, my family will be destroyed. Do you want to destroy my family?
+-No, I want to cool your pussy and cool myself.
+-You are a slut, a slut, an animal. If I were your daughter, would you do this to me?
+
+-If I were a slut like you, I would forcefully fuck a girl. Look how my cock is jumping, wanting to eat the honey of your pussy. And I also know that your pussy is ready to eat my pussy.
+He forced his cock that was stuck in my right hand. Oh my God! I couldn't believe it was such a big cock! It must be at least seven inches. My son-in-law's is 6 inches. He is thicker than his son-in-law's in the girth. My heart was dancing with joy. Uncle also understood what I liked. family choti golpo
+
+-I promised you that if you don't like it, I won't want you again in my life, just once satisfy this old man's desire. I have been hoping for a long time. I have never been so attracted to a woman's body in my life. Once. Just once.
+-No uncle, no. What do you think will happen if someone finds out?
+-No one will know except you and me.
+
+Uncle understood that I had consented. He pushed me to his bed and pushed me on top. His cock was fucking my pussy over my sari. Uncle lifted my sari towards my waist and spread his legs to make room for himself. Then he put the tip of his penis in my vagina and pushed it hard. It went in half and then into my pussy. I moaned and moaned. After about three years, a huge penis entered my pussy, which was bigger than my usual size. With the next thrust, my pussy was full. family choti golpo
+
+Just as he ate food up to his throat, he kept on eating pussy. I hugged uncle while doing uh: uh: uh: comfortably. He remained locked in his big pussy. Uncle, who is an expert in sex, let my pussy take its time so that it would accept the food quickly. Uncle focused on opening my blouse. He couldn't open the buttons one by one and open the bra so I opened it myself. He jumped as if he had never seen my tits.
+-Oops, how long have I been crazy about these two. I never dreamed that I would get it today.
+
+-If the demander wanted to give the supply earlier, he could have gotten it earlier.
+-I was looking for an opportunity to give the supply for a long time, you didn't want to catch me
+Uncle's fat cock swallowed My pussy was getting hard. I was doing uh uh uh ahhhh ah comfortably and uncle started pounding slowly.
+-I gave the amount. You tell me if it is right in proportion to the demand?
+-Huh
+-What huh? Tell me. family choti golpo
+
+- Yah*. Am I as perky as you?
+-If I wasn't perky, would a cock enter my pussy
+-I get horny just seeing a young girl?
+-Am I so old that I can't cool down a young girl
+Uncle keeps fucking me. He is giving me thrusts and it feels like my vagina is bursting.
+
+His heavy pair of legs are playing the tabla on my pussy. Tap tap tap tap
+-My cock dances just by seeing you, my wife. I go to your house every day to get you. Seeing your youthful appearance, my cock used to jump under my lungi all the time.
+-I have never seen you jumping
+-I would show you but I did not have the courage. family choti golpo
+
+Uncle slowly started caressing me while moving his hips.
+-Why were you not brave like today before
+-Did I know that your pussy was so full of holes.
+-Now you know
+-Huh. I promised that I would kill the insects in your pussy before they came alive by slapping them with my cock
+
+Uncle started fucking me with his cock. It was as if the whole shaft was going to enter my pussy all the way to my navel. Every thrust is like a drum beating, my uterus is beating in my mouth, I am moaning in pleasure, wooff woo ahh woo ee family choti golpo
+
+I became hot again in an instant. Uncle kept pounding my pussy like a carpenter that I was forced to release my anger again. I had to accept my son-in-law's kiss. Uncle pushed my penis into my pussy with a few thrusts at a hundred miles per hour. My penis started to ooze out of my pussy. I felt like floating in the air in a state of endless happiness.
+Uncle also lay on my shoulder in complete comfort. My penis started to get smaller and smaller, and at one point it came out of my pussy. He lay right next to me.
+
+- I promised my wife that if you don't like it, I won't want you again in my life. Tell me this time
+- What should I say
+- Do you like it? Have I been able to make you happy?
+- Why don't you understand the answer, being an experienced man?
+- I know the answer to pussy. I don't know your mind. family choti golpo
+
+-The two answers are the same. You compare.
+-So you want it every day?
+-I don't know
+-If you feel ashamed, tell me. How did I give you the money? The need for sex has been fulfilled, right?
+-I got the best money in my life today. You understand the rest.
+
+-You understand. Your aunt has been sick for several years. If she suddenly gets well, she gets fucked. I have been weak towards you for a long time. Don't you understand?
+After fucking, the cataract of shame was removed from my eyes. Through intercourse, a bridge is formed between men and women naturally. Now I see that age is not a barrier, I have not gotten the satisfaction I got today from a man of my father's age in this life.
+-I would have understood where your eyes are
+-You would have said where? family choti golpo
+
+-Mother
+-Really, my wife, your breasts are very beautiful. What is the size?
+-34
+-There is milk
+-A little
+-Eat
+-Eat. Who is stopping you? You ate everything.
+
+-The honey you are feeding me, my hunger will not be satisfied easily, it will increase day by day. I have never had so much happiness in my life as I got from you today
+-I was without Roni for three years, my hunger would arise but I had control. Now, how can I handle myself without the path to happiness that you have shown me?
+Uncle grabbed my pussy with his huge paw and started rubbing it with great skill.
+-It will not be empty anymore, my wife. I will give you a lot of happiness. family choti golpo
+
+I held his erect penis and started rubbing it. It did not take long for it to get hot under the touch of his soft hand. He again became a man of lust.
+-Auntie is almost consuming all the wealth by eating it. I am the owner of the rest of the property.
+-Yes, from today you are the owner of this. Whenever I feel hungry, I will tell you. You will be happy with the property that I still have.
+I rode on my uncle's horse like a warrior. Even in my uncle's dreams, this form of mine was unimaginable. He was a little shocked. I quickly sheathed my sword and started shaking the milk on my uncle's face.
+
+My uncle also gave me a ten-ton blow and held my waist with both hands so that it fit snugly in the sheath.
+-From today, you are the owner of all the property, my wife. No one else has a share.
+With that, he started sucking like a calf and sucking milk, and I started sucking like a bull. I also rubbed my pussy and fucked her. The battle for pussy growth went on in unison. My uncle started sucking milk from each breast with both hands. family choti golpo
+
+My desire to fuck increased manifold with intense sucking on the nipples, I started to thrust faster and the water from my pussy came out continuously after twenty-five minutes of fucking. I fell on my uncle's hairy chest. My uncle was almost done with the last few strokes and poured a lot of hot stuff into my pussy.
+-I felt great relief, my wife. My liver has completely cooled down.
+
+My uncle's big pussy was still biting the fat old man with his pussy lips. Even at this age, the way my uncle fucked a girl like me is unimaginable. I can understand very well what my aunt's pussy is doing when she is young.
+-How do you spend the night with such hot pussy, my wife?
+-You can't spend the night
+-It hurts. family choti golpo
+
+-It hurts a lot. What else can I do? -You are hurting yourself and you have hurt me too for so long. Don't you understand what I want?
+-I understood that your evil eye is on my body.
+-Then why did you take so long to catch me?
+
+-I was thinking that old people are satisfying their eyes by seeing young people.
+-What did you see now?
+-I saw that old people are not old but crazy horses.
+-Why can't I handle crazy horses every day
+-Every day? family choti golpo
+
+-Yes
+-How is that possible? Will I get another chance every day?
+-We have to create the opportunity. If I don't eat your pussy juice once a day, I'll go crazy. Just tell me if you want it
+-I want it
+I gave a short answer and hid my face in my uncle's hairy chest in shame.
+-Wife
+
+-Huh
+-Roni, I don't know, don't eat pills. I poured it inside twice?
+-Why are you afraid?
+-No, what are you afraid of
+-I'm afraid of what you're pouring
+-What's there to be afraid of? I'm here. It'll be okay. family choti golpo
+
+-Then you'll take responsibility
+-Father, if I go to the forest, you have to take responsibility for your wife and children, right?
+-You have to take the pills from tomorrow. You'll bring them.
+-Which one do you want to eat?
+-Obstet
+
+-Okay, I'll buy it in the morning.
+I'm lying on my uncle's chest, talking to him while he's stroking his hair, and he's rubbing his hands on my ass. His cock has come out of his pussy.
+-Cut my hair tomorrow
+-There's no arrangement here
+-Cut it with what? family choti golpo
+
+-Razor and foam
+-I'll bring him in the morning. Do you need anything else?
+-No, leave now.
+-Why?
+-I'm going to the bathroom
+-Okay, go
+
+I got up and held the mouth of my pussy and ran to the bathroom. As soon as I sat on the commode, a pile of semen poured by my uncle came out of my pussy. After urinating and washing my pussy well, I came to the room and saw my uncle sleeping soundly. His nose was snoring quite loudly. The poor thing had become exhausted from fucking him twice in a row. I fell asleep as soon as I lay down next to my father. I woke up in the morning to my uncle's call. I saw that it was 6 o'clock on the clock. He kept calling
+-Wife and wife
+-Yes, uncle
+-Get up. family choti golpo
+
+-Why are you calling so early in the morning.
+-You need to get up
+-Yes, he said
+-Come to me
+As soon as I got up and went to him, he got off the bed and hugged me
+
+-What do you want
+-Don't you understand
+-How will I understand if you don't tell me
+-I want to eat your pussy juice
+-Even after eating so much last night, my stomach wasn't full? family choti golpo
+
+He pulled my right hand down and showed me his penis. I started pulling his thick penis.
+-If your stomach is full, why is your baby crying?
+-Oh, really, baby is very hungry. Come on, honey, I will sleep if I feed you my pussy milk.
+Uncle grabbed the hem of my saree and spun it like a spinning wheel and took it off in a flash.
+
+Then, as soon as he unbuttoned my blouse and took off my bra, my size 34 breasts jumped out like a spring. Uncle's eyes sparkled with desire, his penis started jumping under the lungi. He held me close to his chest and tried to open my petticoat, but I held his hand and stopped him. Uncle put his mouth in my ear and whispered to me
+-What happened
+-What. family choti golpo
+
+-Why are you letting me open it
+-Oh* I feel ashamed
+-What is shame to me again. I broke all my shame last night
+-It was dark then. I feel ashamed in this daylight
+
+-I want to see in the daylight what I own
+-Why didn't you understand at night
+-I understand the real thing by inserting the penis.
+-So
+-I will see with my eyes. You also see what you took inside yesterday. family choti golpo
+
+As soon as I said that, as soon as I untied the petticoat rope, it fell to the floor. I became completely naked in front of him, not even a thread on my neck. He stared at my pussy as if he was seeing it for the first time in his life. I felt very ashamed so I kept my head down. As soon as my uncle took off her lungi, my eyes widened in attraction. Oh, my father! What am I seeing? I don't know how many times I've seen such a big dick in porn movies and fucked. It must be more than seven inches, the penis is not that big, it's soft and pointed, and it's very thick around the girth.
+
+The pussy is hanging but it's heavy. I realized how much it sucks at night. Uncle sat on the bed. His dick was pointed like a gun at my pussy. He started fucking my naked body. A flood of juice rushed into my pussy, and the bridge of my nose swelled with excitement.
+-Bouma
+-Yes
+-Come here. family choti golpo
+
+I walked towards him like a bewitched man. Uncle took my legs on both sides and lifted me into his lap. I hugged uncle and hid my face in his shoulder. I went crazy when he massaged my pussy with his penis. My pussy felt like a thousand bolts of light. I bit his neck in lust. His small penis entered my pussy. Uncle held my waist with both hands and started pulling me down. My penis was getting thicker from under my penis.
+
+He gave the last thrust a little harder and the whole thing went in effortlessly. The old man's narrow head was tickling my vagina, my response was a little funny. I wrapped my legs around uncle's waist and held him tightly. Uncle lifted my face and kissed my lips. Then he pressed my breasts and whispered in my ear
+-What, mother, do you like the old man's thing? family choti golpo
+
+-I don't know
+-What if you feel ashamed even after having sex three times? Don't tell me.
+-What can I say
+-Do you like the old man or not?
+
+-You don't understand
+-No, I don't understand, you tell me
+-I like it very much. Happy this time
+-Hmm. How big is Ronnie's? family choti golpo
+
+-Is it big
+-Like mine or bigger?
+-Small
+-Is it small?
+-You don't understand anything. I didn't say it was smaller than yours.
+
+-You could have cooled your pussy properly by fucking it?
+-Huh. But I don't know if you can do it now.
+-Why?
+-I have never had the happiness that I get from you.
+-I have never had the comfort that I get from fucking you. Bouma family choti golpo.
+
+-Why don't you get comfort from your aunt?
+-It would be wrong to say that I didn't get any comfort at all. At first, it was very comfortable. But later, I did it regularly, but I never got full satisfaction.
+-Why?
+-Your aunt's sex is less. She fucks you, but her body doesn't wake up. Now that you and I are fucking each other, look how much I feel like a pair of Bhadra month's bitch.
+-Hmm.
+-You get comfort, Bouma.
+-A lot. I haven't had this much comfort in my life. Why didn't you give it to me earlier?
+-From now on I will give it to you every day
+I was fucking slowly for so long and my uncle was fucking me while pressing my breasts and talking. Suddenly he got more excited and left my breasts, held my waist with both hands and started making me sit on his erect cock. family choti golpo
+
+I was not able to get my head while fucking me I saw my uncle's cock glistening in and out of my pussy. The juice of the penis had accumulated like foam at the base of the penis. After being pierced for about ten minutes, I let go of the juice and put my head on my uncle's shoulder. Uncle lifted me up and laid me on the bed and started fucking me hard in the missionary position. Each thrust of his was like making my pussy into a potato mash, I was feeling so much pleasure inside my pussy but I was digesting it silently, I was afraid that someone would hear.
+
+Even then I was moaning, and the sound of fucking was quite loud. Uncle continued to fuck my pussy for another five minutes. As soon as I tasted the hot semen in my pussy, I started floating in a sea of ​​pleasure. Uncle fell on my chest like a cut banana tree.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

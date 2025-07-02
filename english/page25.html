@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page25.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page25.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page25.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+The smell of your armpits is driving me crazy today.
+
+</small>
+
+<p>
+
+
+My name is Sayantani. I live in Patna, Bihar. I am currently 24 years old and my figure is 34-30-32. My father has a girls' clothing store which is run by both my father and mother. I have a brother who is currently 20 years old, his name is Somesh. Here is 4 signs from Russian singles dating site
+
+Let's come to the story now. One of my school friends, Sanchita, who now lives in Ranchi, once came to Patna and stayed at our house. During the day, we used to hang out together a lot and at night, she would sleep in my bed with me. One night, Sanchita said –
+
+Sanchita – Your brother has become a young man. Now he is hungry for girls.
+
+Me – Oh no, he doesn't understand that much yet.
+
+Sanchita – Today when I was going to go upstairs after returning home, I stopped at the bottom. The bathroom window was open and as soon as I peeked through that window, I saw your brother holding my bra to his nose and dancing his cock while sniffing the smell. Seeing this, I left quietly.
+
+Me – Was he sniffing the smell, brother?
+
+Sanchita – Yes, and your brother was licking the G-spot of the bra, which is near the armpit. I mean, your brother now really likes the smell of girls' armpits. Your brother has gone crazy for this smell.
+
+Me – But I have never seen my brother do this before.
+
+Sanchita – Hey, if you shave your armpit hair, how will your brother get that smell on your bra? Stop shaving your armpits sometime and you will understand. When you smell the smell that your armpit hair gets wet with sweat, your brother will want to smell your armpits.
+
+The very next day, my friend Sanchita left, but Sanchita's last words kept coming back to my mind. From the next day, I stopped shaving my armpit hair. After about 15 days, one day, I really saw my brother doing what Sanchita had told me. Later, when I entered the bathroom, I saw that the armpit of my bra was wet, meaning that my brother had licked this place.
+
+I started thinking that if my brother did this just to smell the armpit smell stuck to my bra, then what would he do if he really smelled my armpit...
+
+More news Sasuri Jamai Choda Chudi Mother-in-law's pussy burning
+The very next day, my uncle and aunt came to visit our house. So I gave them my brother's room to stay and asked my brother to sleep in my room at night. After dinner, my parents went to their room to sleep.
+
+There was only one bed in my room. I asked my brother to sleep on the bed and went to the bathroom to change my clothes. Then Sanchita's words came to my mind. I decided in my mind that I would test tonight to see if Sanchita's words were completely correct.
+
+Instead of changing the bra I had worn in the morning, I just took off my salwar and put on a sleeveless nightie, but I had panties on underneath. As soon as I returned from the bathroom, my brother got up and went to the bathroom.
+
+I looked through a crack in the bathroom door and saw my brother searching for something in my open clothes. I realized that he was looking for my bra and panties. Within a while, my brother came out of the bathroom.
+
+The look of indifference on my brother's face seemed to have lost the battle in his mind. He came and lay down next to me. Slowly, the sweaty smell of my armpits mixed with the air and disturbed my brother's sleep. My brother kept trying to sleep by hugging me, and I moved away.
+
+I felt that this was the right time, so I pretended to fall asleep and lay down. And I raised my hand to my face and covered my eyes. As soon as I lifted my hand, the smell of my armpit reached my brother's nose and hit him.
+
+Within a few moments, I felt my brother come near my armpit and put his nose to my armpit and sniff the smell of my armpit. This new feeling was very fun. I was pretending to be asleep, when I saw my brother raise his head and glance at me once and lick my armpit with his tongue.
+
+My armpit tickled but I remained silent. He stopped for a while and licked my tongue again... and then kept licking. Then I saw my brother putting his hand inside his pajamas and dancing his cock. I started feeling the sensation of his cock dancing while lying down.
+
+More news Bhabhi Ke Chodar Hot Golpo Bhabhi Ke Chuda Story
+As I slowly folded my one, my nightie came up and my thigh came out. My brother looked up at my feet once but was so engrossed in licking my armpits that he didn't pay attention to my thighs.
+
+Then my brother started licking my armpits and pulling his cock out of his pajamas. A light amount of cum was coming out of the head of his cock and touching my thighs. I thought for a moment that my brother would ejaculate on my feet.
+
+Thinking this, I pretended to get up a little. My brother got nervous and somehow put his cock inside his pajamas and moved away from me and pretended to sleep. I got up and got out of bed, took off my nightie, took off my bra and panties on the chair, put the nightie back on the bed and lay down on the bed and pretended to sleep.
+
+Right after that, my brother got up from the bed and took off my sweaty bra that was on the chair and started sniffing and licking it. When the bra was smelly, he suddenly turned around and looked at me. Actually my panties were soaked with my pussy juice, and brother looked back at me after seeing that. Brother did not understand that I was getting pleasure from licking his armpit and my pussy juice came out and wet my panties. Brother smiled and came to my bed next to me with my bra and panties in his hands. Now brother's courage has increased a lot.
+
+Brother lifted my hand and started licking my armpit again and started smelling the smell of the bra. Then he removed the bra and put my wet panties in his mouth and licked the wet part of the panties, brought his face in front of my ear and whispered -
+
+Brother - I love you very much. Your armpit
+
+The smell of has driven me crazy today. And I also know Didi you are still awake because the lower part of your panty is completely wet. Didi your pussy juice is so sweet and delicious. Didi you have done a lot of drama now get up.
+Me – Brother what are you doing, I am your own sister.
+
+Brother – Yes, even though you are a sister, you are a girl, you have youth.
+
+Me – Well why are you so greedy for the smell of my armpit?
+
+Brother – Didi, not only yours, but the smell of any girl's armpit drives me crazy.
+
+Me – Oh! So you stole Sanchita's bra and took it to the bathroom and smelled it.
+
+Brother – Yes, Didi.
+
+Me – Then don't make me a girlfriend.
+
+Brother – Then don't be that girlfriend of mine.
+
+Me – Have you gone crazy, I am your sister.
+
+Brother – Then why did you keep quiet when I was licking your armpit?
+
+I can be your close friend but not your girlfriend.
+
+Brother – Okay then for the sake of friendship you let me lick your armpit and you move my cock with one hand.
+
+Me – What will happen with that…?
+
+Brother – I will get peace.
+
+Me – Then okay I will do that, but you have to give me my panties.
+
+Brother – Okay right….
+
+As soon as brother came near me I slowly started to raise one of my hands then brother said…
+
+Brother – First take off your clothes
+
+Me – No I didn’t say that
+
+Brother – When you have come to help a friend then don’t do it completely.
+
+I became silent.
+
+Brother – okay I won't watch, I was just saying it for the feeling
+
+Me – okay then close your eyes first
+
+As soon as I said that, brother melted my wet panties with his head and closed his eyes and grabbed the nightie and pulled it hard, the buttons fell off top to top, only one of the bottom straps was stuck.
+
+Then what happened in the next episode…. Stay with the Bangla Choti story
+
+New Bangla Choti – I didn't expect so much, I can't believe it either, brother, he put his hand on my chest, he was afraid that he could never go to girls, he jumped on it as if he had found good stuff. He started pressing my breasts.
+
+More news Bangla Choti Dudh Chusa Rina's breasts are so big
+At the same time, he started pressing both breasts well, ignoring my hand. He filled his hand in the groove of his chest but he couldn't insert it much, I held his hand. The sister who used to discipline and beat her brother with a cane, found her in such a state of pleasure in his arms and wanted to show his strength.
+
+He went crazy with the touch of my soft, fluffy breasts and body, now he is willing to rape me. He pulled my two huge watermelon-like breasts out with his hands, they seemed even bigger outside the blouse, they had become bigger than oranges to the size of big lemons. He started moving the nipples with two fingers, a big black ring around them, it could not be covered by pressing them. My strength to restrain them seemed to be decreasing and my breasts were also getting bigger.
+
+As soon as I lowered my face and lifted one of my breasts in my hand and put it in my mouth, I tried to push my brother's head with both hands, my brother also forced his whole face on my huge breasts and started sucking the nipples in his mouth. I gave up.
+
+He held me against the bed against the wall and started sucking my exposed breasts with both hands, sucking them with his other mouth, pulling them with his lips and releasing the nipples. Brother pressed his cheek against my breasts, inside the groove, and started shaking.
+
+Brother's head seemed to disappear in the groove of my breasts, he pressed my soft breasts against my cheeks from both sides. My hands were now in my brother's hair, but I wasn't pulling, I let them go, I let him suck the milk, since I was a child, this was the first time a girl had given my mouth milk, brother, so it felt great.
+
+Meanwhile, brother's cock had become erect and had become a cannon. It was as high as a mast. Unable to bear the increased friction, brother took off his panties and got naked. This was the first time since I grew up that brother was in front of me, brother, I also understood that brother would fuck me no matter what.
+
+More news Momota Khalar Voda Mara Mamata Khalar's tight pussy
+My brother started shaking my lower abdomen again, started pressing my waist, lowered his face and started sucking my waist and navel. He started pressing my hips with his hand. He started untying my nightie with his other hand. But I didn't want to tie it anymore, I sat with the bed sheet folded and tilted my face to one side.
+
+As soon as I pulled the nightie's lace, I became naked in front of my brother. I covered my pussy with both hands, then turned around and lay down on my stomach. With this, nothing was left open for my brother except my hips, my pussy was all pressed down. My breasts were swollen on both sides due to the pressure of the pillow, which I covered with my hand.
+
+My brother rushed over my hips like a tanpura. He started sucking and biting. He started licking the groove with his tongue. It would have been better if it was a little higher. He pulled the pillow under my chest and brought it under my stomach.
+
+My hips became high. He held the buttocks of my hips with both hands and started sucking and biting lightly. He started moving his face between my thighs. He pushed my thighs away. My pussy is now outside the pillow in front of my brother's eyes, high off the bed. But if he touches my pussy, I will press my thighs to cover it. What is he thinking? My brother spread my legs further and sat between them. He licked the grooves of my hips for a while, pressed my buttocks with both hands. He took one hand down and grabbed my slightly swollen and full pussy. I moved and climbed up. What my brother thought, I tried to bring my thighs together, but since my brother was sitting in the middle, it didn't work.
+
+My pussy started to get wet and wet in my brother's hands. I had no choice but to compromise. I pushed the cream I was applying to my face from the bed with one hand. I didn't say anything to my face. My brother understood what to do.
+I took the clotted cream in my hand and put it on my face.
+
+He started rubbing it, rubbing it on my buttocks. My buttocks started to shine. He started moving his fingers in my pussy slit, I moaned as soon as he put two fingers inside. He slowly started pulling it out. My pussy lips and curtains are quite big, they can be moved with two fingers. After fingering for a while, my brother lay down on my back. His eight-inch penis was pressed into the groove of my buttocks. He put his hands under my breasts and brought them out on both sides. He took cream in both hands and started applying cream to my breasts. I also took some cream in my hand.
+
+My brother's penis is pressed against my buttocks, two and a half inches thick, eight inches long, the red head has come out of the shell. I applied cream to my brother's penis. It's not that I want to fuck my own brother, but it will hurt if my brother's big penis goes inside, so I applied cream. But I didn't realize it until now, I applied cream on my body. Brother took his creamed penis from my hand and put it in his own hand. Lying on my back, he lowered his penis down and started shaking the round head of the penis in my anal slit. I lay still, facing forward, waiting for that inauspicious or auspicious moment.
+
+Slowly pressing, he stuffed the head of his brother's penis inside my anal slit. I sighed and grabbed the sheet, brother stuffed his penis in my sister's pussy in my mother's belly. What a pleasure it was inside my young soft hot tight pussy, what can I say. Why fuck my brother for this happiness, if necessary, I can fuck my father too, I felt like that then.
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+      // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

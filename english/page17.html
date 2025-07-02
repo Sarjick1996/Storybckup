@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page17.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page17.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page17.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Mother's youth at uncle's wedding – 2 (sexstory incest)
+
+</small>
+
+  <p>
+
+
+After coming down from the tree, Bittu said.. I saw your mother's fame. I was just telling you that women in the city are a commodity. Then I went to the place where mother and Amal had sex and started pulling my penis. I also got excited seeing all this. I could not understand what to do with anger, shame and excitement. I do not know why I was so angry with Bittu. I know that he was also thinking about my mother and I was getting horny. I started straight towards the house without thinking anything. (choti golpo incest)
+
+While entering the house through the back road, I saw my elder aunt, (Bittu's mother) maybe she had come to the bathroom. Since this is a village house, the bathroom was at the back of the house. I do not know what happened to me, I went and took aunty behind the bathroom in one go. And I grabbed aunty's saree and pulled it off. And before aunty could say anything, I attacked aunty. I started to suck everything. I really wanted to rape my aunt in anger. But then Bittu came from behind.
+
+choti golpo incest
+He kicked me hard. I got separated from my aunt. Looking at Bittu, I felt like he was going to beat me today. I ran straight home in fear, went into my room and sat quietly. I started thinking what would happen to me now. Will they throw me out of the house? Or will they hand me over to the police. I was so worried, I felt like running away from here. Just then I heard a knock on my door. My mother was calling me outside the door. Hearing my mother's voice, I realized that my mother knew everything. What should I do now. I didn't have the courage to open the door.
+
+Mother pushed the door again. I was forced to open the door. Mother entered the room and closed the door. And then she pulled me and slapped me twice.
+Mother: What did you do? Now will I show my face to everyone. How did you become like this? What will happen if you are handed over to the police now? Have you ever thought about it? choti golpo incest
+
+I sat down on the ground crying. Sorry ma, I made a mistake. It will never happen again. Save me ma.
+This time ma felt a little sorry for me. And ma told me to get up. I got up and sat on the bed. Ma asked this time you are not that kind of boy. But why did you do this, father.
+I said after being silent for a while.
+
+ami: Ma, I had seen your and Amal's sex. So I got very excited. And Bittu was calling me your name, so I also tried to dirty his ma.
+Hearing this, ma was surprised. Ma could not understand what to say or not.
+maa: Baba said that, why was it necessary to force me. choti golpo incest
+
+ami: Ma, save me.
+maa: Only one of us can help this time.
+ami: Who.
+maa: Amal.
+
+Immediately, mother called Amal. And told her everything that happened. And asked aunty to make arrangements not to tell anyone.
+Then mother told me not to worry. I am here, everything will be fine.
+Then mother said, well, since when have you been looking at me like this???
+I told my mother everything that happened, and after hearing everything, mother said. choti golpo incest
+
+Maa: Don't you feel bad, your mother was with a man like this and you were secretly watching.
+Ami: Sorry, mother, but I got excited seeing you like this.
+Maa: Okay, we will talk about this later, first let's make arrangements for your aunty.
+After a while, Amal came to our door and called. Mother immediately opened the door. Mother asked Amal what happened after she entered.
+
+Amal: Everything is fine. No one should tell anyone. And aunty (aunty) should not tell anyone, I have made it clear that the boy has made a mistake. My only concern is Bittu. His mother was attacked, who knows how long he has been silent.
+Maa: No problem. I will explain it to him. Thank you very much Amal, you saved me today.
+Amal: Hey thank you, what's the matter, our love for so long. That's all we have to do. choti golpo incest
+
+He said and hugged Ma. Ma pointed at me and told me to look over there. I turned around. Ma and Amal started kissing each other softly. After the kiss, Amal left. And immediately took out the phone and called Bittu to our room. Bittu came in a while. There was still anger in his eyes and face.
+Maa: Bittu, sit down. Bittu sat on the bed. Next to me. What happened today was not supposed to happen. But what happened today, forget it.
+
+Bittu: How can I forget??? My mother doesn't like anyone like you who lets her fuck her. Then why would he try to ride my mother???
+Ma understood that it was difficult to calm Bittu.
+Maa: You secretly watched me fuck. What if I am giving you pleasure???
+Bittu was surprised to hear this. Because in his heart he also wants to fuck mother. Meanwhile, I am looking at mother in surprise after hearing mother's words. Mother beckoned me to be quiet. choti golpo incest
+
+Bittu: I agree. I will not tell anyone. But I have one condition.
+Maa: What condition??
+Bittu: Whatever I do, I will do in front of your sons. I will make him understand how it feels to insult a mother.
+Immediately mother said, if that is the case, then you will not get my pussy. I will not be able to fuck my pussy in front of my son. Besides, I can do whatever I want.
+
+Bittu: Okay. I agree. I will give you such pleasure that you will give me your own pussy.
+Hearing all these things, I was very humiliated. Mother looked at me again and said that everything is for you, this time you have to be careful. I sat down with my head down.
+I was shocked to hear what Bittu and mother said. Mother looked at me and said. See, all this is for you. Now we both have to get ready. I kept my head down and sat silently. choti golpo incest
+
+Before mother finished speaking, Bittu hugged mother. And Bittu looked at me and said, "Look, good luck, today Who will strip your mother? Then mother pushed Bittu away. And said, not now Bittu, now everyone is awake. The invitation to eat will come later. Bittu did not want to leave mother. But she was forced to leave. After Bittu left the room, mother closed the door and sat next to me.
+ami: Sorry, mother. Whatever happened happened for me. Forgive me. I started crying.
+
+maa: (Pasting my head) Nothing happened, father. Your mother is here. She will fix everything.
+maa: Look, whatever happens, it is a good thing. Now there is no point in thinking. These are because I have hidden a lot from you, and you have hidden from me. So now we have to tell everything. Otherwise, we will be in trouble again.
+Ami: Okay mother. choti golpo incest
+
+maa: Besides, you know everything. Now there is nothing to hide from you.
+I just kept shaking my head after hearing everything.
+Then mother got up from the bed and started taking off her saree. And started saying to herself. Uffff I didn't have time to take off my clothes after fucking her. Mother first took off her saree. Then the blouse. I was looking at mother in awe. Mother was standing in a white saree and blouse and looked at me and said.
+
+choti golpo incest Dad, come here a little. Unfasten my bra hook. I was so shy that I didn't want to. Mother said again, come here, you don't have to be shy anymore. When I saw mother having sex with another man, I didn't feel shy. Now I'm shy to take off my bra. I immediately went to my mother's back. And I put my hand on my mother's bra hook. Immediately, an electric shock passed through my body. How can I explain what it felt like. After taking off my mother's bra, mother took off her bra and gave it to me. Since I was standing behind my mother, I couldn't see my mother's breasts. But still, I can't explain what an impossible exit I am. choti golpo incest
+
+Mom: Put the bra on the rack. And take out one of my bra and panty sets from the bag.
+I put the bra on the rack and opened the bag. At that moment, Mom untied the rope and tied it to her chest. And put her hand down and pulled the panties open. I forgot to open the bag and looked at Mom. After opening the panties, Mom looked at me and said, "Look, for you, you still have to wear the panties soaked with semen from the past." Give me. Give me my clothes. I looked at the bag again, opened the bag and started searching. After searching for a while, I found many sets.
+
+ami: Which one will I give you, Mom?
+maa: Give me the one you like.
+I took out a red set.
+Mom took the bra and panty set and started wearing it. And I sat back and started watching. After that, Mom put on a nighty. Suddenly, Mom asked me. choti golpo incest
+
+maa: Well, do you know, how did Bittu know that I fuck with Amal?
+Hearing the sound of fucking in mother's mouth, my ears felt like smoke was going to come out.
+ami: Has he seen you before?
+maa: Do you know when before?
+
+mai: Whenever you come, you fuck with Amal…(I am silent)
+Maa laughs. What am I. I fuck. Now what will happen if I am ashamed? You can say it. It doesn't matter, you crazy.
+ami: Whenever you come, I see you fucking.
+ami: Well, mother, since when have you fucked with Amal? choti golpo incest
+
+Maa smiles.
+Maa: We have been fucking since class seven.
+Ami: Surprised. What do you mean, since class seven. But despite being in love for so long, why didn't you marry Amil???
+Maa: Oh my god, do I like him??? He only satisfies my body's burning desire. Besides, if I married him, I wouldn't be able to go to the city. I would have to stay in this village.
+
+I was shocked to hear my mother talking about my body's burning desire. What kind of mother am I seeing? My mother is a big old woman.
+
+Mother: That means Bittu knew about our affair a long time ago. That's why he took you.
+Ami: Mother, didn't anyone else know about you???
+Maa: Did he know, many people knew. choti golpo incest
+
+Mai: But there was no trouble???
+Maa: No, he never let any trouble happen. Did I suddenly create any trouble when it happened today???
+I realized that Mother is not as simple as I thought Mother was. She is a terrible thing inside.
+
+Then Mother got up and got ready to go out.
+
+Maa: Let's go out. Bittu will come again at night. We have to be ready for him. Besides, if you don't have to keep your aunt in your sight, who will you tell?
+Saying this, mother went out. I also went out after mother. Everyone was having fun at the wedding. I saw Bittu smiling brightly at me. I think he wanted to say that tonight I will have fun with your mother's body. choti golpo incest
+
+Mother didn't look at me. I think he was angry.
+While doing that, it became night. We all invited him to dinner. I first went to the room. Then mother came to the room.
+Ami: Mother, what will you let Bittu do today?
+Maa: I will see what I let him do.
+
+Ami: Mother, please don't let him do too much. Because I won't like someone my age fucking my mother.
+Maa: Okay, father. I won't let him do too much.
+After some time, Bittu came to our room. He came and closed the door. I was sitting on the bed at that time. Bittu pulled mother by the hand and brought her to his side. Then he kissed her nicely. It seemed that the lover was sitting well. As he came, he opened his mother's nightie and threw it on my face. choti golpo incest
+
+I saw that my mother was wearing the red bra I had given her. She was wearing a white bra underneath. Bittu was immediately pressing his breasts on her bra. Although at first, my mother was not enjoying it much. Now my mother was enjoying it very much. It was clear from my mother's face. Bittu slowly moved one hand into my mother's bra. And before my mother could understand anything, she opened her bra in one pull. My mother's red bra Aunty came out. When mother was covering her pussy with her hand. At that moment, Bittu opened her mother's bra. Whoops. Mother's big breasts came out. Bittu started squeezing mother's milk with great fun. And mother also saw Bittu putting his hand inside Bittu's pants with one hand and moving his penis.
+
+After that, Bittu started stroking mother's pussy with one hand over her panties.
+But as soon as Bittu tried to open mother's panties. Mother pushed him away.
+Bittu: What happened. Don't give me more.
+Maa: This is all for today. The rest later. choti golpo incest
+
+I told you that I will not do anything vulgar in front of my son.
+I was very happy to hear these things. Let my mother remember me.
+Bittu: I will leave today but I will come back tomorrow.
+Saying this, Bittu left. Mother and I left half-heartedly.
+
+After Bittu left. I went and closed the door. Mother quickly picked up the umbrella and tied it to her chest. Maa: Oops, the boy had excited me.
+Ami: Yes, that's what I thought when I saw you.
+Maa: It's been a long time, let's go to bed. I felt sad in my heart, because there was no possibility of watching any more exciting scenes. choti golpo incest
+
+I lay down quietly. Mother came and lay down next to me.
+Thinking of everything that had happened and everything I had seen throughout the day, my penis was erect.
+Again, mother would sleep next to me, wearing only a umbrella, thinking of that, I really wanted to fuck her. But there was no way. Because mother was sleeping next to me. And I made such a mistake this afternoon. So without gathering more courage, I lay down quietly. Mother came and lay down next to me.
+
+We both lay there quietly for a while. Then, breaking the silence, my mother said.
+Maa: Babu, will you give me a task?
+Ami: What task?
+Maa: Will you bring a long one from the kitchen???? choti golpo incest
+
+I understood everything but pretended to be ignorant, why are you doing brinjal at such a late hour, mother???
+Maa: Hey, the bittu made me hot. And I couldn't even fuck him for you
+Me: That means if I wasn't there, you would have fucked Bittu.
+Maa: Don't say anything bad.
+
+Me: Mom, it's okay if she's a little fat.
+Maa: Look, which brinjal do you like for your mother.
+I slowly went outside. There was no one outside. Everyone was sleeping in their own rooms. I went straight to the kitchen and started looking for brinjal. Since it was a wedding, there were all kinds of vegetables, so I got brinjal. I ran towards the room with a long, thick eggplant. choti golpo incest
+
+After coming to the room, I gave the eggplant to my mother
+Mai: Will you do it???
+Maa: Why is it so thick???? Do you want to fuck my pussy or not???
+Mai: Yes, yes. You have taken so much cum, but what is this little eggplant?
+
+Maa: Okay, okay. This time, turn off the light.
+Ami: Leave the light off.
+Maa: It's not very fun. Mom will take the eggplant in her pussy and the boy will sit and watch it. Turn off the light. (Showing a little anger.)
+I went and turned off the light. choti golpo incest
+
+It was all dark. I lay down on the bed. Mom lay down next to me with the eggplant.
+I pulled out my penis in the dark and started fucking the eggplant.
+Next to her, Mom started fucking her legs and inserting the eggplant. Even though I couldn't see it, I could tell that Mom was trying to insert the eggplant.
+Oooooomago.. uuuuuffffff aaa started making noise.
+
+Mai: Mom entered.
+Maa: Yes, baby, what's up with you.
+Ami: Embarrassed (because I didn't know that mom knew I was getting older) we will be okay.
+After that, no one said anything and we continued to enjoy ourselves. I had been so hot all day that. After a while, my goods came out. I wiped it off with my shirt. choti golpo incest
+
+Mom was still inserting the eggplant into her pussy aaa aaa.
+After a while, Mom calmed down. There was no sound anywhere in the house.
+After about 10 minutes of silence like this, Mom said.
+Maa: Hey baby, go to the bathroom.
+
+Ami: Mom, is it yours????
+Maa: Yes, go to the tree. You have already gone to the tree. Let's go outside this time.
+I went and turned on the light.
+I saw my mother lying down wearing only a saree. The saree had almost reached her pussy. And the eggplant was kept under the bed. My mother got up and started going out. choti golpo incest
+
+Ami: Mother, you will go like this.
+Maa: What happened? It won't work. No one is outside.
+I also came out wearing a half pant.
+I went to the bathroom and my mother entered.
+
+Maa: What are you going to do????
+Me: You do it.
+Maa: Let's do it together.
+I didn't waste any more time and went straight to the bathroom. My mother lifted her saree and showed her big fair ass. And sat down to pee. I stood right next to my mother and started peeing. choti golpo incest
+
+The beautiful smell and beautiful sound of my mother's urine slowly reached my ears. When my mother finished peeing, my mother stood up but did not lower her saree. She showed me her ass and went to the bucket and washed her pussy. I inserted my penis and both of us headed towards the room. After coming to the room, mother said. There will be no more talk now. Now go to sleep. I also fell asleep without further conversation…….
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page51.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page51.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page51.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Ben Fingered Gwen's ass (Ben10 sex story) part-1 ,ben10 sex, gwen sex, ben fucks qwen, Gwen Tennyson sex srory, Gwen Tennyson get Creampied Ben 10 Hentai Uncensored,Gwen Wants To Hold A Big Cock Between Her Legs In The Love Hotel (adult Version) Porn Videos Gwen Tennyson (Ben 10 adult version)
+
+</small>
+
+<p>
+
+
+Hi I am Ben Tennyson (you all know me as ben10). I am studying in School. At home, I have my parents, Grandpa max and my irritating Sister Gwen you all know Gwen Tennyson. Like all other siblings, my relationship with Gwen was normal. But it was no longer normal. After separating from alien kind of stuffs, my life became quite chaotic. I had been struggling in life and it  was a big shock for me. At that time, Gwen appeared in my life as a savior. She got admitted to a college far from home to study in the first year of inter. Since she was not used to living in a hostel, her studies deteriorated greatly. So she migrated and got admitted to a college near our house. Moreover, I take classes in the university from home. So I can also help her in her studies. She returned home on the 3rd of May. She returned home with her father. My sweet younger Gwen is walking with a bag on her shoulder. Seeing me, she smiles and asks _ How are you, Ben? _ Good. You look very beautiful Gwen was very happy after hearing the compliment on her appearance _ Give me the bag Have a good sex I said and went home with the bag in my hand. The bag was quite heavy. I was having problems. Anyway, Gwen was wearing that nasty blue t-shirt today. Long hair touched her waist. No makeup on her face. Light pink lipstick on her lips. The shape of her buttocks could be seen quite clearly through the clothes. That's why the boys on the street were looking at her with narrowed eyes. What's the point of blaming them? Boys' eyes will always go towards beautiful girls. If they don't go, girls feel humiliated. I met Gwen after exactly two months. She came on a service leave. She couldn't stay long due to exams. There's no rush to go this time. I helped her pack her things. She had come a long way so she was quite tired. I brought her a bottle of cold water from the fridge and gulped it down. _ Ah… I found peace _ You take a rest. Call me if you need anything Gwen lay down on the bed. We have three bedrooms and a dining room in this house. The biggest room has a sofa and TV. My parents live there. Have a good sex, Mom is a high school teacher and my father works in a private company. Due to his job, my father has to stay in different parts of the country. So he can't stay with us. He takes three days off twice a month. This time, he has to leave tomorrow. After many days, the whole family ate together at night. Gwen was sitting next to me. She was eating quite contentedly and after a while, she stopped eating and was recovering the body of the college hostel cook. We had a lot of fun listening to Gwen. After eating, I talked to Gwen for a while. However, since she came today, I asked her to lie down on the bed without much fuss. I also went to my room and made arrangements for her bed. Gwen now sleeps alone, but she was very afraid of sleeping alone before. There were two rooms in her previous house. I came here after I was in seventh grade. Then Gwen used to sleep with me. If my father was not there, she would stay with my mother. After I was in the fifth grade, we did not live together anymore. My mother said that we should both grow up, so we cannot stay in the same bed. If my father was not there, she would sleep with my mother until she got admitted to college. vai bon sex I got up in the morning and went to college with Gwen. After finishing some work, I showed Gwen around the classes. Although it would have been okay if I had not shown her. It is a government college, so you don't see many students in the class. Teachers come to college to ensure all attendance. They teach in a responsible manner. If you rely on the college, the syllabus will not be completed. So I arranged several private classes for Gwen. As my mother said, I arranged all the private classes during the day. She will study in the morning and afternoon. Near my house. I returned home with Gwen. My mother leaves home at eight in the morning. She returns at two. After cooking, she goes out again at four to teach the students. She returns at seven.Gwen knows how to cook, so now my mother will also benefit. Gwen has been hanging around me since she came. She is watching me when and what I do. I understand that my mother told her about my break up. Yes, after the break up, I got into some bad habits. I used to smoke cigarettes from time to time. Yaba and marijuana are also added to it. Good sex When I get addicted, I feel like I am flying in the sky. Once I get hooked, it is difficult to get rid of it. However, the way Gwen is keeping an eye on me, I don't think I can go to the Yaba chat room anymore. Another problem was that Gwen was around. Now she has grown up. Along with that, her breasts and buttocks have also developed. Sometimes, her chest veil would come off and her breasts like dasa guava were visible. There is another reason for falling in love with Gwen's breasts. In the last two months, I have also developed a bad habit of reading panties. Especially reading my Ben's panties. I used to feel very excited. Although I never thought that way about Gwen. In the story, a Ben would fuck his younger Gwen and pour his cum. Tonight Gwen slept with her mother. I also slept very early. The desire to read a story arose in my head. After searching for a while, I found a new story. Coincidentally, the Gwen in the story was named Gwen. For some reason, the desire to read the story became strong. In the story, the younger Gwen had a bad habit of fucking her pussy. Her Ben's masturbation. One day, the two were caught together. The Ben gave her a great fuck. After reading the story, my penis became erect. For some reason, I wanted to see Gwen. After going to Facebook and seeing some sexy pictures of Gwen, my penis became even harder. It became difficult to control myself. vai bon sex I wanted to suck Gwen's lips, which were wearing red lipstick, like rose petals. After rubbing my penis on the pillow for a while, the semen came out. I went to the bathroom to clean my pant. For some reason, I felt guilty. I swore I would never do it again. Waking up in the morning After breakfast, I started reading the newspaper. Sweetie looked very cheerful today. She greeted me with a sweet smile. I also replied the same. Gwen left for private studies in the morning. I also went to university after a few days. It was nice to meet my friends. When I returned home in the afternoon, I saw my father had come. He had taken two days off for a special occasion. Mother and Gwen were cooking. Sweetie looked like a real housewife. It seems that she has been leading a family for a few years. We all had lunch together today. I took Gwen on a motorcycle to a private school. When I finished, I had to bring her back.  Gwen is modern in riding a motorcycle. She does not sit sideways like other girls. I do not understand if sitting with her legs apart will make such a Mahabharata impure. After marriage, the groom's penis will spread its legs apart and fuck her. Anyway, I left Gwen and went to the market to buy some things. I also bought Gwen's favorite sweets. Then I left everything at home and went to bring Gwen. There is no money problem in our family. vai bon sex So at this time, even though all my friends are busy with tuition, I still have fun. Gwen finished her studies. Seeing the empty road on her bike, I pulled her hard. Gwen said slowly.. and held my neck tightly. If I hugged her, her erect breasts would hit my back, so she didn't hug me. Really, if I hugged her, I would also be in an uncomfortable situation. I reached home to answer Gwen's questions about the development of the area. I felt good talking to Gwen. I forgot about the incident of the night. After returning home, I started cleaning up my studies after eating. At that time, Sweetie came. I have to explain math to her. After finishing my studies, I will go to the bathroom. As soon as I came out, I saw my beloved younger Gwen sitting on the bed occupying a place. She will be with me tonight. She has placed a pillow in the middle. I turned off the light and went to bed. _After many days, we slept together _ Yes. But I can't sleep without hugging the pillow _ No problem, hug me. But don't move away from the middle As soon as I said okay, Gwen started talking about her college. I also started listening to her story like a obedient listener. How many boyfriends did a friend have, which sir all the girls are crazy about, the college environment and all the things. _ I understood all that, you didn't fall in love _ Hmmm….. I liked a boy. But he was a devil. A few days after we started dating, I found out that he was in a relationship with two other girls. After that, I didn't care about any other boy _ Not all boys are bad _ That's right. But I like boys like you Although I was happy to hear Gwen's words, I said _ Why do you see this in me? _ You only like one person. I want a boy who I can trust with my eyes closed. _ It's been a long night. Now sleep. _ Good night, Ben _ Good night.But the night was not good for me. I woke up at dawn. I saw Gwen lying on her stomach. Her breasts were erect like pyramids. I have a habit of sucking and licking her pussy every night. Today, seeing the breasts of a young girl in front of my eyes, I could not control my greed. My hand seemed to go to Gwen's right breast by itself. I placed my hand on the breast and pressed it lightly. The young breasts were quite soft but not yet plump. Gwen moved after pressing a little harder. I removed my hand. Gwen now leaned to the right and folded her legs. Now my eyes fell on Gwen's huge ass. There were black tiles. Tight fitting. I pressed her ass lightly with my hand. I got out of bed, turned on the light and stood at Gwen's feet and started looking at the beauty of her ass. Ah… what a scene. I have seen so many ass but they were of a naked girl. Any boy's penis would stand up when he sees such ass. Gwen's ass is no exception. No matter how big it is,Gwen's ass is all rock. My face is in front. My body is quite hot. If I don't calm down, it won't work. Sexual feelings destroy the feeling of power for a while. I took my mobile and made a video of Gwen's ass. I went to the bathroom and fucked her hard and came out. As I lay next to Gwen, I remembered the oath I had made yesterday. Oh my.. what have I done? What will Gwen think if she finds out? Seeing Gwen's beautiful face made me feel even worse. I have to apologize to Gwen for this disgusting act.. I woke up in the morning and was sitting having breakfast. Gwen and I are not at home. Taking this opportunity, I took out the Yaba kept in my room and started preparing it. Just as I was going to give the Yaba powder to my mouth, I saw Gwen standing in front of the door. I think she opened the door with the key she had and entered the room. _ What are you doing, Ben? As soon as I hid near Gwen, I pulled her hand away and started sniffing the smell. When she insisted, I told her the truth. Gwen got extremely angry with me. She held my right hand with her soft hand and placed it on her head. She looked at me with wide eyes and said _ Promise me, I will never do this addiction again.. Gwen's eyes were fluttering. Once when she was a child, hot water was falling on her. That day, tears also came to my eyes due to her crying. That day, I had promised myself that I would never hurt Gwen. So today, I have to keep my word. When I said that I will never do that addiction again, Gwen put her head on my chest and hugged me. She said in a tone of pride that she loved me a lot. People live longer when they are addicted. If something happens to me, darkness will come into her life. Seeing this attraction of Gwen towards me, my heart was filled. If my lover is gone, does a Gwen who has one not need a lover? Since this incident, my relationship with Gwen has deepened. I started spending more time with Gwen than with my friends. Gwen also spent more time with me. She used to spend time with me. She used to say that the boys or girls in her college used to sing a little too much. I could clearly understand that my mind had replaced Sheila with Gwen. And Gwen had also chosen me as a support to escape her loneliness. Walking along the riverbank with Gwen during the day, eating at restaurants and going to the cinema became very natural. vai bon sex However, Gwen would not go with me to the park and would not let me go either. Because there were always lovers there. I was afraid that if I saw that, I would remember Sheila. However, there was one thing that was bothering me. Thinking of her, masturbating and touching her breasts while she was sleeping. If I did not apologize to her, this guilt in my mind might not go away. After coming home, she would walk around in front of me wearing a veil. But lately, she did not care about that. For her, a veil is a pain. She has to carry a useless thing. Boys should not look at their daughters' breasts. Later, while listening to the conversation, I laughed and said one day_ I also get jealous of your breasts. She replied_ You don't look at them with bad eyes, Ben. I think private boys swallow them. That's why I don't like them. Although I liked hearing Gwen's compliment on my looks, I felt sad thinking about my behavior towards her.That night, the two of us were lying in bed talking. Summer vacation starts tomorrow. Parents have decided to go to los angles for 40 days of medical leave. They left at night. I kept Gwen quiet and turned to look at her. _ Sweetie, I apologize to you for something. She said very surprised _ What's the matter, Ben .. _ I will tell you, but promise me that you will forgive me _ Okay, I will. You tell me I told you about my bad habit of wearing panties and masturbating thinking of her. She got extremely angry. She looked at me and remained silent for a while. I closed my eyes in shame. He asked coldly………_ When did that happen _ Two days after you came _ Then I didn't feel like doing anything else _ To be honest, I was suffering from guilt after that. After that day, I didn't even read a chat. You might not know what a chat is. I thought Gwen had no idea about chat. But Gwen proved my idea wrong and said that a friend of hers let me read the story a long time ago. _ That means you read it too _ I read a few. Then I left it. Do people read these useless things? _ Forgive me like this time _ Hmmmm… There's no point in blaming you. My girlfriend who reads chat and then goes crazy for her Ben. _ What do you mean? I only used to read it to fulfill my fantasy. Even the fantasy about you was temporary. _ So I explain it to her. But she is persistent. Leave it. Tell me, why did you start reading these stories? vai bon sex Now I told you the story of my suffering. How I started reading chat stories to forget my lover. _ Look sweetie, just like yaba takes you to another world, you can also wander in the realm of imagination with the help of chat. I just took the help of imagination to forget the pain of real life. _ I have forgiven you for what happened. Now sleep. _ Are you telling the truth? _ Yes, father. Kiss me on the cheek when you say this. _ Masturbation is bad for the body. Leave it alone, Ben _ Okay, I promised I won't do that again. I also went to sleep happily. vai bon sex I woke up quite late in the morning. After brushing my hair, I saw that Gwen had made parota. I ate it with great satisfaction. Today I will go for a walk at a distant ghat. I am waiting on my bike wearing a blue shirt. Gwen came wearing blue jeans and yellow tops. Light makeup but no lipstick. The zero figure Gwen looked terrible. Seeing me staring at her with a smile, she asked me to start the car. We started walking. I don't know why I feel strange today. Later I realized that Gwen was hugging me. As a result, I could feel her pyramid-like breasts on my back. But Gwen didn't frown. _ Hey, why are you hugging me like a little child? _ Why did I hug you so much when I was a child _ But now you're not a child anymore. What will anyone think if they see you? _ Who thinks what? What does it matter to us? And when I think about my childhood, I feel a lot of pain. If I could get those days back _ That's not possible _ That's right. But during this break, we, Ben and Gwen, can have fun. _ Okay. Whatever you enjoy. Have a good sex This time she hugged me even tighter and thanked me. As a result, her breasts were set against my back. I don't know why I thought Gwen liked to play with her Ben. She might have been enjoying rubbing milk on her Ben's back. My penis was also getting erect. I had a lot of trouble taming my son. At this age, girls want someone to take their milk and make porridge, rub their buttocks with a spoon, etc. However, after Gwen came, a lot of changes have happened in my life. Discipline has returned to my life, I have become consistent in my studies and have stayed away from addiction. I don't want to be without Gwen. Gwen also never goes away from me. Now I study at the same table. Just like I used to when I was a child. Although it was a problem at first, I have adapted to it now. Now Gwen and I read novels together. Gwen reads and I listen. She folds and washes my clothes. Even my underwear. While cleaning them, she abuses me by calling me a dirty slum boy. I am happy to hear her abuse in her sweet voice. At home, we spend a lot of time playing Ludo and Carrom. When I lose, she gets on my back. I have to go around the whole house with her. Even though the work is hard, it feels great when she hugs me. And there are two breasts. When I win, she starts making excuses. Finally, she finishes the job with a kiss on the cheek. I also melt in the love of my younger Gwen. vai bon sex One day, We were reminiscing about old memories. We had so many toys when we were little. Now they are gone. How we used to sleep snuggled together. Suddenly, Gwen took the pillow and threw it off the bed. _ Ben, I don't like this pillow at all _ Oh, what will I sleep with if I don't have this _ I don't know When I said that, Gwen started talking about our childhood doll games. I used to dress up the groom's doll and she used to dress up the bride's doll. Then we would get them both married _ Wasn't life beautiful then, Ben? _ Hmmm. Back then, you had to think about your career _ But now I have some free time. There is no point in worrying unnecessarily _ You are right. Let's go to sleep _ There will be no water tomorrow. How will I take a bath? vai bon sex When I remembered the bath, I remembered something from my childhood. _ Do you remember that we used to take a bath together if my mother didn't exist. Gwen blushed with shame _ Oh my.. What a mischief I did. I used to play with water for a long time. _ Even if you don't go naked in front of anyone else, you would be completely naked in front of me without hesitation. _ Go… don't embarrass me anymore. You should be naked too. And if you look at me and say that my vagina is torn _ What did I understand then? And you used to hold and tug at that part of me. _ Ha… I liked it.. I still want it.. Gwen spoke a little slower now _ What did you say? _ It's okay, you go to sleep. Have a good sex I understood what Gwen said correctly. I looked at her and saw her lying on her left side, curled up. I can't sleep unless I hug her. How would it feel if she thinks of me as a pillow today? I put my left hand on Gwen's waist and hugged me from behind. I think Gwen was waiting for this. She pushed her ass towards me. Even in the heat, her body was pressed against mine. I also hugged her tightly. The heat of her body made her penis protrude from her hole. Now the Gwen broke the silence and said _ Ben, haven't you had a lot of trouble in your life since your Gwen left? My heart was filled with the sweet smell of her hair. _ It must have been trouble, but you filled her emptiness. _ I was talking about a different trouble. You are a grown man. I understood the Gwen's hint. I asked her a little cunningly. vai bon sex _ I think you are also in trouble _ I haven't even made love. What is my trouble again? _ Look at the way! I don't understand the two mountains of my chest that you keep rubbing on my back. Have you thought about it? The Gwen has her eyes closed. I know she doesn't have the answer to this question. _ It's done and you don't have to be ashamed. This is what girls of your age want. The Gwen now said confidently _ I think I am a saint. I touched Gwen's chest like a shameless person I also answered with equal confidence _ What should I do? Gwen's two things are so beautiful. Gwen was happy _ Should I hold them? I think I heard wrong. _ What did you say? vai bon sex _ You can hold them if you want. There's no point in lying. I also like it when someone holds them I couldn't stop myself after getting Gwen's favor. I started stroking Gwen's soft breasts with my left hand. Uff.. Gwen made a sound slowly . Now I started pressing my right breast too. I was getting incredible pleasure by pressing my breasts like a dasara guava. Gwen was also enjoying it silently . As a result of pressing my milk, my penis was getting hard and rubbing against Gwen's ass groove. Gwen said to stop now _ I will let you press it like this. But I also want something _ What _ As I used to tug at yours as a child, I still want to do it I had already guessed that Gwen had such an intention. I left both breasts and lay down on my stomach. Gwen grabbed my 6 inch penis over my pant with one of her hands. _ Ouch…. How big and thick it has become _ Mine is average size. How much bigger is there Gwen started pulling the penis now. But be careful so that the stuff doesn't come out. vai bon sex _ Take it easy, honey, it will hurt if you do it hard _ Oof….. What a great thing. All girls are crazy about this. My friends talk about how big their boyfriend's is. Like this, we enjoyed each other's bodies for quite some time _ Sweetie, that means I can caress you like this from tomorrow _ I can. But I will remember one thing, my Ben and Gwen. _ Whatever you say Then Gwen hugged me. I also hugged her back tightly. Like when we were little, we fell into the land of Ben and Gwen sleep. The only difference is, where before there was only love, now a little sex has been added. My relationship with Gwen deepened after that. It was as if we were back in our childhood. We used to spend our time mischievously as children, and we still do the same. But what I am doing now is adult mischief. But Gwen is reluctant to accept it. According to her, people's needs and entertainment change with age. vai bon sex When we were young, we might have found happiness in playing with toys and sports, but now we have grown up. That doesn't satisfy me. Who would be harmed if we both got pleasure from each other's touch? Whether it is the touch of private parts or not. Gwen's words are true. Just as I get pleasure from massaging her soft breasts, Gwen also gets pleasure. What else is mutual relationship? Now every night Gwen and I sleep in the same bed. We both make out like 10 years ago. The heat and smell of her body intoxicate me. My penis gets erect. I have stopped masturbating as Gwen said. That's why it hurts even more. After I started sleeping with Gwen, I fell asleep very quickly. All the other bad habits have disappeared from my life somehow. All the credit goes to Gwen. After two lessons in the morning, Gwen returns home at ten. I wait for her eagerly. As soon as I open the door, she jumps on me. We have become an inseparable part of each other's lives. We spend the rest of the day together. When she works, I hug her from behind and squeeze her breasts and ass. She does a little ah… oh… do it. She asks me to leave but does not force it. Instead, she pushes her ass back. Good sex As a result, my penis gets stuck in her ass. Even though it is over the cloth, I still get great pleasure. I try to enjoy it by pushing the penis back and forth. But Gwen does not let this go on for long. Her words cannot go beyond the boundaries of Ben-Gwen relationships. I can push her over the cloth as much as I want. When I was young, I used to slap her ass mischievously. She would take revenge by pulling my pussy. I still do that. So what we are doing to Gwen is just a repetition of the past. Whatever Gwen says, I am sure that no Ben-Gwen relationship is like the one between us. Three weeks after the start of the vacation, Gwen's private teacher also gave her summer vacation. However, on the last day, she took the exam for 100 marks. I have taught her higher mathematics quite well so far. As a result, she has overcome this situation. He said he did well in the exam. I hope he will keep his face. I had a very interesting experience while teaching him. He would not be quiet at all while teaching. He and I would sit at a 90 degree angle on the study table. As a result, our feet would be close. He would rub his feet on my feet on purpose. He used to do this when he was a child. I was quite serious while teaching. But it was difficult to keep myself calm due to his mischief. However, I had a great weapon. vai bon sex Which everyone has……. hand….. as soon as I grabbed one of her breasts with my right hand, she would start doing ahh….. bennnnnn.. let go.. it hurts…. However, looking at her face, it didn’t seem like she was in pain. It seemed like a scream of happiness. Like what girls do when they get fucked. Earlier, I felt only love in her bhaiy As soon as I opened my eyes, I saw Gwen sleeping peacefully with her head on my chest. A sweet smell was coming from her body. Oh my… I think it would drive me crazy. Because my brain doesn't see her as just a Gwen anymore. After her milk and ass, the most attractive part of her body is her lips. As soon as I lifted her head from my chest, I saw her beautiful, thin, rose petal-like lips. It felt so juicy. When I put on red lipstick, I felt like eating it. A few days ago, she went to a restaurant with me dressed up in lipstick. Everyone's eyes were staring at her Gwen. That day, Gwen was wearing a lehenga. She looked great. So she asked me what I wanted to eat. My answer was.. Your lipstick.. Gwen was looking at me with a hard look in her kajal black eyes as if she was going to swallow me. I also smiled a little and gave her the menu order. vai bon sex When will I be able to kiss Gwen's lips!!! Leaving all thoughts aside, I got up carefully without waking Gwen. Aluthalu. She was lying in a red nightie. In our country, girls wear nighties because it is convenient to undress for sex at night. Mother wears nighties at night. Gwen also started wearing them after seeing her mother. Now, looking at Gwen, it seems that she is sleeping comfortably after eating Nagar's sex at night. I made breakfast myself. Eggs and paratha. I can make anything else. Gwen taught me. As soon as I finished cooking, I saw Gwen getting up and getting fresh. She left the nightie and put on a sweet-colored salwar kameez. It is completely in line with her body. The curves of her body are quite clear. The breasts are a little high there, and the hips are quite big. Seeing this sexy look of Gwen, I hugged her tightly from behind. Gwen stopped brushing and said…vai bon sex _Isssssss….. Ben, what did you start this morning _ Why, can't I even caress my younger Gwen a little? I said, holding her waist and inserting my penis quite hard into her ass. Gwen knew that it was useless to stop me, so she started doing her own thing silently. I could clearly understand that she was also enjoying herself. Gwen loves to wear salwar kameez. Because the first gift I gave her with my own money was a blue salwar. She really looks the most beautiful in a salwar kameez. After rubbing her ass for a while, we sat down to eat together. After eating, Gwen went to my bed and lay down on her stomach. Even after sleeping all night, she needed to rest again.. When I asked, Gwen replied that her body was hurting. I have to massage her. I became a king thinking that I can make Gwen's body smooth. vai bon sex The Gwen who was lying on her stomach standing next to the bed looked extremely hot. The ass doesn't feel like it.... I started pressing Gwen's hands first with both hands. I was having great fun pressing the soft fluffy hands. Now I gently shook my waist as I went down. Gwen made a comfortable ahhhh... sound. Now I went to her feet.. From the soles of my feet, I slowly reached my thighs. I started rubbing Gwen's wide thighs quite hard with my hands. Gwen started to do a slow oohh.... I continued rubbing for a while without stopping. Now I went to Gwen's real assets. Gwen's soft ass. As soon as I put my hand on her soft ass like a lap pillow, I felt like I was going to sink inside. The groove of her ass is now clearly visible. First, I started massaging Gwen's buttocks or thighs very hard. Gwen ahhhh.... Ben, slow down… I didn’t stop the massage but slapped her on the ass a few times. My penis smelled something familiar in the slap sound. Slap, slap… And Gwen’s ahhh… Ben, stop, my room was filled with the sound. After a while, I stopped Gwen. Although Gwen was in a lot of pain, she also seemed to enjoy it, as she saw her sweaty body. Good sex _ Ben. Now I’m going to take a bath. But I didn’t leave. . One more thing left. I asked Gwen to sit in doggy style with her ass lifted. Gwen taught me the rules. Now I started to insert a finger in and out of her ass hole. .. Ben ahhh… what have I started _ I am giving you pleasure Gwen Even though I was doing it over the cloth, my finger was reaching the hole of Gwen's ass. Because Gwen does not wear panties at home. I fingered Gwen's sexy ass like this for quite some time. Gwen is now happy, ahhh Ben….I am enjoying it so much. Hearing Gwen's voice, I felt like I was going to cry. But there is no clitoris in her ass anymore. After playing with Gwen's body for quite some time, I let go. She was sweating a lot. Girls look sexiest with sweaty bodies. Gwen is no exception. Gwen's ass cloth was wet and Gwen's white panties were visible. Seeing all this, my big dick was in a bad state. I calmed the boy down and went to the bath. I told Gwen that I would not masturbate. After the bath, we both sat down to eat lunch. It was difficult to wash the dishes, so Gwen came up with a simple solution. Eating from one plate. Gwen feeds me and I feed Gwen. When Gwen's finger is in my mouth, I feel like eating the fingers. While sucking the finger, I swallow it lightly and say, "Ahh... it hurts." The mischievous tone in her voice is clear. When I feed her, she doesn't want to let go of my finger at all. She keeps sucking like a hungry cat. I also get a forbidden pleasure from inserting and removing my fingers from Gwen's mouth. Gwen also enjoys it. However, looking at her innocent smile, there is no way to understand what is going on in my mind. My condition was bad. Although she was calm during the day, she was not calm at night. At night, I slept hugging Gwen as usual. At some point in the night, I dreamt that I was fucking a beautiful princess in doggy style. The girl was also having fun by screaming loudly. At one point, I poured my semen into her vagina. When I woke up in the morning, I saw a large dried semen stain on a large part of her dress. As soon as I got out of bed, I saw Gwen's nightie neatly arranged in the cupboard next to me. However, there was a large stain of something across the middle of it. I understood that it was a semen stain.That means that Gwen will wear Ben's semen-stained nightie. I felt a kind of excitement thinking about it. I asked Gwen if she would wash her pant today. Gwen said that it was washed tomorrow, so no matter how dirty it is, it will be fine after two days. As she passed me, she said, "Ben, there is no problem in wearing clothes when the dirt dries, right?" I understood Gwen's hint. She will wear Ben's dirty clothes on purpose. Through this, I got a hidden hint. Gwen has also become sexually attracted to me.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+        // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

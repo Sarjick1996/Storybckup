@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title> </title>
+<meta name="description" content=""/>
+
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page15.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page15.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page15.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Aunts' Love Affair Episode – 1
+</small>
+
+  <p>
+
+
+I am Orhan Khan | Father Mohammad Yasir, Mother Rubina Khatun | I have just turned 18 | My height is about 6 feet | We live in a vacant area 5 km away from Thakurganj area of ​​Bangladesh | But I live in my Dhupgiri because I have just joined our family business | So I live alone in Dhupgiri | I have been alone since childhood so I am self-reliant |
+
+Today, just when I was leaving for my work place, my mother suddenly called me and said that my father and uncle died in an accident last night | So I have to reach home immediately | I called our manager and told everything and left for home | Uncle has a young son and uncle's house is in Dhupgiri, but he has never been there | Uncle must be about 28 years old | Even though uncle's skin color is light brown, uncle looks very beautiful | All the boys in our neighborhood are in love with uncle |bangla new choti.
+
+It took me about an hour and a half to reach home. I still cringe thinking of my aunt every day. I open my aunt's Facebook posts and see her tits and ass. And my mother is no less. My mother is 34. My mother got married very young. My mother is fair and thin. My mother and my aunt are of the same height, but their skin color is slightly different. Many boys are crazy about both of them, but my mother and my aunt don't care about anyone.
+
+new choti
+When I reached home, I saw a shadow of mourning in the house. From there, my father and uncle were buried in the cemetery. Many people came to the house. My uncle's in-laws and in-laws also came. All my father's and uncle's friends and other guests also came. I don't like crowds, so I told my mother and went to the roof of the house and sat on the stairs of the attic and listened to music. After a while, I saw my aunt also come to the roof. When my aunt came and sat next to me, I stopped singing. My aunt started asking me how my work was going.
+
+Aunty talked to me for a long time | She wanted to know what I liked or disliked. After a while, when Mom called me to eat, we finished talking and went to eat. I knew Mom and Aunty could get married again if they wanted to. Because it is our family's rules. If a wife's husband dies in our family, they can get married but only with an unmarried boy from our family. new choti
+
+I finished eating and told Mom – Mom, I'm leaving. I have a lot of work to do there. Saying this, Mom told me – I need something with you. Mom took me to another empty room.
+There she told me – Babu, you know our family's rules.
+
+I said – Yes
+Mom – So we all decided that you have to get me and Aunty married.
+
+Hearing that, my mind seemed to fly to the sky. I wondered if the people I used to think about every day would be my wives. Still
+I said – But Mom, how is this possible? Do you and aunt have to get married because it is family rules?
+Mom – You have to accept what is in the family rules |
+Me – But aunty, will aunty's parents accept all this? And you are my mother | new choti
+
+Mom – They all agree and I agree too, only now you are informed |
+Me – But is it possible, mother?
+Mom – Everything is possible | You won't refuse, promise me this in marriage |
+Me – Okay |
+
+I had to agree to the marriage under compulsion, even though I am extremely happy in my heart | When mom left the room, I also went to the same place on the roof and sat down | After a while, aunty came and sat next to me | Aunty started asking me – Do you think you are angry to marry an old woman like us?
+I said calmly – No, why would you be angry and who told you that the old woman looks so beautiful | Anyone would want to marry you |
+Aunt – Then why don’t you want to marry me?
+Me – You are my mother, aunt | new choti
+
+Aunt – After marriage, we will become your wives, don’t you refuse | And you make your mother, brother and me your own |
+Me – Okay | I agree |
+Saying this, mother called everyone downstairs to eat | I thought about it all afternoon and evening | My attraction towards mother, aunt kept increasing | After dinner, I lay down on the bed and started thinking about mother and aunt’s bodies |
+
+At around 11:30 pm, someone knocked on my door | I opened it and saw mother and aunt | Aunt motioned for me to come to the roof | I and mother followed aunt to the roof | Aunt went to the stairs of the attic and sat down | She asked us to sit next to her too |
+
+Aunt said – Arhan, you are going to be our husband | So you have to obey a few things from us |
+I said – what aunty?
+aunty – first you won’t call me aunty anymore |
+mother – yes you won’t call me aunty anymore |
+me – then what should I say?
+aunty – jahanara | new choti
+
+mother – me rubina |
+me – okay aunty |
+aunty – did you say aunty again?
+me – okay jahanara |
+mother – call me rubina too |
+me – okay rubina |
+
+aunty – and you have to do that with us every night |
+me – all that means |
+aunty – all that means fucking |
+mother – you have to do it with both of us |
+I was very happy to hear mother aunty talking about fucking but I restrained myself and said – it’s not possible | new choti
+
+aunty – everything is possible | after marriage we are going to become your wives | then what’s the problem?
+me – but …
+mother – no more buts | If you have something to say, tell me |
+I will tell you straight without thinking – what is your bra size?
+Aunty said a little hesitantly – 34
+Mom smiled and said – 36
+
+Me – and panties
+Aunty – 32 and ass 34 |
+Mom – 32 and ass 34 |Liked?
+I said shyly – yes
+Aunty – what is your size?
+Me – 30. new choti
+
+Mom – not panty size, what is your height size
+Me – 7 inches |
+Aunty – wow, you are quite big |
+Me – I liked it | I have another one
+
+I want something |
+Mom – what
+
+I – I will kiss you |
+Aunt – where
+Me – on the lips |
+Aunt smiled and turned to me and gestured for me to kiss her | I pressed my lips to Aunt’s lips | When I wanted to fill my tongue in Aunt’s mouth while kissing her, Aunt also pressed her tongue against mine for a while | new choti
+
+Mom started pressing my hand with her hand and asked me to press my hand to her chest | After kissing, Mom asked me – are you happy or do you want more?
+I could not control myself and said – no, I want more |
+Mom held my head and put it in her mouth | Mom started sucking my mouth completely and Aunt started pressing her breasts | Neither of us were wearing a bra | I said you are my wife, so I will keep you naked all day | And I will fuck you completely at night |
+
+Aunty – Dhyat said she was naughty and got up from the ladder and stood on the edge of the roof. I took my mother and put my hand on her and mother's buttocks and put my penis between them. I put my hand in the groove between mother and aunty's buttocks. Mother aunty is almost my height so it was my advantage. When my hand touched aunty's buttocks, I realized that aunty was not wearing anything like me. new choti
+
+I hugged aunty and said - Jahanara and Rubina, I love you. Mother's companion, aunty also said - We love you very much Arhan. I turned aunty towards me and started sucking her lips. Aunty got excited and climbed on my lap. After kissing aunty, she took aunty to sit on the ladder. I sat on the ladder and asked aunty to sit next to me and mother wanted to sit on my lap.
+
+When I put my mother on my lap, she sat on my lap as if my penis was under her vagina. I put my aunt next to me and took her mask off her shoulder and started sucking her shoulder. And I put my hand inside her maxi and started pressing her big breasts.
+
+We fell asleep while sitting like this. The next morning, I woke up and saw my mother lying on top of me. I was lying down with my face covered in my aunt's mask. Later, I called both of them and told them to go home. My mother, aunt and I went to our own rooms and slept. new choti
+
+I took a bath, put on my kurta and got ready and went downstairs. My grandfather and grandmother came to my room and put wedding rings on my mother and aunt's hands. My mother, aunt, was sitting with her head down. They were happy in their hearts and did not talk about it. Today, it started like a wedding celebration in the house. Then my mother and aunt were put on the wedding ring. My grandfather came and gave me a new name. My grandmother came and put on new clothes. I was put in another room.
+
+The judge came and asked Ma Kaki – If you agree to marry Arhan, then say yes | Both of them said yes three times together | Meanwhile, I also said yes three times | Aunt and Ma got married to me so I was very happy in my heart | And I didn't think about all this, I was just thinking about Ma Kaki's body | My marriage with Ma and Aunt was done |
+
+After the wedding, we all invited each other | In the afternoon, I got ready and told Ma – Then I will come, I have to go to work |
+Ma – But not alone, with my wife and children |
+I said – You don't stay here | What is the need to go with me?
+Ma – We will depend on you from now on | You are everything now | You go to the car, Boss, I am going to Jahanara and Suhe's car | new choti
+
+I went to the car as my mother said and sat down | After a while Ma Kaki and Suhe came | We all went to my house | Reaching home, I got down from Ma Kaki and Suhe's car and reached home | When I arrived, my mother and aunt went to my room. I asked my aunt – will you also stay here together?
+Aunt said – yes, this is our room |
+Me – but..
+Mother – no buts, I told you earlier that we are now your wives and we will stay in this room with our husband |
+
+I too, like a good husband, accepted the new wife's words |
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

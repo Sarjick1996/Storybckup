@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page44.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page44.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page44.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Fate leads to the end of two sisters as whores Part 1
+
+</small>
+
+<p>
+
+
+Today's story is the story of two sisters fucking. After the elder sister got addicted to fucking, her friends started fucking her younger sister and she started fucking her younger sister slowly. The elder sister's name is Tania and the younger sister's name is Tuli. When Tania was 19, she started fucking.
+Let's get straight to the point. First, let's talk about Tania and Tuli's figures.
+Tania's breast size is 37.
+And Tuli's breast size is 36.
+Currently, Tania is 23.
+Tuli is 21.
+The university I got into is a reputable university. After getting into it, I got some girlfriends.
+The girlfriends are a little naughty or bad. The reason behind being friends with such girls is that I am a little lazy in my studies or don't like to wear them. So I became friends with such a bad, bad, bad girl type girl in my university. We rent a house together.
+One of my friends' name is Ritu, another's name is Shayla, another's name is Kasum. Each of my friends had two or three boyfriends. And each of them used to spend a lot of time with their boyfriends.
+Kusum told me, why don't you make love, you need a boyfriend.
+Hey, I don't like boys.
+
+You'll like it, you'll like it, try making love, when you start getting physical pleasure from your boyfriend, you'll see if you'll make four or five loves.
+Okay, listen, I have a friend and he wants to make love, create a line with him. Okay, give him your number and show me his previous picture. If you like him, then I'll make love with him.
+
+Then Kusum gave me the Facebook ID of that boy. I saw him and I liked him too, but I didn't know one thing. This boy was Kusum's boyfriend and Kusum made him make love with me to save himself from him. And the boy was actually very bad and and a famous gangster in the area where we lived. Slowly I fell in love with him.
+
+The boy's name was Antik, actually the boy was Hindu, after I started loving Antik, he slowly started getting close to me. We used to go to different places, I mean we went on dates, then he would caress me, hold me, touch me. I liked it too. And when we talked on the phone at night, he would talk to me about sex in different ways. And while talking about these things, he would excite me. And slowly I also started dancing to his words. One time I started showing my body, my milk, gold, and all this with him on a video call. And when we went on dates, he would sit next to me, he would hold me and suck my milk. And he would always kiss my lips. While kissing my lips, he would suck my life. Slowly he started putting his hands in my vagina and when he started putting his hands in my vagina I started getting extreme pleasure and I also slowly started giving my body to him.
+
+One day he arranged a room somewhere and told me that today we will not go on a date outside. And he told me that he will take you to a place where I will give you a lot of fun and you will also have fun. I said where and what fun he will give him he said that today I will have a night of sex with you. I was shocked. And I said okay you know I will do whatever you want. After saying this he hung up. Then I went to Shaila and Kusum and told this. Shaila said it was very good that I do not sleep but Kusum objected a little after hearing this.
+
+Then I went to the place where Antik was arranging the house.
+
+I entered the room and sat on the sofa with my back to Raikha. And from somewhere Antik gave me a bunch of flowers and a mirror. He held me with the flowers and I held him very tightly. When I held him tightly, I could feel his cock sinking into my stomach. He kissed my lips and started sucking my lips and with one hand he started rubbing my ass. After eating my lips for a while, he turned me around and kissed my neck and placed his hand on my breasts and started rubbing my breasts. I was feeling very comfortable while squeezing my breasts and I started exhaling loudly. After a while, that hand started rubbing my vagina and rubbing my vagina. I was really excited to fuck him then I held him and started kissing his lips and cheeks. He made me lie on the bed in his arms and one by one he took off all my clothes and made me completely naked. When I was naked, he told me to get naked now and slowly took off all his clothes. When I opened his pants, I saw that he had a black penis and a rotten smell started coming from his penis, like the smell of alcohol. He told me: -
+Open the place.
+
+I was surprised after opening it. His penis was as big as it was thick. His penis was about 11 inches long and three inches thick and black and sticky with sweat. Then he made me lie down and took my penis in his mouth and started licking it. When he was eating my penis, he suddenly inserted a finger inside my penis and started fingering it. After licking it for a long time, I released my sexual juices. And he completely ate the entire penis and cleaned it. Then he told me
+Suck your penis.
+I replied, "No, I don't know."
+I can't eat your money.
+I feel angry. And I have to eat a lot of money and I have to eat your son-in-law's and son-in-law's money.
+Even then, I will eat whatever you wash and clean.
+Bring it.
+Hey, if you wash it, the taste will be ruined. Take it, Lakshmi, take it, don't do it again, take it well in your mouth.
+I pulled her and kissed her lips again and said, "I can't, you don't understand why." She told me again, take it, try it once, it will hurt a little at first, then you will taste it and from now on I will never have to tell you again. When you get it, you will suck my penis in your mouth.
+Then I washed her penis with my hand and kissed the head of her penis. And I sucked her penis a little. There were seven heads of penis, salty, salty, smeared with milk.
+
+Then Antik told me: -
+If you don't eat it like that, I will show you a video, eat it the way you see her eating in that video. Then she showed me a porn video. She said that this is how you have to eat it. And he said, take a lick of my penis and taste the whole penis. I did as he said and gave a lick of his penis and then started licking the whole penis. When I started eating the last of the sweaty penis, it felt a little bad at first, then it started to taste good, then I slowly felt a different taste and it tasted very good.
+I said, "You know, why didn't you give me so much pleasure before? You didn't want to eat it, but there is another snake thing, eat it, you will have more fun. What is that?"
+After the sex, my penis will come out, eat that penis, see how fun it is. I said, "Yes, I hear from my friends that they like to eat a lot of penises."
+
+Then he made me lie down again and placed his penis near my penis. Gently, insert a little penis inside my penis, that is, gold. I immediately started feeling pain. Then he put some more pressure and inserted half of his penis inside my vagina. I was going crazy with pain. Then he slowly inserted and removed his penis and started fucking like this. My pain slowly started decreasing. I noticed that blood was coming out of my vagina. Then he fucked me in the same position for a long time and made me cum. I got tired of fucking him. He wanted to fuck me again but I refused him. Then I slept with him for a long time and then went home.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

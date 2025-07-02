@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page27.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page27.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page27.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Dirty facts about the Hussain family (Incest sex story),incest story, family sex story
+
+</small>
+
+<p>
+
+Hello friends, how are you, I hope everyone is well by the grace of God. Let's start without any fuss. I am very excited because today we are going to a deserted island in South Goa.
+Me: When are we leaving?
+Sumitra: Wait, let's eat and leave.
+Me: Devarati is up.
+
+Riadi: No, she is not up. You fucked her last night.
+Me: So oh, I fucked you.
+Riadi: Yes, you did.
+Me: Sumitra, go and pick up Sezkaaki.
+
+
+Chhotakaki: What will you take, old man? You didn't say anything there. I said I won't wear anything except panties.
+Mother: Is there any need to wear it, you just go naked.
+Me: Without answering what mother said, I said, Aunty, come with me for a while.
+Aunt: Where to go
+
+Me: I am going to a deserted island in a drug store. I will stay until evening. What arrangements will I make, no one will leave me.
+Aunt: Don't worry, all arrangements have been made. We will play all day long on the sea. You will play with us on the beach. I hugged Masiki and started kissing her. My aunt and uncle said, "Why did you start here, it will be late."
+We all got into the car. bengali choti sex
+
+We were 8 people in one car with 1 driver. Nothing significant happened in the car because Jethi had forbidden it so that no one could know about our real relationship. We all got down on that deserted island, an island covered in jungle and mountains, where it is impossible for people to come and no one comes. The car was released and we reached the island. It was like an unprecedented scene, blue water, white sand, no one would believe it unless they saw it.
+
+The weather was quite pleasant, everyone came wearing saris and churidars, which made me feel sad.
+Sumitra: You sit down, we are coming.
+Me: Where are you going.
+Riadi: Oh honey, sit down.’ bengali choti sex
+
+After about 20 minutes, when 7 people came, I saw that everyone was wearing bikinis and panties, nothing but vermilion on their heads. They look really beautiful. Who are my four wives?
+Jethi: This Sejo, fix everything. I saw that chairs and umbrellas were brought, everyone leaned on the chairs and sat down.
+Me: Dad: Why all this arrangement?
+Sejkaki: I said I would play with you.
+
+Mom: Didi, I haven't eaten anything, I am very hungry.
+Jethi: Yes, let's eat. We sat on the beach and started eating. When I finished eating, Aunty gave me a glass of sherbet.
+Me: Why sherbet, Aunty?
+Devashree: Eat it, it will be useful, I bit my lip. Seeing Aunty's amorous expression, I got hot and finished the sherbet. bengali choti sex
+
+Jethi: Come on, let's go to the sea. Jethi took my hand and took me to the sea water, immediately Riyadi and Sezkaki also came down, we started bathing in the water up to our waists and having fun. The four of us started enjoying ourselves, suddenly I felt my body getting more excited. Riyadi was in front of me, I pulled her close and hugged her, her big breasts pressed against my chest. I started crushing her harder with my chest.
+
+Riyadi started kissing me by hugging my neck. I also started responding, Jethi and Sezkaki came to me, I was so excited that I moved Riyadi's panties to one side and started pounding her pussy with my dick.
+Riyadi: Ah, oh, honey, fuck me harder, harder. Sezkaki was holding my ass and helping me pound it harder. bengali choti sex
+
+I: Ah Riya, is your pussy beautiful? Why did your ex-husband leave you?
+Riyadi: Uff, it feels good, and don't talk about that idiot at this time. He is a cover for inaction and incapable of even sleeping.
+I: I said to increase the speed, you did well to leave such a situation. Otherwise, you will miss the growing pains.
+Riyadi: Really, uff, leave that idiot, you know, and fuck me well.
+
+Jethi: Why didn't you tell me these things before?
+Riyadi: Did you ever ask?
+Me: Kiss Sumitra Riya
+Sumitra: Me?
+Me: Yes, you should satisfy your bitterness, kiss Riya. Sumitra started kissing Riya. bengali choti sex
+
+Riya: Uuuuuu is moaning. I started fucking, my excitement is not going down today. Riadi has once poured water on the waist. I took out the penis from Riadi's pussy and said let's go to the bank. I took off my panties and lay down completely naked on a chair. Jethi and Sezkaki started sucking my penis. There was a sound of sucking and sucking which made the environment sensual at once. I saw my mother lying next to me. Riadi: Oh, Mejkaki. Mother: What happened? Look to the side. Mother looked and saw Jethi and Sezkaki sucking my penis. Why did mother keep quiet? Mother took off her panties and sat on me, holding the penis and started pounding it. Tears of joy started flowing from my eyes. Mother: What happened? Why are you crying? Me: These are my tears of joy, the joy of having you. I started pounding the floor. bengali choti sex
+
+Mom: I put my head on my chest and started dancing in sync, oh my dear, how beautifully you are beating my heart, beat it hard, I can't hold myself back anymore. My baby is so beautiful, fuck me, old man
+Jethi: Yes, you have been hurting our unemployed groom for so long, so I started making my mother sit on my dick even harder. Mom started sucking Jethi's tits now.
+
+Sezkaaki: Hey, you two, mother and son, break the chair together. I am getting a sheet below, come down.
+Mom: Come on, honey, come down, mom said, I could not insert the dick into my pussy because of excitement, then Sezkaaki held the dick and put it in the hole of my mother's pussy and said, press it. As soon as I pressed, he entered and started pounding again. Mother: He held my waist and started pounding me. Ah Ah Ah Ah Pound harder, pound me, don't stop, today you will pound me. bengali choti sex
+
+Sejkaki: Oh my, what will we do?
+Jethi: Come here, Devarati, the way Babu is pounding the table, he says that the water will drain in a while. Jethi and Sejkaki are licking their pussies in the 69 position. I am pounding my mother's pussies with pleasure. Mother is holding my back tightly, you understand. Mother held the water in her vagina with great difficulty but after 15 minutes
+
+Mother: Don't stop, I will have to, I will have to, ah ah ah I am going with a thud thud thud finally mother started moaning. I took out my penis and inserted it into Sejkaki's vagina and started thud. Thud th I am continuously pounding Sezkaaki. Now it is Sumitra's turn to insert the penis into Sumitra's pussy. I sucked her pussy. Now I made Sumitra sit doggystyle on the sand and started pounding her pussy.
+
+Sumitra: Ah ah, what a beautiful pounding you are giving, pound my dear, ah ah ah.
+
+Mother: Come to me
+
+Jethi: Don't stand there, I pounded you for how long. Ah ah, don't pound hard, why did you stop?
+Me: Oh Sumitra, pound my mother again for 5 minutes bengali choti sex
+
+Jethi: Pound me a little more, my water will flow. I immediately started pounding Jethi hard.
+Jethi: Oh my dear, push me hard, push me all the way inside, push me my dear, my dear, your brother-in-law has never pushed me like this. Oh my dear, look, look, look.
+Mother: You are shaking your pussy, it's not your pussy, you are growing something else, you are not dripping water even after eating for so long.
+
+Thi: Oh oh, don't stop, Mejo, wait a minute, it won't take long to cum
+Mom: She inserted her finger in her pussy and started trying to calm down.
+Jethi: Ah, ah, ah, ah, oh, my brother, don't stop, auuu, ah, my dick will come out, ah
+
+I started pushing my mother from behind, oh my dear, push me hard, fuck your mother, tell her that people fuck boys, mother, ah, ah, you won't stop until my dick drips. Oma omago ki boro go bardi hit her and fuck your mother well. I kept hitting her hard. Mom started hitting me with her ass and at one point she started squirting. bengali choti sex
+
+But I haven't had it yet. I took down Sejkaki's panties and started hitting her pussy and Sejkaki also started enjoying it.
+Me: Oh honey, I heard that when you make a noise during fucking, it gets exciting.
+Sejkaki: Oh you want to hear a noise ah ah
+Me: Yes, my Sejkaki is a prostitute.
+
+Sejkaki: Oh my fucking husband hit your Sejkaki is a prostitute and hit her hard.
+Me: Yes, I will hit you, prostitute
+Mom: Why are you abusing me?
+Sejkaki: Then come here, Goddess, come and hit her ass. bengali choti sex
+
+Mom: No, no, it will take a lot and my pussy hasn't even entered yet.
+Sejkaki: Do you know how hot your wife's ass is.
+Mom: No, honey, don't do that.
+
+Jethi: Riya, hold me. Riyadi held Jethi, smeared oil on my pussy and put my pussy in my pussy and said, "Press it." As soon as I pressed, my pussy started to bleed. You really didn't fuck me.
+Mom: So what, I was lying.
+
+Jethi: Hey, why did you stop again? Why did you start again? I started slowly pounding my pussy because my pussy is very tight.
+Mom: Let go, I feel it ah ah. I kept pounding, now the more I pound, the looser it gets, I increase the speed of fucking. bengali choti sex
+
+Mom: Oh, honey, does it feel good, you idiot, hit your pussy hard, I didn't know, hit your pussy hard, hit your pussy hard, ah Jethi: What are you saying? bengali choti sex
+
+Chhotakaku: Grandma, stay away from all this.
+Jethi: What do you want.
+Chhotakaku: To beat your groom.
+Mother: Don't cast your evil eye on him.
+Chhotakaku: I don't like talking like that, Rohit comes here with a pistol.
+
+Me: Why?
+Chhotakaku: Hey, you bring that little dog.
+Goon: He came to take me, when I tried to escape, he caught mother and Jethi.
+Me: Leave them, let's go, where should we go, the police arrived at that moment.
+Police: Rajatav Babu, drop the gun and surrender. No, it's not a trick, drop the gun. All your plans have been ruined.
+Mother: I mean the plan. bengali choti sex
+
+Police: Your Gurudev is his man.
+Mother: I mean
+Police: Not that, hear it from his own mouth. He brought Gurudev
+Gurudev: Please forgive me. I forced Rohit to marry you with Rajatav's words. Actually Rajatav wanted to ruin your relationship so that it would be successful.
+
+Aunty: You are fucking Rohit with your pussy. What if someone gets pregnant?
+Jethi: Yes, Uncle, you have such a dirty character and Gurudev, you did this in the last days.
+Mother: Oh God, what sin have we committed? Meanwhile, Aunty took the opportunity and shot at me, but Aunty moved me away and the bullet hit Aunty's neck. Immediately, the police fired at Aunty.
+
+Me: Aunty, why did you do this?
+Aunty: You are my child, won't I save you? I have raised you since I was little.
+Me: Nothing will happen to you. Someone call an ambulance. The ambulance came and I took Chotokaki to the hospital. She needed blood which we gave her.
+Doctor: The operation was successful and she is out of danger but it will take time for her to regain consciousness. 
+After 2 days like this, Sarbani came to her senses and we returned home but no one gave me a divorce and our relationship became stronger. 
+
+Now I have joined our business. Everyone knows that we talk about our relationship but my four wives handle it. Riyadi is pregnant who knows whether my child will be a boy or a girl. Stay well and healthy everyone, see you in another story
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+      // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

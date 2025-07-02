@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page32.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page32.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page32.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Fucking at wedding Night
+
+</small>
+
+<p>
+
+
+My wife Jessica, my name is Russell, I am 28 years old. I got married 4 years ago. At that time, my wife was 20. My wives are 2 sisters. My wife's name is Jessica and her younger sister Sophia. Sophia was 17. My wife is very beautiful. Such a beautiful girl is not often seen. She was as beautiful as she looked. Her figure was so beautiful that when she went out with her, people would just stare at her. Her height was 5 feet 4 inches. Her breasts were quite big but they were very tight. Even though she was a size 36, she did not sag at all. I don't know how she didn't sag even though she had such big breasts. And her ass was like a pillow. It was so big and so tight that when she walked, she looked so sexy that I can't explain it in words. Her stomach was very flat. Her body shape was 36-32-40. Her navel was as deep as a well. It felt like any man could put his penis inside her navel and dump his goods. She always wore her saree far below her navel, just above her always shaved smooth gold, which made her feel like a sex bomb. Now let's talk about my two characteristics. My height is 6'2" and my body is also quite curvy. I was born a little bit sexually abnormal. My sex drive was very natural. Whenever I would fuck someone, I would teach them how to fuck. At least every time I could last for 40 to 50 minutes just by thrusting. And my penis was different from all the people I knew. When my penis was hard or hard, it was about 10" long and about 5.5" thick. And when I came out, it would grow another 3 to 5 centimeters. When it was hard, it was like an iron rod. Seeing this condition of mine, my friends would say that it was some kind of disease. They would tell me to go to the doctor for it, but I would not listen to them. But they always kept telling me the same thing that I should go to the doctor. Finally, one day, I went to a sex doctor with a friend and told him about my problem. The doctor said with fear that it was nothing. Some people have such characteristics due to their physical hormones and that they are very sexually powerful. After listening to the doctor, I returned home in a happy mood. With this immense power given to me by nature, I started spending my days happily. I used this power to create a sexual world around me, the story of which can be told at another time. Today, I am telling the story of my first night after my marriage. After getting a job in a private organization, my family started talking about my marriage and one day, as a family, we went to see Jessica as a wife. When I saw Jessica, I liked her very much. My husband also liked Jessica. Then, with the consent of both families, we brought Jessica to my house as a wife. My wedding ceremony was held in the afternoon. We came home with our new wife Jessica before evening. Then, on the occasion of the wedding, we went home. It was full of people. Everyone started saying goodbye to their new brides at night. Around 11 pm, the house was completely empty. My elder sister-in-law and Apara let me into the living room at around 11.30 pm. When I entered the room, I saw Jessica sitting on the bed in her wedding saree. I went and sat next to her and started talking to her. I wanted to be free with her. I also wanted to overcome her fear of the living room. I had already eaten the fruits and sweets that the sisters-in-law had given me in the living room. I was also feeding Jessica. Although I was a master at sex, Jessica was new, so I took a lot of time to overcome her fear. At one point, I lifted her face up and kissed her forehead. I saw how she was shocked. Then I held her hand and started pressing it. I started explaining to her what happened after the wedding. At one point, I asked her about what the new bride and groom do on the wedding night. Does anyone know if the grandmother/aunt got any ideas from her friends? She blushed and said that she learned a lot from one of her married friends. Her friend told her that it hurts a lot while doing that thing on the night of the wedding, so she was very scared. I understood that everything has to start with her. I made her lie down on the bed next to her and pulled her next to me. I made her lie down facing me. I held my left hand and placed my head on it. I started cutting her hair with my right hand. Look, Jessica, every person grows up and starts their own family. This is usually due to both social and physical needs. This is the law of nature. This rule has been going on since the creation of the world. Today, we are also living in a house according to the law of nature. You are an adult girl. You have to understand what the needs of men and women are. Surely you also have those needs. This is a very happy thing. If you really want to enjoy the matter yourself, then don't take it as a fear and get the joy out of it. You will find that you will enjoy it as much as I will enjoy it. I was telling her all this and caressing her hands, forehead, and cheeks with my hands. I saw that her inertia was coming and coming and decreasing. Then she told me that even though I had an idea about this matter, she was very scared. I said, there is nothing to be afraid of. Just respond to my work and you will see that everything will become normal. I kissed her forehead and started kissing her eyes, cheeks, and chin. I was still running my hands through her hair. Now I held her cheeks with my hands and applied her red lipstick.
+I brought my face down to her lips and started kissing her passionately. This time I saw that she was quite natural. Should I tell her to let me kiss her? Jessica, won't you kiss me? If someone gives you a gift, you have to give something in return. Without saying anything, she hugged my head tightly with both her hands and gave me a long kiss on my lips. In return, I hugged her and started kissing her hard. After kissing her, I came- came- my right hand melted into the gap of her saree and placed it on her stomach. I felt Jessica shiver a little. I started lightly fingering Jessica's stomach with the tips of my fingers and kissed Jessica's neck and started breathing hotly. I saw Jessica closing her eyes and shaking. In this gap, I put my hands in Jessica's breasts and came- came- pressed. Jessica was still in her wedding dress. Then I removed Jessica's saree from her chest and pressed and kissed only her breasts. She also hugged me tightly and started kissing me. Then I took off her saree with my hands and feet. She was still hugging me tightly and kissing me. I unhooked the hooks of her bra and took her off her body and untied the ribbon of her petticoat and pulled it down from her waist. Then she was wearing only her bra and panties. In the light red light of the room, her fair body looked like a blooming red rose. I then lay down and lifted Jessica on top of me on her back and started pressing her ass. I unhooked her bra with my hand and immediately her two huge, hard, but soft breasts jumped out. Oh, how beautiful these two breasts are. I can't explain them in words. The two slightly round, medium-sized nipples on the heads of the two erect breasts hung near my nose. I started squeezing two of the breasts. The more I squeezed, the more fun I felt. Now I took one of her breasts in my mouth and started sucking it and started squeezing the other breast harder. She said in pain, "Come on, come on, I said, come on, even if it hurts." If you press it, you won't have fun later, and I won't have fun either, so even if it hurts a little now, you'll see that you'll have fun reading it. I used my body's strength to press her breasts with my body's strength. Once I sucked one breast, then another with my mouth, then another breast, then another. After doing this for a while, I started pressing and sucking her under me. In this position, I held her panties with my big toe and lowered them to my knees. She also helped me lift her ass and lower it. I turned her upside down on the bed and made her lie down. It's fun to see her ass. Girls with big asses are also fun to fuck because their vaginas or vaginas are raised a lot because of their big asses, so it's fun to fuck them and hit them while fucking them. I thanked God in my heart for getting such a beautiful and sexy girl like Jessica as my wife. Then I let go of her breasts and started pressing her ass. After twerking like this for a while, I saw that her ass turned red. I then excitedly said to her, "Jessica, my wife, do you know how beautiful you are?" I have never seen such beautiful breasts and ass like yours in my life. Tell me why. Have you done this with any girl before? I will tell you. If not, all this is coming out of my mouth in excitement. I will tell you more. You know, Jessica, even though it sounds bad to hear, I like to talk and listen to nonsense while doing this. I feel very excited about it and I also enjoy fucking. Don't get me wrong. Apart from these things, I feel like a slut. I request her to talk dirty to me during physical intercourse. But when she doesn't agree, she says no. I can't talk dirty. I feel very ashamed. But I am a stubborn servant. I started pestering her a lot about this. Finally, she says, okay, let's see if she gets into such a situation. I am happy with this and started fondling her deeply. After fondling her like this for about 5 minutes, I put her on my back and immediately her pink gold sparkled in front of me. What a beautiful gold save The gold is sparkling, the gold is blooming like a cake, the two edges of the gold are like high dams protecting the main hole. I stared at her gold, fascinated. I saw Jessica covering her eyes with her hands in shame. Lying on her stomach, I saw Jessica's gold and milk. I jumped on her like a madman. I started kissing her nose, mouth, cheeks, lips, and neck continuously and started biting her lightly. She also started to get excited. I bit her lips and whispered in her ear in excitement. Give me your tongue. She also whispered. Tell me why, what will you do? -I'll suck your tongue -No, I know how it feels. I said no, please suck a little. Then he stuck his tongue out. I pulled his tongue out of my mouth as far as I could and started sucking it. Sometimes I started sucking his tongue and his dry lips in my mouth. He also started sucking my tongue and lips in response. I asked him - Does Jessica feel good? - Huh - Shall I suck more? - Huh, suck hard. Meanwhile, as a result of all this rubbing, my penis became as hard as iron under my pajamas. I came. I untied the rope of my pajamas and took it down from my waist along with my panties. Immediately, my penis became long and hard and started rubbing against Jessica's vagina. Jessica did not really understand the touch of the penis as she was still wearing her pajamas and panties. Now she felt her ass and somehow moved herself away a little, but she started kissing me. Then I came and pulled one of her hands and put it on my hard and erect penis. She held the penis.
+He removed my hand and pushed me off his body and sat up himself. I asked him – what happened – why is your penis so big and thick? He was scared and asked me. I laughed and said that's good. All girls like thick, long and strong penises. Why are you afraid? – He said that a penis so thick and so big will never enter me and if you insert it, my penis will burst and I will die. – I asked him why you have no idea about it? – He said, I heard from my married friend that it hurts a lot when it goes in, and now that I see how thick and long your penis is, I'm sure I'll die if you put it inside me. – I reassured him, you heard right, it might hurt a little while inserting it, but once you take it in with difficulty, it's impossible to have fun, which you won't be able to recognize. And I'm your husband, of course. I don't want you to feel pain. If I force it in, you'll feel more pain. So if you're both equally interested in the matter, even if it hurts a little during the first act, you'll definitely enjoy it later. So, don't be afraid. Come on, share with me. If you do what I say, you won't feel much pain. After explaining this for a while, his fear subsided a bit. I hugged him and lay down. I started pressing his breasts on his back. I started to stroke her ass and throat, taking her entire lips including her tongue in my mouth and sucking her throat and chest with my lips, I gave her a hard kiss. She moaned in pain and whispered, "What are you doing? Her throat is getting scarred. What will everyone say when they see her in the morning?" "What will they say? Who cares if I bite my wife and make a scar?" "But won't I be ashamed in front of everyone?" "Not at all. In the morning, my aunts and grandmothers will be looking for your scar and will say, 'Let's see if our son can give our new wife a scar." Hearing my words, Jessica laughed and pressed my head tightly against her chest. I also started sucking her breasts and biting them lightly. She also started kissing me like crazy. I took her tongue and lips inside my mouth and started sucking them. Sometimes I took one of her breasts in my mouth and started sucking the other breast. I started pressing it hard with one hand. I rubbed her stomach and placed it above her navel and started fingering her inside her navel with my fingers. After a while, I lowered my hand and touched her lower stomach and placed it in her vagina like a lotus flower. She shivered at my touch. I started rubbing my hand over her vagina and she started getting excited. She started to rub her hair on the back of my head with her fingers. Now I pulled one of her hands and made her hold my erect, hard, long penis and said, "Peeez, my sweet wife." Keep holding the pussy and coming-coming-pulling
+This time she didn't say anything and started holding my pussy and coming-coming-up and down. I also started playing with my hands on her pussy and rubbing my fingers along the opening of her vagina. I started playing like this. I put two fingers in her pussy and started rubbing it on her clitoris. She also got extremely excited and started pulling my pussy tightly and started making a loud noise with her eyes. I understood that she was quite excited. Then I asked her how she feels. - She said, "Ah, I know how it feels. I know how my body is shaking. I know how my pussy is starting to feel. It feels good to put something inside me. I said, "This is the beginning of the pleasure. Just do as I say. You will see how much fun I can give you." - She said, "Whatever you say, I will do it." Please don't deprive me of the fun. Don't hurt me. - I won't tell you. I will give you full pleasure. Just listen to me." Do the work like this – tell me what to do, Piz Lakshti – I said, please suck my nipples, she said, I can’t do it, I feel horny – I said, what’s the point of licking? Just like you suck my lips and tongue, think of this as a part of my body and if you suck it well, I will be very excited and I will be able to give you good pleasure, saying this, I got up a little next to her and brought my nipples along Jessica’s face. She wiped my nipples well with her petticoat lying next to her and took out her tongue and started licking it. I said, if you lick it, you can take it inside and suck it well. Then she took her nipples in her mouth and started sucking them. I also started licking her. I started slapping her face. Then I told her, while doing that, we both have to say all the bad things we have to each other. This will increase my excitement and I am sure you will also get excited. And both of us will have fun doing that – she said you start first then I will – I said thank you Lakshti saying this I started to press her hard then I got up from her side and laid her on her stomach she didn't understand what I was going to do I laid her on her stomach and came in 69- I put my face in her pussy immediately she said what are you doing? Don't you feel horny? - I said wow you are sucking my pussy and making me horny and I won't repay you for it? Pez let me caress her a little I fucked her both legs and started kissing her swollen pussy like a steamed pie and started to thrust my pussy in her mouth she also said nothing else started to suck my pussy I moved the two nipples with both hands while kissing her pussy she came- came- I put my lips on the pussy door and started to move her clitoris with my tongue then after that The tongue is as much gold as its insides.
+I inserted it as far as it would go and started rubbing it on her clitoris with my lips. Then she started pushing her pussy from bottom to top and started sucking my pussy more. In this way, I sucked her pussy and foamed at the mouth of her pussy. Then I saw how she started moaning. Seeing her in this state, I asked her, "How are you feeling, my Jessica?" She didn't say anything and started mumbling. I said, "Do you feel funny?" -Bishan, I know how my insides are shaking, please do something, stop the shaking of my golden insides - I'll give you this, but before that, let's go a little, don't talk, it will increase your excitement, then I will have more fun when I fuck you - He said, whatever you do, give me more fun, I'll give you, I'll give you, be patient, first let me eat your pussy well, then read it, see how I fuck you, I'll insert my long erect penis into your tight pussy and take it out through your mouth, you little slut, you slutty slut, now shut up, eat my penis, slutty slut, after hearing all this, he also started saying, well, let's see how you can fuck, ahhh Ohhhhhhhhhhhhhhhh how my pussy is doing eat eat more eat as much as you want eat as much as you want I will never find such a pussy in my life eat it bite it and tear it apart
+Oh my gosh I'm dead my love do something like that Piz do something to cool my pussy put something in it put your dick inside my pussy I can't take it anymore how much more will you fuck me with your tongue? Now put your dick inside her pussy and test your erection, let's see how strong your erection is, you fucking son of a bitch, ohhhh I felt pain. I realized that this would not work, so I took a lot of spit from my mouth and wet my penis well with it and wet her golden face well. Now I fucked her legs as much as possible and pressed my penis in her mouth. At that moment, Jessica cried out, "Oh, please, Russell, don't hurt me, please, I told you, be patient, I won't hurt you at all." Without saying anything, I gave Jessica a hard pounding. Immediately, I threw it and made a sound. My penis entered her vagina. I realized that her chastity veil was torn. Jessica immediately screamed, "Fuck you!" and rolled her eyes and closed them. I held her mouth with my hand and looked at her. I realized that she had lost her erection for a while. I didn't move, but put my penis inside Jessica's vagina and lay down quietly for about 30 seconds. She came and got up and I saw her eyes were watering. She told me in a sobbing voice that you hurt me so much that I felt like I was dying. I said, look, Jessica, you have had as much pain as you can get. Now it's just a time of pleasure. Now all you can get is just the pleasure. Saying this, I lay on her and started pressing her hard and big breasts and sucking her lips. While still inserting my little penis inside Jessica's vagina, I started pressing one of her breasts with all my strength and started sucking the other breast as much as I could. After doing this for a while, I asked her, "Jessica, will you take my penis out of your vagina?" Then she said, "Don't you want to stay here and then if I enter it again, it will hurt again?" Besides, I don't feel the pain anymore, but somehow I feel a little bit relieved after hearing her talk. I realized that she was just coming on line. Then I put my penis inside her vagina and started pressing her breasts hard. Oh, what a pleasure it is to press Jessica's breasts. I have never felt before. They are big and hard. I was kissing her lips and face. I was pressing one of her breasts with one hand and using the fingers of the other hand, I was giving her a blowjob on the pink nipple of her other breast. I started saying to her, "Oh, my dear, Jessica, you are beautiful. How big and hard are your breasts? Oh, my dear, why are your breasts so beautiful?" How can you do this? It feels like I'm going to heaven when I press your breasts. When I was doing this, I felt Jessica shaking her ass a little. I understood that the promikan thrust had been overcome and Jessica was getting excited again. I saw Jessica hugging me tightly and started kissing me. I also increased the speed of pressing her breasts. I started pressing her and started saying, "Today I will press and tear your breasts apart. You are a little girl. Fuck me today. I will make you forget your father's name. Oh, oh, how sweet it is to press your breasts." Meanwhile, Jessica's shaking hips increased. Suddenly, Jessica shouted, "Oh, Russell, how do you know what's inside my pussy?" "Peeez, put your cock in there, oh, oh, put your cock inside me. Put it hard and slow down the start of my cock." Even after her words, I did not insert the cock set in her pussy. I said, "If the magician comes, he will surely bring my great king."
+I will put it in her pussy, but if you don't say it like this, I won't have fun putting it in. Jessica said after hearing me - Hey, you son of a bitch, don't say shit, quickly put your dick inside my pussy. I can't stand it anymore. Put your old dick inside my pussy. Let's see how you can fuck me. You can fuck me with your dick and break my pussy. If you can, fuck me a little. You can fuck me inside my pussy. Oh, ah, put your dick inside my pussy and make a hole. - I said after hearing her, "Shia, look at what my dick is like." Now I said it to my body. With one thrust, my 10" dick went completely inside her pussy. Jessica winced a little. I inserted my dick, and within a moment, I wrapped half of it again and inserted it again like this. I came, came, started pounding her with my hard dick. Who bit Jessica's pussy hard and held it, it seemed like the maximum elasticity of her pussy. If my dick had been a little thicker, it would never have entered Jessica's pussy. Jessica then hugged my neck tightly with her legs and said - Oh Russell, why are you coming in and out so much? Don't you have any strength in your body? Didn't you drink your mother's milk when you were young? The problem of your body - hit me hard and break my pussy - Hearing her words, my head caught fire. I pulled my dick wide and made it into her pussy. With another pounding, I took it out again in a moment and put it back in. Like this, I kept hitting her with my long stroke and started saying, "Khanki Magi, my mother fed me milk properly when I was young. I ate my mother's milk. Now I'm eating yours. Will you test my strength?" Sister-in-law, I won't let you go without breaking your pussy. Oh, how beautiful you are. The pussy, as if it was born just for my growth Oh, are you fucking me without any reason? The pussy girl Khanki is not my growth. I started pounding her hard - Jessica tell me, oh, what is the pleasure in fucking, you didn't understand it before, you taught me to fuck Oh, oh, oh, ah - what is the pleasure in fucking, I am very comfortable, why didn't your mother marry me to you earlier? You have deprived me of such comfort Oh, ah, I am dead - Hey, pound me harder, you bastard, today you tear my tight pussy, today you make my long-standing pleasure come true - I said, Khanki, do you really like fucking? Wait, today I will insert my cock into your pussy and fuck you with my mouth, Khanki - Yes, yes, do it, you bastard If you can penetrate more deeply, you can penetrate yourself, oh yes—– while doing so, he started pounding my bottom – I also started pounding him hard on my body. My balls started pounding on the floor under his pussy in rhythm with the pounding. His pussy got completely soaked with juice and started to slurp and slurp. As a result of my pounding, my wet pussy started to make a slurping sound. After fucking him for about twenty minutes, Jessica started pounding me hard from below and started saying – Oh Russell, how is my whole body doing? How is it shaking? It feels like something is coming out of me. Oh, my money is going to come out. Oh, oh She took out the first cock of her married life and I started pounding her. She took out the cock and somehow became numb and closed her eyes and lay there in a sweet ecstasy. And I kept pounding her. Then Jessica said, "Russell, leave me alone now. How do I feel now?" I said, "Why don't you take my penis test? My retained exam has just ended. I still have the exam to go." I pulled my penis out of her vagina and sat up. I saw that her vagina was full of blood. A ring of blood and cum had come out of her vagina. A lot of blood fell on the bed and made a round mark on the sheets. Now I tilted her and lifted one of her legs. I lay behind her and inserted my long erect penis into her pussy from behind and started pounding her. My penis started rubbing directly on her clitoris. As a result, Jessica came- came- started getting excited again, she also came backwards- came- started pounding and said, "Russell, I can't forget the pleasure you gave me a while ago, but what magic do you have to make me horny?" I'm getting hot again. Oh, how I feel so good. Fuck me as much as you want, fuck me all night long. Fuck me, fuck me, fuck me, tear my pussy apart so that I can't get out of bed for the next week. I promise you, honey, I'll give you pleasure as much as you want. I'll tear your pussy apart so that I have to walk around with pain in my pussy for at least fifteen days from tomorrow. I started pounding her hard. Her high and heavy ass started to rub against my lower abdomen, so much so that I started feeling very comfortable and excited. "Don't pound her harder, please, I'll fuck you for the first time in my life and I'll fuck you hard." What fun ohhhhhhhhhh ahhhhhhhhhh ohhhhhhhhhhhhh ahhhhhhhhhh fuck me harder then I got up from her side and said sister stand up your fuck desire is not satisfied yet stand up now I will give you a new style of pounding that my cock will go to your liver and eat your pussy saying that I took her doggy style behind her ass I knelt down and put one lump of spit on the head of the cock and another lump of spit on her pussy and set the head of the cock on the head of her pussy I said no magi get ready ram to pound me, saying that I inserted my long thick cock from behind into her pussy it felt like my long cock went inside her uterus As soon as he hit her, Jessica let out a small scream. I said, "Why are you so horny now? Why don't you like to fuck me? Now fuck me." Jessica said, "Oh, fuck me, I'm not fucking because of the pain. I'm fucking you comfortably. You fuck me harder. I feel so comfortable. It's so much fun. I didn't know before that you would fuck me so beautifully and comfortably. Oh, your penis is really big, thick and hard. Oh, oh Jessica's big tits started moving. I took my hands under her armpits and started pressing her buttocks and started saying - Oooooooooooooh aaah Jessica why is your pussy so good oh how tight is your pussy how hard it is biting and holding my cock it feels like it will bite and eat my cock she likes my cock very much I started saying this and took my cock out of her pussy almost to her clitoris and brought it out again and slowly inserted it into her pussy and started fucking her. Sometimes I tried to press her hard ass hard with my hands and started pounding. I pulled the two big ass holes tightly on both sides and started pounding. Sometimes I started pounding her high ass with my hands. While slapping and pounding like this her ass turned red I realized after fucking her like this for about 20 minutes In a while my money will grow now I started fucking my ram Jessica again and she lay down on her stomach and raised her legs as much as possible on my neck I sat down on my knees and started fucking her till my big pussy - I started fucking her and started saying - Oh Jessica Magi how did you become so much of a fucking scum in one day how did you fuck her so well so much honey inside your pussy has driven my big pussy crazy fucking Magi I will put my pussy and my pussy inside your pussy
+
+I will enter your pussy myself oh sister ahhhhhhhhhhhh ohhhhhhhhhhhhh eat my pussy ohhhhhhhhhh my sweet pussy eat I will bite your pussy and eat it oh you have become a fucking scum like a witch I started fucking her and started pressing her two buns as I wanted I started sucking her tongue with my mouth and started to fuck her pussy with all my strength. Jessica then got extremely excited by my thrusts and moans and started to fuck her and said, "Oh my fucking husband, the pleasure you gave me today will be remembered for the rest of my life. Like this, you will fuck my pussy every day. Now fuck me harder. I think I will cum right now. Ohhhh I pressed my penis deeper into her vagina with two thrusts to make it come out. At the same time, my penis grew about 1" longer and 1" thicker in girth, hitting her vagina and pouring my cum into her vagina. My body started shaking. I hugged Jessica very tightly with pleasure as if I was going to crush her with my body. Jessica also pushed her ass as much as she could and emptied her pussy for the second time. After both of us came out, I lay down on Jessica and she lay under me with her eyes closed for about 5 minutes. After 5 minutes, I asked Jessica, "Oh, Lakshmi, how did I feel about the first time in your life?" - Jessica say it's good, very good, every girl in Bangladesh should have such a happy life, even if she is a little scared of love, Russell, you are a problem - the way you made the matter very easy and gave me joy cannot be explained in words - Look Russell, I have come here to be your wife. I want you to support me and make me happy in your family the way you supported me today, for the rest of my life, by supporting me in this way. He hugged me and gave me a long kiss on my lips. - I also hugged her and said that the pleasure you gave me today will remain with me for the rest of my life. You will also try to live in a good way for my family and especially I am quite addicted to sex, so do as much as you like and enjoy it while fucking me. Jessica laughed when I said that and I kissed her forehead, cheeks, eyes and lips lightly, got down from her, held her hand and we both entered the bathroom together. In the bathroom, he washed my penis and cleaned it and I cleaned her vagina. After that, both of us got into bed. I slept with her that night. I fucked Jessica twice more to my heart's content. On the last night, we both fell asleep. In the morning, I woke up quite late and saw that Jessica was not in bed next to me. She had already woken up, taken a bath, mixed with the rest of the family, and started helping with the morning shower. I went to the dining room and saw her walking towards the living room behind her mother. She sensed my presence behind her and looked at me sweetly and gave me a sweet smile. I looked closely and saw that Jessica was dragging her legs a little while walking??? I thought that's why I smiled a little at her walking.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

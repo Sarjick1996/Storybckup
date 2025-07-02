@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page48.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page48.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page48.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Mother and aunt fuck in the same bed (father and son together make mother and aunt a slave)
+
+</small>
+
+<p>
+
+
+When the cum is overflowing from the aunt's pussy, the mother is watching with awe. After eating this strong cock of mine, the pussies of the two sisters have become one. My cum is stuck in the mother's mouth. I told my mother
+Me: I really want me and dad to fuck you together.
+Mom: Will your dad agree?
+
+Me: If you want, I can arrange it.
+Mom: How?
+Me: You will understand when dad and son fuck your pussy together.
+The next week, when my father comes home, my aunt comes to visit our house. After dinner, my aunt goes to sleep in the guest room. Meanwhile, my father comes home after a long time and my mother is also eager to fuck my father.
+
+choty golpo new
+Auntie came to my room after a while wearing a nightie, without wearing any bra or panties inside. She came and told me-
+
+Auntie: Rajiv, you will give me pleasure by fucking me. My pussy is eating a lot.
+
+Me: That's what I want, Aunty. To merge the four holes of your two sisters.
+
+Aunty: Jamaibabu will fuck Didi's pussy today and make her pussy wet.
+
+Me: I will also make your pussy wet tonight. I heard that a man cannot be the father of a child, he doesn't seem anxious to be your mother.
+
+Aunty: If he says that, I also want my pussy to be filled, to become a baby, to produce milk, then he will crumble in hope.
+
+Me: If I make you a mother, do you mind?
+
+Aunty: I have no objection, rather your man once told me to fuck someone else and become the mother of a child, you know that I was very chaste and pure, even then I didn't fuck anyone except my husband. You are my second man. choty golpo new
+
+Me: I want to make you a mother, do you agree or not?
+
+Aunt: I can't make such a big decision without informing your Mesomshai. Wait, I'll call him.
+
+Aunty on speakerphone with the phone-
+
+Aunty: Hello, listen, I want to have sex with Rajiv and have a child. You once wanted to have sex with someone else and have a child.
+
+Mesomshai: (silent for a while) Yes, since I can't give you this happiness, you should take happiness from someone else.
+
+Seeing Mesomshai's green signal, I opened the button of Aunty's nightie and started sucking her breasts while I was on the phone line. Then, when I hung up, Aunty kissed me on the lips. I also kissed her very passionately for about 5 minutes. Then I completely opened her nightie, then I fucked her, Aunty lifted the foreskin of my penis and sucked it with the tip of her tongue. Aunty gave me a blowjob for about 6-7 minutes. Then I sucked aunty's pussy for about 5 minutes, aunty's pussy was so wet that my mouth was completely wet. choty golpo new
+
+Aunty: Dad, Rajiv. Put your dick in my pussy and give me pleasure, Dad.
+
+I put my dick in aunty's pussy and gave a slow thrust, then as I thrust hard, aunty screamed loudly. I kept thrusting aunty in missionary position.
+
+Meanwhile, in the next room, mom and dad's romantic lovemaking will start. Mom is very dressed up because dad came after a long time.
+
+Nose ring, gold chain around the neck, green chiffon transparent saree, everything is visible inside, the saree is a big step below the navel, the round navel is protruding, a little fat on the stomach makes Bengali women sexually attractive, matching blouse with an open back, the top 2 buttons of the blouse are open, wearing a big bra that makes the breasts look more attractive, a big red tip on the forehead. choty golpo new
+
+Seeing this, the father says that
+
+Father: Today my daughter is so dressed up, I want to caress her all night.
+
+Mother: My daughter has come after so long, I don't have to please her, and besides, I have my own happiness to get my husband's pleasure.
+
+Father: You know that I will open everything one by one and enjoy it, is there any need to dress it up so much?
+
+Mother: Look, Bengali women have the highest sexual appeal when wearing a saree, and a middle-aged woman like me is at her peak now, so she has to make her husband happy or someone else will enjoy this juicy youth instead of her husband. I have heard a lot of talk about my mother's sexy body in her school circle. However, she is better known as a strict teacher. But at home, she likes to fuck her own son.
+
+So she looked at her father with a quizzical look, like watching her father's reaction whenever he thinks someone else is fucking his wife. Although her father was a little angry at the thought of someone else fucking his wife, a thrilling feeling arose in her body, even though her father did not show it to her face, he kept it in his mind. choty golpo new
+
+This time, her father pulled her close from behind and hugged her. Then she started enjoying her body over her saree. She threw off the sari's hem and pressed her breasts over her blouse. Then he poked her soft belly button with his fingers, now my father sat on his knees and started licking my stomach. Then he stood up and took off my petticoat, blouse, bra and panties and made her completely naked. My father started playing with my breasts. My breasts were shaped because of yoga. Anyone who saw them would want to press them.
+
+Now my father also got naked himself. After that they foreplayed in the 69 position. My father held his penis with great difficulty, but whenever my water was about to come out, my father stopped licking my pussy. My mother got excited and said to my father
+
+My mother: Why are you so anxious? Don't put your cock in my pussy.
+
+My son: You are hot. Here, I will put my cock in.
+
+Saying this, my father's big cock entered my pussy and started pounding it. choty golpo new
+
+My father and son are fucking two sisters together in two rooms.
+
+Meanwhile, I fucked my aunt in different positions for the last half an hour, at one point of the fuck, she started to squirt. I was feeling very comfortable while fucking my aunt. Both me and my aunt were feeling comfortable. At one point, I stopped fucking and saw that my aunt's wet pussy was dripping with water. I told my aunt-
+
+Me: Aunt, my father has come home after a long time today. So he will definitely fuck my mother.
+
+Aunt: Yes Your mother is very lucky to eat what your father eats. She has become a slut after being fucked by a man like Jamaibabu. You also fuck like your father, and you fuck even better.
+
+Me: What if you knew, did you get fucked by your father?
+
+Aunt: What if I don't eat? Before my marriage, your mother went out of town for training, then Jamaibabu fucked me for 7 days straight and broke my pussy. Your mother knows everything. choty golpo new
+
+Skye Blue - Nubile Films
+
+Meanwhile, the sound of mother and father fucking could be heard in our room. I told Masiki-
+
+Me: Aunty, let's go see how they fuck.
+
+Aunty: Let's do one thing, you fuck me, there's still more to do, finish it. Meanwhile, you and I will both be screaming loudly. Then your mother might understand. Your father will come to see.
+
+That's what I said. I put my cock in my aunt's pussy and pounded it so hard that my aunt screamed and screamed-
+
+My aunt: Ah ah ah Rajiv, fuck your aunt and remove the bark of her pussy. Give me happiness.
+
+Me: Magi, don't eat.
+
+The sound of our fucking was heard in my parents' room. Then my parents were fucking my mother in the cowgirl position. Sometimes, stopping the pounding, my father would grab my mother's nipples and bite them. Hearing the sound of our fucking, my mother understood that I was fucking her. My father took his cock out of my mother's pussy and with interest, he came to the door inside their room and heard the sound of pounding even harder.
+
+Mother: What the hell, let's come and finish fucking
+
+Father: What's that sound in that room.
+
+Mother: That's nothing. You put out the fire in my pussy. (Mom knows) choty golpo new
+
+Father: Let's go and see.
+
+Mother: Let's go and see after the fuck?
+
+Father: Come on. Let's see who else in my house fucks hard except me. But does Shivani (aunt's name) fuck Rajib?
+
+Saying this, father came to the open window of my room with a small towel and saw his son fucking his sister-in-law. Mother followed father without wearing a blouse or petticoat.
+
+Mother also looked at him confused. Mother said to father-
+
+Mother: Rajib's cock is bigger than yours but look how he fucks Shivani.
+
+Hearing this, father put his hand on mother's pussy over the saree and said-
+
+Father: Now will this pussy need my son's cock too. choty golpo new
+
+Mother: Don't tell me..
+
+Dad: Let's call them to our house. Our bed is big. Four people can fuck together.
+
+Meanwhile, Aunty was dripping wet after fucking me. Now when my cum was about to come out, Aunty said-
+Aunty: Come on Rajiv, pour cum into my pussy and have a baby in my belly. Make me a mother and give me the happiness of motherhood.
+
+I poured cum into Aunty's pussy. I didn't let any of it out. Now when all the cum came out, I took out my cock and held Aunty's legs high.
+
+My parents were surprised to see this scene and came to our house in a hurry.
+
+My father came and said-
+
+Father: Rajiv,
+
+Me: (frightened, holding his cock in his hand and hiding it) Father, mother, you are here.
+
+Father: I heard screaming in the house. I saw Aunty's pussy and you filled it with cum. I think you can fuck really well.
+
+I came with my head down. Meanwhile, the aunt is sitting in front of the parents with her pussy full of cum. The mother asks the mother-
+
+Mom: What will your groom say about the child you are taking? choty golpo new
+
+Aunt: I have taken this decision with his consent. Besides, it is a different pleasure to be fucked by such a young boy at home.
+
+Hearing this, the mother's pussy twitched more.
+
+Mother: So you came half-naked like this, I guess you were fucking.
+
+The mother says with a shy smile-
+
+Mom: What else.
+
+Father: I was fucking your sister, I left the fuck. Now let's go to that house and you will see our fucking.
+
+I am getting a chance to see my mother fucking my father and I didn't think I would get it so soon. I want to take this opportunity to fuck my mother in front of my father, I am thinking.
+
+Mom and Dad said this and went to their room. I went to my parents' room with Masiki in my lap, and when I went, I saw that my father had already started fucking my mother. I laid Masiki down next to my mother and stood on the side of the bed and watched my father pound my pussy.
+
+Andi Avalon Ccccc - scene 12
+
+During the pounding, water flowed down my pussy. My mother's breasts were pressed while my father pounded. Seeing this, my penis also became hard again. Both my parents noticed. While I was fucking my mother, I winked at my father and said-
+
+Mom: Oh, look, my son's penis is standing erect. choty golpo new
+
+Dad: If you don't get erect when you see a sexy woman like you naked, it's a problem.
+
+Dad tells me-
+
+Dad: Do you want to fuck your mother.
+
+Hearing this, I got water without asking for clouds.
+
+Me: What do you say, dad? I did it.
+
+Dad: Do you want it or not?
+
+Me: I want it. I have wanted it for a long time, since when I was a child, I started watching you secretly when you were fucking your mother. Later, after I understood what fucking is, I also want to fuck her, that too in front of you.
+
+Dad: (Surprised) Then I finish, then you start.
+
+Dad poured his cum into my mother's pussy with the last few strokes in this round. choty golpo new
+
+Mom: If it gets stuck inside,
+
+Dad: It will be okay, isn't it strange that two sisters will cum together after eating the father and son's cock?
+
+Dad: Listen Rajiv, whatever you do, don't put it inside your mother's pussy.
+
+Me: If it suddenly falls.
+
+Dad: We will see then.
+
+Meanwhile, Dad's dick fell. Dad was hugging his aunt and watching our mother fuck her son. Mom sucked my cock for a while. I didn't put my mouth on Mom's pussy because Dad's cum was still there, but I sucked Mom's tits. Then Mom fucked me and fucked my legs. As soon as I put my cock in, Dad's sticky cum got on my cock. Still, I kept fucking.
+
+Meanwhile, while I was fucking Mom, Dad also put his cock in Aunty's pussy.
+
+They also started fucking.
+
+After a while, while I was fucking my mother in the cowgirl position, I turned to my mother and whispered in her ear
+
+Me: I told you not to fuck you in front of my father.
+
+Mother: (with a sensual smile) Okay, father, finish it quickly.
+
+Mother started pounding me all over, I could not control myself and with great difficulty I took my cock out of my pussy and cummed on my mother's stomach. Meanwhile, father also cummed on my aunt's breasts a little later. choty golpo new
+
+In this way, my aunt took my cum into her pussy and tied her stomach after a month. After that, my father and I fucked each other many times together.
+
+However, along with my aunt, my mother also tied her stomach. The father of the child in my mother's womb is my father himself. Inside this, my aunt divorced the mistress and came to our house at once.
+
+Mother and aunt, we have adopted these two milfs at this age.
+
+After about 10 months, my mother gave birth to a daughter who is my own sister, and my aunt gave birth to a son whose father I am.
+
+Even after the children were born, my mother and father would fuck them individually, sometimes even in a foursome swapping. This is how our days passed.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

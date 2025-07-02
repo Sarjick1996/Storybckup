@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 500px;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexbengali.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page53.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='../english/page53.html'" class="lang-btn">English</button>
+    <button onclick="location.href='page53.html'" class="lang-btn">বাংলা</button>
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+আমার বোন আমার দুধের মেশিন।
+
+</small>
+
+  <p>
+
+আমি রোহিত এবং আমি আমার বোনের সাথে আমার যৌন অভিজ্ঞতা শেয়ার করতে চাই। আমার বোনের নাম রাধিকা, সে আমার নিজের বোন এবং আমার থেকে ২ বছরের বড় ছিল। সে ছিল সেক্সি বেশ্যা, যার বিশাল স্তন ৩৮ ডিডি আকারের এবং তার সুন্দর আকৃতি ছিল সেক্সি পাছা। এবার গল্পে আসা যাক। আমার বোন ৩ বছর আগে বিয়ে করে এবং চাকরি করার কারণে ২ বছর ধরে নিঃসন্তান ছিল। তার স্বামী একজন সিএ ছিলেন এবং সবসময় ট্যুরে থাকতেন এবং একটি মার্কিন ভিত্তিক কোম্পানিতে কাজ করতেন।
+
+সে তার গর্ভাবস্থার জন্য বাড়িতে এসেছিল কিন্তু দুর্ভাগ্যবশত তার গর্ভে ঠান্ডা লেগে মারা যায়। তার স্বামী তারপর আমাদের বাড়িতে এসে তার সাথে কিছু সময় কাটিয়ে আবার ট্যুরে ফিরে যায়। কিছু দিন পর তার বুকে সমস্যা ছিল এবং কাঁদছিল যখন আমি বাড়িতে এসে তাকে জিজ্ঞাসা করলাম সে বলল যে তার স্তনে প্রচণ্ড ব্যথা হচ্ছে এবং ব্যথা সহ্য করতে পারছে না, তারপর সে আমাকে তার ঘরে নিয়ে গেল এবং বলল যে তার ব্যথার চিকিৎসা কী, তাকে একটি ব্রেস্ট পাম্প কিনতে হবে যাতে কমপক্ষে পরবর্তী ৩ মাস তার দুধ বের করে দেওয়া যায়। সে আমাকে তার আকার বলল এবং তার জন্য একটি কিনে দিতে বলল এবং কাউকে না বলতে বলল। সেই রাতে খাবারের পর আমি আমার বোনের ঘরে আমার বোনের সাথে কথা বলতে গেলাম। তখন দেখলাম আমার বোন ইতিমধ্যেই আমার বিছানায় ঘুমিয়ে আছে। আমি ধীরে ধীরে তার কাছে গেলাম এবং দেখলাম তার স্তন ধীরে ধীরে তার নাইটি থেকে বেরিয়ে আসছে। এতে আমার মধ্যে একটা উত্তেজনা তৈরি হলো এবং ধীরে ধীরে আমার সিংহ তার পুরো দৈর্ঘ্যে ঢুকে গেল। আমি আমার ঘরে গিয়ে আবার সেই দৃশ্য কল্পনা করলাম এবং তার স্তন চুষতে স্থির হলাম যাতে আমি তার সমস্ত দুধ শেষ করে ফেলি।
+
+সেই রাতে যখন সবাই ঘুমিয়ে পড়ল তখন আমি পা টিপে টিপে আমার বোনের ঘরে গেলাম এবং অবাক হয়ে আমার বোনের বাম স্তন তার হাতা থেকে বেরিয়ে আসছিল (সে একটি স্লিভলেস নাইটি পরেছিল) এটি আমাকে পাগল করে তুলেছিল। আমি ধীরে ধীরে তার কাছে গেলাম এবং অন্য হাতা থেকে তার স্তন সম্পূর্ণভাবে সরিয়ে ফেললাম। সে একটু ঝাঁকুনি দিল এবং এমন একটি অবস্থানে চলে গেল যেখানে আমি তার স্তন আরও ভালোভাবে চুষতে পারব। আমি ধীরে ধীরে আমার মুখ দিয়ে তার স্তন চেপে ধরলাম এবং হালকা জোরে তার দুধ পুরো দৈর্ঘ্যে বেরিয়ে আসতে লাগল। আমার বোনের স্তন থেকে হঠাৎ করেই আমার বোন কান্নাকাটি শুরু করে এবং হঠাৎ ঘুম থেকে উঠে যায় এবং অবাক হয়ে দেখে যে তার ভাই তার স্তন শিশুর মতো চুষছে। সে আমাকে ধাক্কা দিয়ে সরিয়ে দেয় এবং আমাকে গালিগালাজ করতে শুরু করে। আমি বললাম যে আমি কেবল তাকে সাহায্য করতে চাই এবং তার ঘর থেকে বেরিয়ে যায়।
+
+পরের দিন সকালে ঘুম থেকে উঠে আমি অফিসের জন্য প্রস্তুত হয়েছিলাম এবং আমার বোনের কাছে ক্ষমা চেয়েছিলাম এবং তাকে সেই মেশিনটি আনার প্রতিশ্রুতি দিয়েছিলাম। বিকেলে আমাদের বাবা-মা বিজয়ওয়াড়া চলে গেলেন এবং আমার বোন আমাকে তার সাথে দেখা করতে ডেকেছিলেন কারণ সে বিরক্ত হচ্ছিল। আমি দ্রুত আমার কাজ শেষ করে বাড়ি চলে গেলাম। বাড়িতে পৌঁছানোর সাথে সাথেই আমার বোন আমাকে আগের মতো নতুনভাবে অভ্যর্থনা জানাল। আমি তাকে জিজ্ঞাসা করলাম যে এত পরিবর্তন কী, সে আমাকে বসতে বলল এবং আমাকে এক কাপ কালো কফি দিল। আমি দুধ যোগ করতে বললাম এবং সে আমাকে নিজেই যোগ করতে বলল এবং তার কাম্মিজের চুন্নি খুলে ফেলল। আমি অবাক হয়ে গেলাম এবং একটি শব্দও বলতে পারছিলাম না। তারপর সে আমার হাত ধরে তার স্তনের উপর রাখল, এটি আমার জন্য স্বপ্নের মতো সত্য হয়ে উঠল। আমি তার সালোয়ার খুলে তার দুটো স্তন আমার হাতে নিলাম এবং ধীরে ধীরে তার দুটো স্তন চুষতে শুরু করলাম। সে কয়েকটি নিচু স্বরে বললো এবং আমাকে বললো যদি আমি সত্যিই তার দুধ চাই তাহলে আরও জোরে চুষতে।
+
+আমি তার দুটো স্তন চুষে দিলাম এবং রাতের জন্য তার ব্যথা দূর করে দিলাম। তারপর সে রাতে রাতের খাবার পরিবেশন করলো এবং সে বললো যে আমাকে তাকে সাহায্য করতে হবে কারণ এবার আবার ব্যথা শুরু হলো। আমি আমার ধুতি পরেছিলাম এবং আমার লিঙ্গ পূর্ণ লম্বা ছিল এবং সে আমার উত্তেজনা অনুভব করলো। সে কিছু বললো না এবং কিছু না বলে ঘর থেকে বেরিয়ে গেল। পরের দিন সকালে সে আমার ঘরে এসে আমাকে জাগিয়ে তুললো এবং আমার সবচেয়ে অবাক করার বিষয় হলো সে সম্পূর্ণ নগ্ন হয়ে আমার ঘরে এসে বললো যে সে যৌন ক্ষুধার্ত এবং মরিয়া হয়ে কাউকে চুদতে চায়। আমি সাথে সাথে আমার লুঙ্গি খুলে ফেললাম এবং আমার পুরো লিঙ্গ তার সামনে উন্মুক্ত করে দিলাম।
+<br>
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

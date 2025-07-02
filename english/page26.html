@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page26.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page26.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page26.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Aunty fucking story – Aunty's virginity being taken
+
+</small>
+
+<p>
+
+
+I am Rekha, I am 22 years old, and I have been married for four months. I am quite beautiful, 5’5” tall and fair. My body is well-built, 36, 25, 34, which means I could do modeling very well. But after finishing college, I got a good marriage relationship and got married very quickly.
+
+Binay, my husband, is around thirty years old, has his own business and earns a lot of money. Quite a wealthy family, car, house, AC, nothing is left out, all the comforts of happiness are stored at home. There are four workers at home who always work hard. There are only three members in the family, Vinay, his younger brother Ajay and old mother. Ajay is my age, preparing for various job exams.
+
+Such a relationship cannot be denied at all. Moreover, they have so much property that they are not even willing to take a small bed, bed cupboard etc. There was only one requirement, that is, the wife should be like a winged They don't mind if she comes from a poor family.
+
+I felt very proud to be a wife in such a house. The first night was last night, so I didn't realize when midnight passed between the many events. Tomorrow, Phulsajja, I will have my first physical relationship with Binoy, Binoy's penis will enter my vagina, just thinking about it made me tingle.
+
+The next day, on Phulsajja's night, Binoy loved me very much. He pressed my breasts and stroked my pussy, but as soon as I held his penis, a bolt of lightning struck my head….. What is this! Binoy's penis is only three inches long! A three-inch thing can't be called a penis anymore, so it should be called a penis. What am I going to do with this for the rest of my life? Will Binoy fuck me with this little thing? As soon as his penis gets stuck in my vagina, it will enter my vagina. You can't.
+
+Of course, there are many medicines and oils available in the market to enlarge the penis. I decided to massage that oil regularly and make Binay's penis bigger. I started trying to enlarge Binay's penis with my hand, but even in the middle of the night, Binay's business was getting so many calls regarding his penis. Due to repeated interruptions, I was unable to tighten his penis properly. Our penis died in the field like this.
+
+More news The smell of your armpits drove me crazy today - 3
+From the next day, I understood that Binay is a crazy person. He leaves the house by eight in the morning every day and returns home after ten at night, exhausted after working hard all day. How can such a man find time to fuck his new wife? No matter how much oil I apply to his penis, he will always be distracted. So first, he needs to change his mind.
+
+I tried to stimulate Binay in different ways for three months. I tried but to no avail. The fool wants a beautiful wife but has no ability or desire to fuck her. Will he fuck a beautiful wife and put her in a show case? I am only 22 years old, how will I live the life of a nun even after getting married? I have to find a solution.
+
+One day, I felt like it, wrapped in a towel, left the bathroom and went into the dressing room to change my clothes. And then…
+
+With a calm mind, I took off the towel and wiped my hands and feet well. I did not notice that my brother-in-law Ajay was in the dressing room to change his clothes as he was about to leave. Suddenly, I saw him and I standing completely naked, facing each other. Electricity ran through my body. Ajay ran away from the house in shame and I quickly put on my clothes. After that, I was ashamed to look at Ajay for several days.
+
+Ajay and his friend Tamal were together in this They were studying for their exams at home. Every day I would go to their study room to give them tea and tiffin and I would tap both of them on the head with a Yorkie and say, “Are you studying properly? Study hard. Only if you get a good job will you get a beautiful wife.” Both of them would say, “Yes, aunty, I am trying hard and let’s see what happens. Just take a look at our studies and you will understand. aunty, bless us so that we get beautiful wives like you.”
+
+More news Biye Barite Borjatrir Lokera Chudlo Make – 2
+I noticed that when I entered their room to serve tea, Tamal would look at my boobs and ass with his eyes wide open. One day I entered their room wearing short leggings and a top on purpose. I looked very sexy then. That day Tamal could not take his eyes off me. After I came out, I stood outside the door after hearing Tamal and started listening to them.
+
+Tamal was telling Ajay, “Hey, your aunt is so sexy! She is so incredibly beautiful! If I can fuck your aunt naked once, then life will be successful. No matter how much you say, we don’t have such beautiful wives written on our foreheads. So we trust our aunts.”
+
+Ajay replied, “Yes, you are right, my aunt is very beautiful and extremely sexy. One day, my sister-in-law came into the dressing room to take off her clothes wrapped in a towel. Luckily, I was taking off my clothes in the same room, completely naked. That day, even if for a moment, both of us saw each other completely naked. Wow, what a figure my sister-in-law has! Her breasts are completely perky, her ass is quite heavy, and there are light hairs all around her pink pussy. I don't understand how my brother found her. I doubt whether my brother can still fuck my sister-in-law after working hard all day. The poor young man is spending the night in her pussy day after day." Tamal said, "We are both your sister-in-law's age, so we can both satisfy her hunger. We will also have experience in fucking and my sister-in-law will no longer have to be a servant. Why don't you ask my sister-in-law if she is willing to enjoy our cock." Ajay said, "Dhyat, never do that to a new bride."
+
+Can I have sex with you? What do you think? If my grandfather finds out, he will make trouble.”
+My pussy started to throb after hearing their conversation. I decided in my mind that when I have two boys my age at home and they are so eager to fuck me, I will not live a life of hardship and indulge in sex with both of them. But the question is how to tell Ajay.
+
+After a few days, Binoy had to go out for work and he said that he would be able to return home after two or three days. I decided in my mind that I would make good use of this opportunity.
+
+After Binoy left, that evening, while I was serving tea and snacks at Ajay’s house, I said to Tamal, “Tamal, you are so stressed about studying. If you stay with Ajay tonight, you will be able to spend more time studying. You wear one of Ajay’s half pants. Your wife will not have to be ashamed anymore.”
+
+I noticed that Tamal was still looking at my mom and Dabna with lustful eyes. Tamal could not ignore the request of the beautiful aunt and stayed at our house. I prepared and served dinner to Ajay and Tamal and they went back to their house and started studying.
+
+After finishing all the work, I dressed up a little and entered their house wearing only a nightie.
+
+What happened after entering the house in the next episode…..
+
+The story of aunty fucking – Since I was not wearing a bra and panties, my mom and ass were swaying a little and the existence of nipples was visible from the nightie.
+
+I said, “Today your dad is not home and I do not feel like sleeping alone in the house, so today I will sleep with you in your house.”
+
+They were both shocked to hear what I said. They couldn't imagine how their fate had turned out. I said, "Today I will sleep between you and my two brothers will hug me on either side. What, can't you caress your beautiful wife a little?"
+
+No words came out of the mouths of either of them. Boy, even though they were talking big words, they didn't dare to move towards a young woman. I pulled both of them to lie down on the bed and then I went between them and lay down. I lifted my nightie up to my knees and put my legs on both sides. Ajay was hesitating a lot. Tamal, feeling the touch of my smooth feet on his hairy legs, dared to touch my vagina.
+
+More news BANGLA CHOTI MA Mother's caress HOT STORY
+Ajay was a little hesitant to touch my vagina. I myself pulled his hand and placed it on my vagina. Ajay was a little scared but Tamal was quite free and was pressing my vagina. Tamal raised his hand a little higher and touched my pelvic area and then started touching my light-colored vagina. Tamal was shaking my clitoris. As soon as he put his finger in my vagina, he said, “Baudi, what is this? You have been married for three months. Does that mean ….?”
+
+I said, “Yes Tamal, you are right. In the last three months, Binoy has not been able to insert his penis into my vagina even once, so my hymen is still intact. Only I know how difficult it is to spend three months lying next to the groom after marriage without fucking. Today, I have left all my shame and come to you both and request you both to fuck me and destroy my chastity and satisfy my lust.”
+
+Tamal said, “Look Ajay, what is the condition of boudi’s vagina! No penis has ever entered this vagina. Come on, tonight we will both fuck boudi and calm her down.”
+
+Tamal pulled Ajay’s hand and placed it on my vagina, and asked him to insert his finger. Ajay was still hesitating a little, so I told him, “Ajay, don’t be ashamed of boudi anymore. The day I entered the house after making love and saw your thick black haired cock, even for a moment, I thought that if your cock is so big in normal conditions, how big a thing it will become when it gets hard. My pussy has been itching since then. I think your cock must be at least six inches when erect. Tamal's cock is also very big. I will get a lot of pleasure from fucking both of you. Since I am Ajay's sister-in-law, he must be a little shy of me. Tamal, you were already willing to fuck me. I heard everything you said from behind the door. You are the one who destroys my virginity first.”
+
+More news Bangla sex choti golpo – Student er Mayer sathe hot sex
+I myself took down my nightie and became completely naked in front of them both. I opened Tamal's half pants. I took Tamal's huge penis surrounded by thick sand in my hand and started stroking it.
+
+Tamal put his hand on my breasts and said, "Baudi, your breasts are amazing! Perfectly round and soft like a sponge. I want to take your nipples in my mouth right now and suck them. Your waist is so thin, there is no fat at all, but your buttocks fit your body. The shape of your buttocks is very beautiful. Your pink pussy surrounded by light sand and soft breasts are calling me to fuck you. Baudi, all in all, your figure is like a model."
+
+I lay down on my back with my legs spread. Tamal started licking my pussy with his mouth. Tamal got very excited after tasting the juice of the virgin girl's pussy and put his big penis in my mouth. I peeled off the skin of Tamal's penis and started licking the tip.
+
+Tamal poured quite a bit of honey juice into my mouth. Then Tamal stuck his penis in my pussy and pressed it a little. I groaned in pain. After patting my head and comforting me, Tamal kissed me several times on my lips and excited me and pressed it again. My hymen was torn with a thud.
+
+The head of Tamal's penis entered the hole of my pussy. I started crying in unbearable pain. Seeing my condition, Ajay said, "Tamal, let go, aunty is in a lot of pain."
+
+Tamal said, "This is the first time that a penis is entering aunty's pussy, so it hurts. This should have been done on the night of the modest flower arrangement. When you fuck the bride, she won't feel any pain anymore."
+
+I started crying.
+I immediately said, “Tamal, you are absolutely right. You forcefully insert your whole cock into my pussy. I will bear it even if it hurts. I have been waiting for this day for a long time. Ajay, you should watch how to fuck a girl, because after Tamal, you will have to fuck me.”
+
+Tamal thrust his whole cock into my pussy with another hard thrust and then started pounding my breasts. I was enjoying being fucked by a young man of my age. By now, Ajay’s hesitation had passed and he himself put his big cock in my mouth. After I sucked my pussy, I started sucking Ajay’s cock while enjoying Tamal’s thrusts.
+
+Ajay’s pleasure was filling my heart. I was no longer in pain. Ajay said, “Baudi, even for a moment that day, I also saw your soft pussy surrounded by balls and from that moment on, I wanted to fuck you. When Tamal was done fucking, I inserted my cock into your pussy.”
+
+Tamal fucked me for about fifteen minutes continuously and then filled my pussy with his cum. As soon as his cock became a little soft, he took it out of my pussy and immediately Ajay started inserting his cock into my pussy. Tamal said, “Ajay, this is the first time that boudi has fucked, so let her rest for a while, and then you fuck her.”
+
+Ajay could not stay any longer. His cock was struggling to enter my pussy so I hugged him and fondled him a lot and put my legs on his shoulders and asked him to insert his cock into my pussy. Ajay inserted his penis in one go and started pressing my breasts and said, “After a long time of flirting, today I was able to insert my penis into the pussy of my beautiful sister, who is the same age as me. Sister, how beautiful are your breasts! Only movie stars have breasts like this.”
+
+Ajay was pounding me quite hard.
+
+Tamal took the opportunity to put his finger on my buttocks and said, “Sister, how soft are your buttocks too, bro! Let me pound your buttocks one day.”
+
+More news Sex in the four walls 3: Mother and uncle’s play
+Ajay’s pounding also lasted for about fifteen minutes and then he also poured a flood of semen into my pussy. Then the two friends cleaned my pussy together.
+
+The next night Tamal stayed at our house and that day he smeared his penis with oil and inserted it into my buttocks. Although I felt a little pain at first, it was quite fun later. After pounding my ass for ten minutes, Tamal ejaculated right into my ass.
+Ajay's cock was a bit thick, so he couldn't insert it into my young ass, so he put his cock in my pussy again and fucked me.
+
+The next night was an extraordinary experience. Tamal stayed at our house that night too. Tamal said, "Today I will make a sandwich for my sister."
+
+I thought the two boys must have come up with a new trick to pound me together.
+
+Tamal made Ajay lie down on his stomach and asked me to climb on top of him, as a result of which Ajay's cock entered my pussy and Tamal inserted his cock into my ass from behind and started pounding. The two young men pounding from both sides at the same time made me feel like there was a war going on in my stomach. My long-standing thirst for two boys was also satisfied. After fucking for about twenty minutes, they both ejaculated together, which made me feel like hot lava was poured into my pussy and ass.
+
+I no longer felt any pain after being fucked by Ajay and Tamal. Binoy himself had already understood the pain of being in my pussy for so long, so almost every night he would send me to Ajay's house so that Ajay could fuck me naked. My life started going quite well after being fucked by Deor and his friend at the groom's place.
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

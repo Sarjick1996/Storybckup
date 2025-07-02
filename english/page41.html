@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page41.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page41.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page41.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+I lost my wife so I fucked my mother and sisters-3
+
+</small>
+
+<p>
+
+
+I woke up late in the morning and my parents had already woken up. I got up after 8 am. We all had tiffin and then went to the market to get fish. My mother cooked for me and ate lunch and took a nap. She told me to call my mother not now or tonight.
+
+I went to bed a little angry. After finishing my meal at night, I threw my mother down and fucked her once. I stayed like this for another 7 days and then I took my parents to Kolkata. Now I live in Bari. It has been quite some time.
+
+One night when I went home, I saw my sister and her daughter. I couldn't recognize her because she had become very heavy. She had become like my mother. I was sitting down to eat and she came closer and asked how is my grandfather?
+
+I- I am fine.
+
+My sister- She started crying loudly.
+
+I- What happened? Why are you crying?
+
+Sister- I am in great danger.
+
+Maa bon choda
+I- If you don't tell me what happened, how will I understand.
+
+Sister- My father had a bike accident and was admitted to the hospital with a broken leg. It will cost a lot of money to have an operation.
+
+Me- Don't do it, I heard you have a lot of money.
+
+Sister- Don't tell me, brother, it's hard to run a family and money. If you don't save him, I'll burn myself.
+
+Me- Where will I get money? I'm not your brother, you've said so many things to separate me from my parents.
+
+Sister- Forgive me, brother, I made a mistake.
+
+Me- Nothing will happen to me, I can't do anything for your husband. You haven't seen my parents.
+
+Sister- We weren't doing well, tell me what to do. Maa bon choda
+
+Me- I got up after finishing eating,
+
+Maa- came to me and said what will you do
+
+Me- I can't
+
+Maa- Don't do that, tell me where to go.
+
+I closed the door and hugged Maa and started squeezing milk and kissing her face.
+
+Mom- hugged me and kissed me and started pulling my cock and told me not to fuck her, she is your younger sister.
+
+I- lifted mom's clothes and put my hand in her pussy and inserted my finger and said that I forgot everything because I can fuck you, otherwise you would not have brought me here one day.
+
+Mom- she knows me but if you don't do anything then think about what will happen to her, what will she do at this age.
+
+Me- I don't have time to find out so much, don't tell me to fuck you first. maa bon choda
+
+Mom- she fucks you but do something for her.
+
+Me- I said no I can't, if you say more I won't come from tomorrow.
+
+Mom- I won't even fuck me.
+
+Me- she says I will come if you tell me, but I can't help her.
+
+Mom- Don't you have any compassion, your own sister.
+
+I- Yes but I don't have anything for him I haven't forgotten
+
+Mom- You got me, I can do it too, think about it, Dad. I have to pay for clothes tomorrow and where will I get it at this time.
+
+Me- I don't like it, just leave it alone.
+
+Mom- I can't do it in exchange for anything.
+
+Me- I can do it on one condition
+
+Mom- What condition. Ma bon choda
+
+I- I will give it only if I fuck him too. You can convince me.
+
+Mom- I don't know, but I can tell you.
+
+Me- Then go and tell me.
+
+Mom- I said I'm going and got dressed and left.
+
+Me- I lay down on the bed and started thinking whether he would agree. Almost 30 minutes passed like this. In the meantime, Mom entered.
+
+Mom- I said I forgot all my shame but she just cried and didn't say anything.
+
+Me- Leave it alone, come and hold her tightly and said there is no need.
+
+Mom- Give him some money, dad.
+
+Me- Mom, I don't feel well at all, you go too, you don't need me here. I'll sleep now.
+
+Mom- Hearing this, she left
+
+Me- I closed the door
+
+Mom's voice opened the door at about 12 o'clock.
+
+Me- I opened the door and saw mom and sister come together. What happened at this time of night? What's up again? Ma bon choda
+
+Mom- I brought her
+
+Me- I said what should I do, I can't. And I have to leave in the morning, I can't go when I wake up at night.
+
+Mom- I know I will leave her, so tell me or will I stay too.
+
+Me- She knows and tells me if she agrees.
+
+Mom- When she comes, don't see what she says.
+
+Sister- Brother, please forgive me, I have made a lot of mistakes, save my husband, brother.
+
+Me- My wife died because of you, how can I forgive you? Can you give my wife back? If you can't, don't say anything.
+
+Sister- How can I bring him back, mother couldn't bring him back.
+
+Me- I forgave mother because mother could.
+
+Sister- What did mother do
+
+Me- I gave him anyway, I got him.
+
+Sister- You won't do me any favors by becoming my own brother.
+
+Me- Mom take him away, it's 12 o'clock in the morning, I have to leave. Good morning
+
+Sister- What should I do?
+
+Me- Mom didn't say anything.
+
+Sister- No
+
+Me- Mom didn't say you
+
+Mom- I couldn't say no, I knew what to say.
+
+Me- But what else, let him go, you stay, my head is getting hot.
+
+Sister- What did brother say, mother, tell me.
+
+Me- Mom, you don't have to tell me anymore, you need to go and sleep with my mother after that.
+
+Sister- Is there any problem with me?
+
+Me- Yes, if you were me, it wouldn't be.
+
+Sister- What will you do that if I were me, it wouldn't be.
+
+Me- I told you not to do it again, don't cheat me, your head is spinning.
+
+Sister- I am so bad to you that you can't stand me at all. Maa bon choda
+
+Me- That's not it, I will talk about it in the morning.
+
+Sister- Brother, give me some money to get him operated.
+
+Me- Give my wife back and I will give it to her.
+
+Sister- What will I do?
+
+Me- Then don't talk anymore.
+
+Sister- Tell me what mother did and I will do the same.
+
+Me- If you can, don't say no again.
+
+Sister- No, I won't.
+
+Me- Mother, go, come later, I have a talk with him.
+
+Mother- Okay, she said and left.
+
+I took out my mobile, I will see our Vellore photo.
+
+Sister- Where can I see it, I gave it to her. I let her see everything from my and mother's selfie. She is looking at it one by one. maa bon choda
+
+I- I see a lot of things and he is looking at them one after another, from the photo of me expressing my mother's milk to the photo of me fucking my mother. My sister is watching everything, I went out to the bathroom. I returned 5 minutes later.
+
+Sister- She left her mobile
+
+Me- You saw everything.
+
+Sister- Yes
+
+Me- Now tell me, my mother gave it to me, my wife returned it.
+
+Sister- She is not saying anything.
+
+Me- How much money do you need.
+
+Sister- You have to deposit 60 thousand taka now, it may take more later.
+
+Me- Okay, I will give it, now tell me what you want.
+
+Sister- She is quiet and does not say anything.
+
+Me- If you don't say anything, you have to sleep as the night is getting longer.
+
+Sister- What should I say, brother?
+
+Me- I will fuck you now if you agree and if you don't, you can leave. Maa bon choda
+
+Sister- You were saying this as a brother.
+
+Me- Do you remember what you did to me as a sister then?
+
+Sister- Since I made a mistake, you will also make the same mistake.
+
+Me- I don't have a wife, where can I go, I need it
+
+Sister- That's why mother and sister have no one else.
+
+Me- Mom has a husband, you have a husband, I don't have a wife.
+
+Sister- Brother, don't disgrace me.
+
+Me- Okay, I'm not forcing you. You go and send it to your mother now.
+
+Sister- But you will give me money.
+
+Me- No, not at all, and think about one thing, not just today, but when I ask for it, you will have to give it too.
+
+Sister- Crying
+
+Me- There is no use in crying and I will not waste time.
+
+Sister- Quietly not saying anything.
+
+Me- Call your mother, whatever you say.
+
+Sister- No, you don't have to call your mother. Maa bon choda
+
+Me- Then I said come and held her hand and put my penis under her lungi. And I said that mother is very comfortable, you can have it too.
+
+Sister- She is sitting with her head down.
+
+Me- Holding her sister's face and lifting it up I said, "Why am I going to fuck you?"
+
+Sister- She is looking at me with one look.
+
+Me- Say yes or no, you will do it if you say so.
+
+Sister- She nodded and remembered.
+
+Me- What size bra do you need?
+
+Sister- Size 36
+
+Me- I pulled her nightie up and took it out. She was not wearing any bra or panty. I picked her up, tied her up and took off her lungi myself. I kissed her on the face and said, "I will fuck you."
+
+Sister- Yes, brother, if you can do whatever you want, why can't I? I am my mother's daughter.
+
+Me- I held both breasts, bit them and started sucking them and put one hand in my pussy and saw that it was soaked in juice.
+
+Sister- Ah, brother, what are you doing? Oh, don't give me your fingers, I will go crazy, brother. maa bon choda
+
+I- I will insert it this time
+
+Sister- Yes, brother, insert it
+
+I- I made her sit next to the bed and spread her legs and inserted my cock into her pussy and started fucking her.
+
+Sister- Ah, brother, how big does it feel, give it slowly, brother.
+
+I- This is sona, I am giving it slowly, so I lifted my legs and gave it a hard thrust.
+
+Sister- Uh, brother, it feels like, oh, brother, give it slowly
+
+I- This is the first time, so I will see this time and I will not need it anymore, so I started thrusting.
+
+maa bon chodaSister- Yes, brother, give it like this, she held my waist.
+
+Me- This sister, does it feel good this time, or should I give it a little harder?
+
+Sister- Give it as much as you want, brother, I like it, but it only takes the whole thing to enter. maa bon choda
+
+I- Okay, but I will make it light, but I will give it frequently, you understand, so I increased the speed of fucking.
+
+Sister- My back hurts like this
+
+Me- Then why should I get up on the bed.
+
+Sister- Yes, brother, do that
+
+Me- I took out my penis and got up on the bed with him and stuffed my penis in my pussy and started fucking him. I started fucking him on his chest and mouth to mouth.
+
+Sister- Oh, brother, you are so happy, brother, give me as hard as you can.
+
+Me- I started slapping my waist saying I am giving you.
+
+Sister- Oh, brother, you can give me so much happiness, I didn't think, brother, my dear brother, give me more, give me more, give me more, brother, my dear brother.
+
+Me- This is my dear sister, I started slapping my belly saying Ram.
+
+Sister- Oh, brother, I can't stay anymore. How is my brother doing, brother?
+
+Me- I am giving you, my dear sister, my dear sister, my dear sister, my dear sister.
+
+Sister- This time, brother, brother, give me more, brother, give me more, give me more, brother, my dear brother. maa bon choda
+
+I- I give you my gold, I give it to you, ummmmm, my gold sister.
+
+Sister- Ah, brother, Ah, brother, my gold went out, brother, Ah, brother, oh, what happiness, brother.
+
+Me- This is my gold sister, give me my cock, you bathe it with your pussy juice
+
+Sister- Brother, it's over, brother, Ah, what happiness, brother, oh, I want to die of happiness.
+
+Me- I'm comfortable, my gold sister.
+
+Sister- I've had it a lot, brother, but you didn't have it, you do it.
+
+Me- I'm doing it, my gold sister, hold me a little, I'll have it in a short time.
+
+Sister- You do it, brother. maa bon choda
+
+Meanwhile, the sound of the door opening, mother entered.
+
+Mother- Oh, you're doing it then.
+
+Me- Yes, mother, I got up.
+
+Mother- It's over
+
+Sister- No, mother, it's mine, not my brother's
+
+Mother- Why
+
+Sister- I couldn't stand it when you're doing it so loudly.
+
+Me- Mom come now I will do it to you I pulled mom closer.
+
+Mom- Now I am sitting in front of her I don't feel shy in front of my daughter. maa bon choda
+
+Me- Come then I said I fucked mom. I put my penis next to her sister and inserted it into mom's pussy. Mom's pussy and juices are working hard. What's the matter how did so much juice come out. That means you were outside.
+
+Mom- Hey I was watching you doing it through the door.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+        // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

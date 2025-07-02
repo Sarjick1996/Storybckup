@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page46.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page46.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page46.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+If you get everything, your life is wasted – 1
+
+</small>
+
+<p>
+
+
+Mallika Chartaji, nickname Molly. Age 38. By profession, she is a biology professor in a renowned college in Kolkata.
+Very elegant, polite, tasteful, Bengali housewife. She lives in a 3BHK flat near Garia with her son Tapesh Chataji. After four years of marriage, her husband died when the son was barely two and a half years old.
+
+Now the son is 17 years old, a science student who has entered class 12 and will be doing his higher secondary next year. She became pregnant just six months after marriage and their beloved Tapesh alias Tapu came to light. But the happiness did not last long, her husband suddenly died and she was left alone with her son. With her own efforts, she joined the college as a guest lecturer and is now a full-time professor.
+
+sex choti 2024
+Currently, things are going very well with the son and the students.
+Mallika Chartaji Height 5' 5", fair, 38 years old but looks like a young woman of 27/28. Since she is a widow, there is no external sign of marriage on her, so people think she is an unmarried young woman. She walks with her son when no one thinks of her as a brother without a son.
+
+Bengali bride, kajal black eyes, hooked nose, skin color which is called milky, thick black hair up to the waist, matching lips, high 34 size erect breasts as if no one has touched them yet. But the most attractive thing is the 36 size round ass. Full curvy body. She always likes to keep herself neat. Her favorite dress is sari. The bra and panties inside the sari are more attractive because of the sari shaya blouse. Which is enough to make anyone from college professor to student turn their heads. sex choti 2024
+
+As a teacher, she is very famous among students. Her studies For the trick of understanding. Those who study, they take classes to study and those who do not study, they also attend classes to see the breasts and ass of the only hot and sexy teacher in the college. Some of them, along with studying, do not miss the opportunity to look at the madam with lustful eyes
+
+No. All in all, the students love and respect her. Mallika Devi and her students are very fond of her. Some students also take biology tuition from her. She teaches the tuition at her house.
+6:30 in the morning. sex choti 2024
+
+Mallika got up from her sleep, got up and went into the bathroom with a new set of bra, panty, saree, blouse. She took off her house coat and hung it on the hanger. She took off her blue panty from her waist with both hands and sat on the toilet. After finishing work, she got up and stood in front of the mirror in the bathroom. She took off the blue bra in her dress and put it in the bucket. She looked at herself in the mirror. She saw that there was a little Hair is visible.
+
+Suddenly, she has light hair there too, by putting her hand down. Mallika always likes to keep herself clean. She has not been able to clean herself for a few days due to work pressure. Today, she cleaned her armpits and lower body with a broom, took a bath, put on the new bra, panties, saree, blouse that she had brought with her, put on a pad, washed her house coat, bra, panties from the previous night and left to dry on the roof. sex choti 2024
+
+She came back and went to call her son, called from outside the door and entered the house __ Tapu, Tapu, get up.
+Tapesh Chattaji is 17 years old, taller than her mother, 5' 7" tall, fair-skinned, very good at studies, loves to play football, does gym, has a muscular body. She watches porn and masturbates, all of this goes on. She knows that her mother is her only support and loves and respects her mother. She has not had any desire for her mother, who can say whether she will have any in the future.
+
+Mallika: Tapu, get up, see what time it is
+Tapesh: I'm getting up, mom. Read a little more
+Mallika: I went downstairs to cook. I have to go to college again. Are you going to school or not?
+Tapesh: Hmm, I'll go. sex choti 2024
+
+Tapesh got up, freshened up, came downstairs, had tea, sat down to read, and Mallika Devi cooked.
+At 9:30, Mallika left for college. Since Tapesh's school was nearby, she would leave at 10.
+
+Mallika returned home at 5 pm, Tapesh arrived earlier. As soon as Mallika arrived, she took a set of clothes and went into the bathroom. She took off the saree and blouses that had been lying there all day and soaked them in a bucket to wash. When she opened her panties, she saw that they were completely wet. That's when she remembered that the bus was very crowded when she came today.
+
+There was a young man right behind Mallika, he pressed her ass a little and that's why this situation is like this. The youthfulness of all these years is not decreasing but increasing. In the bus, the boy slowly held his waist on her ass and it was as if he was pushing her on the swing of the bus. sex choti 2024
+
+It was so crowded that she couldn't even move a bit. After 5 minutes, the bus came to a stop and got off as if to escape. Leaving this thought aside, she came out fresh and wore a new bra, panty, saree, blouse. She came and made tiffin for herself and her son.
+
+After a while, a few students came to study tuition. After the tuition, the mother and son cooked dinner and went to bed as they pleased. This is how their life continued. Almost a long time passed in this way.
+
+Suddenly one day, she was late to return from college. There was a final year exam and there was a tie meeting ahead. So she was a little late and the bus was very crowded. Today again the final year students have tuition and exams are coming so they were not given leave. They will come home quickly and teach. Somehow a crowd got on the bus. sex choti 2024
+
+After some distance, a boy got on and the crowd pushed him into the bus and stood behind Mallika. In the shaking of the bus, Mallika's ass, who was at the back, fell on his hands. The boy. After this happened twice, the boy dared to put his hand on his ass again and dared to press it. This incident happened to Mallika occasionally, so today she was standing like herself without paying any attention and her panties were wet.
+
+After pressing several times, she suddenly noticed that it was the madam of the college, Mallika Chartaji. The boy moved away from there in fear to the back of the bus.
+The conductor shouted, "Wait a minute," the bus stopped and Mallika got down and noticed that Akash was coming down from the back. sex choti 2024
+
+Akash is her student. Akash suddenly saw her and said good evening madam and came home.
+Akash is a college topper who is very good in his studies but weak in his body. After graduation, he will go abroad to study MBA on his father's wish.
+
+As usual, Mallika came home and saw that some students had come and Akash sat with them but he was not himself today. In fact, Mallika's ass was being fondled and pressed in the bus, and his condition had worsened. He was not the only one who was in a bad state, Mallika was also in a bad state, her panties were soaked with the juice that came out of her during the tapa tapi. She entered the bedroom and took her bra, panties, saree, and blouse from the cupboard and entered the bathroom. sex choti 2024
+
+After coming back fresh, she sat down to teach. Akash could not control himself when he saw Mallika, who had just taken a bath. When Mallika said she was going to the bathroom, she saw that Tapesh had just entered the common bathroom, so Mallika asked Akash to go to her bathroom.
+
+Akash went to Mallika's bedroom and entered her attached bathroom, quickly took off his pants and thought he would masturbate, then his eyes fell on Mallika's saree kept in the bucket next to her, Akash curiously removed the saree and found a priceless treasure, the rose flower printed bra and panties left by Mallika.
+
+Akash picked up the panties and saw that they were wet, at first he thought they were wet in the water in the bucket but when he looked closely and brought them to his nose, he smelled a strong but attractive smell. He remembered the incident on the bus, which meant that their tasteful and polite madam had soaked his panties after eating their ass and fucked them. sex choti 2024
+
+Akash could not control himself anymore, he held the panties on his penis and started shaking them, he was so excited that he released his own juice within 30 seconds. Then he left everything as it was, washed his hands and face, fixed his clothes and pants and came to the study room. But he could not concentrate on studying.
+
+It was as if he could see Madam not wearing a saree but the bra and panties she had seen in the bathroom, her breasts erect and erect, teaching them. Mallika did not notice any of this. The day went on like this. Akash also came to study but did not get the same thing.
+
+This is how their life went on. The final exams of the college were a month away. The students were now studying from home. Mallika had a fever and she took a leave from tuition by sending a WhatsApp group MSG. Akash saw the message but the devil was in his head and he decided that he would go to study today and he would be alone today and if Madam gets anything today. sex choti 2024
+
+He also took sleeping pills with him when he came. He went and rang the bell as usual. There was no tapesh then, Mallika went and opened the door __
+Mallika: You are Akash
+Akash: Yes ma'am, we had classes today
+
+Mallika: Yes but I have given leave today because of my bad health. You did not see the group.
+Akash: No madam, I have a month to study for the exam, today is the last class, so I came to clear some doubts. I don't know if you have given leave.
+Mallika: Okay, come in when you have come.
+
+He followed Mallika inside. Since Mallika was sleeping at home, she was only wearing a house coat, and she always wore a bra and panties inside. As Akash walked back and forth, he could see the swing of her ass and the panty line was also visible. sex choti 2024
+
+Mallika: Akash, you sit on the sofa, I am coming
+
+Then Mallika started explaining one thing after another and her fever also started increasing. At one point, he realized that she could not sit anymore. Akash saw all this and said __
+Akash: Ma'am, where is your medicine
+
+Mallika: On the table in the bedroom
+Akash: You sit down, I will bring it
+Mallika: Okay, bring it
+Akash: Here. sex choti 2024
+
+He gives her a fever medicine and a sleeping pill. Mallika doesn't notice what medicine she gave. She takes it in a fever.
+Mallika tells Akash to go home today. While leaving, she presses the key lock of the door from inside and pulls it out. Akash says okay and says let's take you to the bedroom. Mallika says she can do it alone. Saying this, Akash goes towards the door and Mallika goes to the bedroom and lies down.
+
+After a while, Akash quietly goes to the bedroom and sees Mallika sleeping soundly. Akash calls twice but gets no response. Now Akash slowly unties the ribbon of the coat and puts it on both sides. Now he has those desired things.
+
+Akash gently presses on Mallika's breasts through the bra. Then he looks down and sees that the hidden treasure is covered by the panties. He waves his hand over the panties once on Mallika's hidden treasure. Then a message came on Mallika's phone kept on the bed sex choti 2024
+
+Tapu ❤️
+Mom, I will come in 10 minutes, will I bring something?
+
+After that, the phone rang. Tapu saw it calling.
+Seeing the call, Akash got scared and quickly took a few photos of Mallika wearing her bra and panties, tied her coat tightly. Akash locked the door and went home.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page35.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page35.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page35.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+After the death of father and afterwards (incest story) family sex
+
+</small>
+
+<p>
+
+
+My father died in a road accident, when I was 16-17 years old. My father's childhood friend Amal Kaku took care of everything from bringing my father's body to the funeral. Then, after the funeral was over, she took care of everything, including taking my mother to my father's office and supervising her to get money. It is good to say that Amal Kaku was a doctor by profession, but she was not like the uncles in the village. My uncle had been divorced several years ago. My uncle would definitely come to our house on my father's holidays, and also when necessary or unnecessary. By now, quite a few days had passed since my father's death. My mother had overcome her grief and started going to my father's office, the bank, and other places with my uncle. My mother, who was beautiful at the post office, could become the center of attention of anyone even at the age of 36-37. Anyway, one day, when I returned from school and saw that my mother was not there, I thought she must have gone somewhere, so I put the lock back on and went out to play. I couldn't see my mother even after returning in the evening. I asked her if she had said anything to me. Not getting a satisfactory answer, I came back and sat down to study. After a while, my mother returned with Amal aunt. She came back from the bathroom and said to me, "Have you eaten anything?" I shook my head in the negative. My mother said, "Wait, I'm making tea," then she said, "Grandpa, you can eat from here tonight." My aunt said, "Okay, aunt." After eating tea, I went to the second floor room to study. My mother kept talking to my aunt while preparing the food. After a few hours, I went downstairs to the bathroom to urinate. On the way back, I heard my mother say, "Tell me what you're going to eat tonight, it's rice." My aunt replied, "You know what you want to eat, but where is it?" My aunt's words made me stand up. My mother said, "It's been a few months since people started peeing. Besides, the son is growing up and if he suspects something, the whole neighborhood will fall into pieces. That won't happen now. I kept quiet and listened.<br><br>
+Aunty said, 'How will the neighborhood people know! Yes, we have to manage the son's matter a little. Either you tell him that from now on, I will be renting the room below you.<br>
+Mother said, "No, if you are here, you will talk to five people, rather than being here as you are, sometimes staying here at night, none of the neighborhood people will know, just worrying about the son.<br>
+Aunty said, "Look, Santu is dependent on you now, so I don't think he will do anything wrong. If he tries to cause any trouble, he will feel the consequences."
+Mother quickly said, "No, no, he can't do that, that will strengthen his suspicions. Even if he is quiet at home out of fear, he will make a mess of the neighborhood. I wonder what would happen if I did one thing, his sleep is very deep, so if I came from outside and locked the door while he was sleeping.
+Aunt said, "I didn't say anything bad, but your son is growing up, by chance he won't wake up and see you, and then when he sees the door closed, what will happen... Well, what if he doesn't come with me?"<br>
+Mother said, "I mean!<br>
+Aunt said, "I mean, don't I hide anything from him, let him know that I will caress you, fuck you, I mean, I will do whatever his father used to do with you."
+Mother said, "You should be ashamed."<br>
+Aunt said, "What's the shame, don't girls get married twice? And if he finds out about the money, I will make him join you too."
+Mother said, "You shouldn't stop your father from making such strange plans." Aunt said, "No, aunt, you're not very strange. So listen, Nibaran Babu from the neighborhood where I live suffered a stroke at the age of 47-48 and was paralyzed. He has a wife of 40 and a son of 18-19 at home. I used to treat Nibaran Babu, I used to visit him once or twice a month. After six or seven months, Nibaran Babu's son came and called me saying that his mother's health was bad. I went and checked her and found that she was showing signs of pregnancy and admitted that for the past four months, the mother and son had started having sex almost every day.
+Mother said, "What happened to the son? Mother did all that! Then what happened?"<br>
+Auntie, what else will happen? I made him eat his stomach. I gave him medicine and told him to rest for a few days. I prescribed a tablet for the boy and told him to fuck his mother now and take this tablet and fuck her. Now that Nibaran is dead, the boy is fucking his widowed mother by taking pills, not even a crow can feel it.
+Mother said, "You are very rude! Let the rice be cooked, I will serve you the curry hot. I will give you food, tidy the house and go to bed comfortably, I feel very tired.<br><br>
+I didn't stand up anymore and quickly went upstairs. After about five minutes, my mother called me to eat. My aunt and I started eating together. While eating, my aunt said, 'Grandma, it's been a long night, how can I come back from all this way now?' I thought to myself that my aunt couldn't bear it anymore. But I didn't say anything. My mother said, 'Yes, it's been a little late. Then do something and spend the night here at your friend's house. Santu and I are sleeping upstairs.' My aunt said, 'That's good. I understood that something was going to happen today. <br>
+So after eating, I said, 'My mother is sleeping soundly.' My mother said, 'You go to sleep, keep the door open, I'll go a little later. Grandpa, you also go to bed, I'll eat, tidy the kitchen and go upstairs. And there's a lungi from Santu's father in the cupboard, take one out.' I went upstairs and lay down on the bed. I had fallen asleep the other day, but today I pretended to be asleep because the words of my mother and aunt from a while ago were still ringing in my ears. After about half an hour, my mother came into the room and looked at me carefully and asked, "Santu, are you asleep?" I remained silent. My mother looked at me for a while longer and then, feeling relieved, she went out and locked the door from the outside. After about five minutes, I got up. The lock could be opened from the inside in a special way. I opened it and stepped downstairs. As I was coming down, I saw my mother standing in front of the dressing table, combing her hair, through the half-opened window. My aunt, with insatiable curiosity,<br>
+I stood by the door, wanting to see what he was doing. Through the gap in the wooden door, I could see a little of the inside of the room, so I peeked through the gap and saw what my aunt was saying, standing under my father's picture next to the bed. My mother was laughing occasionally. I stood there, my ears pricked up, almost holding my breath. My aunt said, 'Here, give me a lungi of your groom.' My mother opened the cupboard and took out a lungi and gave it to my aunt. My aunt put it on and faced my father's picture on the wall and said, "Animesh, wear your lungi, I will sleep on your bed, with your wife as my lungi. Don't get angry, though. Yes, I could have waited a few more days, but I couldn't do that, thinking of your wife's plump, juicy pussy." My mother heard my aunt's words and said with a laugh, 'Grandfather, what are you talking about! She is your childhood friend.' Then my aunt said, 'Don't you know that in the Kali Yuga, the pussy of a friend's wife was the heaven of men. Then he turned to his father's photo and said, "Look Animesh, don't be angry, in these few days of your death, I am going to sleep on your flower bed with your grieving wife. If you sit there in grief, the burning sensation in girls' vaginas will not subside, you know that very well. So now I have to do that job myself." Mother said, laughing hysterically. "Grandpa, don't say anything more. 
+<br><br>
+My stomach will burst with laughter." Auntie came around and hugged Mother from behind, rubbed her face on her neck a couple of times, stretched out her hand and pressed her breasts, saying, "Okay, I won't say anything more, it's difficult if the vagina bursts before the vagina. But auntie, you should also take the parmesan from Animesh and see how the pussy has become sticky." Mother said she was rude and pushed her ass into Uncle's lap. Auntie now held her mother's ass with her cock, and while pressing her breasts with both hands, she pushed her mother in front of her father's photo and said, "You only see my fault, don't you? Look at your wife's behavior, she is chaining her son up in the room and letting a stranger into your marital bed in your house, that's why she has come to ask your permission." Mother was fidgeting in uncle's arms and getting heated up by uncle's provocative words and started saying, "Hey, listen, I am going to spend the night with Thakurpo on our flower bed, do you mind?" Auntie now said, "My poor Sutapa, don't let this nonsense of yours bring the poor thing down from heaven!" Mother also started again, "I did not agree to sleep with your childhood friend just a few days after you left, I was afraid of public shame, what will your son think of that! But my friend's newly widowed wife is eager to fuck her. I said, 'I'm afraid of getting my stomach tied, I'm even afraid of being caught by my son. Listen to what your magic-loving friend said, while practicing medicine, he learned about mothers fucking their sons and tying their stomachs, so if necessary, I'll have to fuck my son too!
+<br><br>
+Now my aunt said, 'Stop, Sutapa, stop, I'll suffocate to death!<br>
+My mother is not a woman to be left alone, she rolled up her sari and wrapped it around her waist and held it tightly, 'Grandpa was saying a while ago that his wealth is bigger than yours, look how my pussy is leaking juice after hearing that!<br>
+My ears started ringing after hearing what my mother and uncle were doing. My aunt dragged my mother to the bed, pulled her blouse and pulled her big breasts out, and started licking them. She buried her face between her mother's plump breasts. She sucked, bit, and licked her mother, making her dizzy. My mother didn't stop either. Sometimes she was holding my aunt's hair tightly with both hands, sometimes she was raising her back and pressing her breasts against my aunt's face, sometimes she was ripping the bedsheets apart. I was shaking with excitement, my chest was pounding, I started to shake my penis in a fit of rage, when suddenly my mother's sharp but muffled scream broke my silence, "Oh, mother, it feels like it." I looked up and saw that my aunt had taken off her mother's saree and made her lie down, and she had also taken off her lungi and made her lie down and pressed her waist between her mother's legs.
+<br><br>
+ Then I couldn't hear what my aunt said to my mother, my mother covered her face with her hands and said, "Oh, no, I'll be very embarrassed," but she put her legs on my aunt's shoulders and pressed them against her. My aunt didn't say anything more and started shaking her waist, my mother said two or four times, "Umm, come on... it feels like it, you're so big, etc." and kept spreading her legs apart, making more and more incomprehensible sounds. Aunt had been standing under the bed and was holding her mother's waist, now she lay down on her mother's chest. Suddenly, uncle's cock slipped out of her mother's pussy. Mother quickly grabbed the juicy cock and pushed it into her pussy. She said something to the unsuspecting aunt. Aunt inserted it in one go and put her face in her mother's mouth, biting and biting her waist, and she kept on biting.<br><br>
+Mother said in a choked voice, "Oh, what can I tell you about your friend's cock! Father: Oops, I can't do it anymore, fuck my pussy and fuck it.
+Aunt was silently pounding until now, encouraged by mother's fucking, and gasping, "Oh, Animesh, your wife's pussy is hot and tight, what can I tell you, I can't pound it for long, the stuff will come out."<br>
+Aunt said quickly, "No, Grandpa, hold it for at least a minute, my pussy is dripping with your pounding, give it to me harder." Aunt gritted her teeth and placed her hands on both sides of mother's chest and started shaking her hips in a giving position. Mother leaned on her elbows and bent her back upwards and started throwing her heavy hips into the air. After a few seconds, Aunt Sutapa Gudmarani, my dear, jumped on my mother's chest, saying, "Come here, my dear." Mother held onto Aunt Sutapa's hands and feet and kept muttering, "Umm, ummm."<br>
+I was busy when suddenly my mother pushed my aunt away and started coming towards the door, holding my pussy with one hand, I somehow moved behind the wall. My mother opened the door and almost ran into the bathroom and sat down on her back, leaving the bathroom door open. I took this opportunity to climb up the stairs and lay down in the room.<br>
+I took this opportunity to climb up the stairs and lay down in the room. I kept pulling my penis as I went. At that time, I heard the sound of someone coming up the stairs, I quickly stopped pulling and covered my eyes with a pillow. I kept looking at it from time to time. My mother came to the door and stopped when she saw it open, (in fact, I had also forgotten to wet myself and lay down when I heard the sound of footsteps, I was afraid of getting caught without getting wet) then she entered the room and came to me. I pretended to be asleep and remained motionless. However, once my mother tried to lean over me and look at my face but she couldn't understand as there was no light in the room. Then my mother slowly left again, this time leaving the door open. I was in a daze, what should I do? Should I go down again or not? If my mother suspects, she will sneak around and see if I am really asleep! After a little bit of tension, I went out to see my mother and aunt's exploits. As I was going down the stairs, I heard my mother's moans and realized that it was the end of their second sexual intercourse. At that moment, my aunt gasped and said, "Oh, auntie, I came out again under the pressure of your juicy pussy: What a pleasure to fuck your pussy." My mother was also choked and my stomach was full.
+<br><br>
+Everything was completely silent. I didn't know whether to go near the house or not, what if my mother goes to the bathroom again! No, I thought I would just lie down and turn around to get up, but I heard my mother's voice," then Thakurpo Santu must have understood something! Aunt said, "What? He understood. I stood up again.
+Mother said, "I clearly remember that I came to you with the chain in the house, but when I turned around from the bathroom, I saw that the chain in the house was open, the door was also open, out of suspicion, I went to my son and took a good look, although I couldn't see clearly in the dark, but I thought he was sleeping.
+Mother said, "Look, you might be making a mistake, either you left the door without the chain, or you left it loose and it opened in the wind."
+Mother said, "That could be, but from now on, you have to be careful."
+<br><br>
+After hearing this from my mother, I became careful. After that, when my aunt stayed at our house at night, even if my mother went to my aunt to have sex with me, I wouldn't open the door and go out. I imagined them having sex and pulling me out. I used to stay. In the meantime, my aunt and mother started to need to go out frequently. As usual, it was late to return and my aunt's night visits to our house increased. Within a couple of months, my patience broke due to one of my mother's mistakes. That day, my mother forgot to remove the shackles. I couldn't control my greed and went down the stairs. When I looked through the gap in the door, I saw that my mother was completely naked, not even a single thread on her neck. My aunt was also naked. My aunt was sitting on the bed with her legs hanging down and facing the door, while my mother was sitting on my lap with her legs spread on both sides of my aunt's waist and her neck wrapped around my aunt's neck. My aunt was holding my mother's soft ass and pulling my mother to sit on her lap.
+<br><br>
+ After doing this two or three times, my mother said, "Umm, this is it, I can't take it anymore, my mother is pushing me in the face." She kept making a noise, breaking her legs from her knees and holding my aunt's waist with her heels and pushing her pussy. Uncle's cock. I started to pull at that drunken scene, as soon as my goods started to come out with a flash, suddenly my mother jumped up from my uncle's lap, I didn't look anywhere and just climbed the stairs, spreading my goods, when I heard my mother's muffled voice, "Grandpa, come out at once." I sat on the stairs and peeked and saw my uncle coming out and said, "What's wrong?" Mother said, "Turn on the light a little, how did my foot slip, my chest was shaking, my foot must have slipped because of my spilled semen! My uncle came out in a rage and saw everything and said, "It didn't spill from there, did it?" Mother said, "No, no, whatever spilled out got smeared on my thighs. My uncle said, "You come back from the bathroom, I'll see." I came home and lay down, my chest was pounding with fear of being caught, my aunt came and entered the house and without any hesitation, "Santu! Don't pretend to be sleeping anymore, come downstairs." She said and grabbed my hand and pulled me. 
+<br><br>
+I was scared and sat up, pretending to be a slut and said, "What are you calling me for!" My aunt said, "No, don't pretend anymore, after seeing your mother and me fucking, don't throw your stuff away and go fuck your mother." I was sure that I had been caught, so without further ado, I followed my aunt downstairs. When I entered the house, I saw my mother sitting with only her saree wrapped around her. Aunt said, "Baudhi, your suspicion was true, your son must have seen our feats from the first day, so I brought him so that he can fuck you without wasting his money." Mother kept quiet, saying that she would be ashamed of her grandfather. Aunt held her hand and pulled her off the bed. "Leave that shame and shame behind and teach your son so that the matter does not become known in the neighborhood," he said, lowering the hem of his mother's saree, his fair breasts came out like bells. I was watching their antics with a smile, when my aunt scolded me. "Don't stand like a fool and grab my mother from a distance and tape her phone." I was startled and grabbed my mother from behind. My mother tried to release my hand, saying, "Don't let go." My aunt took this opportunity to kneel down and remove the saree from my mother's waist.
+Mother became completely numb. My penis became erect as my mother's soft ass rubbed my lower body, I lost consciousness, I held my penis between my mother's ass, I started to rub my breasts with my hands.<br><br>
+Mother said, "Let go, I don't want to do this to my mother." At this time, my aunt came close to me like a savior and said, "I told you not to do this to my mother, this child, push your mother and take her in front of your father's picture, ask your mother for permission. You also ask for permission, she winked at me.
+I pushed my mother from behind and brought her to the wall of the room where my father's picture was hanging. Now my aunt said, "Tell your father - father, I have taken all the responsibilities of your wife from now on."<br>
+I said those things like a fool.<br>
+
+Aunt said again, "Tell me, now it is my responsibility to satisfy your wife's pussy. That is why I came to ask permission to fuck my mother's pussy." As soon as I said what my uncle said exactly, my mother said, "Oh, you hear how you two want to use your wife! No one is thinking about what will happen if you get pregnant!" Aunt said, "Don't worry about Sutapa, I will take care of everything. Now lie down at the feet of your dead husband and fuck your pussy with the son created by his semen. Let him see what happens when he leaves his young wife and goes to heaven in a hurry." Mother laughed like a madwoman, "You are right, let him see how his son fucks his wife. He will fuck the mother from whose womb he was born. Come on, let's fuck." She pointed at me with her elbow and lay down on the bed. My ears were burning with the conversation between my aunt and mother, I didn't even mention the penis, I rushed to my mother without any delay, I tried to grab one of her breasts, I covered my face with the other, I felt my mother holding my vagina with one hand and rubbing her penis on a wet and hot spot twice and said "Push this time". As I pushed, a little of my penis entered that wet and hot hole.
+<br><br>
+ My mother responded by raising her lower abdomen with a sigh. I moved my waist a little and pushed harder, "Pachch" and it entered a little more. After pushing like this five or six times, my mother's balls pressed against my balls, I lay down on my mother's chest with a feeling that I had conquered the kingdom. My mother also ran her fingers through my hair and held it. At that time, my aunt tapped me on the back and said, "This girl, just putting the penis in your vagina and lying down is not called fucking. You have to lift your waist and pound it, then the accumulated juice from your vagina will come out. Then your mother will be comfortable." I stood up and put my hands on the bed on both sides of my mother's chest and started dancing my waist as if giving a blowjob. After pounding her two or three times, my mother started shaking her head, "Umm ah... Yes... Uncle: ah, Who knows what my aunt understood, she climbed up on the bed and sat near my mother's head and started rubbing my mother's breasts and told me, "Stir it harder. As a result, my mother's moaning and babbling increased in one breath. "Oh, look, your son has torn your wife's pussy open and oh." "Mom, you didn't do anything kind," my aunt said. "At my aunt's words, I'm pushing my cock all the way to the mouth of my vagina. My cock is melting all my juices and coming out of my pussy, oh I held it and relaxed. 
+<br><br>
+My penis came out of my vagina due to my mother's pressure. I was looking at my mother's face in surprise. There was silence for a few moments, then Aunty giggled and said, "No, Sutapa, you are not watching, you should continue the story of the food you were eating, it will reach her soul." At Aunty's words, Mother opened her eyes, and from our eyes, Mother first looked away and smiled and wrapped her knees around her legs. I could not understand whether to insert her again, although Laura Babaji was still in a state of shock. Once I looked at Aunty, Aunty winked and with two fingers in a special way, she stuck her tongue in her gap and moved it. Without delay, I jumped between Mother's spread legs, kissed her pussy with a smile, and when I was about to move my face away due to a foul smell, Aunty jumped and held my head. "No, don't move your face at all, just like you sucked my breast a little while ago, immerse your face in Mother's pussy and suck it, then Fuck. I forced myself to kiss my mother's swollen pussy and rub my face, saying "Oh my god, mommy" and wrapping my legs around her neck, my head sank between her soft thighs. By now, the foul smell of the place had reached my nose, I couldn't see anything with my eyes, so I stuck my tongue out and started moving it around randomly, the balls of my pussy got stuck around my mother's pussy, smeared with spit and saliva, and my mouth was filled with a salty and spicy taste. I immediately felt my mother's heels leaving my neck and pressing down on my back.
+
+<br><br>
+ I rubbed my face like a madman, narrowing my tongue and pushing it in and started rolling it over the long slit. As soon as a big pea-sized lump of meat hit my tongue, I moved it with the tip of my tongue, and my mother made a "yuck" sound like a hiccup and held my pussy high. I bit the lump gently with my lips, and my mother shouted in a distorted, muffled voice, "Oh, who did you leave me in, suck my pussy?"<br>
+Oh, he is licking and biting and eating me, you have never shown me the search for this unbearable happiness! But your son has taken me by the hand on this terrible road of happiness, oh, there is no way back from here. He sucked my breasts and milked me as a child and now he is sucking all the juice from my pussy. Oh, the juice that you have been able to extract only a few times in your entire life, you have extracted that juice three or four times in this short time, if he enters and presses it again, then all the juice from my body will come out through my pussy, I will die. "Let go, I can't take it anymore, the bed is getting wet under my hips, I'm going to cum," he said, closing his eyes and stretching, his legs slid off my back, his pussy also left my mouth. Mother kept taking deep, long breaths. I looked at my uncle with a questioning look, my uncle winked and gestured for me to enter, I spread my legs with my hands and saw that the junction of my mother's thighs was wet, her hair was covered, her pussy lips were slightly spread on both sides, a lump of flesh like a nose had come out from inside, just below it was a pink, juicy hole. I quickly placed my erect penis in the mouth of that hole and danced my hips and gave a thrust. Mother made a "ouch" sound and raised her chest once and stretched again. I had been a little scared, a little confused, a little excited and I could not enjoy the taste of fucking with passion, I was doing everything like a machine, according to my uncle's instructions or due to excitement, now I wanted to hug my mother who was lying down fiercely, I ran my hands under my mother's back and held her to my chest, as a result, my mother's face came close to my face.
+<br><br>
+ Mother was lying down with her eyes closed, now she opened her eyes under my hands and chest, with the touch of my hot breath. The meeting of our four eyes was a strange ability, in my mother's eyes, shame, shyness and on the other hand, I saw a strange ability. Like a bewitched mother, I dipped my lips between her lips, stuck my tongue out and touched her tongue, conveying the emotions of my mind. Mother held me with both hands, our tongues kept moving in each other's mouths. Mother put my cock in her pussy in this gap, without any instructions, gently I pushed it in a little and kissed it deeply again. I felt my mother's pussy lips trembling, biting and biting my penis head in the warm cover. 
+
+<br><br>
+My male nature became busy searching for the bottom even deeper, I gave a push and my penis slipped and entered a little deeper, in this way I felt my mother holding my ass and pulling it down. I was drowning in the heavenly pleasure of my mother's wet and slippery vagina. My head was burning with the pull of my mother's hand, and I also lifted my waist and started jumping into that bottom again and again, wanting to turn the gap between my mother's thighs into a deeper and deeper pit. The opposite rhythm of our lower limbs started moving in sync. The cock was like a piston of an oily machine, penetrating the deep bottom of my mother's vagina with the throbbing of saliva and returning with the emotion of love. Mother's I held one of my breasts in my hands and looked into my mother's eyes. I didn't know how I could ask, "Mom, are you comfortable?" My mother said, running her fingers through my hair. "It feels so good." My aunt had been watching our mother and son's silent lovemaking speechlessly for so long. 
+<br><br>
+Now she said, "Baudi, your son probably doesn't like you fucking him so quietly or, due to his inexperience, doesn't understand how much pleasure girls get from fucking. Just as you were telling your dead husband about it, tell him how you feel about being fucked by your son. That will increase your son's experience too." My mother said this in a rude voice and gave me a small tap from below and gestured for me to tap again. I started tapping again. In a short while, the rhythm and rhythm returned with a rotten, rotten sound. Mother started as her uncle said, "Oh, listen, your son's pounding has made your wife's pussy smell so bad, Mom, it's dripping so much that the bed sheet is getting wet. This is it, my mother's pussy, pound it and make it look like a hole. Um, um, ah Pour it into the mother's heart. Grandpa, if you don't arrange medicine, my stomach will be stuck "<br>
+
+I said so, mother, I will make your stomach, hold me or go, go or go, and jumped on my mother's chest. Mother suddenly hugged me tightly and kept shaking.
+That was the beginning<br>
+A few days later, my mother's bad reputation spread like wildfire in the neighborhood, because two or three people had seen our joint sex. Although I think that is not the case, because many people were greedy to enjoy my mother's youthful, plump, orphaned body. But mother did not care about anyone outside except one aunt, she slandered her out of anger or jealousy. But no matter how much it was, it was not possible to stay in the neighborhood for long, I cannot tell what happened between mother and aunt, aunt fixed a house in the city where she used to work in her early life, sold all the property here and left with us.
+<br>
+The train left at night, a fart
+<br>
+Aunt had booked four seats in the 1st class compartment. After a while, the checker came, Aunt managed to say that someone else had gone to the bathroom. After eating, she closed all the doors and windows and put all the belongings on the empty bunk and said, "Sleep tight. In the new city, you will be known as my wife. Although Santu is the father of your upcoming child, but I will introduce him to the father of that child." I was shocked and said, "Mom, you are pregnant! For how long! I don't know!" Mother said, "You don't need to know, sleep up high. Your aunt and I are sleeping downstairs." After arriving in the new city, Aunt's house became a mess, and I also started studying. A new guest came to our family, my sister, Sari's daughter. Aunt laid her in a cradle and rocked her, I sat Mother on her lap, and society and life continued. Only occasionally, Father's face emerged from the depths of memories. Then it seemed that memories were not always happy.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+       // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

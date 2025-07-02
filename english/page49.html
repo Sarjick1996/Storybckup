@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page49.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page49.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page49.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+The maid Maya's Maya(illusion)
+
+</small>
+
+<p>
+
+I moved to this new area for a job. As a bachelor, I had a lot of trouble finding a house, but I found one, but when I got home, I ran into another problem. It is very difficult to find a worker because there are not many people here. And those who do work don't take jobs here because they don't get much money. After looking for a while, I gave up and asked the caretaker downstairs to find a worker. If necessary, I can pay more.
+
+Two days later, in the evening, I was going to go upstairs. At that time, the caretaker's uncle called me. When I approached him, he said that someone was willing to work, but he would have to pay a little more. I didn't mind the money at that time, so I agreed. I asked who it was. He said that it was the wife of the man from the house next door. He didn't work anywhere, but he agreed because it was very close and the money was good. I was a little surprised to hear that she had never worked. My uncle said that the girl was very clean and polite. If necessary, he would talk to her. I agreed and took me to the house next door.
+
+kajer bou choda
+He left me standing outside and went inside. After a while, he came out and said that the girl's husband was outside, but I could talk to him now by going inside. He said that the gate of his house was open, so he left.
+I went inside, it was just getting evening. The lights were not on, when I went inside, someone came and turned on the light and turned to me.
+At first, I was a little shocked, this girl is the janitor's wife and will work in my house!
+
+She is probably the same age as me or a year younger, wearing a very clean but slightly worn salwar. She has a very fair complexion, a round face. Her body is quite full, the salwar is quite tight on her. Seeing that I was not saying anything, he said, 'Work at your house?'. Sambit came back to his words. I felt ashamed that I had been looking at her for so long, and I could see from the gentle smile on her face that she had noticed it too. I said yes, but it will take some time to work. She shook her head and said, "If I don't have time problems, I don't work anywhere else. kajer bou choda
+
+My husband agreed to come to your house near you." I saw a regional twist in the words. The next day, Friday, I said, come in the morning from the next day. She nodded her head and replied, "Yes, sir." Before leaving, I asked her if she knew that I was a bachelor. Hearing my words, she laughed and said, "What's the matter, you won't eat it." While laughing, I saw a tear fall on her cheek, and a lump came out of the girl's left side.
+
+Hearing this, I felt a little embarrassed and said that many people don't want to work in a bachelor's house because it requires a lot of work. Hearing this, she said, "Why are you making me do so much that you are already scared?" I smiled and said, "Okay, come tomorrow." Before leaving, I suddenly realized that the girl's name was not known. I turned around and asked her what name should I call you? She smiled again and said, "Maya." kajer bou choda
+
+The next day, Friday, there was no office. The office hours of the other person in the house are opposite to mine, so I stay home alone on Fridays and Saturdays. That's why I wake up late on holidays. It's ten o'clock in the morning, and I'm lying in bed when the doorbell rings. I open the door to see Maya standing in front of me. I saw the girl's face clearly in the daylight. She was much fairer than I had seen her in the evening light yesterday.
+
+A round face, thick eyebrows over her eyes, beautiful wide and thick lips. Seeing my newly woken-up state, she smiled again and said, "I would have gone to Chailai in a little while, if you slept like this every day, you wouldn't have to work." I smiled and said, "No, that's why I slept late on holidays." Without delay, Maya went to the kitchen and started looking for a broom. I saw the girl again in the daylight with sleepy eyes. Maya's body is even more desirable than what I saw in the dim light of yesterday evening. The girl is not very tall, but her body is very full. The girl cannot be called fat, there is a slight bulge in her lower abdomen but she looks quite attractive. The salwar on her body is somehow able to hold her tight body. I kept looking at her body while brushing my teeth.
+
+Especially when she was bending down to sweep the house, I felt bad when I saw her wide thighs and round heavy buttocks from behind. Her buttocks were very wide, so when she bent down to sweep and stood up straight again, her shirt kept getting stuck in the crease of her buttocks, a problem that girls with big buttocks have. Every time she stood up, Maya had to pull the shirt out of the crease of her buttocks. kajer bou choda
+
+I noticed another thing, when she was bending down, her breasts were hanging down quite a bit in her salwar, meaning she doesn't wear a bra or bralette in her salwar, that's why she always covers her chest with a veil so that her breasts are not visible above her salwar.
+
+I didn't notice the bulge under my lungi when I saw Maya. If she saw this, there would be no limit to my shame, so I went to the bathroom to have breakfast from a distance. I took off my lungi and saw that it was already quite hard after waking up, and then the things I saw a little while ago were stuck to it like iron, it didn't seem like it would come off easily. I forced myself to eat the food and threw it away while thinking about Maya's tempting body.
+
+I left the bathroom and went to the kitchen. I saw that breakfast was finished, now Maya was sitting on the stool with rice and curry. I went closer and started chatting. After talking for a while, I realized that there was no awkwardness, the girl was talking to me quite naturally. Through her words, I learned that she had married at a very young age due to poverty in her family. She had not had much education, because She had a child at a young age. kajer bou choda
+
+I liked listening to Maya's fluent speech quite a bit, when I heard that she had a child, I said that looking at you, it is not clear that you have a son. When she heard that, she gave that sweet smile again and asked how she feels? I said that you look very beautiful, you don't look like a mother of one child. Hearing the compliment, she said with a smile, you are not married, wife, see how a wife feels after having a child. I gathered some courage and said what should I do, she said if I found someone like you, I would have filled the house with children. Hearing my words, Maya started laughing with her clothes on her face.
+
+After cooking, while leaving the dishes, she told me that she would come tomorrow at this time. While leaving, she stood at the door and told me, you heard that you are bringing a wife home, otherwise, if I see the next wife, my lungi will be ruined in the morning. With that, she left with a smile. I became a bit stupid, when she saw her in the morning, she saw that I was in that state. On one hand, I felt good knowing that I was attracted to her, but she didn't feel bad about it. kajer bou choda
+
+A week passed like this. Since my flatmate Maya was in the office when she came, I would do everything with Maya, including shopping and household chores. I didn't let it be embarrassing like that first day, but I would secretly look at Maya's physical beauty. My desire for her was growing, it would come out in our conversations. But I saw that she enjoyed it very much.
+
+There was a lot of gossip between us, Maya would give me the opportunity to get married and I would remind Maya that I would only get married if I found someone like her. Maya would mischievously scold me for looking at the maids, but she was very happy in her heart. In fact, all the girls were full of praise. kajer bou choda
+
+As our relationship became very normal, she would come home and work very freely. At that time, it was very hot and the electricity was very weak in our area. So, during the heat, Maya would work without her veil. Sometimes, when she sweated a lot, I would bring her a wet towel to wipe her body, she would be very happy with that. Once, after cooking, we would sit and talk, I heard all her stories from her mouth.
+
+She studied in the village school till class nine, but the lack of family, and the biggest reason was Maya's growing body, which is why she got married at a young age. Her husband had a lot of land, but after having a son at a young age, her husband developed asthma problems, he could no longer farm, and almost lost all the land to pay for treatment and the expenses of his son, and then she came to Dhaka to earn a living.
+
+At first, Maya did not want to come to Dhaka because of the cost, but there were many problems for young women in the village, so she left her son with her grandmother and came here. Unable to meet the demands of the family, she finally took up work in our house. kajer bou choda
+
+I could sense that Maya had a lot of life left in her, I was jokingly asking her how many times a day her husband caresses her, I thought she would answer with a mischievous tone after hearing the question, but she said with a slightly dirty face that her husband had no body to caress and was just working. I understood that Maya was quite deprived of sexual pleasure due to asthma. That's why she felt quite comfortable talking to a boy of similar age like me.
+
+In between, one day Maya didn't come to work, we both used to eat from outside so I didn't care anymore. When she came to work on her day off two days later, I was surprised to see her, her hair was messy, her face was dirty. What I understood was that for the last three days there was no water in the area, we had to bring water for cooking and drinking from a distant water supply pump, with that we were somehow able to cook and eat, but we couldn't bathe and use the toilet properly. We are bachelors, so we are coming to see what the situation is. kajer bou choda
+
+I am surprised, our landlord is quite influential. He takes some money from the tenants and brings a tank of water from WASA every day. It takes a little calculation but since we both stay out most of the time, we have enough water.
+
+Seeing Maya's condition, I told her that she did well to come, take a good bath and take some mineral water bottles at home to drink. She was very happy to hear me but did not agree to take a bath, lest people say that a bachelor is taking a bath and leaving the house. I smiled and said, "Hey, no one will say anything, the owner of the house knows us, there will be no problem."
+
+Even after saying this, she said that she did not bring any clothes, she went and got them from the house. I told her that I have a good towel and she uses that. Seeing her begging, I said, "Hey, why are you afraid, I will not eat you again." Hearing this, Maya's face lit up with a smile, saying that she could eat it, you don't believe it. kajer bou choda
+
+I took out the towel and asked her to go to my room. There is an attached bathroom with my room. After some time, I felt like getting my mobile from the room. There is no lock in my room, I put my hand on the lock and saw it turning, I understood that Maya had entered the bathroom. As soon as I turned the lock and opened the door, my face turned red as I looked inside.
+
+Maya took off all her clothes on my bed and stood in the middle of the room with only the towel wrapped around her. The towel is not very big for boys, she somehow covered her private parts with that small towel and saw Maya's body with her hair hanging down her back, I was stunned, her fair breasts were trying to burst out from under the towel. The bottom edge of the towel somehow covered the crease of her buttocks, exposing the entirety of her white, smooth, wide thighs. Maya's face returned to my senses.
+In the sound of angry voice. kajer bou choda
+
+Maya: What are you doing, Shit. Go and get out of the room.
+
+Me: I was coming to take the phone, how would I know that you were undressing without locking the door.
+
+Maya: I don't understand how to open your door. So, come on, it's time for people to undress.
+
+I was shocked to hear Maya's words, Maya laughed at my condition.
+
+Maya: I said that I won't take a bath here, I don't trust men.
+
+I feel normal after seeing Maya's smile, I understand that she is enjoying this incident. I want to use the opportunity, stand by the door and say, you are very comfortable in a towel, it seems like that. kajer bou choda
+
+Maya: Hmmm, I could understand that just by looking at your face. Now go, I'll go to the bathroom. Or will you also open the door and enter there?
+
+Me: No, I won't, if you fulfill one request.
+
+Maya: What do you want?
+
+Me: This is the first time I've seen you with your hair open. Show me your hair, twist it a little.
+
+Maya: What's your hobby? Go and show your wife's hair as much as you want after getting married. Now move away from the door. If not, I'll give you a slap.
+
+Me: Uh, if you don't show your hair, I won't let you leave the door. And if you shout, I'll marry you to me, then as my wife, you have to show your hair. So the sooner you fulfill my request, the sooner you can go to the bathroom. kajer bou choda
+
+Maya holds the towel fold near her chest with one hand and with the other hand, twists the hair bundle and brings it to the front.
+
+Maya: Are you satisfied?
+
+Me: Oh, I didn't mention the hair on your head, people have hair on other parts of their bodies.
+
+Maya started laughing hysterically after hearing me, saying that I was talking to you at your house, you know, just like your mother. With a burst of laughter, her full ass came out from under the towel. Finally, she stopped laughing and raised her bare hand above her head and exposed her armpit.
+
+Seeing the tuft of hair between her fair armpits and the heavy ass sticking out from under the towel, my penis started to become hard like iron. This juicy body, almost naked in front of me, made me terribly horny. I felt like taking off the only covering of her body, that towel, throwing Maya on the bed and enjoying it to the extreme point of desire. I started to want to fill her soft breasts, deep ass, every inch of her body with my semen. I was distracted by the sound of Maya's voice. kajer bou choda
+
+Maya: Take it, go this time. And listen, I am a woman from Chandpur. You can't do such mischief with me.
+
+Me: Hmm, I'm going, but girls have hair in another place. So when you show your armpits, is it clean there at once?
+
+Maya stopped when she came to the bathroom door and stopped listening to me, pressed her lips together and smiled softly. I never expected what she did. Maya held the two edges of the towel hanging between her thighs in front of her body with both hands. And the most secret part of her body came out in front of me. I was fascinated to see her private part, starting from a span below her navel and ending at the three corners of her thighs, covered in sand.
+
+I can't see the fold of the vagina because Maya is pressing it with her thighs, but after a smooth fat groove on the lower abdomen, the swollen altar of the vagina covered with thick black sand is clearly visible in front of me. After just a few moments, Maya lets go of the edge of the towel, but by then I have started to feel a terrible tingling sensation in my penis. Maya laughs and leaves me in a daze, enters the bathroom, blocks the door and asks me to close the room door from the inside. kajer bou choda
+
+I lock the door and close it, somehow enter the other bathroom, open my lungi and take out my plump penis. The tip of the penis is smeared with cum. After pulling it two or three times, the most exciting ejaculation of my life begins, thick semen keeps pouring out from the tip of the penis at a rapid pace.
+
+My legs went numb, after ejaculating for about a minute, my body started feeling light. I went outside and filled a water bottle for Maya. After a while, the door opened and Maya came out and got dressed. She asked me to tie the headscarf around her head and told me that she had left the towel on the balcony.
+
+When I went to show her the water bottle, our eyes met, Maya smiled again and said, is the mischief decreasing? Then she took the water bottles in her hand and said that if the water does not come, I will come again to get drinking water, but I will not bathe here again. I smiled and said why are you angry because I am making a fuss? Maya smiled and said that I was scared of your condition. kajer bou choda
+
+I was shocked and said, "Oh no, no," then I dared to say that I have never seen a girl like this. Maya said with a smile, "Yes, I can feel that." But you are a good person. When you were coming to the room, I was really scared, but later I saw that you were being naughty, so I also did naughty things to you.
+
+Saying this, he left, but when I came to the room, I lay on the bed and kept thinking and decided in my mind that I would have to take Maya to my bed no matter what.
+
+bangla romance choti 2022. Ever since I saw Maya's pussy, I wanted to have her in any way. I became more courageous day by day and would make love to her. I noticed that Maya also enjoyed my dirty jokes. I started looking for an opportunity to tell her what was on my mind. This was going on for a day, when she would finish her work, I asked her that tomorrow I would be the only one at home, and the flatmate would go to her country house. She should come to mind. Hearing my words, she said that she would not come tomorrow. I was surprised and asked her what What happened?
+
+Maya said very seriously that if you have a bad character and are alone, what should you do? I understand that she is joking but I wanted to use this thing. I said that since you have been staying with me alone for so long, why am I doing something? Maya then said with a mischievous smile, no, you have not done anything, I do not remember you forcing me to see you naked. I was surprised to hear the words on her face. I dared to raise my hand and pinch her cheek and say that you are very evil, you talk dirty.
+
+romance choti 2022
+After pinching her cheek, Maya stood with her hand on her cheek, I was a little embarrassed and moved her hand away and asked if it hurts. When I moved my hand away and looked at her face, I could not hold myself still anymore, seeing the look in her eyes, her eyes were full of desire. I lowered my face and pressed my lips on Maya's lips. I found no resistance, I stretched out my hand and twisted her body and started to grind it against my chest and pushed my tongue into her mouth.
+
+Maya's body trembled in my arms as soon as I felt the touch of my tongue inside her mouth. I pushed her against the wall and sucked her tongue. Holding her waist with one hand, I held her right breast in my fist. I stroked the soft and full breast hanging lightly over the salwar, I felt her nipples harden in my palm. Leaving her lips, I looked at her face while kissing her cheek and understood that she wanted me to do something more with her, Maya had no intention of stopping her at this moment. romance choti 2022
+
+I let go of her breasts and kneel on the floor and hold her salwar high, remove her shirt to expose her lower body, as soon as I lift the salwar, her deep navel comes out from her fair belly. Seeing the deep navel, I can't control myself, I push my tongue inside the navel, a soft moan comes out of Maya's mouth for the first time.
+
+I am extremely aroused by that time. I hold her waist and turn her ass in front of me, Maya also understands my mind and presses her head against the wall and pushes her huge ass high in front of me. I press the buttocks on the shirt and keep searching for the swollen and high pussy with my hands between my legs.
+
+As soon as I pulled the shirt back clumsily, I realized my mistake. I pulled the shirt without untying the knot, so it got stuck on the slit of her ass. As soon as Maya reached out and untied the knot of her shirt, I pulled the shirt down, but Maya's ass was so big that the shirt got stuck under her ass. romance choti 2022
+
+Maya's ass was completely exposed in front of me, I held both sides of her ass with both hands and cut the slit of her ass. Seeing Maya's big and deep brown pussy and the strong smell coming from her ass, I couldn't hold myself back. I kept licking her ass slit like crazy, and kept licking her ass hole with my tongue. My saliva became sticky around the ass and pussy, I pressed my tongue as deep as possible into Maya's ass and sucked her ass. (This story was published on Banglachatti.live website)
+
+As soon as I felt the tongue on her ass, Maya's mouth started making sounds of pleasure. I became intoxicated by the intense sensual smell of Maya's ass, I spread her ass and licked the sticky ass like crazy, pushing my tongue as far as possible inside the pussy and moving it back and forth. romance choti 2022
+
+After sucking the pussy for a while, I stuck my tongue out of the hole in her ass, smeared my right middle finger with spit and pressed it against Maya's ass hole, and as soon as I held it, it entered the hot hole, I held her waist and started fingering Maya's ass, and started biting her ass gently. Maya also started moaning loudly while eating my fingertip in her ass with great pleasure.
+
+My penis had swollen and become harder than iron by now. I took my fingers out of Maya's ass and stood up. I held the swollen penis over her lungi and pressed it against her ass groove, I held Maya's breasts in my fists with both hands from behind and kept kissing her neck and cheeks. Maya turns around on her own as soon as she feels the pressure of the erection on her ass, I reach out and hold her naked ass with both hands and press my erect penis directly on her lower abdomen and pussy. romance choti 2022
+
+Maya looks into my eyes and suddenly grabs my penis over her lungi and starts pulling it gently. As soon as I feel the soft feminine hand touching her, I press my face back on her lips, our tongues continue to suck and suck, and I reach out and search Maya's lower abdomen for her pussy. As soon as my finger moves a little further over the thick hair, I find the pussy coat, I reach out and hold Maya's pussy between my thighs. (You will get all the story updates first on the Banglachoti.live website)
+
+With my hand on the pussy, I realized that Maya's pussy was smeared with pussy juice between her legs, the groove of the pussy and the hair above the pussy were all wet with cum. As soon as I pressed the pussy with one finger of my right hand, it entered the juicy pussy with a bang, I slowly started moving my finger inside the pussy, as soon as Maya got the pussy, she held my shoulder with her hand so that it wouldn't fall. romance choti 2022
+
+I took the other hand back and inserted another finger into her ass. At the same time, while fingering her pussy and ass, Maya started moaning loudly with her mouth, pussy juice started flowing down my right hand fingers. I realized that now is the time to strip Maya naked and fuck her pussy.
+
+I took my fingers out of Maya's pussy, kissed her on the lips and told her to take off her salwar and I pulled her shirt and started taking it off completely, when Maya realized that I was going to fuck her naked now, she whispered and said not here, I will see it in person. I also Hearing her words, I told her to go, go to my room. romance choti 2022
+
+At that time, the calling bell rang like a thunderbolt, both Maya and I were startled. The calling bell rang a couple more times and my roommate's voice came from the other side of the door. She had come a long time ago. I looked at Maya like a fool, Maya looked at my face once and said in a low voice, go and open the door.
+
+I also realized that nothing more could be done now, so I stepped towards the door. Maya said in a low voice from behind again, wait a moment, I looked and saw her picking up the shirt lying on the floor and putting it on and adjusting her clothes a little, then pointing at my lungi with her hand - at my swollen penis. romance choti 2022
+
+I held the cock between my legs and looked at Maya once again and opened the door. My roommate came in, she came early today because she was going home. He asked Maya how she was and went to her room. Then, surprising me, Maya walked out through the open door without saying a word.
+
+I went to my room, my fingers still had the scent of Maya's pussy juice and ass on them. My mouth still tasted of Maya's tongue. I kept wondering what had happened.
+
+I couldn't understand anything until the next morning. Maya didn't come in the morning either. I was scared that she wouldn't come again for yesterday. I had Maya's number saved on my mobile, I called that number several times, but no one picked up. I kept thinking whether I should go downstairs and look for her building. An hour later, I saw a missed call on my mobile, from Maya's number. I immediately called her, and Maya picked up the other end. I asked, won't you come today?
+
+Maya said in a very low voice, "Come down," Aisa stood at the corner of the street. Saying that, she put the phone down. I went downstairs without understanding anything. After waiting for a while at the crossroads, I saw Maya coming from the side with a cloth on her head. She came to me and asked me to take a rickshaw, I hired a rickshaw and took Maya. I got into the rickshaw and asked Maya what happened to you? She replied that I was going wherever I was going. I could understand by now that she was not angry about the previous day, but I could not understand where we were going either.
+
+desi maid sex
+Maya asked her rickshaw driver to take her deep into the residential area. There was still construction work going on around this area. Maya stopped the rickshaw in front of a plot like this. The work on the house was almost finished, only plaster was left. The plot was surrounded by a tin shed. After getting out of the rickshaw and paying the rent, I saw Maya take out a key, open the gate of the tin shed and go inside. I followed her. We went inside an empty room on the second floor, the room was most likely the kitchen because there was a cooking shelf built on the wall. I didn't say anything for so long but I couldn't stay any longer and said, why is Maya here? Are you angry about the past?
+
+Maya: I didn't go today because it's not right for you not to do the same thing today either. And the guard of this building is my village uncle's wife's husband. I was keeping the key from him because her husband goes to the country every month and then Aisa stays here, I feel alone, wife and Aisa stay here. You can talk about everything here. desi maid sex
+
+Me: Maya, see I like you a lot, but I couldn't say it because you might think something. I never said anything at home because you might think I'm taking advantage of you. But yesterday I couldn't control myself, but if you had said something, I wouldn't have gone this far.
+
+Maya: I understand that you like me. But I'm married, I have a son, what will you do if you like me. I can't go holding your hand. And I also liked you in my heart, so when you held Kal like that, I didn't stop you.
+
+I was very happy to hear Maya's words, I went forward and held Maya's face and kept kissing her. desi maid sex
+
+Me: I can't live without you, I've been having a headache since yesterday. Maya, finish what I was starting Kal, come on.
+Saying this, I held her tightly to my chest again and kept sucking her lips. But, Maya pulled away and said, don't hold me like this here. If people see me around, I will be destroyed.
+
+Me: If you leave me like this now, I have no choice but to go crazy. I'm not telling you to leave the world and come to me, but I want to have those days when I'm by your side.
+
+Maya gave me that pouty smile on her cheek after hearing my words. desi maid sex
+
+Maya: I said I like you, you told me the truth, you didn't take a chance with me. But I said I can't ruin my family. So I will give you everything I have, you can have me as you want but I can't break up with you. And I have one condition.
+
+Me: What condition do you say, I will do whatever you say.
+
+Maya: Don't do anything with me in your house. I work in that house, I won't keep my relationship with you hidden.
+
+Me: Then how will it be? Will you have a problem even if I am alone at home?
+
+Maya: You have friends at your house, when will I work and when will you love me? And if I let you do it at home, you will want to do it daily. Listen, I have a secret place, come to the head of the road tomorrow morning at this time like today, I will take you. Do whatever you want with me there three days a week. desi maid sex
+
+I was very happy to hear Maya's words. I kissed her on the lips and said, "Okay, but if Maya doesn't do anything to me today, I can't stay." I hugged her and kissed her, and while I was kissing her, I kept on rubbing her full ass. Her I pressed my swollen penis on my lower abdomen over my pants. As soon as I felt the pressure of the penis, she moved away. Then she started pressing my penis over my pants with her hand.
+
+Maya: Your penis is in this condition, you didn't do anything.
+
+Me: Nothing else has been done for your concern. Please make an arrangement for this.
+
+I saw that twinkle in Maya's eyes again, I understand that she has been quite hot since yesterday.
+
+Maya: You are taking your thing out. desi maid sex
+
+Like a obedient boy, I opened the zipper and took out my swollen penis from inside my underwear. Mild juice was starting to come out from the penis's tip. The vagina was so swollen that the veins on the penis's body were visible.
+
+Maya pressed her lips and started looking at my penis. When she saw the dangling penis coming out from inside her pants, she said, "Take it all out." I don't understand what she wants. To my surprise, Maya came forward and inserted her right hand into my underwear, grabbed my pussy and brought it out.
+
+Then she grabbed the base of my penis and started gently moving it up and down, rubbing it with one finger in the groove under my clitoris. The penis swelled even more in Maya's hand with the soft feminine touch. I pulled Maya's body closer to me and held her ass. A sound of pleasure started coming out of my mouth. desi maid sex
+
+Me: Do you like my penis?
+
+Maya: Yes, yours is very wide. Maya, people are more comfortable with wide penises.
+
+Hearing this, I pushed my tongue into her mouth, my hand started moving around the groove of her hips. After sucking her tongue for a while, she started pulling my penis again.
+
+Maya: You are very hot from the Kailka, when a man's body is hot, the mind is not right. Stand up, I will ease your pain.
+
+I say in a lustful voice, Maya, you lower your shirt and stand with your legs apart, I will enter you from behind and fuck you once. Maya, hearing me, says don't make me naked here.
+
+Me: You are making me naked. No one will see here. desi maid sex
+
+Maya: There is no problem if a son is naked, if he is caught, it will be dealt with. But if Maya takes off a man's clothes, then it is a problem, if someone sees, then he will also want to eat her pussy. And now, do you have a condom? In your condition, you will put it inside me, and if you put it inside me today, I will turn into a cow. Do whatever you want tomorrow, not today.
+
+Me: Then will you take me out with your bare hands, I will not be Maya.
+
+Maya: Stand here and lean against the shelf, I am reducing your irritation.
+
+As soon as I stood like that, Maya came to me and knelt down. She held the base of my penis in her fist, licked the tip with her tongue once, put the tip in her mouth, and started sucking it with a jerk. Then Maya filled several inches of the penis in her mouth and started sucking it. And at the same time, she held the base. I felt blissful when I found her hot juicy mouth on my penis. desi maid sex
+
+While sucking it quite tightly, Maya spread a lot of spit on the entire penis. She took the penis out of her mouth and started rubbing her tongue on my pussy. She licked and sucked both my pussy a lot. Then she put the penis deep in her mouth again, this time taking the penis up to her throat and started giving me sucking pleasure. He keeps playing with his tongue on my clitoris, he keeps poking the groove of my clitoris with the tip of his tongue. I can't stay still with this strong penis sucking.
+
+Standing up from the thrusting position, I hold her hair in my fist and press her face against my penis. Holding her hair, I keep running my cock inside Maya's mouth. I start to feel very comfortable while making love to her, I fill my cock as far as it goes in her throat, my pussy bag is pressed against her chin. After several more strokes on Maya's face, I release the bunch of her hair. desi maid sex
+
+Maya takes her cock out of her mouth and takes a breath, her cock is smeared with liquor and Maya's saliva. Then he licked it from the base of the penis and put it in his mouth again, this time he only filled his mouth with a couple of inches of the penis and started sucking it, I could understand that he was sucking it in this way to get the cum out.
+
+A glint flashed from the bottom of my pussy to the tip of the penis, the pussy bag became hard and the penis swelled even more. I understood that my cum would come out, Maya could also feel the condition of the penis in her mouth. He took the penis out of his mouth and said before coming out, he did not cum on my salwar. He cumed in my mouth. desi maid sex
+
+I was happy to hear him, after sucking it a few times, the head of my penis swelled and the cum started coming out. I held Maya's head and pressed her mouth on the penis. It went deep into her throat and started squirting out of my penis. After the first two or three hard ejaculations, I let go of Maya's mouth.
+
+She saw that instead of taking the penis out of her mouth, she started pulling it quickly, and the juice from my hole started flowing out by gurgling on her tongue inside her mouth. The semen started flowing down Maya's cheeks. I emptied my entire vagina into Maya's mouth for about twenty seconds. My breathing slowly returned to normal from the state of extreme lust. Maya held my penis tightly and took the semen into her mouth until the very end, sucked it once and released it.
+
+Maya stood up with a mouthful of semen. To my surprise, she squeezed my mouth shut and swallowed my penis whole. I looked at her in surprise. I thought she was going to throw it out of her mouth. Seeing my gaze, she said, "You are taking it right down my throat and your juice was thick and sticky - it was getting stuck in my throat, so I couldn't throw it out." I show her the lump of semen stuck to her cheek. Maya wipes her face with her veil. desi maid sex
+
+My dick is already there It was swinging outside the pants, Maya stroked her pussy and gently squeezed her penis once and said, are you cold? Now put this inside the pants. I kissed her cheek and said, you put it inside. Maya smiled and put my penis inside the underwear along with the pussy and zipped it up.
+
+I squeezed Maya's breasts and said, you reduced my heat, didn't your body wake up a little? I said, I pressed Maya's swollen pussy over the shirt, the shirt was wet with pussy juice covering a large area near the pussy. I looked at the condition of the pussy and said, you are really hot, won't it hurt? Maya said, even if the human body is hot, Maia can keep the chaipa, and tomorrow we will see how much you can reduce the heat. Now go home and take me down. desi maid sex
+
+I took Maya in a rickshaw and left from there, dropped Maya at the intersection. While getting off, Maya reminded me that tomorrow I should be here on time and left. I went home eagerly waiting for tomorrow.
+
+bengali choti live. I couldn't sleep properly all night, thinking about the next day. I came down in the morning. As I was going to the place, I remembered Maya talking about condoms, yesterday she was refusing to do it because of this. I bought condoms from a nearby pharmacy, when I came, I saw Maya standing there like yesterday. As I approached, she asked me to take a rickshaw, got into the rickshaw and told me the same as yesterday, but a little further inland today. I asked where are you taking me? Maya smiled and said that you can see it when you go.
+
+I extended my hand under Maya's armpit and gently pressed Maya's breasts and kissed her lips, Maya said in a low voice, what are you doing, rickshaw driver, I will listen. I said listen, Maya smiled and turned her face away, but let me hold her hands as she wished. We stopped in front of a two-story house, looking at the house, I understood that it was not a place for very rich people. Maya took me to the basement, unlocked the door and entered inside. Once inside, she locked the door.
+
+bengali choti live
+Then she turned around and looked at me and said, this is the house of the girl I was talking about the other day, she works here in the garment factory. She doesn't come in the morning for three days a week, I come here to get the key from her. No one will come here, everyone in this area is a garment factory. Now she can do whatever she wants. I was happy to hear her words, went ahead and pressed my lips to hers like the previous day. Today Maya also put her tongue in my mouth on her own and fell on me.
+
+I kept sucking Maya's tongue while pressing Maya's left breast. I saw a very tidy bed inside the room and took Maya there. Maya started laughing hysterically, when I asked her, she said that men take their new wives in their arms like this. I threw Maya on the bed and kissed her and said that today you are my new wife. Maya started enjoying my cock on her nipples while lying on the bed, I held her in my palm and started caressing her cheeks and neck with my strong hands. bengali choti live
+
+Then I told Maya, take off your salwar and take these two out. Maya said in a sweet voice that you see your wife naked, saying that she removed the veil and opened her hair. I went behind Maya and kissed her neck and ears and untied the chain of Maya's salwar, when Maya held her hand high, I pulled the salwar open. A pair of light dangling panties without a bra jumped out on her chest, Maya stood in front of me with her naked chest without a salwar.
+
+I kept looking at Maya's open and full breasts, her breasts had sagged quite a bit, but her breasts were still quite tight, her nipples were slightly hard with excitement. The thing I liked the most was the big, thick brown ring around her nipples. Maya stretched her half-naked body on the bed, her big breasts swaying on both sides of her chest. As soon as I brought her face closer, Maya held her right breast high, I took as much as I could around the nipple and started sucking. bengali choti live
+
+I sucked her breasts vigorously, rubbed her nipples with my teeth and kept moving my tongue, Maya's nipples became quite hard with excitement. I held her left breast with my hands and bit her other nipple with my teeth. Maya screamed in arousal and sucked slowly, "I'm going to get a scar." I started sucking Maya's other breast this time, as a result of taking turns massaging and sucking both breasts, Maya's nipples became hard like raisins.
+
+With both hands, I went down to kiss Maya's swollen lower abdomen. Maya's deep navel was just below a fat groove in Maya's fair stomach. Maya hissed as soon as I filled her navel with my tongue like the previous day. I held her in my palm and licked her navel with my tongue. Maya started to squirm in pleasure. She became hard like iron due to my increased excitement. bengali choti live
+
+As soon as I put my hand on her shirt, I felt the wet stain on the cloth, I let go of Maya and said, lie down and hold her ass high, open her shirt. As I said, she raised her huge tanpura ass and put her head on the pillow and opened the knot of her shirt. Big breasts were hanging down from the chest. I got up and lowered my shirt to my knees.
+
+I was fascinated by Maya's exposed pussy and hips. Before this, I had seen Maya's bare ass and pussy, and even though I had inserted my fingers into her pussy and fingered her, this was the first time I saw Maya's tight juicy pussy. Between Maya's full, fair buttocks, there was a deep brown hole, and just below the hole, a swollen, double-layered pussy covered in sand. If you reduce the pussy, it was a little longer than the length, the dark brown pussy was No, it's swollen and it's hard to believe that this is the pussy of a child's mother. bengali choti live
+
+I keep looking at Maya's pussy, Maya sees my condition and says what's wrong with you, Maya has never seen a human pussy before? I don't feel ashamed and say, you are the first. Hearing my words, Maya bursts into laughter and says, "My dear, take a good look." She spreads her legs and holds her pussy high, tearing it open and revealing the red hole inside the pussy petals.
+
+Seeing this intense erotic scene, I can't control myself anymore, I move forward and tear open the slit of Maya's huge buttocks with both hands and lick the slit of her pussy like crazy with my tongue. I lick it from the slit of her pussy to the nipples a couple of times and I keep licking the groove of Maya's buttocks. I became horny with the sweet smell of Maya's ass and started licking the slit of her tight ass and inserting my tongue into the slit and sucking it, at the same time I raised my hand and rubbed her pussy under her abdomen and started shaking her pussy. bengali choti live
+
+Maya started moaning loudly in this ass sucking and pussy fucking, after a while she raised her head from the bed and said to me, what honey do you get in my ass, and you can do it. How can you put your mouth in a dirty place? I stuck my tongue out of Maya's ass and said, why are you not comfortable? Maya laughed after hearing me and said, "Maya, I will get comfortable in any hole you put your mouth on, but you have no shame at all, you are sucking alone in the shade of the toilet, your tongue is shaking."
+
+I patted Maya's ass and said that there is no comparison to the smell and taste of your ass, I can keep my tongue full of your pussy all day. Maya started laughing after hearing me, but after hearing her words, I understood that Maya wanted me to suck her pussy. That's why I held Maya's waist and gestured for her to sit up so that I could completely remove her shirt. Hearing me, Maya lay down on her back, and as soon as I pulled the shirt that was down near her knees, Maya's legs melted and the shirt came out. Maya became completely naked in front of me. bengali choti live
+
+While lying on the bed, Maya's eyes fell on the swollen penis on my pants, seeing my condition, she said, what are you doing? Your penis is like a bamboo, and you are eating my ass. She took it out, saying that it will hurt. She herself unhooked the hook and zipper of my pants and took it down. As soon as I pulled down my underwear, my plump penis jumped out like a spring.
+
+Maya pulled my panties down to my knees and started stroking my pussy, seeing the glint of happiness on her face, I asked, you really like my penis, don't you? Maya smiled and said, yes, that's how your penis is. Just like a thick penis - don't you see, it doesn't fit in my hand, it's so big. The semen also comes out in the same amount as you, when you put it in my throat the other day, I was holding my breath. bengali choti live
+
+I was happy to hear Maya's praise of my penis. Maya took the tip of the penis in her fist and pulled it quite a bit, pulled the skin of the penis back and put it in her mouth and started sucking it. I was already aroused by sucking Maya's pussy and smelling her hips, then as soon as Maya's tongue touched my penis, I realized that if this goes on for a while, I will have to put my money in her mouth like yesterday. But today my goal is not Maya's face, but Maya's juicy ripe pussy.
+
+So I tell Maya, you drank my juice with your mouth yesterday, today feed me your juice. Maya, happy to hear what I say, says, don't eat, am I holding you back, you put your mouth on my ass when you strip me naked. Doesn't my ripe fruit come to mind, or doesn't the hollow pussy of a single bean come to mind? bengali choti live
+
+Say this, I let go of my cock and leaned on a pillow on the bed, Maya held her fair, banana-like thighs in both hands and spread her pussy, inviting me, come, there is three days of juice in her pussy, let's see how much juice you can eat.
+
+Hearing Maya's light moans and seeing her huge pussy spread, I was mesmerized and sat on the floor on the edge of the bed, Maya's pussy filled with sand just a few inches away from my mouth. As soon as I put my mouth near her pussy, a sweet smell came from her pussy. I became intoxicated by the smell of sweat, urine and pussy juice, I kissed her pussy slit and started licking the pussy crack surrounded by sand. bengali choti live
+
+As soon as I moved my tongue down to her pussy slit, the salty taste of Maya's thick pussy came to my mouth. I understand that Maya's pussy is already dripping with juice. As I spread the swollen edge of her pussy with my thumbs, the crack of her pussy opens up, revealing a long, reddish slit and a deep hole underneath. The entire slit is smeared with sticky pussy juice. I keep moving my tongue up and down the crack of her pussy, tickling the top of her pussy with my tongue, Maya's body trembles and shakes.
+
+I insert the middle finger of my right hand into the groove of her buttocks and press it, it penetrates the hot hole of her ass. I keep pressing the bottom of her pussy with my finger, pulling the nipple and sucking it at the same time. Fingers on her buttocks and tongue in her pussy, with this intense caress, Maya's pussy starts to squirm and juice starts to flow, I also suck Maya's pussy with a jerk. bengali choti live
+
+Maya's body, deprived of sex for a long time, started shaking with lust, Maya pressed my head against her pussy and gently felt it. A moan started coming out of Maya's mouth and her huge thighs started shaking. I raised my eyes As I looked, I saw Maya closing her eyes and rubbing her pussy with both hands, her pussy was getting hotter and hotter.
+
+Maya's pussy was getting hotter at this point, Maya's pussy was still stuck to my jaw. I took my finger out of her ass and stood up, moved forward and pressed Maya's lips, our tongues sucked and sucked for a while. Maya raised her hand and started pulling my penis slowly, by then my penis was leaking like a thread, seeing the condition of my penis, Maya said, come, don't delay, I am very horny in my pussy, and you are also very horny. Come, fuck this pussy, don't make me hot, come, fuck my pussy. bengali choti live
+
+I can't stay any longer after hearing Maya's call to fuck her pussy in her mouth. As soon as I stood between Maya's legs on the edge of the bed, he spread his legs and held her, Maya's pussy that had been sucking her juice was ready to be fucked. I remembered the previous day and took out a condom from my pants pocket lying on the floor and went to teach her to fuck. Maya was surprised and said, "What are you doing?"
+
+Me: Why, I'm not wearing a condom, you said that if you take off the condom, your stomach will hurt now."
+
+Hearing my words, Maya laughed and said, "You heard that, I was saying that so that you wouldn't fuck me with your penis the other day. You don't need a condom, you will feel much more comfortable if you fuck your pussy without a condom." bengali choti live
+
+Me: So won't your stomach hurt if you put the stuff inside, or do you have to take it out before finishing?
+
+Maya: I have a ring in my pussy, no matter how much I fuck you, I won't hurt my stomach. When I was in the village, I used to go to the clinic and get a ring inserted. And you don't understand the pleasure that comes when a hot penis falls into a woman's uterus. Come on, you can just squirt the semen into my pussy, there will be no problem.
+
+Hearing Maya's words, I was happy, I stepped forward, held Maya's lower abdomen, put my cock on her swollen pussy, and pushed my cock into her pussy mouth with a few strokes. As soon as I rubbed my cock in her pussy slit a couple of times, the tip of my cock started to shine with the juice of my pussy. I clumsily placed my cock in the middle of her huge long pussy crack and pressed it, but the cock slipped out without being inserted into her pussy. bengali choti live
+
+Maya laughed at my condition, raised her hand and held the tip of her cock, put it down in her pussy mouth and said, "This time, insert it." As I held Maya's waist and pressed lightly, her juicy pussy opened up and swallowed the cock, and after a few strokes, an inch of my cock was inserted into Maya's pussy.
+
+For the first time in my life, I got the pleasure of fucking Maya's pussy, as if my penis was biting her. Closing my eyes for a while, I held Maya's thick thighs and started inserting my penis into her pussy again. The long-standing lovemaking started to tear the pussy open, as soon as half of it grew inside her tight pussy, Maya screamed in pain. She put her feet around me and said, first do this, then when the juice in her pussy starts flowing, then insert it again. Nyan, this time she gave me a big fuck. bengali choti live
+
+Hearing Maya's invitation to fuck, I leaned forward, raised one knee on the bed and started fucking Maya's pussy. In the rhythm of the fuck, Maya's big tits started swinging on her chest, Maya spread her arms and took out her armpit hair and started enjoying the fucking of my penis in her pussy. Seeing Maya's swinging mana, I can't control myself, I put my left breast in my mouth like a hungry person and start sucking Maya's pussy while caressing her.
+
+Maya raised her hand and started rubbing the penis in her pussy like a piston, she held my hanging pussy in her fist and held it in place, I got even more excited and started fucking Maya's pussy hard, a gurgling sound came out of her pussy, my pussy bag started slapping her buttocks and eating her pussy. bengali choti live
+
+After pounding Maya's pussy hard for about three minutes, my penis swelled in her pussy and started tingling on the tip of her penis. I realized that I was going to ejaculate for the first time in my life due to the pleasure of fucking my pussy. Realizing the state of my penis inside her vagina, Maya tightly wrapped her legs around my waist and said, now sit quietly and put your dick in my vagina, after a while, start again when you are full.
+
+I slowly lay down on Maya's body, filled my tongue in Maya's mouth and sucked Maya's saliva, leaving the weight of my waist between Maya's legs. In this way, just as my feet sink in the mud during the rainy season, my thick penis started to penetrate Maya's juicy pussy. My entire penis entered Maya's vagina and the hole pressed against Maya's hot pussy, and my penis started to rub against Maya's pussy. bengali choti live
+
+While the whole penis was in the vagina, after a while Maya released the fence and shook her huge ass from below, indicating to start the pussy churning again. I pushed the penis into the vagina again, took out an inch of my penis and started fucking her pussy with small strokes. Since there was a lot of juice in the vagina, the penis started entering and leaving the vagina very easily, as soon as I increased the speed of fucking, a rotten sound started coming from Maya's vagina and at the same time, my pussy bag was hitting Maya's huge ass with a bang, and then this fucking music started playing throughout the house.
+
+After fucking like this for a while, it occurred to me that I would hit Maya's pussy from behind to see her hips, thinking of this, I stood up, pulled my waist and took my penis out of Maya's pussy. The whole penis was glistening with the cum of her pussy, even my pussy was soaked in the juice of her pussy, Maya was still lying in front of me with her pussy curled up. As soon as I gave Maya a signal, she raised her heavy ass and sat on all fours. bengali choti live
+
+The huge long juicy pussy under Maya's flabby hips seemed to be calling me I climbed up on the bed and pressed my penis into the groove of Maya's hips, Maya held her ass high for my convenience, as soon as the penis found the mouth of her vagina, I pressed my waist, and the penis was completely trapped in Maya's vagina, the hole was pressed into the mouth of her vagina. As soon as I inserted the penis into her vagina, Maya hissed, "Uhhh, mommy," and I realized that the penis was set quite nicely in her vagina.
+
+I raised my hand and squeezed Maya's dangling penis, and with the other hand, I grabbed Maya's hair and started having sex. I kept pulling and hitting her vagina, pulled out about six inches of my penis, and then inserted it into her vagina up to the base of her clitoris in one go, and started fucking her tight vagina. I kept fucking Maya with all my strength, my cock started hitting Maya's pussy like a mortar, and at the same time I started pounding her pussy with the sound of my pussy. With this strong fucking, Maya's pussy started foaming at the mouth, after a while, Maya's pussy started to gurgle and squirt out of her mouth due to the heat of lust. bengali choti live
+
+Maya: Ahh and uncle, do it well. A boy's dick doesn't enter a pussy for more than two years, I'm getting a lot of cum all at once. Fuck her, fuck her pussy, fuck her pussy, fuck her pussy, take all the oil out of her pussy, ah ah. Fuck her pussy, fuck her pussy, make it hurt so much that I can't cum for two days. He kept pounding the pussy, fucking me until my throat, I was a child with your seed.
+
+Hearing Maya's moans, my sexual excitement reached its peak, I realized that Maya's pussy would soon squirt. As soon as Maya squeezed her pussy with five huge strokes, Maya's pussy juice started squirting and soaking my pussy. As she slowly squeezed the juice out of her pussy, Maya's thighs trembled and shook, Maya took the pleasure of pounding her pussy after a long time and got intense pleasure from it. bengali choti live
+
+After a while, when her pussy cooled down, she lay down on her back from her stomach and told me to come and give it to you. She spread her pussy and invited me to cum in her pussy. I was horny since the hot juice of my pussy fell on my dick, seeing Maya's banana pussy and hearing Maya's call for my cum in her mouth, I grabbed my dick and pressed it against her pussy, the juice-spilling pussy sucked and swallowed it. I started fucking her pussy with a gurgling sound while lying on Maya's body.
+
+Maya spread her thighs and fucked her pussy, my pussy bag remained in place. I pushed my dick deep into her pussy with a dozen strokes, and at the same time, my dick swelled and ejaculated inside Maya's pussy. For the first time, the cum spilled out in a few spurts and fell into the mouth of the uterus, then I started filling Maya's pussy with the juice of my hole. bengali choti live
+
+After pouring my cum into my pussy for ten to fifteen seconds, I lay quietly on Maya for a while, Maya, satisfied with the intense pleasure of fucking, started kissing my face, I asked if you were happy? Maya said with a smile on her cheek, the way you are fucking my pussy, any woman would be a slave to your fucking. My pussy, which is a child, is dripping with juice. I have never had such a fuck in my entire life. I listened to Maya and kissed Maya on the lips and stood up.
+
+I pulled out my semi-hard penis from Maya's pussy. Seeing Maya lying naked with her breasts spread and her pussy spread, I got very horny again. But I was surprised that not a single drop of my cum came out of Maya's pussy, her pussy was soaked with juice, her pussy mouth was slightly open due to being fucked for so long, but when I opened her pussy with two fingers, I saw that there was no cum in her pussy. When Maya asked me about my surprise and saw the hole in her pussy, I said that I put cum in your pussy, but nothing came out.
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

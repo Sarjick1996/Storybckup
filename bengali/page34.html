@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 500px;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexbengali.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page34.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='../english/page34.html'" class="lang-btn">English</button>
+    <button onclick="location.href='page34.html'" class="lang-btn">বাংলা</button>
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+ঘুমের ভিতরে জোর করে বোনের পাছা চুদলাম ( Bangla choti golpo)
+
+</small>
+
+  <p>
+
+bangla choti golpo , new choti golpo , bangla choti pdf , indian girls story , bangladeshi girls story
+
+সেদিন রাত্রে বাসায় অনেক লোকজন আপু আমার সাথে এক বিছানায় ঘুমালো , choda chudir golpo আপুকে দেখে আমার মনের সুপ্ত বাসনা জেগে উঠলো কিন্তু ভাবলাম কি করা জায় তখন মাথায় ১ টা আইডিয়া আসলো । kolkata panu story
+
+ঘুমের ভান করতে লাগলাম , ঘুমের অভিনয় করতে করতে
+আমি আপুকে জড়িয়ে ধরে তার ঠোটে চুমা দিতে লাগলাম। আপু আমাকে ধাক্কা মেরে সরাতে চেষ্টা করছে। tamil sex stories
+
+আমি জোর করে , আপুর জামা কাপড় খুলে ফেললাম । আমি আপুর পেটিকোট তোলে আমার ধন তার ভোদার সাথে ঘষতে লাগলাম।
+
+আর এতেই আপু কাবু হয়ে আমাকে জড়িয়ে ধরে তার মুখ ফাক করে আমার জিহ্বা তার মুখে ঢুকতে দিল। আমি আমার হাত দিয়ে তার পিঠে হাত বুলাতে লাগলাম। এরপর পেটিকোটের ফিতা টান মারতেই পেটিকোট নিচে পরে গেল। আমি আপুকে জোরে জড়িয়ে ধরে আবার চুমা দিতে লাগলাম। bengali choti golpo 2016
+
+আমি এবার আপুর দুধ টিপতে লাগলাম আর মাথা নিচু করে তার দুধের বোটা মুখে নিয়ে চুষতে লাগলাম। কি বলব দারুন স্বাদ আপুর বোটা দিয়ে তির তির করে দুধ বের হচ্ছে আর আমি চুষে খাচ্ছি। আমি আপুকে দুই হাতে তুলে নিয়ে কিচেনের টেবিলে বসিয়ে তার ভোদার চারপাশে চুমা দিতে লাগলাম।
+
+তারপর জিহ্বা ভোদার ভিতর ঢুকায়ে চুষতে লাগলাম। আপুর ভোদা অনেক গরম আর রসে ভরে গেছে। আমি আপুর ভোদার ভিতরে জিহ্বা দিয়ে চাঁটার কারনে আপু কিছুক্ষনের মধ্যেই আমার মুখে তার ভোদার রস ঢেলে দিল। আমি চেটে পুরা রস খেয়ে নিলাম।
+
+এবার আমি আমার ধন আপুর ভোদায় ঢুকানোর জন্য ভোদার মুখে ফিট করলাম।
+আপু তখন বলল, না দিপু আমার ভোদা তোর দুলাভাইয়ের জন্য। তুই বরং আমার পাছার ছেদায় ঢুকা। আমি আপুর মনের অবস্থা বুঝে আমার ধন তার পুটকির ছেদায় ঢুকানোর চেষ্টা করতেই আপু চিৎকার করে বলল, আরে গাধা, আগে পিছলা করে নে, নাহলে ভিতরে ঢুকবে না। bangla choti golpo
+আমি হেসে আপুর পাছায় চুমা দিয়ে তার পুটকির ছেদা চুষতে লাগলাম আর মাঝে মাঝে একটা আঙ্গুল আস্তে আস্তে ঢুকাতে লাগলাম।
+
+এরপর আমি আমার জিহ্বা তার পুটকির ছেদায় ঢুকাতে বের করতে লাগলাম। কিছুক্ষন পর আপু বলল এবার হয়ছে, তারপর নিচু হয়ে বসে আমার ধন মুখে নিয়ে চুষতে লাগল আর আমার ধনের বিচি টিপতে লাগল। indian hot girls
+
+আপু তার এক হাতের আঙ্গুল আমার পুটকির ছেদায় ঢুকাতে লাগল। আমি বললাম, উঃ আপু থাম তুমি এভাবে চুষলে, টিপলে আমার মাল বের হয়ে যাবে।
+আপু এবার চোষা বন্ধ করে আমাকে বলল, ঠিক আছে তাহলে, এবার ঢুকা। আমি আমার শক্ত ধনের মাথা আপুর পুটকির ছেঁদায় রেখে আস্তে আস্তে চাপ দিতে লাগলাম। new bangla choti
+
+ধনের মাথা পুরা ভিতরে যাওয়ার পর আমি জোরে ধাক্কা দিয়ে পুরা ধন ঢুকায়ে দিলাম। এরপর আমি জোরে জোরে আপুর পুটকি মারতে লাগলাম। আপু আমাকে জড়িয়ে ধরে আছে আর চুমা দিচ্ছে আর আমি দাড়িয়ে দাড়িয়ে ঠাপ মারছি।
+কিছুক্ষণের মধ্যে আমার মাল বের হবার সময় হয়ে গেল।
+
+তখুনি আপুর পাছা থেকে ধোন বের করে ভোদায় ভিতরে ধোন ঢুকিয়ে দিলাম অনেক্তা জোর করেই কারন আমার মূল্যবান মাল মাগির পাছায় ছাড়বো কেন , আরও পাঁচ মিনিট আপুর ভোদা চুদে আমার সব গরম মাল আপুর ভোদায় ছারলাম।
+
+আপু হাত দিয়ে আমার ধন বের করে নিতেই আমার মাল চিরিক করে আপুর পেটে আর ভোদার চারপাশে পড়তে লাগল। আপু হেসে আমাকে জড়িয়ে ধরে চুমা দিল। তারপর আমরা দুজনে একসাথে বাথরুমে গেলাম। আপু আমার ধন পানি দিয়ে ধুয়ে দিল এবং নিজেও পরিস্কার হল। bangla choti
+আপু বলল, আচ্ছা তোর এটা ভাল লাগছে না, এই বলে আপু আমাকে ধরে নিচে বসিয়ে আমার মুখে পেশাব করতে লাগল। আমি চিৎকার করলাম আপু তুমি কি করছ, কিন্তু আমার খুব মজা লাগছিল।
+
+এরপর আমরা আবার গোসল করে ফ্রেশ হলাম। তারপর দুপুরের খাওয়া দাওয়া করে ঘুমালাম।
+তখন থেকে আপুর সাথে আমার অবৈধ সম্পর্ক চলছে। সুযোগ পেলেই আমরা সেক্স করি আপুও আগের থেকে অনেক বেশী সেক্সি হয়ে উঠেছে। bangla choti golpo , choda chudir golpo bangla
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+       // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page37.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page37.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page37.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+I fucked My wife with two young boys.She loves it 
+
+</small>
+
+<p>
+
+
+In my and Rakhi's sexual life, Sunny is the first boy who has fucked my wife. To say he has fucked would be an understatement. Except for the days of menstruation, Sunny and I often fuck my wife together. Sometimes Sunny fucks my wife Rakhi in my absence. It's really nice to see Sunny's cock enter Rakhi's pussy and fuck her. Sunny, like me, loves to lick Rakhi's pussy. Whenever he fucks Rakhi, he licks her pussy at least once before fucking her. One day, when I returned home, I saw Rakhi naked, leaning on the bed with her legs spread and Sunny lying naked between his wife's legs, licking her pussy. Everyone wants to fuck someone else's wife while keeping their own wife in front of them. But it's really nice to see my wife fucked by an eighteen-nineteen year old boy like Sunny. The sexual pleasure I get from watching blue-films is more than watching Sunny and my wife fucking. Then the feeling of fucking my wife's pussy in front of Sunny is more than the feeling of fucking her for the first time on the wedding night. In fact, the addiction to watching blue-films from a young age and having homosexual sex with a few friends has become an addiction, after six months of marriage, that addiction has flared up again. Especially in front of my wife, I really want to do and see a young or older boy (of course not gay, bisexual like me) having homosexual sex with me and then fucking my wife's pussy. Moreover, Rakhi's polygamy, especially her desire to fuck young boys like Sunny, has played a helpful role in fulfilling my desire. That's all, from now on I will be able to fuck any girl in front of my wife. After watching blue-film with my wife, both Rakhi and I decided to have someone else as our sexual partner. I discussed this in the previous article "I and Sunny together fucked my wife's pussy". Since then, we have been satisfying Rakhi's pussy. If not every day, then three or four days a week. We even have lesbian sex with Sunny in front of my wife. If I had kept my wife in check, then we would not have had the pleasure of fucking her together. And besides, is there any guarantee that my wife would not have fucked someone else in my absence? My friend Prabal keeps his wife in check. But in his absence, I have fucked his wife Lipi several times.
+
+Anyway, now let's get to the real story. On the afternoon of January 18th, I was going to Madhabpur by train to Rakhi's aunt's house. I was supposed to go two days ago. But I couldn't go because Rakhi had her period. In fact, her stomach sometimes hurts during her period. That's why, the day before, my period ended, so the next day, January 28th, we boarded the train from Ballygunge to go to her uncle's house. The train was quite crowded. I got up and stood near the door. I couldn't get in. A man had placed a big sack in front of the door. I somehow got past it and stood a little further. There was a partition in the middle of the train. On the other side of the partition was the vendor's room. A fair-skinned, sweet-looking boy was leaning against the partition. Seeing the boy, the homosexual desire that had been dormant in my mind was aroused. I stood cross-legged next to the boy. Rakhi just crossed the boy and stood with her back to me. I pulled Rakhi towards me in a sideways manner so that she would be a guard. The boy was standing leaning against his pants with his hands folded. The crowd had just entered the train platform. There was no room to move forward to get more people on top of him. Taking advantage of the crowd, I stood next to the boy and placed my left hand on the boy's folded hands. Then I slowly put my little finger on the boy's folded hands and touched his pants. The boy was thin but looked quite sexy. He was about seventeen. Slowly inserting my finger inside, I felt the touch of his penis. I started pressing lightly. After a while, I felt that his penis was slowly getting hard and it felt quite hot. I saw the boy looking at me through the corner of my eye. Now the boy loosened his hands and moved them to the sides. The boy's entire penis was now in my grasp. I held his penis in my fist and started pressing it. Within a few seconds, his penis became completely hard. The boy had nothing under his pants. Probably a Muslim. Quite a long and thick penis. It felt good to press. Meanwhile, Rakhi's buttocks were near the boy's left hand. The boy is putting his right hand on my penis and pressing it. He is pressing it hard. My penis is hard. The boy is giving me a lot of comfort. While we were pressing each other's penises like this, I unbuttoned the boy's pants and put my hand inside and started pressing his penis. At one point, the boy took my left hand out of his pants and placed it on Rakhi's hips. Then he took my hand and first placed it in the groove of Rakhi's hips and started moving it up and down. Rakhi looked at me and I explained with gestures what was happening. Rakhi smiled and stood silently waiting for the boy to touch her hips. After a while, my hand started pressing it. As a result, my hand was pressing Rakhi's right hip along with the groove of the hips. The boy was pressing Rakhi's hips with me. After a while, I realized that the boy's hand was moving to the left and his index and middle fingers were slowly moving up and down in the groove of Rakhi's hips. Now I held the boy's hand and rubbed his fingers along Rakhi's hips. When Rakhi didn't say anything, the boy's courage started to grow and after a while he started pressing Rakhi's hips and running his fingers along the creases of her hips. Sometimes he started pressing his fingers on the opening of Rakhi's hips. Today Rakhi is wearing a woolen jacket, a pink T-shirt and black terrycloth pants. I am a little I pressed the letter in his hand and explained that I should do what I was doing well. Then I started to stroke his penis again. The boy was happily stroking Rakhi's buttocks, running his fingers in the crease of her buttocks and stroking my penis with his right hand. And Rakhi closed her eyes and enjoyed it. I was stroking the boy's penis. Rakhi came back a little and in this gap I took the penis from the boy's pants and held it in the crease of Rakhi's buttocks. The boy started stroking Rakhi's buttocks now and I started stroking the boy's buttocks. After a while Rakhi turned towards the boy and took the boy's cock in her hand and started stroking it. The boy also put his hand over Rakhi's pants and put his hand in Rakhi's pussy. While stroking Rakhi's pussy like that for a while, he untied the chain of Rakhi's pants and put his hand inside. Now the boy was stroking Rakhi's pussy over Rakhi's panties. I put my hand inside Rakhi's pants and put my hand in the boy's hand. I realized that he was running his fingers over Rakhi's panties into her pussy. The bottom of her panties was soaked with her pussy juice. Along with the boy, I was also running my fingers into Rakhi's pussy. After a while, the boy inserted his fingers through the side of her panties. The boy's fingers were traveling from Rakhi's pussy to her pussy hole. At the same time, he was occasionally inserting his fingers into her pussy hole and fingering her. The boy was also touching Rakhi's pussy along with me. Rakhi was somehow suppressing her excitement and pressing the boy's cock. While pressing, the boy's cock, which was being teased, pressed against Rakhi's pussy hole. I held the boy's cock at the bottom. The boy now started to pound Rakhi's pussy with his cock. As a result, the cock was entering and exiting between Rakhi's thighs along Rakhi's pussy hole. Occasionally, the boy tried unsuccessfully to hold his cock inside Rakhi's pussy. If the boy had lowered himself a little, his cock might have entered Rakhi's pussy. Then he could have stood up and fucked her. But that would have been excessive. Then the people around would have understood. The boy was smart. Even in extreme sexual excitement, the boy did not go the other way. Rakhi limited himself to fucking her pussy and occasionally taking the opportunity to touch her breasts. There was also a high sack on the boy's left. Despite that, I noticed that a young boy standing on the other side of the sack had guessed our situation a little. I looked at the boy with a meaningful look. There was a hint of desire in the boy's eyes. Pushing through the crowd, the boy came and stood behind Rakhi. He pressed his cock into the groove of Rakhi's hips and started pressing lightly. The boy in front was thrusting into Rakhi's pussy and the boy behind, realizing that, pressed his cock quite tightly into the groove of Rakhi's hips and occasionally rubbed his cock lightly up and down in the groove of her hips. Along with rubbing his penis on Rakhi's buttocks, the boy now put his left hand on Rakhi's lower abdomen. From there, he first grabbed the Muslim boy's penis and placed his hand on Rakhi's pussy. After playing with Rakhi's pussy for a while, one of them touched her penis and the other with his hand, the boy turned around and started pressing her left breast. Along with rubbing her buttocks, he started pressing her breasts. One boy was rubbing his penis on Rakhi's buttocks and pressing her breasts. As the train entered Mallikpur station, the second boy gently asked me, "Do you want to get down in Baruipur? I have a flat." I agreed. I motioned for the first boy to get down with us. The boy tied the chain of Rakhi's pants and also tied his own chain. When Taru reached Baruipur, the four of us got down. While leaving the station, I was wondering if I had made the right decision. Then I thought, what else to do! Together, they will strip my wife naked in front of me, press her breasts, insert their cocks into her pussy and fuck her pussy. And we both want this. The boy told us before going out on the street that if anyone asks, he will say that I am his cousin and that boy is Rakhi's brother. Although no one asked anything on the street. As we went, I found out that the boy's flat I was going to was named Nirupam and the first boy was named Shakib. Nirupam had just turned sixteen. We reached Nirupam's flat at 5:15 in the afternoon.
+
+After entering the house, Nirupam closed the door of the flat. Today, after Sunny, Nirupam and Shakib will play with my wife's pussy. Both of their cocks will be with my wife's pussy. Now both of them will insert their cocks into my wife's pussy. They will fuck my wife in front of me. My cock has become hard while thinking about it. We entered the bedroom. There is a six-foot by seven-foot bed. Showing the bed, Nirupam said, "My father fucks my mother on this bed. Today, Shakib and I will fuck your wife together. You will also fuck your wife in front of us." Saying this, Nirupam pulled Rakhi closer and took off her jacket. Rakhi's plump breasts looked quite sexy from above the T-shirt. Then her nipples were high. Nirupam started pressing Rakhi's breasts with both hands. Shakib put his left hand through the bottom of Rakhi's T-shirt and rubbed her stomach, and with his right hand, he rubbed Rakhi's hips and pressed her hips. After a while, Nirupam unbuttoned the T-shirt, put his right hand inside and started pressing her left breast, and with his left hand, he hugged Rakhi's neck and started sucking her lips. Shakib is skinny, but Tamal's figure is very beautiful. Like Sunny. But both of them look beautiful and sexy. Shakib now came next to Nirupam, unbuttoned Rakhi's pants and chain, put his hand inside and kissed her pussy, saying, "Baudi, today we will both fuck your pussy together." Hearing this, Nirupam said, "Yes, Baudi, we two brothers will fuck you together. I will give you a lot of pleasure by fucking you." Saying this, Nirupam started sucking his wife's lips.
+Next. Rakhi held Nirupam's head with her left hand and inserted her tongue into Nirupam's mouth. I stood behind Nirupam. Nirupam was sucking Rakhi's tongue and pressing her breasts. Shakib now inserted his right hand between Rakhi's stomach and panties and started rubbing his hands in her pussy. Seeing Rakhi's movements, it is clear that Shakib's fingers are playing in the groove of my wife's pussy, in the gap of her pussy. I can see their feats with my wife's lips, body, and genitals and I can feel their buttocks. Shakib now lowered his wife's pants. Rakhi's lower body is now only wearing red panties. The pussy groove is clearly visible after being wet with cum. Shakib sat on his knees and started rubbing his nose in the pussy groove over the panties and started sniffing the smell of her pussy. Rakhi's right hand is playing to increase Nirupam's teasing. A little later, I saw Nirupam taking off Rakhi's T-shirt, sucking her right breast in his mouth and pressing the other. Rakhi's upper body was completely naked. Shakib inserted his tongue through the edge of her panties and licked Rakhi's pussy. Then he took off her panties too. My beautiful, fair, sexy wife was now standing completely naked in front of two young boys he had just met. Shakib was looking at Rakhi's clean shaved pussy with fascination. Nirupam, while moving his hands around Rakhi's pussy, said, "I can't take it anymore, aunty. I won't rest until I insert my penis into this sexy pussy of yours. Come on, aunty, let's go to bed now. I'll play with your pussy. I'll fuck you. Come on, Shakib, let's go to bed now," he said, lifting Rakhi up onto her lap and making her lie down on the bed. Rakhi lay down with her legs apart. Nirupam and Shakib both got naked on the bed together. Nirupam's penis was like mine. A little thick. Shakib's penis was about eight inches long and thick like Nirupam's. Today Rakhi's pussy would be fucked well. The penises of two young men would fuck Rakhi's pussy. Shakib got on the bed and started to fondle Rakhi's breasts and at the same time started to suck both breasts in turn. Also her lips. Nirupam first licked the area around Rakhi's smooth, hairless pussy for a while. Then he inserted his tongue along the groove of the pussy and started licking it. He held the petal of Rakhi's pussy between his lips and released it. After licking the groove of the pussy for a while, he inserted his tongue inside the hole of the pussy and started licking the inside of the pussy. Rakhi started to scream in extreme excitement. I started to run my fingers along the groove of Nirupam's buttocks. Then I started to lick the hole of the buttocks. Then I pulled Nirupam's buttocks with my thumbs and started licking them as much as possible. Nirupam was licking the inside of his wife's pussy and I was licking the inside of Nirupam's buttocks. After licking like this for a while, Nirupam now spread Rakhi's feet further apart, pressed his penis into Rakhi's pussy and inserted his penis into her pussy in one stroke and started fucking her. Nirupam kept pounding Rakhi's pussy and kept saying, "Thank you Tuhinda for giving me the opportunity to fuck your wife."
+I said, "How does it feel to fuck my wife!"
+Nirupam said, "It feels great to fuck your wife. Aunty, you are the first woman in my life whose pussy I have fucked. I want to give you pleasure by fucking you, Aunty. How do you feel about my cock, Aunty?"
+"It feels great Nirupam!", Rakhi said. "You two fuck me together and give me pleasure. I came to your flat to take your cock in my pussy. You two fuck my pussy as much as you want. Ahahaha Nirupam, fuck my pussy harder. Uffff............. Aaaaaa........ Uhhh Nirupam listens to Rakhi's words, Rakhi's pussy is throbbing and Shakib is squeezing and biting her breasts tightly. And Rakhi is screaming in unison with him. Both of them are enjoying Rakhi's soft body together. Both of them are playing with Rakhi's breasts and pussy. And sometimes I am licking Shakib's pussy, sometimes I am sucking his cock, and again I am licking Shakib's buttocks by inserting my tongue inside the hole of his buttocks. Nirupam's shiny cock, soaked in Rakhi's pussy juice, is entering and leaving Rakhi's pussy with incredible speed. I am now licking Shakib's buttocks. Shakib says, "Dada, you are a very good ass licker." While fucking Rakhi, Nirupam said, "Yes Tuhinda, you are a very good ass licker. When Shakib fucks your wife, you will lick my buttocks." Nirupam started pounding Rakhi even harder. Nirupam's plump and full buttocks were rising and falling rapidly in the rhythm of my wife's pussy. Nirupam also screamed occasionally along with Rakhi's screams. While fucking, Nirupam said, "You know Tuhinda, my mother is also very sexy. I have heard that she has fucked a few people. One of them is my friend. I will introduce you to my mother. You will strip your mother and fuck her. If you can, fuck her in front of me. I will see."
+I said, "Okay, let me introduce you later. I will strip your mother and fuck her properly. You will fuck my wife on the bed in one room and I will fuck your mother. I will also take Shakib with us. He will fuck both my wife and your mother."
+"If you two fuck my mother, I will fuck my mother too." Nirupam said.
+Shakib had been listening to his wife's breasts being sucked. Now he stopped sucking them and said, "That means two pussies and three cocks. I will do one thing and bring my cousin. She is very sexy. I have fucked her a few times."
+I said, "That's enough. My wife, Nirupam's mother and Shakib's cousin - these three pussies are three in number."Let's lie down on a bed and take turns fucking. What Rakhi! It's going to be a big deal. What do you say?" Rakhi said, "First bring Nirupam's mother in line. Then plan to fuck three pussies. Now fuck my pussy with your mind."
+"Yes, aunty, today we will fuck only your pussy" said Nirupam and started fucking my wife's pussy even harder.
+After fucking Rakhi's pussy for about ten minutes, Nirupam said, "Oh, aunty, I can't take it anymore" and poured his fresh hot semen into Rakhi's pussy. Rakhi closed her eyes and started feeling the warmth of Nirupam's hot semen. After pouring the stuff into Rakhi's pussy, Nirupam moved Shakib and lay on Rakhi's chest for about a minute. Then he took out his penis from Rakhi's pussy. As soon as he took out his penis, a lot of semen came out of Rakhi's pussy in a gurgle. Nirupam wiped it off with his panties. Then he inserted his finger inside Rakhi's pussy and released the remaining accumulated semen. Shakib was ready. As soon as Nirupam moved away, Shakib went and sat between Rakhi's legs. First two fingers He inserted it into Rakhi's pussy and started fingering her. Rakhi closed her eyes and started enjoying it. Then he inserted three fingers. After fingering her for a minute, he took out his fingers and put his tongue in her pussy and licked it for a while. Then Shakib stuck the red tip of his penis in her pussy. Rakhi's pussy was aching, wanting to swallow Shakib's penis. Shakib first inserted his penis into Rakhi's pussy with a little pressure. Then, in one go, he inserted his entire penis into Rakhi's pussy, causing Rakhi to moan. Then Shakib started fucking Rakhi's pussy. Shakib's eight-inch penis was almost completely inside Rakhi's pussy. Shakib held Rakhi's feet on both sides and fucked Rakhi's pussy. Rakhi first started moaning while eating Shakib's eight-inch penis. Then she moaned. Shakib moaned in time with Rakhi's moans He is beating.
+"Shakib, fuck my pussy harder. Nirupam gave me pleasure by fucking. You give me pleasure by fucking."
+"Yes, sister, I will give you pleasure by fucking. I will break your pussy by fucking. If I don't fuck a sister like you, then who will I fuck! Fucking a sexy sister like you is different. Nirupam has enjoyed fucking you so far. Now I will fuck your pussy and enjoy your pussy."
+"Your grandfather also enjoys fucking me."
+"Anyone who has a wife like you will enjoy fucking. Today I will enjoy fucking your pussy. I will fuck your pussy. After me, grandfather will also fuck you. We will both watch you fuck. Then we will fuck you again."
+
+"Fuck me as many times as you want, Shakib. Fuck my pussy harder............... Ahaha Shakib, fuck me harder like this. Fuck me and give me peace." I watch Shakib's long, fair penis fucking my wife's pussy while tickling her innocent pussy. After fucking Rakhi like this for a while, Shakib lay down on Rakhi's chest and started fucking her. He started sucking Rakhi's lips with him. Rakhi is shaking in time with Shakib's pussy beating. My penis is erect watching both of them fucking. After beating Rakhi's pussy for ten to twelve minutes, Shakib poured his cum into Rakhi's pussy. When Shakib got up, I inserted my finger into Rakhi's pussy, took out Shakib's cum and inserted my penis into Rakhi's pussy. Then I started fucking my wife in front of them. I have fucked Rakhi many times in our eight-month married life. But today, the pleasure of fucking your own wife in front of two young boys I have just met is different. It cannot be expressed in words. Even if I say it is heavenly, it is an understatement. Shakib and Nirupam, both of them were enjoying the scene of our fucking. After about ten minutes of fucking, my cock came. I took my cock out of Rakhi's pussy and put it in Rakhi's mouth. After fucking Rakhi's face for a few seconds, the cock came out. Rakhi ate the whole cock.
+After I finished, Shakib started fucking my wife again. In the second round, Shakib fucked Rakhi for about half an hour. Sometimes he fucked her pussy with his legs apart. Sometimes he fucked her pussy lying on Rakhi's chest. During this, Shakib himself was lying down and holding his cock with his hand and Rakhi was pointing at him, and as soon as she sat down, Shakib's cock smoothly entered Rakhi's pussy. In that situation, my wife's pussy started being fucked in a new way. Shakib was fucking my wife's pussy with a jerk. Rakhi also moved up and down from time to time. Shakib is helping to fuck her. Shakib is also pressing her pussy as he fucks Rakhi. For half an hour, the two of them were intoxicated with primitive play in different positions. In the meantime, I licked Nirupam's buttocks and pussy. I sucked his cock. Then I slowly inserted half of my tongue inside the buttocks and started licking the inside of Nirupam's buttocks. Meanwhile, as the cum was coming out, Shakib put his cock in Rakhi's mouth and started fucking her face. After fucking for a few minutes, he poured his cum inside Rakhi's mouth and Rakhi ate Shakib's entire cum. While Shakib was fucking Rakhi with his cock in her mouth and fucking her face, Nirupam got up in that gap and inserted his cock in Rakhi's pussy and started fucking her. In the second phase, Nirupam also fucked Rakhi for a long time. Sometimes lying down, sometimes spreading Rakhi's legs, and sometimes sitting Rakhi on his lap and fucking Rakhi's pussy. He fucked her. When Nirupam was making Rakhi sit on his lap and fucking her pussy, Rakhi was sucking Nirupam's lips. And I was pressing Rakhi's breasts from behind. Like Shakib, Nirupam also fucked Rakhi in different poses. When Nirupam finally put his cum in Rakhi's pussy, it was 7:30 am. After the three of us fucked Rakhi's pussy together from 5:15 to 7:30, we ended the fucking session like today. Rakhi's pussy is no longer in a condition to take a penis. Rakhi went to the bathroom and cleaned her pussy. He takes off his T-shirt, jacket and pants. We also take off our clothes. We take everyone's mobile number. Shakib kisses my wife on the lips and says, "Baudi, will you let us fuck you again! Or will you forget us?"
+Rakhi, squeezing both of their cocks, said, "If I don't let you fuck me, then who will I give it to? The way you two gave me pleasure by fucking, I have pledged both of your cocks for my pussy today. Let's see, how long will I fuck this baudi of yours?"
+"No baudi", Nirupam said, "And no matter who you fuck, I will fuck your pussy as long as you give it to me. I will not let Tuhinda fuck your pussy alone. From today, your pussy is ours too. We will fuck you with Tuhinda too."
+Rakhi said, "Only pussy!"
+Shakib hugged Rakhi from behind, rubbed his nose on her cheek and hit her buttocks, and said, "I will hit your pussy. I will hit your buttocks too."
+Nirupam pressed Rakhi's breasts, "I will also press your sexy breasts and do this," Nirupam said, sucking Rakhi's lips. Then Nirupam took Rakhi's face in his hands and said, "Lakshi, my aunt, come to us quickly. Don't delay too much. We will fuck you a lot together. I will fuck your pussy. I will give you a lot of fun."
+Rakhi held both of their cocks in her hands and said, "Very soon these two cocks will enter my pussy again. How! Happy!"
+
+At eight o'clock, I, Rakhi and Shakib left Nirupam's flat. Shakib took the train to Mallikpur. Rakhi and I took the train to Mathurapur.
+
+Before I end, I will say one thing. It was risky for two unknown boys to fuck my wife's pussy in extreme excitement. Although Shakib and Nirupam are both very passionate about sex, they are not vulgar. It is a good thing that neither of them are bad boys. From now on, I will proceed carefully in these matters. I will not take such risks again. One more thing, what Nirupam said about his mother happened in my life too. I will write about it one day later. Not only that, I will write about what happened that night at Rakhi's aunt's house next time if I want. January 8, 2020 is a memorable day in my life. That's all for today. I will come back later. Warm sexual greetings to each of you.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

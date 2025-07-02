@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexhindi.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='page53.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='../english/page53.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page53.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+मेरी बहन मेरी दूध की मशीन है।
+
+</small>
+
+  <p>
+
+
+मैं रोहित हूँ और मैं अपनी बहन के साथ अपना यौन अनुभव साझा करना चाहता हूँ। मेरी बहन का नाम राधिका है, वह मेरी अपनी बहन है और मुझसे 2 साल बड़ी है। वह एक सेक्सी वेश्या थी, जिसके स्तन 38DD साइज़ के थे और उसका फिगर बहुत सुंदर था और गांड भी सेक्सी थी। अब कहानी पर आते हैं। मेरी बहन की शादी 3 साल पहले हुई थी और वह अपनी नौकरी के कारण 2 साल तक निःसंतान रही। उसका पति CA था और हमेशा टूर पर रहता था और एक US बेस्ड कंपनी में काम करता था।
+
+वह गर्भावस्था के लिए घर आई थी लेकिन दुर्भाग्य से गर्भ में ठंड लगने के कारण उसकी मृत्यु हो गई। उसके बाद उसका पति हमारे घर आया और उसके साथ कुछ समय बिताया और वापस टूर पर चला गया। कुछ दिनों के बाद उसे सीने में तकलीफ़ हुई और जब मैं घर आया तो वह रो रही थी और उससे पूछा तो उसने कहा कि उसके स्तन बहुत दर्द कर रहे थे और वह दर्द सहन नहीं कर पा रही थी, फिर वह मुझे अपने कमरे में ले गई और कहा कि उसके दर्द का क्या इलाज है, उसे ब्रेस्ट पंप खरीदने की ज़रूरत है ताकि वह कम से कम अगले 3 महीनों तक अपना दूध निकाल सके। उसने मुझे अपना साइज़ बताया और मुझसे कहा कि मैं उसके लिए एक खरीद लूं और किसी को न बताऊं। उस रात डिनर के बाद मैं अपनी बहन से बात करने के लिए उसके कमरे में गया। फिर मैंने देखा कि मेरी बहन पहले से ही मेरे बिस्तर पर सो रही थी। मैं धीरे से उसके पास गया और देखा कि उसके स्तन धीरे-धीरे उसकी नाइटी से बाहर आ रहे थे। इसने मेरे अंदर उत्तेजना पैदा कर दी और धीरे-धीरे मेरा लिंग उसकी पूरी लंबाई में प्रवेश कर गया। मैं अपने कमरे में गया और उस दृश्य की फिर से कल्पना की और उसके स्तनों को चूसने का फैसला किया ताकि मैं उसका सारा दूध पी जाऊं।
+
+उस रात जब सब सो गए तो मैं अपने पैरों से अपनी बहन के कमरे में गया और मुझे आश्चर्य हुआ कि मेरी बहन का बायाँ स्तन उसकी आस्तीन से बाहर आ रहा था (उसने बिना आस्तीन की नाइटी पहनी हुई थी) यह देखकर मैं पागल हो गया। मैं धीरे से उसके पास गया और उसके स्तन को दूसरी आस्तीन से पूरी तरह से बाहर निकाल दिया। वह थोड़ा हिली और ऐसी स्थिति में आ गई जहाँ मैं उसके स्तनों को बेहतर तरीके से चूस सकता था। मैंने धीरे-धीरे उसके स्तनों को अपने मुँह से दबाया और हल्के जोर से उसका दूध पूरी लंबाई में बाहर आने लगा। मेरी बहन अचानक अपने स्तन से रोने लगी और अचानक जाग गई और यह देखकर हैरान रह गई कि उसका भाई एक बच्चे की तरह उसके स्तन चूस रहा था। उसने मुझे धक्का दिया और मुझे गाली देना शुरू कर दिया। मैंने कहा कि मैं बस उसकी मदद करना चाहता था और उसके कमरे से बाहर चला गया।
+
+अगली सुबह मैं उठा और ऑफिस के लिए तैयार हो गया और अपनी बहन से माफ़ी मांगी और उसे वो मशीन लाने का वादा किया। दोपहर में हमारे माता-पिता विजयवाड़ा के लिए निकल गए और मेरी बहन ने मुझे मिलने के लिए बुलाया क्योंकि वह परेशान हो रही थी। मैंने जल्दी से अपना काम खत्म किया और घर चला गया। जैसे ही मैं घर पहुँचा मेरी बहन ने पहले की तरह मेरा अभिवादन किया। मैंने उससे पूछा कि ऐसा क्या अलग है, उसने मुझे बैठने के लिए कहा और मुझे एक कप ब्लैक कॉफ़ी दी। मैंने दूध डालने के लिए कहा और उसने मुझे खुद दूध डालने के लिए कहा और अपनी कमीज़ की चुन्नी हटा दी। मैं हैरान था और कुछ भी नहीं बोल सका। फिर उसने मेरा हाथ लिया और उसे अपने स्तन पर रख दिया, यह मेरे लिए एक सपने के सच होने जैसा था। मैंने उसकी सलवार उतारी और उसके दोनों स्तनों को अपने हाथों में लिया और धीरे-धीरे उसके स्तनों को चूसने लगा। उसने कुछ धीमी आवाज़ में कहा और मुझसे कहा कि अगर मुझे वाकई उसका दूध चाहिए तो मुझे ज़ोर से चूसना चाहिए।
+
+मैंने उसके दोनों स्तन चूसे और रात भर के लिए उसका दर्द दूर किया। फिर उसने उस रात खाना परोसा और उसने कहा कि मुझे उसकी मदद करनी होगी क्योंकि अब दर्द फिर से शुरू हो गया है। मैंने अपनी धोती पहनी हुई थी और मेरा लिंग पूरी लंबाई में था और उसने मेरी उत्तेजना महसूस की। उसने कुछ नहीं कहा और बिना कुछ कहे कमरे से बाहर चली गई। अगली सुबह वह मेरे कमरे में आई और मुझे जगाया और मेरे सबसे बड़े आश्चर्य के लिए वह पूरी तरह से नग्न मेरे कमरे में आई और कहा कि वह यौन रूप से भूखी थी और किसी के साथ संभोग करना चाहती थी। मैंने तुरंत अपनी लुंगी उतार दी और अपना पूरा लिंग उसके सामने उजागर कर दिया।
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+       // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

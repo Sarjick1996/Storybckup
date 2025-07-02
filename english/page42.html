@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page42.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page42.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page42.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+sister-in-law Fulfilled Wife's absence
+
+</small>
+
+<p>
+
+
+I am Avinash. I work in a company in the city. I grew up in an orphanage. When I was almost 30, I started trying to get married. But I couldn't get married because I was an orphan. One day, a friend asked me to open a profile on Matrimony. I started getting many phone calls because I was beautiful. One evening, a polite woman suddenly called me.
+
+She runs a beauty parlor in the city. Her two daughters, husbands are dead. The elder daughter has passed college. The younger daughter will give HS. She called for her elder daughter. I went to her house with one of my friends. The polite woman said that she doesn't have any sons, so she wants someone to take care of her house.
+
+shali choda
+Her elder daughter Lata brought tea in front of me. Her sister Mita was with her. I couldn't take my eyes off Lata. She has a milky complexion, a sweet face, red and beautiful lips, and a chest of about 34 size. I agreed to the marriage. Lata's mother asked me to stay at her house after marriage. I married Lata in a month. Friends, don't get bored. This is a true story of my life.
+
+After that, something happened in my life that I never imagined. On the night of the wedding, I closed the door and walked towards Lata sitting on the bed. I slowly undressed her. I kept sucking her 34 size breasts with my mouth. Then I went down and kept sucking her thick forest covered pussy with my mouth. She kept moaning with her eyes closed. I kept pressing my mouth into her pussy and started pouring cum. Then I inserted my 6 inch cock into her pussy, she screamed in pain. shali choda
+
+She pushed me away. Every time she tried to insert me that night, she pulled me away in pain. I gave up and started sleeping. A month passed like this, I didn't even try anymore. I returned home late at night. One day, when I returned home at 12 am, my mother-in-law called me to her room. He said, “Avinash, I will tell you something today, don’t feel bad, don’t blame me.
+
+When Lata was 16 years old, a distant relative of mine lived here, he used to help me in the parlor. But I could not even imagine that he would do such a big harm to me. He had physical relations with Lata and made her pregnant, due to which I had to get her aborted. Then I threw him out. But he would take Lata and then fuck her in the hotel. She became pregnant again. I had to get her aborted again.
+
+Since then, her lower abdomen would hurt sometimes. She would say that she would never get married again. You know, when girls get a taste of sex, they become even more dangerous than boys. I heard from Lata that there is no physical relationship between you. You are a very good boy, father. My own son would not take care of us like this, the way you do. Lata will sleep with me today. I have shown her to the doctor, the doctor said that she will be fine within 1 month.” shali choda
+
+Standing by the door, Mita told us what we had talked about so far She heard everything. Without saying a word, I left my mother-in-law's room and went to my room to sleep. It was about 2 am when suddenly Mita entered my room.
+“Is Jamaibabu not sleeping? Mother has shown Didi to the doctor. Don't worry, you can insert your machine after a month.”
+I laughed at her words.
+
+“Your mother knows you are in my room so late at night.”
+“No”
+“Sit here.”
+She came and sat next to my head.
+I asked her how she knew all this?
+
+“I watch a lot of porn, Didi used to watch it too. Honestly, Didi is much more sensual than you. She will tear you apart when the time is right. You have to take a month off from work.”
+
+“Is that so? Who did you do this with? Your breasts are bigger than your sister's at this age!”
+“I have a boyfriend in college, I almost pressed two or three. But I didn’t let anyone fuck me.” shali choda
+
+My cock stood up after hearing her words. She grabbed my cock and held it over her lungi. I asked her to close the door. When she did, I kind of jumped on her. She took off her shirt on her own.
+Her breasts were size 34 like her sister’s. Her nipples were erect and hard with excitement. I felt like swallowing them. Her complexion was fair like her sister’s.
+
+I kept French kissing her lips, and using my hands, I kept squeezing her breasts like a drum. After that, I just sucked her breasts like crazy. A month of hunger had turned me into an animal. She hugged my waist with both her legs and held me tight against her chest. shali choda
+
+“Ammmm,,,, suck harder. Get down and suck my pussy.”
+Clean her pussy nicely. Not full of jungle like her sister. I keep sucking her clitoris.
+“Abinashada, enter now, I can’t do it anymore”
+“I’m entering Mita. I will make you a mother today. I have fallen in love with your milk and pussy. You become my wife.”
+
+After that, I set my cock in her pussy and inserted it all in one moment. I kept on slowly driving my cock. She started shaking. After that, I started increasing the speed of fucking her breasts.
+“Ummmm,,,, Jamaibabu fuck me harder. Suck my breasts. Ahhh, what pleasure you are giving me. If I had known earlier, I would have married you instead of Didi.” shali choda
+
+“Mita, your milk and pussy taste different. I will make you a slave.”
+
+Mita lifted her legs and held them tighter and made me cum. I kept pounding at a fast pace, the whole room was filled with the sound of pounding, pounding, pounding and Mita’s moans of pleasure. Mita started scratching my back with her nails. I kept biting her nipples in the desire for sex. Mita started screaming, “Ummmm, I lay down and suck her breasts. Then I fuck her in missionary position for the last time. She squirts. I tell her to let go. "Jamaibabu, let go now, ummmmm,,,,, I feel,,,, my pussy
+Yes, it will happen, I won't be able to stand up tomorrow. I'm sucking your cock and ejaculating. ”
+
+“Magi, I haven't had peace yet, I'll pour my cum into your pussy, I'll rip your pussy open today. Don't let anyone else fuck this pussy of yours. I'll rip your nipples out today. "She started moaning in pain. After about 20 minutes, I bathed her pussy in my semen and lay down with my face in her milk. She started rubbing her hair. shali choda
+
+After that, every night, when everyone was asleep, I started fucking Mita. I fucked her without a condom. I used to give her medicine for protection. While fucking her, I forgot that I was married to Lata, because I didn't call her close anymore. Lata didn't come either. One day, my mother-in-law and Mita went to one of their relatives' houses for a day.
+
+While leaving, Mita said, try with Didi today. I will satisfy your craving when I return tomorrow. When I returned home at night, Lata gave me food and went to her mother's house to sleep. I also ate and went to sleep. Suddenly, I woke up in the middle of the night. I saw that my lungi was wet, I was fucking Mita in my dream, and in the meantime, my semen came out. I went to the bathroom and cleaned myself and put my lungi on. I changed.
+
+Lata's room next to the bathroom. I saw that the door was not locked from the inside. I slowly entered. I kept watching Lata with great enthusiasm in the dim lights. She was sleeping in a thin pink nightie. Her curvy 34 size tits were trying to burst out through the nightie. If Lata didn't have a problem with her pussy, I wouldn't have thought of anyone but Lata. shali choda
+
+Her beautiful face, curvy tits, full ass, sensual lips would drive any man crazy. Seeing her for so long, the fire of desire spread like lightning in me. I decided that no matter how much she screams, I will fuck her today. I planned for that. I went to her and shook her, she was fast asleep. I brought two towels and two ropes from my room. I slowly tied her hands tightly with the two towels.
+
+She moved a little. I stood silently. Then I spread my legs and tied them to both sides of the couch/bed. My own lungi I took it off and spit on the tip of her penis. Then I lifted her nightie and saw that she was not wearing a bra. I started sucking her fair perky tits with one hand and started sucking her other one with the other. She woke up. She tried to remove me from her chest with all her might, but she could not do it because her hands and feet were tied. shali choda
+
+shali chodaI started sucking her tits by putting my face in her mouth. She started screaming loudly. I put another towel that was nearby in her mouth so that she could not scream. I came down and pulled down her panties and inserted my index finger into her pussy. She started kicking. I lowered my face and inserted my tongue into her vagina and started sucking. Her pussy filled with the forest of balls started swelling.
+
+I was burning with desire then, without delay I put spit on the tip of my penis and sucked her I inserted the penis into her vagina. She moaned, "Ummmm, maaah," and said, "Oh, my." I inserted it all in one go. I started pounding my penis. Tears started flowing from her eyes. I could tell she was in severe pain. The room was shaking with the sound of pounding, pounding, pounding.
+
+I sucked and bit her breasts while fucking her. After about 10 minutes, I saw her pounding from below. I couldn't believe she wasn't in pain anymore. I opened her hands and took the towel out of her mouth. She took a deep breath. Then she hugged me and said, "Fuck me, you've overcome my fear. I won't hurt you anymore. Untie my legs." I jumped and untied her legs. shali choda
+
+"I will sit on you and fuck you." ‘”
+“Okay”
+I made her sit on me, she took my cock in her pussy on her own. Then she started pounding her pussy hard on my cock.
+
+“I will fuck you to death today. Let’s see how much stamina you have. Make me a slut in a month. You have made my pussy big.”
+
+Then I got on top of her and kept pounding her pussy hard. I fucked her for about an hour and poured my semen into her pussy. That night we fucked about 5 times. Mita was right that Lata is very passionate.
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

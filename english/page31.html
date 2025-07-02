@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page31.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page31.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page31.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+My married sister Nancy (Incest sex story) brosis sex story, sister brother sex love
+
+</small>
+
+The story I am going to tell is quite old. But it is still fresh. The incident happened with my married sister Nancy. Nancy is about 10 years older than me. Her son-in-law is a businessman. When the incident happened, my sister had a 6-month-old son in her lap. Although she had a beautiful body, I never thought about her. About 38 size breasts and huge ass, smooth and thin, any man would look at her twice. When someone looks at her, the first thing they notice is her breasts, then her ass. Before starting the story, let me tell you about my son-in-law's family. My sister has a family with her in-laws and a sister-in-law. One daughter after another, a son. The son is 6 months old. My sister's sister-in-law is Ranjana. "What can I say about her beauty?" She is only 1 year younger than me. She is now in ninth grade. My sister got married, about 6 years ago. I was very young then, Ranjana is also young. But I am now in tenth grade. I am quite fit, and my body is strong because of gym. I myself did not know when I started loving my childhood playmate Ranjana. But I did not have the courage to say it.
+
+The incident started at my cousin's wedding. As a joint family, everyone from my sister's house was present at his wedding. The house was full of relatives. I had already told my sister out of fear that I loved Ranjana. My sister had assured me that if Ranjana agreed, she would arrange our marriage. Finally, I told Ranjana yesterday, and I got the green signal from her, so the wedding ceremony was a great joy for me.
+
+I had wanted to hug Ranjana for a long time. The wedding ceremony gave me that opportunity. But after hugging her for a little while, my hunger increased. I wanted something more. And with this hope for more, something happened that changed my relationship with my sister forever.
+
+Nancy has been at our house for almost a week now. My son-in-law also arrived yesterday. The house was full of people. When we came home with my wife after the wedding, there was no place to set foot in the house. Nancy told her mother that she was very tired, she needed to rest. I didn't see my son-in-law anywhere either. I also got a chance, got a chance, to do something for Ranjana. I handed a small note to the maid of the house. I am in the store room, come.
+
+I asked her to give it to you, she meant Ranjana. But I only said to give it to you. No one said anything. The maid thought I asked you to give it to me, so she gave it to Nancy. She didn't know what was written on the note. When my sister read the note, she thought that her husband, my son-in-law, had given the note. Maybe the son-in-law had not been able to fuck her for a long time and was trying to fuck her using this opportunity. Nancy didn't delay, she went to the store room to ease the groom's pain. Most of the things that were not used due to the wedding were stored in the store room, so there was not much space to move around there either. I was waiting for Ranjana in the dark. Apa opened the door and entered the room. Just as I could not recognize her in the dark, she could not recognize me either. When she entered the room, I hugged her so quickly and started kissing her that she did not get a chance to say anything. While kissing her quickly, I put my hand on her breasts. And started squeezing them. I was surprised, because Ranjana's breasts are not that big. I did not want to miss the opportunity without thinking about anything, but on the other hand, since the situation was the same, I kept squeezing one breast after another. I slowly opened her blouse. I did not have to do anything else, she herself pulled my head and filled her mouth with her milk. I handed my penis to her. While sucking the milk, I realized that this was my sister Nancy. I stopped sucking, but she filled her mouth with her milk again. I was in another strange state of mind. I kept sucking with all my might. My dick was now in her hands. I started sucking two breasts one after the other with extreme passion, my stomach was filled with sweet and delicious milk.
+
+She had been pressing my dick over my pants for so long. But I didn't realize when her pants had come off due to her sudden attack, I realized when she also took off her panties. My dick Babaji had already taken on its true form. Suddenly my sister's hand stopped. Maybe by now she had realized that I was not her husband. But it didn't last long. She started sucking my dick again. My fear went away with a sweat.
+
+She started sucking my fat dick up and down. I think she was enjoying the opportunity to suck other dicks than her husband's, at least it was clear from her expression. She knelt down and suddenly brought her face to my dick. Later I heard from him that wives do not put their husband's dick in their mouth, but they do not mind taking another man's dick as an opportunity for extramarital affairs. Slowly he started kissing the head of the dick, and I was shuddering. Then he put the whole dick in his mouth and started sucking it like ice cream. 'Mmmm' was the only word that came out of his mouth.
+
+After sucking for a while, I could not bear it anymore, I started pounding on his mouth after pounding. The cum had almost reached his head. I pulled the dick out. I hugged him to my chest with both hands. I started kissing and licking his lips. He also put his tongue in it. I understood that his condition was similar. While kissing and kissing, I lifted her sari on the mat, put my fingers in her pussy. I started pulling it along with the kiss.
+
+I realized that in a day or two, she would start plucking her pussy hair. Because there is no ball in the pussy. I was fucking her with another finger. She was making ahhhh, mmmmm sounds in fun. I stopped her moaning with my lips. After about 5/7 Nancytes, suddenly someone poured water on my hand, and with the intense pressure of Nancy, my finger almost broke. I understood that the water in the pussy had drained.
+
+I left my lips and went down. I used two fingers to suck her pussy.
+
+
+I fucked her and put my tongue in her pussy and started biting and biting her pussy. I thought the whole house could hear her moans. Sometimes I was licking her pussy with two fingers and at the same time I was licking her pussy. She held my head between her two nipples and held it in her pussy. While licking her pussy, I inserted my fingers into her ass hole.
+
+She moaned and filled her mouth with the water of her pussy again. The burning sensation of my penis became unbearable. I think she could understand it too. She sat down like a dog and held my penis in her pussy mouth. I slowly pushed and inserted the penis into her wet pussy. My penis started hitting the mouth of her uterus. She was in pain from my thrusts, I understood when she tried to stop me. But I ignored her and took the penis out and inserted it into her pussy with all my might. She screamed, "Slow down." I was in no condition to show mercy. I started pressing my breasts with both hands like a blind man. My sister was just saying, "Mmm Meanwhile, my situation was almost the same. I released both of them at the same time. I fell asleep after that. I hugged both of them and lay down. I stayed like this for about 20 Nancytes. After getting some breath, she stuffed the breast milk bottle into my cheek again. I started sucking. My sister sat up and turned on the light. Seeing me, she felt like she was electrocuted. She didn't say anything, got up and opened the door and left...
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+       // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

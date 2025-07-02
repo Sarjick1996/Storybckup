@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page24.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page24.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page24.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+Take off your saree, lift your skirt and stand with your legs spread!
+
+</small>
+
+<p>
+
+
+Sonali and I have been married for almost two years. My wife is very beautiful. She is five feet eight inches tall. She is two inches taller than me. Her chest and buttocks are very developed. She wears a size forty bra. She is a little fat. But even though she is fat, her body is curved like an hourglass, her big round arms and legs, her big breasts and buttocks and her fat waist make any man's heart beat faster. She is very fair and her skin is also very smooth. Even though she is heavy, her body is very soft. You can feel very comfortable touching her. We were getting along very well. But suddenly one day everything changed. Suddenly one day Sonali's ex-boyfriend called her on his mobile. He wanted to meet her. Their relationship broke up just before our wedding. I don't know why. I never asked. All I knew was that they had a big fight and the relationship ended very bitterly. Sonali told me that Amit wanted to meet her once to end the bitterness. He wanted to end the relationship amicably. I saw that my wife was also interested in meeting Amit and ending the relationship amicably.
+Sonali told me very little about Amit. I only knew that he was a very handsome man. He had a tall, broad, muscular face. Their relationship was very intense. The break-up happened because Amit could not get a job. Sonali's father did not agree to marry her off to an unemployed boy. Her relationship with me improved and their relationship broke down. Sonali said that one and a half years ago, Amit had started a business by lending money in the market. Today, as Bhagyadevi was pleased, it has blossomed and grown quite big. Now, she is getting Amit's mother's son married. Before getting married, Amit wants to meet Sonali once and settle everything.
+I reluctantly allowed Sonali to meet Amit. I am a jealous person by nature. I like to keep my wife under strict discipline. Sometimes we quarrel because of this nature of mine. Because Sonali likes to fly a little. Hanging out with friends, returning home late at night; that is her nature. So sometimes we get into a fight. I do not give permission to my wife easily. After exchanging many harsh words, when I saw that she was determined to meet her ex-boyfriend, I gave up.
+On the night of the interview, I saw Sonali coming down after finishing the preparation. My head caught fire when I saw her. She was wearing a small blouse without a bra. The fabric of the blouse was so thin that her breasts were clearly visible from inside the blouse. The blouse is cut too much in the front and back. Almost half of her huge breasts are exposed. Her back is almost completely uncovered in the back. She is wearing a chiffon transparent saree. The inner shade is visible through the transparent saree. My wife has applied makeup on her face. She is wearing high-heeled shoes. She looks like a dirty girl from a regular market. I could never have imagined that my wife would wear such clothes that she could go out. To be honest, I stood there in shock for quite a while after seeing my wife's clothes. Taking advantage of my confusion, she said 'bye' to me and left the house. When I regained my composure, I immediately called Sonali on my mobile. I taunted her about her choice of clothes. But she replied that when they were in love, she used to dress up like that to meet Amit. She told me not to worry too much and told me that she would be late and hung up. I immediately tried calling her on her mobile again. But she had already switched off her mobile.
+No matter how much my wife tried to stop me, my worries did not go away throughout the evening. She was spending the evening with someone with whom she had once been very close. And it is true that she was showing more skin than necessary, which was forcing me to worry even more. But there was nothing I could do except wait for my wife. Control was out of hand. I started fidgeting. I tried to reach Sonali on her mobile from time to time. But it was no use. She had switched off her mobile. On the contrary, my worries increased. Finally, unable to hold on any longer, I went to bed at around 10 pm. But I could not sleep a wink due to my worries. I lay there quietly, waiting for my wife to return, counting the minutes.
+Exactly five minutes before one o'clock, I heard the sound of the main door opening. I thought Sonali had returned alone. But immediately, an unfamiliar, heavy voice came from the bottom of the stairs. With anxiety and fear in my mind, I got up from the bed and quietly went to the stairs. I couldn't see anything properly in the darkness, but I could hear everything clearly.
+“Shalikhanki Magi! Take off your saree, lift your skirt and stand with your legs spread!”
+“Amit, you definitely don't want to fuck me in my house, when my groom is upstairs.”
+“If you want, I can move out of your life again right away.”
+“No, no! Don’t do that! You fucked me three times in one evening and you still haven’t satisfied me? Okay. Fuck me again with your big cock, you fucking bastard! Put that huge cock in my wet pussy. Fuck me in my own groom’s house and make me a slut. Oh Amit! I forgot how happy I am when you put those big pussies inside me. No one has ever given me the same happiness as you!”
+“Why is your groom doing this? How is he?”
+“He can’t compare to you.”
+“Tell me better. I can’t understand you properly.”
+“Okay, I’m telling you. He’s very small and never gets hard enough. He couldn’t satisfy me even for a day after marriage. Is that what you wanted to hear?”
+"I was afraid. Because then you would come back to me again and again, now that I I'm back. Right? Now that you've had a taste of my huge cock once, you'll want to have it again and again. You won't be able to leave me, especially my cock, anymore. Isn't that right?"
+"You're absolutely right. I'll really come back to you again and again. If necessary, I'll beg at your feet on my knees. I'll do whatever it takes to get the kind of fuck I want."
+"Today, I've introduced you to my two friends, and I want them to fuck you. What will you do then?"
+"No problem! If you want, they can fuck me too. As long as you fuck me well, I'll suck them. I'll put their hard cocks in my ass. I want to be your randy."
+"But what about your fiancé?"
+“Shoot that idiot. The idiot is a child, a woman. Now I just want to think about how many times I can fuck her with that big cock.”
+Hearing their conversation, my head started spinning. My beloved wife had betrayed me and was fucking a stranger in my own house all night. This was not the first time. Thinking about this, my heart was filled with jealousy. My stomach started grumbling. But my penis had also betrayed me. For some reason, my penis had become completely hard. It had become like a small tent on my pajamas. Out of excitement, I moved forward a little in the darkness, hoping to catch a glimpse of the lovers. But I slipped in the darkness. There was a very loud noise. Suddenly, the light turned on. Sonali and Amit immediately turned around and saw me near the stairs. My wife's face turned pale when she saw me. But Amit was not at all confused, he remained calm. I also saw both of them. Sonali was holding the handrail of the stairs and standing with her buttocks high up. Amit is fucking her from behind. Amit has one hand on the wall. He has turned on the light. My wife is not wearing a saree, she is lying on the floor next to her. Sonali is wearing only a skirt and blouse. The skirt is pulled up from the back to her ass. My wife is completely sweaty. The sweat-soaked blouse is sticking to her chest like glue. The thin fabric has become transparent. Her huge breasts are clearly visible with two buttons. Amit is wearing only a shirt. His pants are worn shamelessly next to my wife's saree. Amit's skin-tight T-shirt is completely soaked with sweat. It fits perfectly against Amit's strong muscular body. Hearing the loud sound of me going after him, Amit took out his penis from my wife's vagina. A huge penis, truly gigantic in size. At least twelve inches long It must have been four inches wide. The giant penis was soaking wet with juice. I was completely stunned to see such a giant penis. I caught Amit's eyes. I saw him measuring me with a fixed gaze. His gaze fell on my pajamas. Just then, a mocking smile appeared on the corner of his lips.
+"You idiot, come down!" Amit shouted. I hesitated.
+"You bastard, come down! I don't want to have to tell you anymore. Then you, you idiot, are very sad today! You idiot, secretly spying on your wife!" Amit bellowed like an angry bull. I got scared and quickly went down the stairs. The tent that was bulging near my pajamas was clearly visible.
+"Look, look at your husband's godly body!" Amit said to Sonali. "That idiot was beating his hands while listening to us!" Sonali's eyes fell on my pajamas and within a moment, her attitude and body language changed.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+     // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

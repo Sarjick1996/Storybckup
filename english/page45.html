@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page45.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page45.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page45.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+A brother of two sisters
+
+</small>
+
+<p>
+
+
+I am Tia, a beautiful girl who was living a peaceful life with her brother, sister, parents, but two months ago, a mountain of sorrow descended on their lives. My elder brother Joy and my sister Pia, who were left behind by their parents, went to Puri to travel. But they never returned.
+
+The news came that all the passengers of the bus died in an accident. A huge storm of sorrow descended on us. And our responsibility fell on my brother. But it was not much trouble for my brother. Because my brother had a shop before him, selling TVs and refrigerators. My sister is now a B.A. complete.
+
+So we are two very good friends in the house. I had heard rumors that my sister was in love with a boy in our neighborhood. But I was young, so I never had the courage to see that boy. But one day, an incident changed our lives completely.
+
+That day, when there was a knock on the door of my house, my sister and I were asleep. My brother started calling from behind the door, Tia, open the door, Pia, open the door. Without thinking, I went and opened the door. And I asked Dada why he had come to this house so late at night. Because after eating rice, Didi and I had gone home a long time ago. Dada had a drop of sweat on his head, Dada asked from outside the house where is Piya? I undoubtedly raised my hand and saw the bed. Who knows, Dada then roared,,,,Where is Piya?? I got scared.
+
+I looked into the darkness of the bed, and my chest heaved when I saw the empty space on the bed in the dim but dirty white light coming from the window. Piya was not on the bed. Dada took me to the roof. What I saw when I went to the roof made my eyes water. I saw Piya sitting on the lap of a boy, one of whose hands was stuck in Didi's nightie and doing something. Seeing Dada, Piya's face went dry and he started shaking.
+
+Dada went straight and told the boy not to step in that direction. The boy went down without saying a word. Pia was crying but couldn't say anything, Dada just said one thing, you didn't decide this, you shouldn't have gone this far. Pia was about to say something but Dada didn't hear her and walked downstairs.
+
+Pia is my sister, but since we are almost the same age, I don't call her sister. I picked her up and took her home. I understood that Pia was very scared and at the same time her love for Dada for so long had gone. She was crying profusely and saying that I didn't do anything. She had no deep relationship with me. I don't know when I fell asleep again listening to her crying.
+
+It was almost the end of the night when I woke up, I turned around and saw that Pia was not there. I got scared again, I ran to Dada's room. I was about to enter Dada's room when I heard Pia's voice. The window was open so I saw Pia sitting on the bed with Dada explaining something to Pia. She was talking to Pia in small words and Pia was also saying something to Dada.
+
+Suddenly, surprising me, Piya Di jumped on Dada. I couldn't understand what I should do. I stood still and watched what Piya was doing. But I didn't think Dada had consented to this act. Because Dada moved his lips away from Piya's lips a couple of times. Every time he moved them away, Piya pressed her lips and bit them.
+
+The two of them started kissing like this. At one point, I saw Dada holding Piya's back from behind. I understood that a new light of youth had come into Dada's life. And he wanted to enjoy it very well. While kissing, no one noticed that Piya's nightie had come up above her knees.
+
+Suddenly, Dada grabbed Piya's nightie with one hand and lifted it up and lowered it from her neck. Piya Di was now standing in front of her own Dada wearing only a panty. I have seen Piya's breasts many times before, but I have never seen them fully exposed. They are a little bigger and a little looser than mine. Seeing the breasts the size of a can, Dada grabbed one of them and sucked it. He started sucking the milk in various ways.
+
+Once he put his mouth on the nipple, and then Piya made the first sound of ahh and held Dada's head to his chest. Dada was sucking one breast like a little boy and squeezing the other. In this way, he sucked both breasts well and increased the sexual excitement of Piya's body. Didi almost shouted, "Dada, I can't do anything anymore."
+
+My chest heaved. Is it true that today Piya will take her Dada's penis in her pussy, that too as the first son in her life.
+
+Hearing Piya's words, Dada smiled and pulled down Piya's last clothes, the small red panties. Piya was swallowing Piya's young pussy with his eyes. At that time, Piya put her hand inside Dada's small underwear and took out Dada's dick like a bush. I understood that this was a dick. I had never seen such a big dick in my life.
+I had seen a lot of porn from girls in the class, but that dick was close to a baby. Dada brought his cock to Piya's mouth and Piya took it in her mouth and started sucking it comfortably. Is it really so fun to taste it, I also really wanted to try Dada's dick, but now it was not possible, so I started watching.
+
+Piya was sucking the dick and Dada was moving her pussy lips from side to side with a finger in her pussy slit. Suddenly Dada took out the dick from her mouth and came and put his face in Piya's pussy. Piya made that sound again. Ahh ahh ahh. Piya grabbed the bed sheet of the bed and indicated her pleasure and occasionally pressed Dada's head in her pussy.
+
+After a while, Dada lifted his face from Pia's pussy and started that primitive act that they never imagined, that brother and sister would ever enjoy their own parts in such a way. First, he laid Pia down with her head on a pillow. Then he put one leg on his shoulder and put his penis in her pussy.He set it on her face and gently pressed it so that his sister wouldn't suffer much at first.
+
+In one stroke, that giant dick didn't enter half of it in Piya's pussy, but Piya screamed and shook the whole room. Today, Achoda's pussy lost its chastity to her brother, along with her virginity. Grandfather was very slowly inserting and removing his dick from his sister's pussy. Piya was now completely naked.
+
+Grandfather was having trouble thrusting while sitting, so he took the dick out of her pussy with two thrusts and got down from the bed. I saw brother's eyes and mouth burning with desire. Grandfather grabbed one of Piya's legs and pulled it to one side of the bed, grabbed the leg and lifted it onto his shoulder. And Achoda looked at the pussy and thrust the dick in, this time there was no more resistance, the whole dick went straight into Piya's pussy.
+
+I stood and watched their fucking. There was no more pause in the pounding. Once one leg on the shoulder, once two legs on the shoulder, once two legs on the shoulder, Dada started fucking Pia's pussy in different positions. Pia also started taking the real pleasure of a woman's life from her Dada. She exposed herself.
+
+Dada also started thrusting his penis into her pussy many times in a row. Pia had let out water in her pussy two or three times, but there was no way for Dada to cum, he was constantly pounding the bed and shaking Pia's breasts with his hands. Pia was just moaning and saying ah ah uh ah Now he opened his mouth and abused his brother. I didn't know that my sister was so sexy before, but I wouldn't have to go to that old woman's neighborhood every night and give her money to fuck her. Piya said that from now on I am your old woman. You can fuck me whenever you want, and you won't go anywhere. While saying this, my brother gave a loud slap and Piya screamed, my brother mercilessly squeezed both of them and started giving big slaps and Piya grabbed the bed sheet in pain and started screaming ah ah ah. My brother kept on slapping and saying, "No, old woman, I am pouring my cum in your stomach, I will fuck you today and make you cum." Then I will fuck our younger sister and make you cum too.
+
+Then he gave a few more big slaps and started pouring cum inside Piya's pussy. I realized that Dada was shaking and trembling. And Piya Di held Dada and made him sit on her back. Dada poured the last bit of the whole thing inside her pussy and then took out the cock from her pussy, the cock started glistening in the water of Piya's pussy in such a low light. Both of them fell on the bed.
+
+Watching their sex, I didn't even notice when my hand went to the side of her pussy, I realized when my hand was washed away in the water of my pussy. I first went to the bathroom and changed my panties, then went to my room and fell asleep and started thinking about the sudden incident that happened a while ago, especially one thing that woke up my mind that Dada had said that he would fuck his younger sister and make her stomach hurt. But is it true that like Didi, I will also eat this cock of Dada? Will I also get as much happiness as Piya Di got? I don't know when I fell asleep thinking about so many things. I woke up in the morning and saw that Piya was not at home, which means Piya did not come home at night. I felt that Piya had been fucked more at night.
+
+In the morning, everyone started talking normally as if nothing had happened. The whole day passed like this. In the afternoon, Dada came home from the shop to eat rice. Piya was waiting for Dada, as soon as he came home, he told me to cook the rice, saying that the two of them went upstairs to Dada's room. I could not understand why the two of them went upstairs. I kept listening.
+
+After about two or three minutes, I heard Piya moaning. My pussy started to water again. But what can I do but wait, what magic did that Piya magician do that Dada does not get time to look at me. I also put my top on in such a way that my breasts could be seen clearly. If only I could impress Dada in some way.
+
+After about ten minutes, Dada came. The sleeves of the shirt were unbuttoned, the hair was folded upside down, the bite marks on the neck were messy, and there was a mark of Piya's red lipstick on the collar of the shirt. It looked like the way you would see someone raping someone in a Bengali movie and leaving the house.
+
+I gave my rice and bent down, and more than half of my breasts were visible, my brother glanced at me once. My brother ate and left without saying a word. I went upstairs and saw Piya still lying on my brother's bed with a small sheet on. I realized that Piya still had no clothes on.
+
+I came out of the room and started thinking about how I could go to my brother. After a while, I got a good opportunity. After my brother ate and left, it started raining, very heavily. Piyadi brought the clothes from the roof and put them on. And came down and started talking to me. I was talking but my mind started to wander. As the evening rolled around, I finished my work a little before my brother came. I gave Piya Di a sleeping pill with water. Piya Di could not understand anything. He started falling asleep while talking. I told him to sleep in his room. He went upstairs and slept in his room.
+
+My day today, meanwhile it is raining in full force and if Dada does anything to me, there will be no end to the joy. I also got ready in that way. I put on the short pants like a mini skirt that I wear at night. When I put it on, my buttocks bounce a lot, Piya Di said. And on top of that I put on an inner that I always wear under my clothes. Today I will impress Dada. Dada came on time. He looked at me with wide eyes. Because my breasts were bouncing a little too much, there was no bra inside
+Because there was no one.
+
+Grandpa asked where is Piya?
+
+I said she ate and fell down through the door. Grandpa was a little surprised, but didn't say anything. At this time, a loud noise was heard somewhere. I was scared and screamed like "Oh my god!" Grandpa laughed and said, "I'm so scared." I said, "Yes, I'm a little more scared." Grandpa said, "Who are you going to sleep with today, Piya is asleep."
+
+I saw that my chance had come, so I said, "To you." Grandpa looked at my eyes once. Then he said, "Okay, let's eat and go to my room. I'm getting up." It felt like someone was beating my chest. He was making a noise like that. After finishing the dinner table, I entered Grandpa's room.
+
+Grandpa had turned on the TV. He was sitting in the middle of the bed with a blanket and was watching the TV. As soon as I entered the room, he looked at my feet. After looking at it for a while, he looked away. I understood Grandpa's pain. He was fucking Piya every day and now it's very difficult to spend a night alone. I got up on the bed and sat next to my brother.
+
+My brother was reading a book and put his hand on my shoulder and said, "Don't sleep." I said yes. So I fell on my brother's lap, and by lap I mean on top of that big pile of my penis. My brother was wearing a cotton half-pant. So I realized that the thing under my mouth was slowly swelling.
+
+My brother was a little surprised by my action, but I pretended to watch TV. My brother started stroking my head. Meanwhile, the thing under my penis had straightened up and become so hard that it was going to be difficult for me to put my head on. As I started sleeping with my head moving from side to side, the more my face rubbed, the more the thing inside my pants started swelling.
+
+My brother had been combing my hair all this time, but now he is holding my hair steady with his hand. Many times, when I could not find a place to put my head, I did something. I placed a bite right in the middle of my penis. But my brother's dick was so hard that it hurt my teeth. Grandfather laughed and said, "What are you doing?"
+
+Grandfather was already horny from rubbing my face. So I told him openly that I would bite it. Grandfather said, "If I bite it, it will hurt." I said no, he was trying to seduce me, I would bite him. I took advantage of the opportunity. I put my hand inside Grandfather's pants with one hand and grabbed a dick and brought it out.
+
+This was the first time in my life that I had ever held a dick in my own hands. It felt like it was cutting my whole body. I took the dick out and looked at it, it felt much nicer and bigger than the day before. I kept on moaning, looking at Grandfather's face and saw a light touch of happiness on his face. I surprised Grandfather and put the dick in my mouth and started sucking it slowly like a porn star.
+
+I started licking the tip of the penis with my tongue, I got a different kind of pleasure along with an intoxicating smell. After sucking for a while, I felt my brother's hand on my head, my brother is now preparing himself to fuck my younger sister. I realized this and hugged my brother and said, "Dad, cool me down, I can't take it anymore." My brother pulled my underwear and tore it off.
+
+My small but shapely breasts were exposed. My brother was holding both breasts and sucking the nipples one by one with his mouth. This was the first time someone had put his mouth on my breasts. I was very happy and my body was erect. He turned my breasts from white to red by pressing and squeezing them. Then he opened my lower pants.
+
+My pussy was dripping with juice from the pressure of my brother's breasts. My brother was very happy to see my pussy and said, "What a pussy you have made, today I will insert my penis inside your pussy and make it a canal." I said yes, brother, you fuck me like a pawn, make me your mistress, from today on, this body of mine is yours.
+
+Brother was surprised and said how did you know this news, I laughed and took brother's dick and brought it in front of my pussy and told him about my plan. After hearing everything, brother said that my younger sister is more of a fucker than my older sister, I just have to see how much pleasure she can give me. So he tried to insert his dick into my pussy, but it didn't go in much, and my life bird almost died.
+
+I screamed aaaaah but brother started thinking of me as a prostitute from the neighborhood, so he slapped me hard on the cheek and said shut up, brother, you are planning to fuck yourself and why are you screaming so much, brother. I didn't say anything, on one side the burning sensation of the ruptured vagina, on the other the pain of the two slaps, on the other hand the pleasure of having my breasts massaged with one hand, all of it a cocktail of fun. It was as if my brother was raping me and giving me pleasure.
+
+He thrust a little more into my vagina and it started to hurt even more. Again, he pressed his lips to my lips and sucked them, holding my waist with both hands and shaking it down and started to pound my ass. My eyes rolled back, if my lips weren't tied, maybe everyone reading would have known that I was being fucked by my brother's big dick. So he pounded me with his mouth and hands, almost making me feel like he was raping me, what a pounding, I think my brother's bed will break. And it was as if my brother's dick was breaking and breaking through my vagina and hitting my stomach.
+
+After a while, he stopped kissing my hands and I got the real pleasure of fucking. Grandpa was fucking me and in his mouth he was saying ah ah ah oh my dear my dear my little sister my dear Like a magician, I have learned to dance and fuck, ah: I will put my money in your daughter's stomach today. I will fuck your two daughters and tie their stomachs.
+
+Now the speed of my brother's thrusts increased. He held my breasts and slowly started inserting the whole penis into my vagina, and when he said I would come out, he started putting his own penis into my vagina. I understood that some hot thing was entering my stomach. Only after I let the last bit of sperm from the penis reach me, did my brother take out his penis from my vagina. And he lay down next to me. My brother, the first man in my life, fucked me so hard that I doubt if I could stand for two days.
+
+My own brother fucked me to my heart's content all night long. He didn't let me sleep at all, he forgot everything after getting a new young pussy.
+
+When I woke up in the morning, I saw that my brother had left the room. I also changed and came downstairs and had breakfast with Piya Di and Dada. Dada looked at me once and left for the shop. I was about to tell Piya Di something, she herself said, how are you going to play Dada's thap tomorrow?
+
+I felt like I fell from the sky. How did you know? I said dryly.
+
+Piya smiled and said when you mixed sleeping pills in my glass, I saw it, that's when I understood your plan, later when I heard your moaning at night, I saw through the window of your room how you were hitting Dada's shoulder with your foot.
+
+I got a little courage and said, you also eat it every day, all night long.
+
+Piya said, okay, from now on, you will eat Dada's cock one day and I will eat it one day, okay. I said, no, no, I will eat it every day. You arrange another time, Dada will fuck me all night, you will eat Dada's cock during the day, Piya did not agree to that. Piya and Chai and MD had a little argument about it, then it was decided that Dada would actually ask Dada who he would sleep with at night.
+
+As usual, Dada entered the house after eight in the evening. We all started talking, after some time after eating and drinking, I sat at the table and asked Dada about this. Dada answered in a unique way. He made our two sisters sit on two chairs, then brought a chair between us and sat himself, then placed his hands on my and Piya's shoulders with both hands and put his hands inside my clothes and started pressing my breasts. Both breasts of the two sisters were in the palm of his hands, how comfortable was that? Dada said, is anyone having less fun, tell me?
+
+You two are my sisters and I love both of you equally, so I will fuck both of you together, you two will sleep in my room at night now, and you will be fucked by your Dada all night long. We both said yes. I and Piya took Dada to the house and made Dada completely naked. Dada put one hand on my pussy and with the other hand Piya's breasts started shaking, my pussy flooded with the touch of Dada's hand. I took off my panties and made it easier for Dada to move his hand. Meanwhile Piya had taken off everything herself, I put my hand out to catch Dada's dick and just then Piya also put his hand in Dada's pants for the same reason, Dada laughed loudly seeing this incident...
+
+I opened the chain and Piya put his hand in the chain and took out the dick. Without thinking twice, I put the dick that Piya was holding in my mouth and started sucking it. Piya said now look, I took out the dick and you are eating it, okay, I will eat it today, she said and took her pussy in front of Dada's face and said that sister fuck Dada, suck my pussy.
+
+Dada took a bite first and then started sucking, and Piya was moaning ah ah. I was sucking the dick then. Dada sucked all the juice from Piya's pussy and said, "Maggie, get your pussy ready now, I will fuck your pussy today, Di had wanted to hear this for so long, as soon as he said that, he fell asleep and said, "You are my juice, fuck me and fuck my stomach, I want to be the mother of your child." Dada placed his big cock in front of her pussy and with one push, he entered Piya's pussy with a thud.
+
+I understood that Piya had fucked her pussy and made Dada cum. As soon as Dada's dick entered, Piya started abusing him. Dada was fucking Piya in one go and one of my breasts was dripping. I took my face and kissed Dada, Dada's dick then started glistening with the juice from Piya's pussy.
+
+Again, Dada took out his dick and stuffed it in my pussy, I felt a little pain but I didn't say anything, Piya quickly pulled out his cock without making a fuss, I understood that he hadn't fucked me. Again, Dada started fucking my pussy, I shouted and said Dada, fuck me harder, fuck me and burst my pussy. Piya said no, Magi,,,, you are fucking your own Dada sitting next to Didi. By fucking your pussy, Magi will become the prostitute of the neighborhood one day.
+
+I said no, my pussy is only for my Dada, Dada is listening to us and is pounding me with lightning speed. I said to Dada, what are you enjoying fucking me today, Dada squeezed one of my breasts and said my two sisters are two Magi, and they are made by me. That's why I always like fucking these two Magi, and you are my little Magi. Seyana is the most clever, you have cleverly taken your brother's dick in your mouth, I know everything, don't eat again, how much will you fuck me in the morning, I started to say ah ah ah, now Piya could not help but hear my moans, she sat next to me and said, you have fucked your younger sister a lot, now your older sister's pussy is burning, fix it quickly. Dada put the dick in Piya's pussy again and started to fuck.
+
+In this way, for about three hours, our brother and sister's wild fucking game continued. Sometimes my own brother started hitting my pussy, sometimes Piya's pussy, and we both started abusing each other While eating.
+
+In this way, for about three hours, our brother and sister's wild fucking continued. Sometimes my own brother started hitting my pussy, sometimes Piya's pussy, and we both started abusing each other while eating. Grandfather did what he said and dumped his cum in my stomach, and in the morning when Grandfather fucked the two MDs, he dumped all the cum in Piya's stomach, but we did not get pregnant, because Grandfather had given us pills.
+
+In this way, a new life came into our lives where my brother, sister and I, these three, floated in the ocean of happiness, hidden from the eyes of the people of this world. I wish to continue to eat my brother's cum all my life.
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

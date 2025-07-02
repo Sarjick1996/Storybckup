@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page20.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page20.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page20.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+low character Housewife – Brother's wife is now a prostitute – Episode 7
+
+</small>
+
+  <p>
+
+
+First of all, know something about me, my name is Riya, I am 27 years old, 5 feet 5 inches tall, I have been married for about 3-4 months, after getting fucked by everyone in these 3-4 months after marriage, my breast size has become 36D, my ass size has become 40 and my waist size is 28-30, I have fucked many people before marriage, so I did not want to do anything like this after marriage, but after getting fucked by everyone in these 3-4 months and agreeing to Nitin's words in the previous episode, I felt like a whore. (bangla Bessha Boudi choti)
+
+My husband, I and my father-in-law, mother-in-law have been dead for almost 2 years, so we all lived in the same house. My husband was always busy with work, he was at home for two days a week, he was busy with work, he didn't even touch me, and the rest of the days he was outside, my father-in-law now left the TV/newspaper and just found a chance to insert his cock into his beloved wife's pussy all day long.
+
+Bessha Boudi
+She used to think that when her son would go out of the house and get that chance, he would fuck her, and after eating everyone's big dicks for the past few months, now my pussy can't get enough of it without fucking twice a day. The story is about the money-making plan that Nitin told me in the previous episode, and this incident happened 2-3 days after the incident with Nitin.
+
+Now let's start the story, like every day, I woke up in the morning, washed my eyes and face, and was doing household chores when the doorbell rang. I went and opened the door and saw that the milkman had come to deliver milk. Then I took the milk from the milkman and went back to work and finished the chores. Then I went to the kitchen and started making tea for everyone. After a while, everyone sat at the table and had tea. Bessha Boudi
+
+Then everyone got busy with their work and I started cooking lunch, around 10-11 pm Nitin called me and the phone was with me, as soon as I picked up the call Nitin said “Hello aunty, I have found a big man for you” I looked around me, I saw that no one was around then I said “Okay, what is his name? And what does he do?
+
+” Nitin said “His name is Ratan Saha, and the man is a builder, you know, he has built all the big buildings and shopping malls in our city” I said “Yes, I know the man, a few days ago it was shown in the news that the man got divorced” Nitin said “Yes aunty yes, that is why the man is looking for a partner to spend the night, and after getting the news of that I told you. Bessha Boudi
+
+And the man is even willing to pay 15-20 thousand taka” Hearing this I said “So did you watch that video Did you show the guy?” Nitin said “No, aunty, I just saw a sexy picture of you and that’s what made the guy agree, you know, aunty? The guy went crazy after seeing a glimpse of your picture” I said “Wow, that’s good then” Nitin said “aunty, listen…
+
+The guy will come to pick you up around 7 o’clock, just tell me the place where the guy will pick you up from?” I thought for a while and said “Listen, it won’t be from my house, someone can see it, so I don’t have any problem picking you up from the bus stand we have”… Bessha Boudi
+
+Nitin said “Okay then the bus stand is at 7 o’clock in the evening, remember aunty” I said “Yes yes, remember”, after talking I put down the phone and was happy in my heart to hear about 15-20 thousand taka.
+
+Then I finished cooking, went into the bathroom and took a good bath, applied shampoo and conditioner to my hair, and although I don't have that much hair on my pussy, I shaved my pussy thoroughly today because I'm going to spend the night with such a big man, so I have to look a little better...
+
+I took a bath, came out, had lunch, rested a little, then it was 5 pm and I started getting ready to go. Seeing me getting ready, my husband asked, "Where are you going?" I said, "To that friend's birthday party." My husband said, "Do I have to go too?" I said, "No, no, she just invited me." My husband said, "Oh, okay, and when will you be back?" Bessha Boudi
+
+I said, "I can't say for sure, if the party is big, I'll stay at my friend's house tonight." My husband said, "Okay, then let's see." Then I put on a backless blouse and a bright blue saree with black panty-bra and blue nail polish on my toenails.
+
+I put red lipstick on my lips and vermilion on my forehead, put on a garland around my neck, conch shells and some bangles, and I was thinking whether to wear the mangalsutra or not, I thought about it and did it, then by the time I got ready it was almost 6:30, and I quickly left the house and took a toto-rickshaw to the bus stand at around 6:50. Bessha Boudi
+
+I reached the bus stand and started waiting for Ratan Saha. It was around 7:15 when I saw a Fortuner car entering the bus stand and the car was coming towards me. I realized that this car belonged to Ratan Saha. The car stopped in front of me and the driver opened the back door of the car for me. I saw Ratan Saha inside and got into the car and sat on his right side..
+
+As soon as I sat in the car, Ratan said, “I didn’t keep you waiting for long, did I?” I respectfully said, “No sir, I reached a little before you arrived.” Ratan said, “Okay, and instead of calling me ‘you’, you should call me ‘you’ and not ‘sir’, just call me Ratan.” I said, “Okay Ratan, I will tell you that.” Ratan said, “You look more beautiful in person than in the picture.”.. Bessha Boudi
+
+I said, “Thank you,” then Ratan took the driver to a restaurant.
+I asked him to go and Ratan put his right hand on my thigh from above my saree, then after about 1 hour we got out of the car and entered a 5 star restaurant, as soon as we entered the restaurant Ratan told a waiter to book a private VIP lounge.
+
+Then we both went to that lounge and sat down, after 2-3 minutes a waiter came Ratan ordered two cocktails, and we both started chatting a little, Ratan said “So what do you do?” I said “I don’t do anything, I am a housewife” Ratan said “Oh, well, what does your husband do?” Bessha Boudi
+
+I said “My husband works in an office”, after two conversations the waiter brought us cocktails, and Ratan took one of the cocktails and said “Cheers” and took a sip like tea, Ratan said “Are you the only one at home with your husband?” I said, “No, no, my father-in-law also lives with us, and I don’t have a mother-in-law.” Ratan said, “
+
+Why did you take up this job when you have such a beautiful family?” I said, “What else can I say, my husband loves his job more than me. He only spent the night with me during our marriage, and then he never touched me, so I took up this job in the heat of my youth.” Ratan said, “Well, the family is beautiful, but I haven’t found a husband to satisfy your cravings… Bessha Boudi
+
+No problem, I will satisfy your cravings today.” I said, “That’s why I came to you,” then we both finished the cocktail and Ratan sat next to me on my right side, put his left hand on my shoulder, and with his right hand, he removed the saree from my chest, put his hand on my breast from above the blouse, and started pressing it and said….
+
+“Not everyone is lucky enough to have such a sexy wife and your husband doesn’t do anything to you?” I said, "Yes, I see, it seems I made a mistake to marry him." As soon as I finished talking, Ratan started kissing my neck, cheeks, and lips and said, "Your body is so soft, why didn't I get a wife like you?"... Bessha Boudi
+
+And Ratan started pressing my breasts with his right hand from above my blouse and because of that my body started getting hot and excited, after a while Ratan removed his hand from above my breasts and took it down and put his hand inside my saree-petticoat and started massaging my pussy with his fingers from above my panties and with that the inside of my pussy got completely wet with cum..
+
+On the other hand, Ratan's penis had become completely hard and long and that caught my attention, I understood the size of the penis to be inside the pants and I thought it would be about 5-6 inches, then from above Ratan's pants I placed one hand on the penis I started rubbing the penis, after 4-5 minutes Ratan said “Come to my room” I said “Do you have your room here too?” Ratan said “Yes, there is a 5-star room”, then we both fixed our clothes a little and started going to the room. Bessha Boudi
+
+I went to the room and saw that the whole room was like a palace then I went to the bedroom and saw that the bed was decorated with marigolds and roses. I went to the bed and said “Is today our flower decoration night?” Ratan hugged me from behind and said, “No, baby, today our flower arrangement is much more than last night.” After saying that, Ratan started kissing my neck and cheeks…
+
+He started opening my saree with one hand, then after opening my saree, Ratan untied the ribbon-hook of my blouse and pulled my blouse open, and Ratan from behind started holding my breasts from above my bra with both hands and started rubbing his penis on my ass, then Ratan untied the knot of my petticoat and the petticoat came off… Bessha Boudi
+
+I was now only in my bra and panties and Ratan removed one hand from above my breasts and inserted his hand inside my panties and started running his fingers over the soft petals of my pussy and my whole body started shaking, after a while Ratan took his hand out of my panties and turned me towards him and pushed me onto the bed and laid me down and Ratan took off his coat-pants-dress. He started to open it one by one…
+
+After taking off his clothes, Ratan was now wearing only his underwear, then Ratan jumped on the bed and lay down next to me, then he raised one leg over my body and placed his lips on my lips and we started kissing each other's lips-mouth-tongue, after kissing for a while, Ratan pulled my bra and took out a breast and took the breast in his mouth and started sucking it.. Bessha Boudi
+
+I held Ratan's head and started pressing on my breast and while sucking my breast, Ratan was biting the nipple with his teeth and on the other hand my pussy was completely wet with cum, then Ratan stopped sucking my breast and kissed my chest-stomach-waist and brought his face to my pussy, and said, "Sona, your pussy is wet with cum and your panties are wet"
+
+I said, "Then take off your panties and wet them with cum." "Lick your pussy", then Ratan pulled my panties open and went between my legs and lay upside down and started licking my pussy petals with his fingers and tongue and only I know how much fun I was having because before this I don't think anyone has licked my pussy so well... Bessha Boudi
+
+After licking my pussy for a while, Ratan inserted his two fingers into my pussy and started licking my pussy while moving his fingers in and out and I was enjoying it so much that I held Ratan's head with my hand and held it against my pussy and Ratan started licking my pussy harder and I started moaning with "ahh um um" sounds.
+
+After licking my pussy for about 10-15 minutes, Ratan made my pussy juice flow and on the other hand, Ratan's penis was erect inside his panties and became like a hard iron, Ratan said "I sucked your pussy and "You suck my cock" I said "Yes of course, I will suck and eat your cock completely" Ratan said "Okay, let's see how much you can eat" ... Bessha Boudi
+
+I knelt down on the bed and Ratan stood in front of my face, then I grabbed Ratan's panties with both hands and pulled them down and what I saw made me completely surprised and my face fell open, as soon as I pulled the panties down I saw that a black, 9 inch long, 4 inch thick, anaconda-like cock was squirming in front of my face..
+
+I have never seen such a big cock before. This was the first time I saw such a big cock and I was shocked for a while, Ratan said "What happened? You didn't like the cock?" I said "No...no, I mean, how can you hold it so big...in my mouth?" The truth is that I was afraid that when he fucked me with such a big cock, my pussy would burst… Bessha Boudi
+
+Ratan said, “You will catch it, just try it once, and it will go all the way into your pussy, don’t worry” I said to myself, “Okay, let’s try it once” After thinking about it, I held the cock in both hands and put the tip of the cock in my mouth and started sucking it, and I was thinking to myself that such a big cock will fit in my pussy…
+
+Then the cock slowly entered my mouth about 4 inches and Ratan started lightly thrusting it into my mouth and after sucking it like this, the cock got wet with the saliva on my face and became slippery. Then Ratan held my head with both hands and thrust the cock further into my mouth and started fucking my face with forceful thrusts… Bessha Boudi
+
+About 6-7 inches The penis entered my mouth and the tip of the penis went into my throat and started pushing and said, "Here, Magi, suck my big penis, and clean my penis by sucking and sucking." Hearing these words from Ratan's mouth, I felt my excitement increase even more.
+
+After fucking my face like this for about 10 minutes, Ratan took out my penis, which was wet with saliva and saliva, from my mouth and said, "How did it feel to suck my penis?" I said, "I thought you wouldn't put it in my mouth, but I sucked it as much as I could, and it felt good." Ratan said, "Now get your pussy ready, let's see if your pussy can swallow the whole penis." Bessha Boudi
+
+Then I lay down on the bed and Ratan spread my legs and sat between my legs and held my penis and started rubbing it on my pussy petals with his penis head, and I was still scared seeing the size of his penis, so I said, "First, go in slowly." Ratan said, "Don't worry...
+
+I know how to do it." After saying that, Ratan put spit on his penis head, placed it between my pussy petals, and pressed it lightly, so that his penis head entered my pussy. Then Ratan pressed it a little more, and his penis entered my pussy about 3-4 inches, and Ratan slowly started fucking my pussy. Bessha Boudi
+
+Ratan said "Oh, how tight your pussy is, I'm fucking someone after a long time, how comfortable", after about 10 minutes of fucking like that, when my pussy became as big as Ratan's penis, Ratan put his penis in my pussy and pressed it a little, and since my pussy was wet with cum, my pussy swallowed his 6-inch thick penis, but Ratan didn't put his entire penis in yet, so my fear was a little less..
+
+Then Ratan started fucking me with light strokes and I was also pressing lightly with my lower abdomen and "Ahh uhh" sounds started coming out of my mouth. After about 10-15 minutes of fucking like that, Ratan started fucking me with his penis and pressing it to insert his penis more into my pussy, but it wasn't going in.. Bessha Boudi
+
+So suddenly Ratan started pounding me hard and slowly his penis was completely inside me. He started to enter my vagina and I started moaning loudly “Ahhhhhhhh ohhhhhh” and my condition was getting worse because of such a big penis entering my vagina, in a while the whole penis entered my vagina but even then Ratan did not stop giving me a hard thrust…
+
+The tip of the penis passed through my vagina, passed through my uterus and started pushing into my stomach and since the penis was quite thick it was visible from my belly button, Ratan said “What a whore, you said such a big penis would not enter your vagina, look I have inserted the whole penis into your vagina. Bessha Boudi
+
+Now see how I fuck you" I said "Take out your dick, it hurts me" Ratan said "Shut up whore, I just started fucking you, today I will fuck you and break your pussy", then Ratan lay down on top of me and held one breast in his hand and started pressing it hard and took the other breast in his mouth and started sucking it and I held Ratan's head on my breast and Ratan started fucking me with a strong thrust..
+
+After fucking me like this for a while, I sucked my pussy juice, then Ratan made me doggy style and put his dick in my pussy and with one thrust he inserted the whole dick into my pussy and I made a loud "ahhhhhhhhhh" sound in my mouth, and Ratan held my waist with both hands and started fucking me and slapped my ass and made it red and our fucking “Thap-thap….thap-thap” Bessha Boudi
+
+The room shook with the sound, then Ratan made me lie down on top of him and kept fucking my pussy, after about 1 hour of fucking, Ratan said “My cock will come in a while” I said “Just don’t leave it inside your pussy”…
+
+After 1-2 minutes, Ratan took out his cock from his pussy and said “Here, my girl, take my cock” and poured all his cum on my ass, there was so much cum from such a big cock that my entire ass was covered in cum in the morning, then Ratan lay down next to me.
+
+After about 10-15 minutes of sleeping, Ratan’s cock throbbed again The anaconda became hard and I was lying upside down, Ratan sat on my thigh and inserted half of his cock inside my pussy and started fucking me, I said "Can't you just fuck me once?" Ratan said "Shut up, Magi, I bought you money for the whole night, and tonight I will fuck you as many times as I want" Bessha Boudi
+
+After saying that, Ratan inserted his whole cock into my pussy and started fucking me. In this way, Ratan fucked me in my pussy and ass for the whole night, and I ejaculated 5-6 times that night, when I woke up around 8 am, my pussy and ass were slightly hurting from Ratan's big cock, then I took a bath, cleaned myself up and got ready…
+
+Ratan gave me 20 thousand taka and said, “Here, take your 20 thousand taka, I initially wanted to give you 15 thousand but your performance in last night's fucks was very good so I gave you another 5 thousand.” I said, “Thank you Ratan.” Ratan said, “Listen, I won't go now, I have told the driver to drop you off at your house…. Bessha Boudi
+
+” I said, “What was the need for this, I could have gone by bus.” Ratan said, “No problem, go by my car today.” I said, “Okay, let's go then.” After saying that, I left the restaurant-hotel and went home in Ratan's car.
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+    // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

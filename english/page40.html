@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFPXYBBB2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZFPXYBBB2R');
+</script>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #faf3e0;
+      color: #111;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #cccccc;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .theme-label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #333;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .language-buttons {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    body.dark-mode .lang-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    img.top-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+.home-button-container {
+  margin-bottom: 10px;
+}
+.home-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1eee9; /* warm whitish tone */
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Dark mode variant */
+body.dark-mode .home-btn {
+  background-color: #d6cfc4;
+  color: #111;
+}
+
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+body.dark-mode .tag {
+  background-color: #444;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    max-width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .featured-image-container img {
+    width: 200px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lang-btn{
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    background-color: #f8f1e9 !important; /* warm whitish background */
+    color: #333 !important;
+    font-weight: 600;
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .switch {
+    width: 40px !important;
+    height: 20px !important;
+  }
+
+  .slider:before {
+    height: 14px !important;
+    width: 14px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px) !important;
+  }
+
+  .theme-label {
+    font-size: 14px !important;
+  }
+
+  .tag {
+    font-size: 10px !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="location.href='indexenglish.html'" class="home-btn">Home</button>
+  <span class="theme-label" id="themeLabel">Light Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="location.href='../hindi/page40.html'" class="lang-btn">हिन्दी</button>
+    <button onclick="location.href='page40.html'" class="lang-btn">English</button>
+    <button onclick="location.href='../bengali/page40.html'" class="lang-btn">বাংলা</button>
+
+  </div>
+
+<article>
+  <h1 id="post-title">Loading title...</h1>
+<div id="top-image-container" class="featured-image-container">Loading image...</div>
+
+<div id="post-tags" class="post-tags">
+  <span class="tag-icon">🏷️Tags</span>
+  <span class="tag">SEO</span>
+  <span class="tag">HTML</span>
+  <span class="tag">Web Design</span>
+</div>
+
+<small>
+
+My Randy Mom (whore)
+
+</small>
+
+<p>
+
+
+Hello friends, I am Sujoy. Today I have brought another mother's sex story. My mother's name is Sucharita. I live alone in my mother's house. Those who have read my previous stories know about my mother well. Still, I will tell the new readers. My mother looks like the South actress Sona Hayden. Her body size is 46 cm, waist 31 cm, height 35 cm. Her mother is 37 cm, fair. My mother is a complete randy magi. I have a long hair in front of me at home. Let's come to today's story.
+
+Today's story is with my friend Anik. So first of all, let me tell you that Anik was in my mother's sexy class. So he knows everything about my mother, that how big a hot magi my mother is. So Anik called me one day that he would spend a day with my mother. I agreed. Anik said that I will have 3 friends too. But I will not tell them anything. I will introduce your mother as my mother. After that, whatever your mother will do.
+
+My girlfriend has said the opposite about me. I will also watch this video and their girlfriend. I will ask your mother to come in a sexy dress. Tell your mother a plan and convince her. I will dive into your direction and see what you have to say.
+
+Me – Yes. I will tell my mother the plan.
+Anik – Will your mother agree?
+Me – Abe Magi is sitting there saying that she will only take the land. Then who wouldn’t like to have sex with young boys.
+Anik – Okay then tell your mother to come to Kolkata Sector Five on Saturday. I will text the rest of the address.
+Me – OK
+Anik – Will you come?
+Me – No. But I need the full live video.
+Anik – OK
+Me – Mom, you will go to my friend’s Kolkata flat as his mother.
+Mom – Doesn’t Anik’s mother look as sexy as me.
+Me – No. Will he use his mother to fuck his friends. What are you doing? You are all our whore's property.
+Mom - Yes. I am all our property. What should I do?
+Me - So you will go to my friend's flat as Anik's hot mother. Then you will point to his friends so that they can fuck you.
+Mom - What is the benefit of that.
+Me - Anik will blackmail his friends. You don't need to know all this. When Anik is not in the room, you will wear a sexy dress and talk sexy to them. So that they will get excited and fuck you and understand that I am a randy magi.
+Mom - Yes. I understand my mother's son.
+
+So on Saturday, mom started going out after eating and drinking.
+When mom got ready and came downstairs, I was surprised to see her. Mom was wearing a black net saree. In which mom's hand-cut blouse inside was completely visible, so mom's huge breasts were stuck, which were half visible. Mom's navel was visible. Since she was not wearing a bra, mom's nipples were completely visible through the saree. There is a rope in the blouse at the back which is clinging to the mother's body. Such big breasts can hold that rope. And then, mother, it seems that only panties are worn below. It seems that she has not worn a skirt. Inside mother, panties are visible from above the saree. Then, high-heeled shoes. What does she look like?
+
+Mother – How do I feel?
+Me – What should I say, mother, you look like a complete slut. Shall I fuck you once?
+Mother – You can see how expensive my dress is. You will spoil it.
+Me – Go on, okay. Enjoy it a little.
+Mother – My dear son.
+Me – Drive away. Whatever dress you are wearing, people will tear it off and fuck you on the road.
+Mother – I know. That's why I brought the car keys.
+
+After mother left, I called Anik.
+Anik – Aunty has gone out.
+Me – No more aunty, tell me now until tomorrow, mother. Otherwise, the whole plan will be ruined.
+Anik – Yes, you said it right. Send a picture of your mother.
+Me – Sala, I will see it right away.
+Anik – No, I will not go down and bring it, I will send it to my friends.
+I sent the picture.
+Anik – Oh, dear, whatever you are dressing up today, Sucharita has become completely randy.
+Me – Don’t say anything more. Look at what you have done, you will never find that dress again.
+Anik – You are becoming like such a complete dabka maal day by day. It seems that even the bodies of milf pornstars will accept defeat.
+Me – Leave it, tell your friends to bring your mother.
+
+After a while, mother took the car and went down to Anik’s flat. There, Anik’s friends Neel, Shuvo, Palash were standing. When mother got down from the car, they were completely surprised. When they saw mother, their wealth was completely tight. (What mother told me later) Anik’s flat was in a little empty space, so there were few people in the flat. Anik was from a big family, so he lived in a flat like this. It would be wrong to call it a flat, it was a bungalow. Mother was surprised to see so many boro bungalows.
+
+They came to mother and said, "Yes." Mother also said, "Yes." Then they all came to Mile's room. Mother hugged Anik and kissed him. And said, "My dear son. How thin he has become."
+
+Shubh - Oh, aunty lives alone here, so his body is drying up.
+Mother - Who knows if it's because of being alone or not.
+Anik - Mom, you started with them too. You look like a sexy bomb today.
+Hearing this from Anik's face, his friends laughed.
+Mother - Yes, at this age, he won't tell his girlfriend, who is telling his mother.
+Neel - Aunty, you are more beautiful than our girlfriend.
+Mother - Not only beautiful, but also beautiful.
+Palash - Aunty, your body is heavy.
+Anik – Hey wait, I don’t have to say that much.
+Mom – Where will I stay?
+Anik – In my room.
+Mom – Okay, bring my bags.
+Mom was going to swing her mother’s ass while she was leaving. Anik went to get the bag. While he was bringing the bag from downstairs, he heard, “Oh, Anik’s mother is a real slut. If I had known about it before, I wouldn’t have treated Anik badly. Who needs a girlfriend with a slut like that? Oh, when I first saw Mal, I thought she was Randy. Look at the dress she’s wearing, she’s a real slut. And her ass is a pumpkin. Mal needs to be fucked once.
+Anik – What are you doing?
+Do one thing, take this bag to Mom's room. I'll bring food for the night.
+Shubh - Hey Anik, you know that shop where you can get good chicken.
+Anik - It's a long way and then you have to stand in the shop for a long time.
+Neel - But the chicken in the shop is heavy.
+Anik - Okay, Palash and I will go.
+Palash - I'm going to get beer. That's what we were discussing.
+Anik - Okay, I'll take the car then.
+Shubh - Okay, you bring the chicken. We'll get everything else ready.
+Anik knows what will happen after he leaves, so he has already installed a CCTV camera in his room.
+
+Mom - Why haven't they brought the bag yet?
+Hearing the sound of her coming up the stairs, Mom took off her saree and stood in the room wearing only panties and a sleeveless blouse. All the friends entered the room together and said no. Everyone was surprised to see Mom, they had never seen Mal wearing such a dress before. Everyone said sorry aunty. (I am watching the room's CCTV camera live)
+Mom - Okay, is this a dress like this again? Haven't you seen your mother?
+Neel - Aunty, my mother doesn't wear such a dress.
+Mom - Yes. But I do. I look hot in this dress.
+Shubho - Aunty, you look sexy.
+Mom - Thanks Shubo.
+Neel - Aunty, this dress looks heavy on you.
+Mom - And if you don't hit Aunty, hit your girlfriend with this line. She will let you fuck her less and less.
+Everyone is surprised to hear about the fuck.
+Mom - What happened, you didn't fuck your girlfriend.
+Shubho - Aunty, are we so advanced anymore?
+Mom - What's the point of advance in this? See when she doesn't agree, everyone agrees with a little force.
+Neel - Aunty, you had sex during your college time.
+Mom - Yes, what's wrong with that? What do you think, such milk, ass or fuck.
+Palash – Aunty, can we make you naked?
+Mother – No, what will Anik say that his mother is having sex with her friends?
+Shuvo – Aunty Anik will be very late to come.
+Mother – Where has he gone?
+Neel – Aunty is far away.
+Mother – You have planned to fuck me one by one.
+Shuvo – Aunty, if you can't see and fuck me, our life will be so miserable.
+Mother – Then start by saying something so that Anik doesn't know. There are three of you. You will force me to fuck you a little. Otherwise, it's no fun to fuck three people.
+
+Shuvo grabbed Mother and tore her blouse. Mother was standing in front of three young boys, pumping milk. Then they started moving here and there, the three of them grabbed Mother and tore her panties. Mother was completely naked in front of three boys.
+(I am watching Anik's live telecast. Anik's room has 4 cameras installed. Mom is told to do whatever that room does.)
+Then the three of them are fucking mom while she is hanging.
+Mom - Tap a little slowly.
+Shubh - Shut up, Magi is fucking with a boy friend in a room again slowly. Shali's pussy is fucked and fucked today. Shali can't stand it.
+Neel - Abe Maler, who has gone to the store, we have to fuck together.
+Palash - Wait, I am coming. Saying this, Palash brought a bunch of rope from below and tied mom's whole hands and feet to the bed and started fucking her.
+Mom - Palash, oh my dear son, what did you want to have sex like this. You can fuck me today. If you can, you can fuck me like this in front of my son, let's see. Fuck me like a whore Magi. Shuvo fucks mother's pussy, Neel fucks mother's bottom ass, Palash fucks mother's face. Everyone takes turns fucking mother for half an hour.
+Anik calls, "Hey Sujoy, I want to fuck aunty after seeing this."
+Me - Now go to the room with chicken. I have the whole day tomorrow. And see what happens. I have a lot for you. I am a little surprised to see some things. The dress that mother has taken. When you see it, any boy will wear it.
+Anik - What do you say?
+So they fucked and everyone got wet with sweat. Mother also got wet with sweat but she is still tied with ropes.
+Shuvo - What can be done with this sister now.
+Palash - There is a video recorded with the mobile in front.
+Neel - What do you say. Video
+Palash - Yes, this time it will be fun. If aunty Anik falls asleep in our room, you will sleep with us in our room. And you will behave like a little fool with us in front of the boy.
+Mom – Why did you make the video?
+Shubh – It’s decided that you will be our mother from now on.
+Mom – Okay, but now, take off your hands and feet. Am I going to be naked in front of my son?
+Neel went to the bed and took off his clothes. Hearing the sound of Anik’s car downstairs, he quickly cleaned his room and went out. Mom went to the bathroom, took a shower, came out and changed her clothes.…..
+
+The next story will come after a few days to find out what happened next.……
+
+
+
+</p>
+</article>
+
+
+  <script>
+    // Load and apply theme from localStorage
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const body = document.body;
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.replace('light-mode', 'dark-mode');
+        label.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        label.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      label.textContent = 'Dark Mode';
+      toggle.checked = true;
+    } else {
+      body.classList.add('light-mode');
+      label.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'dark' : 'light');
+    });
+
+      // Load post data
+    let currentPage = location.pathname.split('/').pop();
+if (!currentPage.endsWith('.html')) currentPage += '.html';
+
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const post = posts.find(p => p.filename === currentPage);
+        if (!post) {
+          document.getElementById('top-image-container').textContent = 'Post not found.';
+          document.getElementById('post-title').textContent = '';
+          document.getElementById('post-description').textContent = '';
+          return;
+        }
+
+        // Set page title
+        document.title = post.title;
+
+        // Show image
+        const container = document.getElementById('top-image-container');
+        container.textContent = ''; // clear loading text
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title;
+        img.className = 'top-image';
+        container.appendChild(img);
+
+        // Update title & description
+        document.getElementById('post-title').textContent = post.title;
+      })
+      .catch(err => {
+        document.getElementById('top-image-container').textContent = 'Failed to load post data.';
+        console.error(err);
+      });
+  </script>
+
+<div style="margin-top: 40px;">
+  <style>
+    .hidden-link a {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .hidden-link a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    body.dark-mode .hidden-link a {
+      border-color: #eee;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    body.light-mode .hidden-link a {
+      border-color: #333;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .hidden-link a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <p class="hidden-link" style="display: none;"><a href="page2.html">Visit my site</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 2</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 3</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 4</a></p>
+  <p class="hidden-link" style="display: none;"><a href="#">Link 5</a></p>
+</div>
+
+
+</body>
+</html>

@@ -403,27 +403,7 @@ body.dark-mode .scrolling-banner span {
   </style>
 </head>
 <body>
-<div id="ageConsentModal" style="position:fixed;top:0;left:0;width:100%;height:100%;
-background-color:rgba(0,0,0,0.85);display:flex;flex-direction:column;justify-content:center;
-align-items:center;z-index:10000;color:white;text-align:center;padding:20px;">
-  <h2>Attention!</h2>
-  <p style="max-width: 500px; font-size: 15px;">
-    This site contains adult content. By entering this website, I acknowledge that I am 18 years old or older 
-    and agree to the <a href="#terms" style="color: #ff69b4; text-decoration: underline;">Terms of Service</a>, 
-    which are available on the site.
-  </p>
-  <div style="margin-top:20px;">
-    <button id="consentYes" style="padding:12px 24px;margin-right:12px;
-      background: linear-gradient(45deg, #ff4da6, #ff66cc); border:none;
-      border-radius:6px; color:white; font-weight:bold; font-size:14px;
-      cursor:pointer; transition:0.3s;">Agree</button>
-    
-    <button id="consentNo" style="padding:12px 24px;
-      background: linear-gradient(45deg, #ff4da6, #ff66cc); border:none;
-      border-radius:6px; color:white; font-weight:bold; font-size:14px;
-      cursor:pointer; transition:0.3s;">Not Agree</button>
-  </div>
-</div>
+
 <div class="scrolling-banner">
   <span>
     best collection of free sex stories —  mom son sex story, bro sis sex stories, family sex stories, family sex videos, incest stories,desi sex video, indian sex videos, real incest, mother son hentai, hot comics, reddit sex comics, porn sex comics, sex comics, gay sex comics, furry sex comics, anime sex comics, cartoon sex comics, hentai manga, mom son sex comics, mom son sex porn, real sister porn, little sister porn, sleeping sister porn, manga, my reading manga, solo leveling manga, reddit manga, manga reddit, one punch man manga, manga hentai, mother son incest porn, sitting on my son's lap, sitting on my son's lap stories, sitting on my son's lap 2, nifty erotic stories, incest erotic stories, erotic stories online, taboo erotic stories, erotic stories free, audio erotic stories, erotic stories audio, indian erotic stories, incest english sex stories, english sex stories xossip, english sex stories mom, real mom son sex stories, free mom son sex stories, mom son sex stories indian, mom son sex stories desi, best mom son sex stories, desi mom son sex stories, mom son sex, real mom son sex, mom son sex video, mom son sex videos, japanese mom son sex, bro sis porn, bro sis fuck, bro sis hentai, xxx bro sis, real bro sis incest, adin ross sister porn, real brother and sister porn, brother sister porn, brother sister sex, brother sister incest, brother sister hentai, brother sister fuck, incest porn, incest, real incest porn, incest hentai, pure taboo, taboo porn, taboo season 2, taboo sex, taboo sex stories, family sex, real family sex, family sex porn, family sex games, indian sex story, gay sex story, hindi sex story, taboo sex story, ai sex story, telugu sex story, adult sex dolls, adult sex comics, adult sex game, adult sex story.
@@ -563,35 +543,6 @@ if (window.innerWidth <= 600) {
       setTheme(toggle.checked ? 'dark' : 'light');
     });
   </script>
-<script>
-  // Bypass age modal for search engine crawlers
-  const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
-  if (isBot) {
-    document.getElementById("ageConsentModal").style.display = "none";
-  }
-</script>
-<script>
-  const consentModal = document.getElementById("ageConsentModal");
-  const consent = localStorage.getItem("ageConfirmed");
-  const consentTime = localStorage.getItem("consentTime");
 
-  const now = new Date().getTime();
-  const sevenDays = 7 * 24 * 60 * 60 * 1000;
-
-  if (consent === "yes" && consentTime && (now - parseInt(consentTime)) < sevenDays) {
-    consentModal.style.display = "none";
-  }
-
-  document.getElementById("consentYes").addEventListener("click", () => {
-    localStorage.setItem("ageConfirmed", "yes");
-    localStorage.setItem("consentTime", new Date().getTime());
-    consentModal.style.display = "none";
-  });
-
-  document.getElementById("consentNo").addEventListener("click", () => {
-    alert("You must be 18+ to access this site.");
-    window.location.href = "https://www.google.com";
-  });
-</script>
 </body>
 </html>

@@ -365,7 +365,7 @@ body.dark-mode .post-content::after {
     transform: translateX(-100%);
   }
 }
-/* 🔄 Smooth scrolling animation */
+/* SCROLL ANIMATION */
 @keyframes scroll-banner {
   0% {
     transform: translateX(0);
@@ -375,47 +375,59 @@ body.dark-mode .post-content::after {
   }
 }
 
-/* 🧱 Base banner wrapper (default: light mode) */
+/* BASE STYLE (neutral) — No light theme yet */
 .seo-tag-banner {
   overflow: hidden;
   padding: 10px 0;
-  max-width: 960px;       /* reduced width */
+  max-width: 960px;
   margin: 0 auto;
   border-radius: 8px;
-  background: #fff0f6;    /* light pink */
-  border-top: 1px solid #ffb6c1;
-  border-bottom: 1px solid #ffb6c1;
-  color-scheme: light dark;
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
 }
 
-/* ➡️ Scrolling track */
+/* SCROLLING TRACK */
 .seo-tag-track {
   display: inline-flex;
   gap: 1rem;
   white-space: nowrap;
   animation: scroll-banner 25s linear infinite;
-  padding-left: 100%;  /* ensures start off right side */
+  padding-left: 100%;
 }
 
-/* 🔗 Tag links — light mode */
+/* LINKS DEFAULT RESET */
 .seo-tag-track a {
   flex-shrink: 0;
-  background: #ffe4ec;
-  color: #c2185b;
-  border: 1px solid #ffc1d6;
   padding: 6px 12px;
   border-radius: 5px;
   font-size: 14px;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
+  border: 1px solid;
 }
 
-.seo-tag-track a:hover {
-  background: #ffd2e1;
-  color: #b0003a;
+/* 🌞 LIGHT THEME OVERRIDE */
+@media (prefers-color-scheme: light) {
+  .seo-tag-banner {
+    background: #fff0f6;
+    border-top: 1px solid #ffb6c1;
+    border-bottom: 1px solid #ffb6c1;
+  }
+
+  .seo-tag-track a {
+    background: #ffe4ec;
+    color: #c2185b;
+    border-color: #ffc1d6;
+  }
+
+  .seo-tag-track a:hover {
+    background: #ffd2e1;
+    color: #b0003a;
+  }
 }
 
-/* 🌚 Dark theme overrides */
+/* 🌚 DARK THEME OVERRIDE */
 @media (prefers-color-scheme: dark) {
   .seo-tag-banner {
     background: #111;
@@ -435,7 +447,7 @@ body.dark-mode .post-content::after {
   }
 }
 
-/* 📱 Mobile responsive layout */
+/* 📱 MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .seo-tag-banner {
     max-width: 100%;

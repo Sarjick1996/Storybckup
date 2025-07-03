@@ -361,69 +361,210 @@ body.dark-mode .post-content::after {
     transform: translateX(-100%);
   }
 }
-.scrolling-banner {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: rgba(255, 255, 255, 0.3); /* translucent white background */
-  padding: 8px 0;
-  margin-bottom: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  text-align: center;
-}
 
-.scrolling-banner span {
-  display: inline-block;
-  padding-left: 100%;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333; /* default for light mode */
-  animation: scroll-banner 130s linear infinite;
-}
 
-body.dark-mode .scrolling-banner {
-  background-color: rgba(255, 255, 255, 0.1); /* slightly more transparent in dark mode */
-}
 
-body.dark-mode .scrolling-banner span {
-  color: #ffffff; /* true white text in dark mode */
-}
-
+/* === TAG BANNER SCROLL ANIMATION === */
 @keyframes scroll-banner {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
+
+/* === SHARED BASE STYLES === */
+.seo-tag-banner {
+  overflow: hidden;
+  padding: 10px 0;
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.seo-tag-track {
+  display: inline-flex;
+  gap: 1rem;
+  white-space: nowrap;
+  animation: scroll-banner 25s linear infinite;
+  padding-left: 100%;
+}
+
+.seo-tag-track a {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  border: 1px solid;
+}
+
+/* === LIGHT MODE (Pink Theme) === */
+body.light-mode .seo-tag-banner {
+  background: #fff0f6;
+  border-top: 1px solid #ffb6c1;
+  border-bottom: 1px solid #ffb6c1;
+}
+
+body.light-mode .seo-tag-track a {
+  background: #ffe4ec;
+  color: #c2185b;
+  border-color: #ffc1d6;
+}
+
+body.light-mode .seo-tag-track a:hover {
+  background: #ffd2e1;
+  color: #b0003a;
+}
+
+/* === DARK MODE (Dark Theme) === */
+body.dark-mode .seo-tag-banner {
+  background: #111;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .seo-tag-track a {
+  background: #222;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode .seo-tag-track a:hover {
+  background: #444;
+  color: #fff;
+}
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .seo-tag-banner {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0;
+  }
+}
+
+
+
+/* === Featured Story Horizontal Scroller === */
+.featured-stories-bar {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.featured-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 15s linear infinite;
+}
+
+.featured-track .post {
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 18px;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.featured-stories-bar:hover .featured-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 600px) {
+  .featured-track .post {
+    width: 240px;
+  }
+}
+
+
+
+
+/* === FIX: Language Button Visibility === */
+body.light-mode .lang-btn {
+  background-color: #e0e0e0;
+  color: #111;
+  border: 1px solid #bbb;
+}
+
+body.light-mode .lang-btn:hover {
+  background-color: #d4d4d4;
+}
+
+body.dark-mode .lang-btn {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark-mode .lang-btn:hover {
+  background-color: #333;
+}
+
+
+/* === FIX: Pagination Buttons === */
+body.light-mode .pagination button {
+  background-color: #f9f9f9;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+body.light-mode .pagination button.active {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+body.dark-mode .pagination button {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  border: 1px solid #333;
+}
+
+body.dark-mode .pagination button.active {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+
   </style>
 </head>
 <body>
-<div id="ageConsentModal" style="position:fixed;top:0;left:0;width:100%;height:100%;
-background-color:rgba(0,0,0,0.85);display:flex;flex-direction:column;justify-content:center;
-align-items:center;z-index:10000;color:white;text-align:center;padding:20px;">
-  <h2>चेतावनी!</h2>
-  <p style="max-width: 500px; font-size: 15px;">
-    इस साइट पर वयस्क सामग्री है। इस वेबसाइट में प्रवेश करके, मैं पुष्टि करता हूँ कि मेरी आयु 18 वर्ष या उससे अधिक है 
-    और मैं <a href="#terms" style="color: #ff69b4; text-decoration: underline;">सेवा की शर्तों</a> से सहमत हूँ, जो साइट पर उपलब्ध हैं।
-  </p>
-  <div style="margin-top:20px;">
-    <button id="consentYes" style="padding:12px 24px;margin-right:12px;
-      background: linear-gradient(45deg, #ff4da6, #ff66cc); border:none;
-      border-radius:6px; color:white; font-weight:bold; font-size:14px;
-      cursor:pointer; transition:0.3s;">सहमत</button>
-    
-    <button id="consentNo" style="padding:12px 24px;
-      background: linear-gradient(45deg, #ff4da6, #ff66cc); border:none;
-      border-radius:6px; color:white; font-weight:bold; font-size:14px;
-      cursor:pointer; transition:0.3s;">असहमत</button>
+<!-- SEO Tag Banner -->
+<section aria-label="Popular Tags" class="tag-section">
+  <div class="seo-tag-banner">
+    <div class="seo-tag-track">
+      <a href="/tag/milf">MILF</a>
+      <a href="/tag/taboo">Taboo</a>
+      <a href="/tag/stepmom">Stepmom</a>
+      <a href="/tag/lesbian">Lesbian</a>
+      <a href="/tag/teacher-student">Teacher-Student</a>
+      <a href="/tag/first-time">First Time</a>
+      <a href="/tag/public">Public</a>
+      <a href="/tag/fantasy">Fantasy</a>
+      <a href="/tag/bdsm">BDSM</a>
+      <a href="/tag/cuckold">Cuckold</a>
+      <!-- Duplicate for smooth infinite scroll -->
+      <a href="/tag/milf">MILF</a>
+      <a href="/tag/taboo">Taboo</a>
+      <a href="/tag/stepmom">Stepmom</a>
+      <a href="/tag/lesbian">Lesbian</a>
+      <a href="/tag/teacher-student">Teacher-Student</a>
+    </div>
   </div>
-</div>
-<div class="scrolling-banner">
-  <span> antrvaana, bhai behen ki chudai, maa bete ki sex story, मा बेटा सेक्स कहानी, desi sex kahani, desi sex story, हिंदी सेक्सी वीडियो, हिंदी सेक्स स्टोरी, indian sex kahani, indian sex story, baap beti sex story, baap beti sex stories, baap beti sex, bap beti sex story, bap beti sex stories, bap beti sex, bap beti chudai, maa sex story, maa sex stories, maa hindi sex stories, maa xxx, maa sex kahani, maa ki chudai story, maa porn, maa chudai story, पारिवारिक च**** की कहानी, पारिवारिक चुदाई की कहानी, पारिवारिक कहानियां, sex kahani, desi sex kahani, hindi sex kahani, free sex kahani, urdu sex kahani, sex kahani hindi, chudai story, desi chudai story, hindi chudai story, free chudai story, urdu chudai story, chudai story hindi, punjabi chudai story, indian chudai kahani, xossip chudai kahani, hindi audio chudai kahani, desi indian chudai kahani, gay chudai kahani, chudai kahani audio, audio chudai kahani, hindi sex kahani, hindi sex story, hindi sex mms, hindi sex web series, hindi sex movie, मा बेटा सेक्स कहानी, xxx मा बेटा, मा बेटा चुदाई कहानी, मा बेटा सेक्स स्टोरी, मा बेटा की चुदाई, मा बेटा सेकस, मा बेटा सेक्स, मा बेटा xxx video, maa beta sex story, maa beta sex stories, maa beta sex, maa beta chudai, maa beta hindi sex stories, maa beta xxx, maa beta chudai kahani, bhai bahan xxx, bhai bahan sex, bhai bahan ki chudai, xxx bhai bahan, bhai bahan sex video, bhai bahan sex story, भाई बहन की चुदाई, भाई बहन की च****, भाई बहन का चोदाई, भारतीय भाई बहन सेक्स, bhai behen ki chudai, bhai behen chudai, bhai behen sex, bhai behen sex stories.
-  </span>
-</div>
+</section>
+
 
 <div class="logo-desktop">
   <img src="../logo/svgfinal.svg" alt="Logo" style="width: 500px; height: 150px; display: block; margin: 0 auto 3px;">
@@ -455,6 +596,71 @@ align-items:center;z-index:10000;color:white;text-align:center;padding:20px;">
     <button onclick="location.href='../english/indexenglish.html'" class="lang-btn">English</button>
     <button onclick="location.href='../bengali/indexbengali.html'" class="lang-btn">বাংলা</button>
   </div>
+
+<div class="featured-stories-bar">
+  <div class="featured-track" id="featuredTrack">
+
+    <!-- Featured Story Card Example (copy as needed) -->
+    <a href="story1.html" class="post-link" title="TITLE TEXT FOR SEO">
+      <div class="post">
+        <div class="post-content">
+          <h2>Story Title1</h2>
+          <p>Short description with keywords goes here.</p>
+        </div>
+        <img src="images/story1.jpg" alt="IMAGE ALT TEXT FOR SEO" />
+      </div>
+    </a>
+
+    <a href="story2.html" class="post-link" title="TITLE TEXT FOR SEO">
+      <div class="post">
+        <div class="post-content">
+          <h2>Story Title2</h2>
+          <p>Short description with keywords goes here.</p>
+        </div>
+        <img src="images/story2.jpg" alt="IMAGE ALT TEXT FOR SEO" />
+      </div>
+    </a>
+    <a href="story3.html" class="post-link" title="TITLE TEXT FOR SEO">
+      <div class="post">
+        <div class="post-content">
+          <h2>Story Title3</h2>
+          <p>Short description with keywords goes here.</p>
+        </div>
+        <img src="images/story2.jpg" alt="IMAGE ALT TEXT FOR SEO" />
+      </div>
+    </a>
+    <a href="story4.html" class="post-link" title="TITLE TEXT FOR SEO">
+      <div class="post">
+        <div class="post-content">
+          <h2>Story Title4</h2>
+          <p>Short description with keywords goes here.</p>
+        </div>
+        <img src="images/story4.jpg" alt="IMAGE ALT TEXT FOR SEO" />
+      </div>
+    </a>
+    <a href="story5.html" class="post-link" title="TITLE TEXT FOR SEO">
+      <div class="post">
+        <div class="post-content">
+          <h2>Story Title5</h2>
+          <p>Short description with keywords goes here.</p>
+        </div>
+        <img src="images/story2.jpg" alt="IMAGE ALT TEXT FOR SEO" />
+      </div>
+    </a>
+    <a href="story6.html" class="post-link" title="TITLE TEXT FOR SEO">
+      <div class="post">
+        <div class="post-content">
+          <h2>Story Title6</h2>
+          <p>Short description with keywords goes here.</p>
+        </div>
+        <img src="images/story2.jpg" alt="IMAGE ALT TEXT FOR SEO" />
+      </div>
+    </a>
+
+    <!-- Add as many more cards as needed -->
+
+  </div>
+</div>
 
   <div id="posts" class="posts-grid">Loading posts...</div>
   <div class="pagination" id="pagination"></div>
@@ -556,35 +762,12 @@ if (window.innerWidth <= 600) {
       setTheme(toggle.checked ? 'dark' : 'light');
     });
   </script>
+
+
 <script>
-  // Bypass age modal for search engine crawlers
-  const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
-  if (isBot) {
-    document.getElementById("ageConsentModal").style.display = "none";
-  }
-</script>
-<script>
-  const consentModal = document.getElementById("ageConsentModal");
-  const consent = localStorage.getItem("ageConfirmed");
-  const consentTime = localStorage.getItem("consentTime");
-
-  const now = new Date().getTime();
-  const sevenDays = 7 * 24 * 60 * 60 * 1000;
-
-  if (consent === "yes" && consentTime && (now - parseInt(consentTime)) < sevenDays) {
-    consentModal.style.display = "none";
-  }
-
-  document.getElementById("consentYes").addEventListener("click", () => {
-    localStorage.setItem("ageConfirmed", "yes");
-    localStorage.setItem("consentTime", new Date().getTime());
-    consentModal.style.display = "none";
-  });
-
-  document.getElementById("consentNo").addEventListener("click", () => {
-    alert("इस साइट का उपयोग करने के लिए आपकी आयु कम से कम 18 वर्ष होनी चाहिए।");
-    window.location.href = "https://www.google.com";
-  });
+  const track = document.getElementById('featuredTrack');
+  const original = track.innerHTML;
+  track.innerHTML += original; // duplicate for seamless infinite loop
 </script>
 </body>
 </html>

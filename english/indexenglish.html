@@ -365,29 +365,39 @@ body.dark-mode .post-content::after {
     transform: translateX(-100%);
   }
 }
-/* Base banner container */
+/* 🔄 Smooth scrolling animation */
+@keyframes scroll-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 🧱 Base banner wrapper (default: light mode) */
 .seo-tag-banner {
   overflow: hidden;
   padding: 10px 0;
-  max-width: 1000px;
+  max-width: 960px;       /* reduced width */
   margin: 0 auto;
   border-radius: 8px;
-  background: #fff0f6; /* default light background */
+  background: #fff0f6;    /* light pink */
   border-top: 1px solid #ffb6c1;
   border-bottom: 1px solid #ffb6c1;
   color-scheme: light dark;
 }
 
-/* Scrollable tag track */
+/* ➡️ Scrolling track */
 .seo-tag-track {
   display: inline-flex;
   gap: 1rem;
   white-space: nowrap;
   animation: scroll-banner 25s linear infinite;
-  padding-left: 100%;
+  padding-left: 100%;  /* ensures start off right side */
 }
 
-/* Tag links */
+/* 🔗 Tag links — light mode */
 .seo-tag-track a {
   flex-shrink: 0;
   background: #ffe4ec;
@@ -400,23 +410,12 @@ body.dark-mode .post-content::after {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Hover effect */
 .seo-tag-track a:hover {
   background: #ffd2e1;
   color: #b0003a;
 }
 
-/* Scroll animation */
-@keyframes scroll-banner {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* DARK MODE override */
+/* 🌚 Dark theme overrides */
 @media (prefers-color-scheme: dark) {
   .seo-tag-banner {
     background: #111;
@@ -436,7 +435,7 @@ body.dark-mode .post-content::after {
   }
 }
 
-/* MOBILE RESPONSIVENESS */
+/* 📱 Mobile responsive layout */
 @media (max-width: 768px) {
   .seo-tag-banner {
     max-width: 100%;
@@ -445,7 +444,6 @@ body.dark-mode .post-content::after {
     border-radius: 0;
   }
 }
-
 /* === Featured Story Horizontal Scroller === */
 .featured-stories-bar {
   width: 100%;

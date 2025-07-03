@@ -472,12 +472,14 @@ body.dark-mode .seo-tag-track a:hover {
 .featured-track .post {
   flex: 0 0 auto;
   width: 220px;
+  height: 70px; /* Match image height */
   margin-right: 18px;
   display: flex;
   flex-direction: row-reverse; /* Image on the right */
   align-items: center;
-  padding: 6px 10px; /* Reduced vertical space */
-  height: auto;
+  padding: 0 10px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .featured-track .post img {
@@ -485,24 +487,29 @@ body.dark-mode .seo-tag-track a:hover {
   height: 70px;
   object-fit: cover;
   border-radius: 8px;
-  margin-left: 10px; /* spacing between text and image */
-  margin-right: 0;
+  margin-left: 10px;
 }
 
 .featured-track .post-content {
   flex: 1;
-  padding: 0;
+  overflow: hidden;
 }
 
 .featured-track .post-content h2 {
-  font-size: 14px;
-  margin: 0 0 4px;
+  font-size: 13px;
+  margin: 0;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .featured-track .post-content p {
-  font-size: 12px;
-  margin: 0;
+  font-size: 11px;
+  margin: 2px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #d6a940;
 }
 
@@ -522,7 +529,8 @@ body.dark-mode .seo-tag-track a:hover {
 @media (max-width: 600px) {
   .featured-track .post {
     width: 150px;
-    padding: 4px 6px;
+    height: 70px;
+    padding: 0 6px;
   }
 
   .featured-track .post-content h2 {
@@ -530,9 +538,10 @@ body.dark-mode .seo-tag-track a:hover {
   }
 
   .featured-track .post-content p {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
+
 
 /* === FIX: Language Button Visibility === */
 body.light-mode .lang-btn {

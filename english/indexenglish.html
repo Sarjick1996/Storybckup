@@ -365,7 +365,7 @@ body.dark-mode .post-content::after {
     transform: translateX(-100%);
   }
 }
-/* SCROLL ANIMATION */
+/* === TAG BANNER SCROLL ANIMATION === */
 @keyframes scroll-banner {
   0% {
     transform: translateX(0);
@@ -375,19 +375,15 @@ body.dark-mode .post-content::after {
   }
 }
 
-/* BASE STYLE (neutral) — No light theme yet */
+/* === SHARED BASE STYLES === */
 .seo-tag-banner {
   overflow: hidden;
   padding: 10px 0;
   max-width: 960px;
   margin: 0 auto;
   border-radius: 8px;
-  background: transparent;
-  border-top: none;
-  border-bottom: none;
 }
 
-/* SCROLLING TRACK */
 .seo-tag-track {
   display: inline-flex;
   gap: 1rem;
@@ -396,7 +392,6 @@ body.dark-mode .post-content::after {
   padding-left: 100%;
 }
 
-/* LINKS DEFAULT RESET */
 .seo-tag-track a {
   flex-shrink: 0;
   padding: 6px 12px;
@@ -407,47 +402,43 @@ body.dark-mode .post-content::after {
   border: 1px solid;
 }
 
-/* 🌞 LIGHT THEME OVERRIDE */
-@media (prefers-color-scheme: light) {
-  .seo-tag-banner {
-    background: #fff0f6;
-    border-top: 1px solid #ffb6c1;
-    border-bottom: 1px solid #ffb6c1;
-  }
-
-  .seo-tag-track a {
-    background: #ffe4ec;
-    color: #c2185b;
-    border-color: #ffc1d6;
-  }
-
-  .seo-tag-track a:hover {
-    background: #ffd2e1;
-    color: #b0003a;
-  }
+/* === LIGHT MODE (Pink Theme) === */
+body.light-mode .seo-tag-banner {
+  background: #fff0f6;
+  border-top: 1px solid #ffb6c1;
+  border-bottom: 1px solid #ffb6c1;
 }
 
-/* 🌚 DARK THEME OVERRIDE */
-@media (prefers-color-scheme: dark) {
-  .seo-tag-banner {
-    background: #111;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-  }
-
-  .seo-tag-track a {
-    background: #222;
-    color: #fff;
-    border-color: #444;
-  }
-
-  .seo-tag-track a:hover {
-    background: #444;
-    color: #fff;
-  }
+body.light-mode .seo-tag-track a {
+  background: #ffe4ec;
+  color: #c2185b;
+  border-color: #ffc1d6;
 }
 
-/* 📱 MOBILE RESPONSIVE */
+body.light-mode .seo-tag-track a:hover {
+  background: #ffd2e1;
+  color: #b0003a;
+}
+
+/* === DARK MODE (Dark Theme) === */
+body.dark-mode .seo-tag-banner {
+  background: #111;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .seo-tag-track a {
+  background: #222;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode .seo-tag-track a:hover {
+  background: #444;
+  color: #fff;
+}
+
+/* === MOBILE RESPONSIVENESS === */
 @media (max-width: 768px) {
   .seo-tag-banner {
     max-width: 100%;

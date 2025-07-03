@@ -366,9 +366,9 @@ body.dark-mode .post-content::after {
 }
 .seo-tag-banner {
   overflow: hidden;
-  background: #111;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  background: #fff0f6; /* light pink background */
+  border-top: 1px solid #ffb6c1; /* soft pink border */
+  border-bottom: 1px solid #ffb6c1;
   padding: 10px 0;
 }
 
@@ -377,22 +377,24 @@ body.dark-mode .post-content::after {
   gap: 1rem;
   white-space: nowrap;
   animation: scroll-banner 25s linear infinite;
-  padding-left: 100%; /* ensures it starts offscreen to the right */
+  padding-left: 100%; /* starts offscreen right */
 }
 
 .seo-tag-track a {
   flex-shrink: 0;
-  color: #fff;
-  background: #222;
+  color: #c2185b; /* deep pink text */
+  background: #ffe4ec; /* very light pink badge */
   padding: 6px 12px;
   border-radius: 5px;
   font-size: 14px;
   text-decoration: none;
   transition: background 0.3s;
+  border: 1px solid #ffc1d6;
 }
 
 .seo-tag-track a:hover {
-  background: #444;
+  background: #ffd2e1;
+  color: #b0003a;
 }
 
 @keyframes scroll-banner {

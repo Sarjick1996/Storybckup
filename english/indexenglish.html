@@ -366,37 +366,73 @@ body.dark-mode .post-content::after {
 }
 .seo-tag-banner {
   overflow: hidden;
-  background: #fff0f6; /* light pink background */
-  border-top: 1px solid #ffb6c1; /* soft pink border */
-  border-bottom: 1px solid #ffb6c1;
   padding: 10px 0;
+  max-width: 1000px;     /* ⬅️ narrower width */
+  margin: 0 auto;         /* center it */
+  border-radius: 8px;
 }
 
+/* Track for scrolling animation */
 .seo-tag-track {
   display: inline-flex;
   gap: 1rem;
   white-space: nowrap;
   animation: scroll-banner 25s linear infinite;
-  padding-left: 100%; /* starts offscreen right */
+  padding-left: 100%;
 }
 
+/* Common anchor styles */
 .seo-tag-track a {
   flex-shrink: 0;
-  color: #c2185b; /* deep pink text */
-  background: #ffe4ec; /* very light pink badge */
   padding: 6px 12px;
   border-radius: 5px;
   font-size: 14px;
   text-decoration: none;
-  transition: background 0.3s;
-  border: 1px solid #ffc1d6;
+  transition: background 0.3s, color 0.3s;
+  border: 1px solid;
 }
 
-.seo-tag-track a:hover {
-  background: #ffd2e1;
-  color: #b0003a;
+/* LIGHT MODE */
+@media (prefers-color-scheme: light) {
+  .seo-tag-banner {
+    background: #fff0f6;
+    border-top: 1px solid #ffb6c1;
+    border-bottom: 1px solid #ffb6c1;
+  }
+
+  .seo-tag-track a {
+    background: #ffe4ec;
+    color: #c2185b;
+    border-color: #ffc1d6;
+  }
+
+  .seo-tag-track a:hover {
+    background: #ffd2e1;
+    color: #b0003a;
+  }
 }
 
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .seo-tag-banner {
+    background: #111;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+
+  .seo-tag-track a {
+    background: #222;
+    color: #fff;
+    border-color: #444;
+  }
+
+  .seo-tag-track a:hover {
+    background: #444;
+    color: #fff;
+  }
+}
+
+/* Scrolling animation */
 @keyframes scroll-banner {
   0% {
     transform: translateX(0);

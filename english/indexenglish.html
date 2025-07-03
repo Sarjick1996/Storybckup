@@ -497,33 +497,50 @@ body.dark-mode .seo-tag-track a:hover {
 
 
 
-/* === NAVIGATION & LANGUAGE BUTTON FIX === */
-body.light-mode .navbar a,
-body.light-mode .language-button,
-body.light-mode .theme-toggle {
+/* === FIX: Language Button Visibility === */
+body.light-mode .lang-btn {
+  background-color: #e0e0e0;
   color: #111;
-  background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #bbb;
 }
 
-body.light-mode .navbar a:hover,
-body.light-mode .language-button:hover,
-body.light-mode .theme-toggle:hover {
-  background: #f5f5f5;
+body.light-mode .lang-btn:hover {
+  background-color: #d4d4d4;
 }
 
-body.dark-mode .navbar a,
-body.dark-mode .language-button,
-body.dark-mode .theme-toggle {
+body.dark-mode .lang-btn {
+  background-color: #222;
   color: #fff;
-  background: #222;
   border: 1px solid #444;
 }
 
-body.dark-mode .navbar a:hover,
-body.dark-mode .language-button:hover,
-body.dark-mode .theme-toggle:hover {
-  background: #333;
+body.dark-mode .lang-btn:hover {
+  background-color: #333;
+}
+
+
+/* === FIX: Pagination Buttons === */
+body.light-mode .pagination button {
+  background-color: #f9f9f9;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+body.light-mode .pagination button.active {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+body.dark-mode .pagination button {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  border: 1px solid #333;
+}
+
+body.dark-mode .pagination button.active {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
 }
   </style>
 </head>

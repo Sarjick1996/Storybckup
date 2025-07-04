@@ -822,5 +822,31 @@ if (window.innerWidth <= 600) {
   track.innerHTML += original; // duplicate for seamless infinite loop
 </script>
 
+
+
+<script>
+fetch('posts.json')
+  .then(res => res.json())
+  .then(posts => {
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": posts.map((post, index) => ({
+        "@type": "Article",
+        "position": index + 1,
+        "name": post.title,
+        "description": post.description,
+        "image": location.origin + '/' + post.image,
+        "url": location.origin + '/' + post.filename
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData, null, 2);
+    document.head.appendChild(script);
+  })
+  .catch(console.error);
+</script>
 </body>
 </html>

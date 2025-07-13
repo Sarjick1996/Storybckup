@@ -21,8 +21,7 @@
       border-bottom: 1px solid #444;
     }
 
-    .logo-desktop,
-    .logo-mobile {
+    .logo-desktop {
       height: 40px;
     }
 
@@ -45,24 +44,22 @@
       height: calc(100vh - 60px);
     }
 
-    object,
-    embed {
+    iframe, object, embed {
       width: 100%;
       height: 100%;
       border: none;
+      display: block;
     }
 
-    /* fallback link */
     .fallback-link {
       display: none;
-      text-align: center;
       padding: 20px;
-      color: #ffd700;
+      text-align: center;
       background-color: #1e1e1e;
     }
 
     @media (max-width: 768px) {
-      object, embed {
+      iframe, object, embed {
         display: none;
       }
 
@@ -82,14 +79,17 @@
 </header>
 
 <div class="pdf-container">
-  <!-- Primary embedded PDF -->
-  <object data="pdfs/pdf1.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
-    <embed src="pdfs/pdf1.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" />
-  </object>
+  <!-- Main PDF viewer -->
+  <iframe 
+    src="pdfs/pdf1.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+    type="application/pdf"
+    allow="autoplay">
+  </iframe>
 
-  <!-- Fallback for mobile -->
+  <!-- Fallback for mobile browsers -->
   <div class="fallback-link">
-    📄 Tap to open PDF: <a href="pdfs/pdf1.pdf" style="color: #ffd700;" target="_blank">View PDF</a>
+    📄 This browser can't show the PDF inline. <br />
+    👉 <a href="pdfs/pdf1.pdf" style="color: #ffd700;" target="_blank">Tap here to open the PDF</a>
   </div>
 </div>
 

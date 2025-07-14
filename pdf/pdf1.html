@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PDF Viewer</title>
+
+<script>
+  // Redirect to PDF on mobile devices
+  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+    window.location.href = "pdfs/pdf1.pdf";
+  }
+</script>
   <style>
     body {
       margin: 0;

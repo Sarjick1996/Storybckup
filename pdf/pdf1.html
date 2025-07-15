@@ -23,7 +23,27 @@
     }
 
     .logo-desktop {
-      height: 40px;
+      display: block;
+      margin: 0 auto 20px;
+      width: 500px;
+      height: auto;
+    }
+
+    .logo-mobile {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .logo-desktop {
+        display: none;
+      }
+
+      .logo-mobile {
+        display: block;
+        margin: 0 auto 20px;
+        width: 240px;
+        height: auto;
+      }
     }
 
     .home-button {
@@ -52,9 +72,14 @@
 <body>
 
 <header>
-  <div class="logo-desktop">
-    <img src="logo/svgfinal.svg" alt="PDF Library Logo" />
-  </div>
+<!-- Logo -->
+<div class="logo-desktop">
+  <img src="../logo/svgfinal.svg" alt="PDF Library Logo" />
+</div>
+<div class="logo-mobile">
+  <img src="../logo/svgfinal.svg" alt="PDF Library Logo" />
+</div>
+
   <a href="indexpdf.html" class="home-button">🏠 Home</a>
 </header>
 

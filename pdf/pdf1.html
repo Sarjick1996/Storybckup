@@ -29,22 +29,25 @@
       height: auto;
     }
 
-    .logo-mobile {
-      display: none;
-    }
+.logo-mobile {
+  display: none;
+  text-align: center;
+}
 
-    @media (max-width: 600px) {
-      .logo-desktop {
-        display: none;
-      }
+.logo-mobile img {
+  width: 60%;     /* Scales to 60% of screen width */
+  max-width: 200px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .logo-desktop {
+    display: none;
+  }
 
-      .logo-mobile {
-        display: block;
-        margin: 0 auto 20px;
-        width: 240px;
-        height: auto;
-      }
-    }
+  .logo-mobile {
+    display: block;
+  }
+}
 
     .home-button {
       background-color: #ffd700;
